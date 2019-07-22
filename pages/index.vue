@@ -3,51 +3,152 @@
     <v-layout row wrap>
       <v-flex xs12 md12 lg12>
         <v-card>
-          <v-img
-            src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
-            aspect-ratio="2.75"
-          ></v-img>
-
+          <v-card-title
+            class="darken-1"
+            style="background-color: rgba(179,179,179,0.09);"
+          >
+            <v-layout align-center row spacer>
+              <v-flex xs4 sm2 md1>
+                <v-avatar size="50px">
+                  <v-img
+                    src="https://avatars0.githubusercontent.com/u/21191878?s=460&v=4"
+                    aspect-ratio="1"
+                    class="grey lighten-2"
+                  />
+                </v-avatar>
+              </v-flex>
+              <v-flex sm5 md3 hidden-xs-only>
+                <div class="headline white--text">
+                  Andrea Zago <small>(Andreacw)</small>
+                </div>
+              </v-flex>
+            </v-layout>
+          </v-card-title>
+        </v-card>
+      </v-flex>
+      <v-flex xs12 md12 lg12>
+        <div class="container page">
+          <a
+            href="#bio"
+            class="mr-2 d-inline-flex color--default"
+            style="text-decoration: none"
+            ><div class="layout align-center">
+              <div>
+                <h1 id="bio" class="headline">
+                  Chi sono? <span class="color--permalink">#</span>
+                </h1>
+              </div>
+              <!---->
+            </div></a
+          >
+        </div>
+        <v-card>
           <v-card-title primary-title>
             <div>
-              <h3 class="headline mb-0">Kangaroo Valley Safari</h3>
-              <div>kjl</div>
+              <span
+                >Giovane sviluppatore web fin dall'età di 16 anni mi diletto sul
+                web, nella grafica e nella creazione di siti/app per
+                divertimento, mi piace gestire comunità (di cui ho grande
+                esperienza sia tramite una comunità online alir.eu, sia nella
+                collaborazione con element-gaming.eu), sono un soccorritore
+                volontario dall'età di 18 anni in Protezione Civile.</span
+              >
             </div>
           </v-card-title>
         </v-card>
       </v-flex>
       <v-flex xs12 md12 lg12>
+        <div class="container page">
+          <a
+            href="#history"
+            class="mr-2 d-inline-flex color--default"
+            style="text-decoration: none"
+            ><div class="layout align-center">
+              <div>
+                <h1 id="history" class="headline">
+                  La mia storia <span class="color--permalink">#</span>
+                </h1>
+              </div>
+            </div></a
+          >
+        </div>
+      </v-flex>
+      <v-flex xs12 md8 lg4>
         <v-card>
-          <v-card-title class="darken-1">
+          <v-card-title primary-title>
             <div>
-              <div class="headline white--text">Andrea Zago</div>
-              <span class="grey--text">Aka andreacw</span>
+              <div class="headline">Le mie esperienze</div>
             </div>
           </v-card-title>
-
-          <v-list>
+          <v-list style="margin-color: white">
             <v-list-tile>
+              <v-list-tile-content>sdfdsfsdf</v-list-tile-content>
               <v-list-tile-action>
-                <v-icon>mail</v-icon>
+                suca
               </v-list-tile-action>
-
-              <v-list-tile-content>
-                <v-list-tile-title></v-list-tile-title>
-              </v-list-tile-content>
-            </v-list-tile>
-
-            <v-divider inset></v-divider>
-
-            <v-list-tile>
-              <v-list-tile-action>
-                <v-icon>location_on</v-icon>
-              </v-list-tile-action>
-
-              <v-list-tile-content>
-                <v-list-tile-title></v-list-tile-title>
-              </v-list-tile-content>
             </v-list-tile>
           </v-list>
+        </v-card>
+      </v-flex>
+      <v-flex xs12 md8 lg4>
+        <v-card>
+          <v-card-title primary-title>
+            <div>
+              <div class="headline">Formazione</div>
+            </div>
+          </v-card-title>
+        </v-card>
+      </v-flex>
+      <v-flex xs12 md8 lg4>
+        <v-card>
+          <v-card-title primary-title>
+            <div>
+              <div class="headline">Le mie passioni</div>
+            </div>
+          </v-card-title>
+        </v-card>
+      </v-flex>
+      <v-flex xs12 md12 lg12>
+        <div class="container page">
+          <a
+            href="#tech"
+            class="mr-2 d-inline-flex color--default"
+            style="text-decoration: none"
+            ><div class="layout align-center">
+              <div>
+                <h1 id="tech" class="headline">
+                  Conoscenze <span class="color--permalink">#</span>
+                </h1>
+              </div>
+            </div></a
+          >
+        </div>
+      </v-flex>
+      <v-flex xs12 md8 lg4>
+        <v-card>
+          <v-card-title primary-title>
+            <div>
+              <div class="headline">Progetti</div>
+            </div>
+          </v-card-title>
+        </v-card>
+      </v-flex>
+      <v-flex xs12 md8 lg4>
+        <v-card>
+          <v-card-title primary-title>
+            <div>
+              <div class="headline">Sviluppo</div>
+            </div>
+          </v-card-title>
+        </v-card>
+      </v-flex>
+      <v-flex xs12 md8 lg4>
+        <v-card>
+          <v-card-title primary-title>
+            <div>
+              <div class="headline">Sistemi</div>
+            </div>
+          </v-card-title>
         </v-card>
       </v-flex>
     </v-layout>
@@ -65,10 +166,22 @@ export default {
       { name: "og:type", content: "website" },
       {
         name: "og:url",
-        content: "https://protezionecivile-settimomilanese.it"
+        content: "https://andreacw.it"
       },
-      { name: "og:image", content: "https://nuxtjs.org/meta_640.png" }
+      {
+        name: "og:image",
+        content: "https://avatars0.githubusercontent.com/u/21191878?s=460&v=4"
+      }
     ]
   }
 };
 </script>
+
+<style>
+.color--default {
+  color: #424242;
+}
+.color--permalink {
+  color: #2196f3;
+}
+</style>
