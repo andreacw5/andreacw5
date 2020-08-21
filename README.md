@@ -43,5 +43,10 @@
   <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=andreacw5&layout=compact&theme=onedark&count_private=true" />
 </a>
 <a href="https://github.com/anuraghazra/convoychat">
-  <img align="left" src="https://github-readme-stats.vercel.app/api?username=andreacw5&hide=issues&show_icons=true&count_private=true&theme=onedark&include_all_commits=true" />
+  <img align="left" src="https://github-readme-stats.vercel.app/api?username=andreacw5&layout=compact&hide=issues&show_icons=true&count_private=true&theme=onedark&include_all_commits=true" />
 </a>
+
+<br />
+<br />
+
+*NOTE: Top languages does not indicate my skill level or something like that, it's a github metric of which languages i have the most code on github, it's a new feature of [github-readme-stats](https://github.com/anuraghazra/github-readme-stats)*
