@@ -1,22 +1,47 @@
-# personalSite
+# Hi, I'm Andrea
+> Apple entusiast, javascript lover and gaming addicted, what else I need :)
 
-> My personal website
+[![Visits Badge](https://badges.pufler.dev/visits/andreacw5/andreacw5)](https://badges.pufler.dev)
+[![Years Badge](https://badges.pufler.dev/years/andreacw5)](https://badges.pufler.dev)
+[![Repos Badge](https://badges.pufler.dev/repos/andreacw5)](https://badges.pufler.dev)
 
-## Build Setup
+###### About me
+- 👨‍💻 i’m currently working as Board member at [Element Gaming](http://https://www.element-gaming.eu) & Developer at [Medas Solutions](https://medas-solutions.it/)
+- ‍🌟 my released product [Network App](https://app.element-gaming.eu/) & [ALIR Community](https://alir.community/)
+- 🌱 next learning adventure: ![typescript](https://img.shields.io/badge/-Typescript-black?style=flat-square&logo=typescript) & ![nest.js](https://img.shields.io/badge/-Nestjs-black?style=flat-square&logo=nestjs)
+- 📫 reach me on [my linkedin page](https://www.linkedin.com/in/andrea-tombolato-57147986/)
+- 🚣 currently volunteer for [civil protection](https://comune.settimomilanese.mi.it/category/protezione-civile/).
 
-``` bash
-# install dependencies
-$ yarn install
+###### Tech
+* frontend: 
+![javaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript)
+![vue.js](https://img.shields.io/badge/-Vue-black?style=flat-square&logo=vue.js)
+![nuxt.js](https://img.shields.io/badge/-Nuxt-black?style=flat-square&logo=nuxt.js)
+![html5](https://img.shields.io/badge/-HTML5-black?style=flat-square&logo=html5&logoColor=white)
+![css3](https://img.shields.io/badge/-CSS3-black?style=flat-square&logo=css3)
+![bootstrap](https://img.shields.io/badge/-Bootstrap-black?style=flat-square&logo=bootstrap)
 
-# serve with hot reload at localhost:3000
-$ yarn run dev
+* backend:
+![node.js](https://img.shields.io/badge/-Nodejs-black?style=flat-square&logo=Node.js)
+![express.js](https://img.shields.io/badge/-Expressjs-black?style=flat-square&logo=Node.js)
+![Java](https://img.shields.io/badge/-Java-black?style=flat-square&logo=java)
+![Groovy](https://img.shields.io/badge/-Groovy-black?style=flat-square&logo=groovy)
 
-# build for production and launch server
-$ yarn run build
-$ yarn start
+* database:
+![mongodb](https://img.shields.io/badge/-MongoDB-black?style=flat-square&logo=mongodb)
+![postgresql](https://img.shields.io/badge/-PostgreSQL-black?style=flat-square&logo=postgresql)
 
-# generate static project
-$ yarn run generate
-```
+* infrastructure:
+![heroku](https://img.shields.io/badge/-Heroku-black?style=flat-square&logo=heroku)
+![docker](https://img.shields.io/badge/-Docker-black?style=flat-square&logo=docker)
+* tools:
+![git](https://img.shields.io/badge/-Git-black?style=flat-square&logo=git)
+![github](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github)
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+###### My github stats
+<a href="https://github.com/anuraghazra/github-readme-stats">
+  <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=andreacw5&layout=compact&theme=onedark&count_private=true" />
+</a>
+<a href="https://github.com/anuraghazra/convoychat">
+  <img align="left" src="https://github-readme-stats.vercel.app/api?username=andreacw5&hide=issues&show_icons=true&count_private=true&theme=onedark&include_all_commits=true" />
+</a>
