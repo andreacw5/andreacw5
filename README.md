@@ -6,11 +6,10 @@
 [![Repos Badge](https://badges.pufler.dev/repos/andreacw5)](https://badges.pufler.dev)
 
 ###### About me
-- 👨‍💻 i’m currently working as Board member at [Element Gaming](http://https://www.element-gaming.eu) & Developer at [Medas Solutions](https://medas-solutions.it/)
-- ‍🌟 my released product [Network App](https://app.element-gaming.eu/) & [ALIR Community](https://alir.community/)
-- 🌱 next learning adventure: ![typescript](https://img.shields.io/badge/-Typescript-black?style=flat-square&logo=typescript) & ![nest.js](https://img.shields.io/badge/-Nestjs-black?style=flat-square&logo=nestjs)
-- 📫 reach me on [my linkedin page](https://www.linkedin.com/in/andrea-tombolato-57147986/)
-- 🚣 currently volunteer for [civil protection](https://comune.settimomilanese.mi.it/category/protezione-civile/).
+- 👨‍💻 I’m currently working as Board member at [Element Gaming](http://https://www.element-gaming.eu) & Developer at [Medas Solutions](https://medas-solutions.it/).
+- ‍🌟 my released product [Network App](https://app.element-gaming.eu) & [ALIR Community](https://alir.community).
+- 📫 reach me on [my linkedin page](https://www.linkedin.com/in/andrea-tombolato-57147986/).
+- 🚣 Volunteer for [civil protection](https://comune.settimomilanese.mi.it/category/protezione-civile/).
 
 ###### Tech
 * frontend: 
@@ -41,7 +40,4 @@
 ###### My github stats
 <a href="https://github.com/anuraghazra/github-readme-stats">
   <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=andreacw5&layout=compact&theme=onedark&count_private=true" />
-</a>
-<a href="https://github.com/anuraghazra/convoychat">
-  <img align="left" src="https://github-readme-stats.vercel.app/api?username=andreacw5&hide=issues&show_icons=true&count_private=true&theme=onedark&include_all_commits=true" />
 </a>
