@@ -23,6 +23,6 @@ deploy:
   github-token: $GITHUB_ACCESS_TOKEN
   target-branch: gh-pages
   local-dir: dist
-  fqdn: andreacw.it
+  fqdn: andreacw.dev
   on:
     branch: master
