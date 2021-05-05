@@ -1,31 +1,20 @@
 <template>
-  <v-app dark>
-    <NavMenu />
-    <v-content>
-      <nuxt />
-    </v-content>
+  <v-app>
+    <v-main>
+      <v-container>
+        <v-layout column justify-center align-center>
+          <nuxt />
+        </v-layout>
+      </v-container>
+    </v-main>
   </v-app>
 </template>
 
 <script>
-import NavMenu from "~/layouts/shared/navbar.vue";
 export default {
-  components: {
-    NavMenu
-  },
+  name: 'DefaultLayout',
   head: {
-    titleTemplate: "%s - Andrea Zago",
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial scale=1" },
-      { hid: "description", name: "description", content: "Meta description" }
-    ]
+    titleTemplate: '%s - Andrea Tombolato'
   }
-};
-</script>
-
-<style>
-main {
-  background: #c0c0c0;
 }
-</style>
+</script>

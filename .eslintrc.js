@@ -7,9 +7,10 @@ module.exports = {
   parserOptions: {
     parser: 'babel-eslint'
   },
-  extends: ['plugin:vue/recommended', 'plugin:prettier/recommended', "prettier/vue"],
-  // required to lint *.vue files
-  plugins: ['vue', 'prettier'],
+  extends: [
+    '@nuxtjs',
+    'plugin:nuxt/recommended'
+  ],
   // add your custom rules here
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
@@ -24,4 +25,4 @@ module.exports = {
     'vue/singleline-html-element-content-newline': 'off',
     'vue/component-name-in-template-casing': 'off'
   }
-};
+}
