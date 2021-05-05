@@ -2,7 +2,7 @@
   <v-container grid-list-md text-xs-center>
     <v-row wrap>
       <v-col cols="12">
-        <h1 class="rubik-font text-uppercase">Andrea <span class="yellow-text">Tombolato</span></h1>
+        <h1 class="rubik-font text-uppercase">Andrea <span class="green-text">Tombolato</span></h1>
       </v-col>
     </v-row>
     <v-row wrap>
@@ -28,7 +28,7 @@
 .intro-img {
   border-radius: 5%;
 }
-.yellow-text {
-  color: yellow
+.green-text {
+  color: #00A86B
 }
 </style>
