@@ -7,12 +7,15 @@
         </v-layout>
       </v-container>
     </v-main>
+    <Footer />
   </v-app>
 </template>
 
 <script>
+import Footer from '../components/Footer'
 export default {
   name: 'DefaultLayout',
+  components: { Footer },
   head: {
     titleTemplate: '%s'
   }
