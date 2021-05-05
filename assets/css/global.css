@@ -22,3 +22,7 @@ main {
 .green-text {
   color: #00A86B
 }
+
+.transition-h:hover {
+  transform: scale(1.3);
+}

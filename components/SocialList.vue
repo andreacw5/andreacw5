@@ -5,13 +5,15 @@
       :key="social.title"
     >
       <v-list-item-avatar>
-        <v-icon
-          dark
-          :color="social.color || 'white darken-2'"
-          size="38px"
-        >
-          {{ social.icon }}
-        </v-icon>
+        <v-btn tile icon :href="social.href" target="_blank" class="transition-h">
+          <v-icon
+            dark
+            :color="social.color || 'white darken-2'"
+            size="38px"
+          >
+            {{ social.icon }}
+          </v-icon>
+        </v-btn>
       </v-list-item-avatar>
 
       <v-list-item-content>

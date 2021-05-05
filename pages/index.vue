@@ -52,7 +52,7 @@
               <template #activator="{ on, attrs }">
                 <v-icon
                   dark
-                  class="ma-2"
+                  class="transition-h ma-2"
                   size="40px"
                   v-bind="attrs"
                   v-on="on"
@@ -84,7 +84,7 @@
                 >
                   <v-hover v-slot="{ hover }">
                     <v-card
-                      :elevation="hover ? 12 : 2"
+                      :elevation="hover ? 22 : 2"
                       :class="{ 'on-hover': !hover }"
                     >
                       <v-img
