@@ -33,8 +33,8 @@
       <v-col xs="12" sm="12" md="8" lg="8">
         <h2 class="mb-2 rubik-font">Hello,</h2>
         <div>
-          <p>My name is Andrea Tombolato and Welcome to my personal website. I'm a Web Developer from Milano and work as Web Developer at <a href="https://medas-solutions.it" target="_blank">Medas Solutions</a>. I'm also working as Board member for <a href="https://element-gaming.eu" target="_blank">Element Gaming</a>, a company operating in the e-sports sector. Besides coding, I spend my time a volunteer for my local <a href="https://comune.settimomilanese.mi.it/category/protezione-civile/" target="_blank">civil defence office</a>.</p>
-          <p>In my free time I dedicate myself to TV series, those who don't, video games and PC assembly. </p>
+          <p>My name is Andrea Tombolato and Welcome to my personal website. I'm a Web Developer from Milano and work as Web Developer at <a href="https://medas-solutions.it" target="_blank">Medas Solutions</a>. I'm also working as Board member for <a href="https://element-gaming.eu" target="_blank">Element Gaming</a>, a no-profit organization operating in the e-sports sector. Besides coding, I spend my time a volunteer for my local <a href="https://comune.settimomilanese.mi.it/category/protezione-civile/" target="_blank">civil defence office</a>.</p>
+          <p>In my free time I dedicate myself to TV series, video games and PC assembly. </p>
         </div>
       </v-col>
       <v-col xs="12" sm="12" md="12" lg="12">
@@ -43,26 +43,11 @@
           justify="center"
           no-gutters
         >
-          <v-col md="auto">
-            <v-tooltip
-              v-for="(skill, i) in skills"
-              :key="i"
-              top
-            >
-              <template #activator="{ on, attrs }">
-                <v-icon
-                  dark
-                  class="transition-h ma-2"
-                  size="40px"
-                  v-bind="attrs"
-                  v-on="on"
-                >
-                  {{ skill.icon }}
-                </v-icon>
-              </template>
-              <span>{{ skill.title }}</span>
-            </v-tooltip>
-          </v-col>
+          <skills-area
+            v-for="(skill, i) in skills"
+            :key="i"
+            :skill="skill"
+          />
         </v-row>
       </v-col>
       <v-col cols="12">
@@ -130,8 +115,9 @@ import project from '@/static/data/project'
 import skill from '@/static/data/skills'
 import socials from '@/static/data/socials'
 import SocialList from '../components/SocialList'
+import SkillsArea from '../components/SkillsArea'
 export default {
-  components: { SocialList },
+  components: { SkillsArea, SocialList },
   data: () => ({
     projects: project.projects,
     skills: skill.skills,
