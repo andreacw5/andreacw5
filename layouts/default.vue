@@ -7,15 +7,17 @@
         </v-layout>
       </v-container>
     </v-main>
+    <fab-to-top />
     <Footer />
   </v-app>
 </template>
 
 <script>
 import Footer from '../components/Footer'
+import FabToTop from '../components/FabToTop'
 export default {
   name: 'DefaultLayout',
-  components: { Footer },
+  components: { FabToTop, Footer },
   head: {
     titleTemplate: '%s'
   }
