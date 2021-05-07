@@ -1,3 +1,6 @@
+import it from './i18n/it'
+import en from './i18n/en'
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -56,7 +59,9 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@nuxtjs/color-mode',
+    'nuxt-i18n'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -77,6 +82,19 @@ export default {
         path: '*',
         component: resolve(__dirname, 'pages/error/not-found.vue')
       })
+    }
+  },
+
+  // I18N Configuration
+  i18n: {
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en.js' },
+      { code: 'it', iso: 'it-IT', file: 'it.js' }
+    ],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: { en, it }
     }
   },
 

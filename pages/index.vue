@@ -2,7 +2,7 @@
   <v-container grid-list-md text-xs-center>
     <v-row wrap>
       <v-col cols="12">
-        <h1 class="rubik-font text-uppercase" style="font-size: xxx-large; font-weight: bolder">Andrea <span class="green-text">Tombolato</span></h1>
+        <Header @toggleDarkMode="toggleDarkMode" />
       </v-col>
       <v-col xs="12" sm="12" md="4" lg="4">
         <v-card
@@ -31,10 +31,10 @@
         </v-card>
       </v-col>
       <v-col xs="12" sm="12" md="8" lg="8">
-        <h2 class="mb-2 rubik-font">Hello,</h2>
+        <h2 class="mb-2 rubik-font">{{ $t('greetings') }}</h2>
         <div>
-          <p>My name is Andrea Tombolato and Welcome to my personal website. I'm a Web Developer from Milano and work as Web Developer at <a href="https://medas-solutions.it" target="_blank">Medas Solutions</a>. I'm also working as Board member for <a href="https://element-gaming.eu" target="_blank">Element Gaming</a>, a no-profit organization operating in the e-sports sector. Besides coding, I spend my time a volunteer for my local <a href="https://comune.settimomilanese.mi.it/category/protezione-civile/" target="_blank">civil defence office</a>.</p>
-          <p>In my free time I dedicate myself to TV series, video games and PC assembly. </p>
+          <p v-html="$t('intro.firstSection')"></p>
+          <p v-html="$t('intro.secondSection')"></p>
         </div>
       </v-col>
       <v-col xs="12" sm="12" md="12" lg="12">
@@ -116,8 +116,9 @@ import skill from '@/static/data/skills'
 import socials from '@/static/data/socials'
 import SocialList from '../components/SocialList'
 import SkillsArea from '../components/SkillsArea'
+import Header from '../components/Header'
 export default {
-  components: { SkillsArea, SocialList },
+  components: { Header, SkillsArea, SocialList },
   data: () => ({
     projects: project.projects,
     skills: skill.skills,
@@ -130,15 +131,24 @@ export default {
     wipUrl () {
       return require('~/assets/img/wip.jpg')
     }
+  },
+  methods: {
+    toggleDarkMode () {
+      if (
+        this.$colorMode.preference === 'dark' ||
+        (this.$colorMode.preference === 'system' &&
+          this.$colorMode.value === 'dark')
+      ) {
+        this.$colorMode.preference = 'light'
+      } else {
+        this.$colorMode.preference = 'dark'
+      }
+    }
   }
 }
 </script>
 
 <style scoped>
-.v-card {
-  transition: opacity .4s ease-in-out;
-}
-
 .on-hover {
   opacity: 0.5;
 }
