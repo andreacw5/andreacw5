@@ -30,7 +30,6 @@ export default {
   computed: {
     styleObject () {
       return {
-        '--color': 'white',
         '--color-hover': this.skill.color
       }
     }
