@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import Footer from '../components/Footer'
-import FabToTop from '../components/FabToTop'
+import Footer from '../components/layout/Footer'
+import FabToTop from '../components/layout/FabToTop'
 export default {
   name: 'DefaultLayout',
   components: { FabToTop, Footer },

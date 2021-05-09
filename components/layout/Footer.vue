@@ -8,7 +8,7 @@
         </strong>
       </v-card-text>
       <v-card-text class="py-2 white--text text-center">
-        © {{ new Date().getFullYear() }}
+        © {{ new Date().getFullYear() }} - All rights reserved
       </v-card-text>
     </v-card>
   </v-footer>

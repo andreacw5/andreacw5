@@ -8,6 +8,7 @@
       color="primary"
       fab
       fixed
+      icon
       large
       right
       style="z-index: 6"
