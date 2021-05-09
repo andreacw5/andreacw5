@@ -142,10 +142,10 @@ export default {
   }),
   computed: {
     imageUrl () {
-      return require('~/assets/img/profile-iberia.png')
+      return require('~/assets/img/profile.webp')
     },
     wipUrl () {
-      return require('~/assets/img/wip.jpg')
+      return require('~/assets/img/wip.webp')
     }
   },
   methods: {
