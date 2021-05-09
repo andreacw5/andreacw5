@@ -9,7 +9,7 @@
     },
     {
       "title": "Facebook",
-      "subtitle": "/andreacw5",
+      "subtitle": "andreacw5",
       "href": "https://www.facebook.com/andreacw5",
       "color": "#3b76e3",
       "icon": "mdi-facebook"
@@ -42,7 +42,7 @@
     {
       "title": "Github",
       "href": "https://github.com/andreacw5",
-      "subtitle": "#andreacw5",
+      "subtitle": "andreacw5",
       "icon": "mdi-github"
     }
   ]

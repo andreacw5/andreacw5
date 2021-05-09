@@ -41,6 +41,11 @@
       "color": "#0db7ed"
     },
     {
+      "icon": "mdi-wordpress",
+      "title": "Wordpress",
+      "color": "#21759b"
+    },
+    {
       "icon": "mdi-git",
       "title": "Git",
       "color": "#f34f29"
