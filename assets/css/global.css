@@ -1,11 +1,32 @@
+:root {
+  --color: #243746;
+  --color-primary: #00A86B;
+  --color-secondary: #0e2233;
+  --bg: #f3f5f4;
+  --bg-secondary: #fff;
+  --border-color: #ddd;
+  --card-color: #4f5050;
+}
+
+.dark-mode {
+  --color: #ebf4f1;
+  --color-secondary: #fdf9f3;
+  --bg: #202124;
+  --bg-secondary: #071521;
+  --border-color: #0d2538;
+  --card-color: #1c1d1e;
+}
+
 body{
-  background-color: #202124;
+  background-color: var(--bg);
+  color: var(--color);
+  transition: background-color .3s;
   font-family: 'Roboto', sans-serif;
 }
 
 main {
-  background: #202124;
-  color: #ffffff;
+  background-color: var(--bg);
+  color: var(--color);
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -15,8 +36,19 @@ main {
   transition: all 0.3s ease-in-out
 }
 
+.card {
+  color: var(--color) !important;
+  background-color: var(--card-color) !important;
+  transition: background-color .3s;
+}
+
 .rubik-font {
   font-family: 'Rubik', sans-serif;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
 }
 
 .green-text {
