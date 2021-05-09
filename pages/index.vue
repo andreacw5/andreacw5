@@ -4,37 +4,40 @@
       <v-col cols="12">
         <Header @toggleDarkMode="toggleDarkMode" />
       </v-col>
-      <v-col xs="12" sm="12" md="4" lg="4">
+      <v-col xs="12" sm="12" md="5" lg="5">
         <v-card
           class="d-flex align-center ml-3"
           dark
         >
-          <v-img
-            alt="Intro images"
-            height="300"
-            :src="imageUrl"
-            class="grey darken-4"
-          >
-            <template #placeholder>
-              <v-row
-                class="fill-height ma-0"
-                align="center"
-                justify="center"
-              >
-                <v-progress-circular
-                  indeterminate
-                  color="grey lighten-5"
-                ></v-progress-circular>
-              </v-row>
-            </template>
-          </v-img>
+          <image-item alt-text="Intro image" :image-url="imageUrl" />
         </v-card>
       </v-col>
-      <v-col xs="12" sm="12" md="8" lg="8">
-        <h2 class="mb-2 rubik-font">{{ $t('greetings') }}</h2>
+      <v-col xs="12" sm="12" md="7" lg="7">
+        <h2 class="mb-2 mt-2 rubik-font">{{ $t('greetings') }}</h2>
         <div>
-          <p v-html="$t('intro.firstSection')"></p>
-          <p v-html="$t('intro.secondSection')"></p>
+          <i18n path="intro.welcome" tag="p">
+            <template #name>
+              <b>Andrea Tombolato</b>
+            </template>
+            <template #username>
+              <b>andreacw</b>
+            </template>
+          </i18n>
+          <i18n path="intro.resume" tag="p">
+            <template #medas>
+              <a href="https://medas-solutions.it" target="_blank">Medas Solutions</a>
+            </template>
+            <template #element>
+              <a href="https://element-gaming.eu" target="_blank">Element Gaming</a>
+            </template>
+          </i18n>
+          <i18n path="intro.hobbies" tag="p">
+            <template #prociv>
+              <a href="https://comune.settimomilanese.mi.it/category/protezione-civile/" target="_blank">
+                {{ $t('prociv') }}
+              </a>
+            </template>
+          </i18n>
         </div>
       </v-col>
       <v-col xs="12" sm="12" md="12" lg="12">
@@ -51,7 +54,13 @@
         </v-row>
       </v-col>
       <v-col cols="12">
-        <h1 class="rubik-font text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">My <span class="green-text">Works</span></h1>
+        <h1 class="rubik-font text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
+          <i18n path="sections.start" tag="span">
+            <template #section>
+              <span class="green-text">{{ $t('sections.works') }}</span>
+            </template>
+          </i18n>
+        </h1>
       </v-col>
       <v-col xs="12" sm="12" md="12" lg="12">
         <v-item-group active-class="primary">
@@ -79,7 +88,7 @@
                         <v-expand-transition>
                           <div
                             v-if="hover"
-                            class="d-flex transition-fast-in-fast-out green darken-3 v-card--reveal display-3 white--text"
+                            class="d-flex transition-fast-in-fast-out primary darken-1 v-card--reveal display-3 white--text"
                             style="height: 100%;"
                           >
                             {{ item.title }}
@@ -95,7 +104,13 @@
         </v-item-group>
       </v-col>
       <v-col cols="12">
-        <h1 class="rubik-font text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">My <span class="green-text">Contacts</span></h1>
+        <h1 class="rubik-font text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
+          <i18n path="sections.start" tag="span">
+            <template #section>
+              <span class="green-text">{{ $t('sections.contacts') }}</span>
+            </template>
+          </i18n>
+        </h1>
       </v-col>
       <v-col xs="12" sm="12" md="4" lg="4">
         <social-list :socials="socials.one" />
@@ -116,9 +131,10 @@ import skill from '@/static/data/skills'
 import socials from '@/static/data/socials'
 import SocialList from '../components/SocialList'
 import SkillsArea from '../components/SkillsArea'
-import Header from '../components/Header'
+import Header from '../components/layout/Header'
+import ImageItem from '../components/shared/ImageItem'
 export default {
-  components: { Header, SkillsArea, SocialList },
+  components: { ImageItem, Header, SkillsArea, SocialList },
   data: () => ({
     projects: project.projects,
     skills: skill.skills,
@@ -126,7 +142,7 @@ export default {
   }),
   computed: {
     imageUrl () {
-      return require('~/assets/img/624656.jpg')
+      return require('~/assets/img/profile-iberia.png')
     },
     wipUrl () {
       return require('~/assets/img/wip.jpg')
@@ -150,7 +166,7 @@ export default {
 
 <style scoped>
 .on-hover {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .v-card--reveal {

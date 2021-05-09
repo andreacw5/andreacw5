@@ -8,9 +8,7 @@
       <v-tooltip bottom>
         <template #activator="{ on: tooltip }">
           <v-btn
-            color="primary"
             icon
-            class="mt-1"
             v-bind="attrs"
             v-on="{ ...tooltip, ...menu }"
           >
