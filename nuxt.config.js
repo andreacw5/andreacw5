@@ -41,7 +41,12 @@ export default {
     ]
   },
 
-  loading: { color: '#00A86B' },
+  loading: {
+    color: '#00A86B',
+    height: '10px',
+    continuous: true,
+    duration: 3000
+  },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
