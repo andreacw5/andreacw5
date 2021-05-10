@@ -36,16 +36,14 @@ export default {
       { rel: 'apple-touch-icon', sizes: '144x144', href: 'icons/apple-icon-144x144.png' },
       { rel: 'apple-touch-icon', sizes: '152x152', href: 'icons/apple-icon-152x152.png' },
       { rel: 'apple-touch-icon', sizes: '180x180', href: 'icons/apple-icon-180x180.png' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Rubik&display=swap' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap' }
     ]
   },
 
-  loading: {
+  loadingIndicator: {
+    name: 'wandering-cubes',
     color: '#00A86B',
-    height: '10px',
-    continuous: true,
-    duration: 3000
+    background: '#202124'
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -87,7 +85,8 @@ export default {
         path: '*',
         component: resolve(__dirname, 'pages/error/not-found.vue')
       })
-    }
+    },
+    linkActiveClass: 'active-link'
   },
 
   // I18N Configuration
