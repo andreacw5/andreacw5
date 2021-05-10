@@ -43,14 +43,6 @@ a {
   text-decoration: none;
 }
 
-.green-text {
-  color: var(--color-primary);
-}
-
-.transition-h:hover {
-  transform: scale(1.3);
-}
-
 .circles{
   position: absolute;
   top: 0;
@@ -162,4 +154,51 @@ a {
     border-radius: 50%;
   }
 
+}
+
+@media screen and (min-width: 1008px) {
+
+  /* during entering and leaving : */
+  .page-enter-active, .page-leave-active {
+    position:absolute;
+    max-width:725px; /*make sur our content keep it's original width*/
+    transition: all .2s ease;
+  }
+
+  /* entering start */
+  .page-enter {
+    left: -100%;
+  }
+
+  /* entering end */
+  .page-enter-to {
+    left: 0;
+  }
+
+  /* leaving start */
+  .page-leave {
+    opacity: 1;
+  }
+
+  /* leaving end */
+  .page-leave-to {
+    opacity: 0;
+  }
+
+}
+
+/* Animation effect */
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--color-primary);
+  transform: translateY(-0.25em);
+}
+
+.up:hover,
+.up:focus {
+  box-shadow: inset 0 -3.25em 0 0 var(--color-primary);
+}
+
+.transition-h:hover {
+  transform: scale(1.3);
 }

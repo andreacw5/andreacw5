@@ -4,7 +4,7 @@
       <v-card-text class="py-2 white--text text-center mt-2">
         <span>Designed & Developed with <v-icon size="20" color="#6f5c37">mdi-coffee</v-icon> by</span>
         <strong class="subheading" style="margin-left: 1px">
-          <a href="https://andreacw.dev" class="green-text" style="text-decoration: none;">Andrea Tombolato</a>
+          <a href="https://andreacw.dev" class="primary--text" style="text-decoration: none;">Andrea Tombolato</a>
         </strong>
       </v-card-text>
       <v-card-text class="py-2 white--text text-center">
