@@ -54,7 +54,7 @@
         <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
           <i18n path="sections.start" tag="span">
             <template #section>
-              <span class="green-text">{{ $t('sections.works') }}</span>
+              <span class="primary--text">{{ $t('sections.works') }}</span>
             </template>
           </i18n>
         </h1>
@@ -87,15 +87,6 @@
                             <v-card-title>
                               {{ item.title }}
                             </v-card-title>
-                            <v-card-text class="mr-4 ml-2">
-                              <p class="subheading">
-                                {{ item.description }}
-                              </p>
-                            </v-card-text>
-                            <v-card-actions>
-                              <v-spacer></v-spacer>
-                              <v-btn small outlined>Altri dettagli</v-btn>
-                            </v-card-actions>
                           </v-card>
                         </v-expand-transition>
                       </v-img>
