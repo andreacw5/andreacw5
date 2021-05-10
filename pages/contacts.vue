@@ -5,14 +5,14 @@
         <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
           <i18n path="sections.contact.end" tag="span">
             <template #contact>
-              <span class="green-text">{{ $t('sections.contact.title') }}</span>
+              <span class="primary--text">{{ $t('sections.contact.title') }}</span>
             </template>
           </i18n>
         </h1>
       </v-col>
     </v-row>
     <v-row wrap>
-      <v-col xs="12" sm="12" md="12" lg="7">
+      <v-col cols="12" lg="7">
         <v-card class="card">
           <v-form
             ref="form"
@@ -49,8 +49,12 @@
           </v-form>
         </v-card>
       </v-col>
-      <v-divider vertical inset class="mr-2 ml-2 d-none d-lg-block" />
-      <v-col xs="12" sm="12" md="4" lg="4">
+      <v-divider
+        vertical
+        inset
+        class="mr-2 ml-2 d-none d-lg-block"
+      />
+      <v-col cols="12" lg="4">
         <p>{{ $t('sections.contact.others') }}</p>
         <v-row wrap>
           <v-col
@@ -61,21 +65,21 @@
             <v-btn
               target="_blank"
               :href="social.href"
-              class="mx-md-4 transition-h social-button"
-              :color="social.color || 'white darken-2'"
+              class="mx-md-4 transition-h"
+              :color="social.color || 'white darken-4'"
               large
               block
-              data-hover="dgf"
-              outlined
+              :data-hover="social.subtitle"
+              :outlined="isDarkMode"
             >
               <div>
                 <v-icon
-                  :color="social.color || 'gray darken-2'"
+                  :color="isDarkMode ? social.color : 'gray darken-2'"
                   size="38px"
                 >
                   {{ social.icon }}
                 </v-icon>
-                <span class="hidden-sm-and-down" style="padding-left: 8px">
+                <span class="hidden-xs-and-down" style="padding-left: 8px">
                   {{ social.title }}
                 </span>
               </div>
@@ -103,7 +107,12 @@ export default {
       email: v => !!(v || '').match(/@/) || 'Please enter a valid email',
       required: v => !!v || 'This field is required'
     }
-  })
+  }),
+  computed: {
+    isDarkMode () {
+      return this.$colorMode.preference === 'dark'
+    }
+  }
 }
 </script>
 
