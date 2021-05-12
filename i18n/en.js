@@ -23,6 +23,15 @@ module.exports = {
         email: 'Email',
         content: 'Message'
       }
+    },
+    about: {
+      title: 'About',
+      end: '{contact} Me',
+      download: 'Download my resume',
+      skills: 'Skills',
+      experience: 'Experience',
+      languages: 'Languages',
+      other: 'Also busy with'
     }
   },
   actions: {
@@ -36,7 +45,8 @@ module.exports = {
       en: 'English',
       fr: 'French'
     },
-    send: 'Send Message'
+    send: 'Send Message',
+    website: 'Visit website'
   },
   visitWebsite: 'Visit {name} website',
   copyright: 'All rights reserved'
