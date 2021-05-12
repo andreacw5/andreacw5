@@ -13,7 +13,12 @@
     </v-row>
     <v-row wrap>
       <v-col cols="12" lg="7">
-        <v-card class="card">
+        <v-card
+          elevation="2"
+          class="card"
+          outlined
+          tile
+        >
           <v-form
             ref="form"
             v-model="form"
@@ -65,7 +70,7 @@
             <v-btn
               target="_blank"
               :href="social.href"
-              class="mx-md-4 transition-h"
+              class="mx-md-4 transition-h social-button"
               :color="social.color || 'white darken-4'"
               large
               block
@@ -139,6 +144,8 @@ a.social-button:before{
   opacity: 0;
   transform: translate(-100%,0);
   transition: all .3s ease-in-out;
+  background-color: transparent;
+  text-align: center;
 }
 /*button div (button text before hover)*/
 a.social-button:hover div{
