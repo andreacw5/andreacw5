@@ -3,6 +3,7 @@
     elevation="2"
     outlined
     tile
+    class="card"
   >
     <v-card-title class="display-5 primary--text">{{ title }}</v-card-title>
     <v-card-subtitle>
