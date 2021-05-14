@@ -3,9 +3,11 @@
     {
       "title": "Full Stack Developer",
       "company": "Medas Solutions",
-      "website": "https://element-gaming.eu",
+      "website": "https://medas-solutions.it",
       "period": "Jul 2016 – Present",
-      "description": "A company focused on developing web tools for patients to access their medical information"
+      "start": "",
+      "end": "",
+      "description": "A company focused on developing web tools for patients to access their medical information. Develop with Vue.js, Java and some other framework."
     },
     {
       "title": "Member Of The Management Board",
@@ -19,7 +21,7 @@
       "company": "Element Gaming",
       "website": "https://element-gaming.eu",
       "period": "Feb 2019 – Nov 2020",
-      "description": "Development of web apps for the automation and management of the group streamers."
+      "description": "Development of web apps for the automation and management of the group streamers. Develop with Nuxt.js, Node.js and some other framework."
     }
   ]
 }

@@ -12,6 +12,12 @@
       </v-col>
     </v-row>
     <v-row wrap>
+      <v-col cols="12">
+        <p>
+          If you wanna get in touch, talk to me about a project collaboration or just say hi, fill up the awesome form below or send an email to
+          <a href="mailto:andreacw96@gmail.com">andreacw96@gmail.com</a> and talk.
+        </p>
+      </v-col>
       <v-col cols="12" lg="7">
         <v-card
           elevation="2"

@@ -7,7 +7,7 @@
     },
     {
       "name": "sections.about.title",
-      "icon": "mdi-account",
+      "icon": "mdi-book-outline",
       "url": "/about"
     },
     {
