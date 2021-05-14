@@ -37,19 +37,96 @@
           </i18n>
         </div>
       </v-col>
+    </v-row>
+    <v-row wrap>
       <v-col xs="12" sm="12" md="12" lg="12">
         <v-row
           class="mt-4"
           justify="center"
           no-gutters
         >
-          <skills-area
+          <v-col cols="12" lg="5">
+            <v-row justify="space-around">
+              <span class="group pa-2">
+                <v-icon x-large>mdi-vuejs</v-icon>
+                <v-icon x-large>mdi-nuxt</v-icon>
+                <v-icon x-large>mdi-language-html5</v-icon>
+                <v-icon x-large>mdi-language-css3</v-icon>
+              </span>
+            </v-row>
+          </v-col>
+          <v-col cols="12" lg="5">
+            <v-row justify="space-around mt-5">
+              <span class="group pa-2">
+                <v-icon x-large>mdi-vuejs</v-icon>
+                <v-icon x-large>mdi-nuxt</v-icon>
+                <v-icon x-large>mdi-language-html5</v-icon>
+                <v-icon x-large>mdi-language-css3</v-icon>
+              </span>
+            </v-row>
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
+    <v-row wrap>
+      <v-col xs="12" sm="12" md="12" lg="12">
+        <v-row
+          class="mt-4"
+          justify="center"
+          no-gutters
+        >
+          <skill-icon
             v-for="(skill, i) in skills"
             :key="i"
             :skill="skill"
           />
         </v-row>
       </v-col>
+    </v-row>
+    <v-row wrap>
+      <v-col cols="12">
+        <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
+          <i18n path="sections.start" tag="span">
+            <template #section>
+              <span class="primary--text">{{ $t('sections.about.skills') }}</span>
+            </template>
+          </i18n>
+        </h1>
+      </v-col>
+      <v-col cols="12" lg="7">
+        <p>I started my adventure in the world of development in 2015, programming the first site in php, since then I have been involved in projects both as a developer and sometimes as a project manager, starting from the initial mockup up to the complete realization with the latest technologies, like Vue.js, Nuxt.js and some other languages.</p>
+        <p>I make successful responsive websites, I also have experience with popular open source CMS like (WordPress, Drupal and others). </p>
+      </v-col>
+      <v-col cols="12" lg="5">
+        <div>
+          <b>Front-End</b>
+          <v-progress-linear
+            value="55"
+          ></v-progress-linear>
+          <br>
+          <b>Back-End</b>
+          <v-progress-linear
+            value="80"
+          ></v-progress-linear>
+          <br>
+          <b>Vue.js</b>
+          <v-progress-linear
+            value="55"
+          ></v-progress-linear>
+          <br>
+          <b>Nuxt.js</b>
+          <v-progress-linear
+            value="70"
+          ></v-progress-linear>
+          <br>
+          <b>Node.js</b>
+          <v-progress-linear
+            value="70"
+          ></v-progress-linear>
+        </div>
+      </v-col>
+    </v-row>
+    <v-row wrap>
       <v-col cols="12">
         <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
           <i18n path="sections.start" tag="span">
@@ -73,25 +150,7 @@
                   cols="12"
                   md="4"
                 >
-                  <v-hover v-slot="{ hover }">
-                    <v-card
-                      :elevation="hover ? 22 : 2"
-                      :class="{ 'on-hover': !hover }"
-                    >
-                      <v-img
-                        :src="wipUrl"
-                        height="225px"
-                      >
-                        <v-expand-transition>
-                          <v-card v-if="hover" style="height: 100%;" class="transition-fast-in-fast-out primary darken-2 v-card--reveal white--text">
-                            <v-card-title>
-                              {{ item.title }}
-                            </v-card-title>
-                          </v-card>
-                        </v-expand-transition>
-                      </v-img>
-                    </v-card>
-                  </v-hover>
+                  <project-card :item="item" />
                 </v-col>
               </template>
             </v-row>
@@ -99,44 +158,66 @@
         </v-item-group>
       </v-col>
     </v-row>
+    <v-row wrap>
+      <v-col cols="12">
+        <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
+          <i18n path="sections.start" tag="span">
+            <template #section>
+              <span class="primary--text">{{ $t('sections.about.experience') }}</span>
+            </template>
+          </i18n>
+        </h1>
+      </v-col>
+      <v-col
+        v-for="(work, i) in works"
+        :key="i"
+        cols="12"
+        lg="6"
+      >
+        <work-card
+          :title="work.title"
+          :company="work.company"
+          :period="work.period"
+          :description="work.description"
+          :website="work.website"
+        />
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
 <script>
-import project from '@/static/data/project'
 import skill from '@/static/data/skills'
 import socials from '@/static/data/socials'
-import SkillsArea from '../components/SkillsArea'
+import about from '@/static/data/about'
+import SkillIcon from '../components/SkillIcon'
 import ImageItem from '../components/shared/ImageItem'
+import ProjectCard from '../components/ProjectCard'
+import WorkCard from '../components/about/WorkCard'
 export default {
-  components: { ImageItem, SkillsArea },
+  components: { WorkCard, ProjectCard, ImageItem, SkillIcon },
   data: () => ({
-    projects: project.projects,
     skills: skill.skills,
+    works: about.works,
     socials
   }),
   computed: {
     imageUrl () {
       return require('~/assets/img/profile.webp')
     },
-    wipUrl () {
-      return require('~/assets/img/wip.webp')
+    projects () {
+      return this.$store.state.projects.projects
     }
   }
 }
 </script>
 
 <style scoped>
-.on-hover {
-  opacity: 0.7;
+
+.group {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
 }
 
-.v-card--reveal {
-  align-items: center;
-  bottom: 0;
-  justify-content: center;
-  opacity: .9;
-  position: absolute;
-  width: 100%;
-}
 </style>
