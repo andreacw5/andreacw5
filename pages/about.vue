@@ -91,53 +91,56 @@
           </i18n>
         </h1>
       </v-col>
-      <v-col cols="12">
-        <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
-          <i18n path="sections.start" tag="span">
-            <template #section>
-              <span class="primary--text">{{ $t('sections.about.experience') }}</span>
-            </template>
-          </i18n>
-        </h1>
+      <v-col cols="12" lg="6">
+        <p>Since beginning my journey as a freelance developer nearly 5 years ago, I’ve done remote work for agencies, consulted for startups, and collaborated with talented people to create web products for both business and consumer use. I create successful responsive websites that are fast, easy to use, and built with best practices.</p>
+        <p>I have a full-stack developer experience with popular open-source CMS like (WordPress, Drupal and others) and with Grails/Java.</p>
+        <p>Mainly I develop with Node.js for REST API and with Nuxt.js for GUI</p>
       </v-col>
-      <v-col
-        v-for="(work, i) in works"
-        :key="i"
-        cols="12"
-        lg="6"
-      >
-        <work-card
-          :title="work.title"
-          :company="work.company"
-          :period="work.period"
-          :description="work.description"
-          :website="work.website"
-        />
+      <v-col cols="12" lg="6">
+        <div>
+          <div>
+            <b> <v-icon>mdi-vuejs</v-icon> Front-End</b>
+            <v-progress-linear
+              value="55"
+            ></v-progress-linear>
+          </div>
+          <br>
+          <b>Back-End</b>
+          <v-progress-linear
+            value="80"
+          ></v-progress-linear>
+          <br>
+          <b>Vue.js</b>
+          <v-progress-linear
+            value="55"
+          ></v-progress-linear>
+          <br>
+          <b>Nuxt.js</b>
+          <v-progress-linear
+            value="70"
+          ></v-progress-linear>
+          <br>
+          <b>Node.js</b>
+          <v-progress-linear
+            value="70"
+          ></v-progress-linear>
+        </div>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-import about from '@/static/data/about'
 import ImageItem from '../components/shared/ImageItem'
-import WorkCard from '../components/about/WorkCard'
 export default {
   name: 'About',
-  components: { WorkCard, ImageItem },
-  data: () => ({
-    reveal: false,
-    works: about.works
-  }),
+  components: { ImageItem },
   computed: {
     isDarkMode () {
       return this.$colorMode.preference === 'dark'
     },
     imageUrl () {
       return require('~/assets/img/profile.webp')
-    },
-    wipUrl () {
-      return require('~/assets/img/wip.webp')
     }
   }
 }

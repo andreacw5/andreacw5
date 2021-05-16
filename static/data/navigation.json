@@ -6,11 +6,6 @@
       "url": "/"
     },
     {
-      "name": "sections.about.title",
-      "icon": "mdi-book-outline",
-      "url": "/about"
-    },
-    {
       "name": "sections.contact.title",
       "icon": "mdi-account",
       "url": "/contacts"
