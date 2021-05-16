@@ -45,36 +45,6 @@
           justify="center"
           no-gutters
         >
-          <v-col cols="12" lg="5">
-            <v-row justify="space-around">
-              <span class="group pa-2">
-                <v-icon x-large>mdi-vuejs</v-icon>
-                <v-icon x-large>mdi-nuxt</v-icon>
-                <v-icon x-large>mdi-language-html5</v-icon>
-                <v-icon x-large>mdi-language-css3</v-icon>
-              </span>
-            </v-row>
-          </v-col>
-          <v-col cols="12" lg="5">
-            <v-row justify="space-around mt-5">
-              <span class="group pa-2">
-                <v-icon x-large>mdi-vuejs</v-icon>
-                <v-icon x-large>mdi-nuxt</v-icon>
-                <v-icon x-large>mdi-language-html5</v-icon>
-                <v-icon x-large>mdi-language-css3</v-icon>
-              </span>
-            </v-row>
-          </v-col>
-        </v-row>
-      </v-col>
-    </v-row>
-    <v-row wrap>
-      <v-col xs="12" sm="12" md="12" lg="12">
-        <v-row
-          class="mt-4"
-          justify="center"
-          no-gutters
-        >
           <skill-icon
             v-for="(skill, i) in skills"
             :key="i"

@@ -4,7 +4,7 @@ export const state = () => ({
       title: 'ALIR Website',
       description: 'Altis Life Italia Reloaded community website ',
       src: 'alircommunity.webp',
-      explore: true,
+      explore: false,
       id: 'alircommunity',
       slides: [
         {
@@ -29,6 +29,11 @@ export const state = () => ({
           'CSS3',
           'Meteor.js',
           'MongoDB'
+        ],
+        icons: [
+          'mdi-language-html5',
+          'mdi-language-css3',
+          'mdi-language-javascript'
         ]
       },
       other: {
@@ -40,36 +45,69 @@ export const state = () => ({
       title: 'ALIRDB',
       description: 'Online data viewer of the Arma 3 videogame, to allow users to access their game statistics ',
       src: 'alirdb.webp',
-      explore: true,
-      id: 'alirdb'
+      explore: false,
+      id: 'alirdb',
+      technical: {
+        icons: [
+          'mdi-language-html5',
+          'mdi-language-css3',
+          'mdi-language-javascript'
+        ]
+      }
     },
     {
       title: 'Gym Track App',
       description: 'Web application of a personal trainer for customer management ',
-      src: 'default.webp',
+      src: 'gymapp.webp',
       explore: false,
-      id: 'gymtrack'
+      id: 'gymtrack',
+      technical: {
+        icons: [
+          'mdi-nodejs',
+          'mdi-language-html5',
+          'mdi-language-css3',
+          'mdi-language-javascript'
+        ]
+      }
     },
     {
       title: 'PROCIV Website',
       description: 'Civil protection website of the municipality of Settimo Milanese ',
       src: 'prociv-sm.webp',
       explore: false,
-      id: 'prociv'
+      id: 'prociv',
+      technical: {
+        icons: [
+          'mdi-nuxt',
+          'mdi-firebase'
+        ]
+      }
     },
     {
       title: 'Element Website',
       description: 'Element Gaming sports association website ',
       src: 'element.webp',
-      explore: true,
-      id: 'element'
+      explore: false,
+      id: 'element',
+      technical: {
+        icons: [
+          'mdi-wordpress',
+          'mdi-language-php'
+        ]
+      }
     },
     {
       title: 'Element Network',
       description: 'A monitoring site of the various Network Element teams, shows users in streaming and allows their management ',
       src: 'elementapp.webp',
-      explore: true,
-      id: 'elementapp'
+      explore: false,
+      id: 'elementapp',
+      technical: {
+        icons: [
+          'mdi-nuxt',
+          'mdi-nodejs'
+        ]
+      }
     }
   ]
 })
