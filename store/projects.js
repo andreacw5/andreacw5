@@ -33,7 +33,8 @@ export const state = () => ({
         icons: [
           'mdi-language-html5',
           'mdi-language-css3',
-          'mdi-language-javascript'
+          'mdi-language-javascript',
+          'mdi-language-php'
         ]
       },
       other: {
