@@ -39,21 +39,6 @@
       </v-col>
     </v-row>
     <v-row wrap>
-      <v-col xs="12" sm="12" md="12" lg="12">
-        <v-row
-          class="mt-4"
-          justify="center"
-          no-gutters
-        >
-          <skill-icon
-            v-for="(skill, i) in skills"
-            :key="i"
-            :skill="skill"
-          />
-        </v-row>
-      </v-col>
-    </v-row>
-    <v-row wrap>
       <v-col cols="12">
         <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
           <i18n path="sections.start" tag="span">
@@ -63,69 +48,21 @@
           </i18n>
         </h1>
       </v-col>
-      <v-col cols="12" lg="7">
-        <p>I started my adventure in the world of development in 2015, programming the first site in php, since then I have been involved in projects both as a developer and sometimes as a project manager, starting from the initial mockup up to the complete realization with the latest technologies, like Vue.js, Nuxt.js and some other languages.</p>
-        <p>I make successful responsive websites, I also have experience with popular open source CMS like (WordPress, Drupal and others). </p>
-      </v-col>
-      <v-col cols="12" lg="5">
-        <div>
-          <b>Front-End</b>
-          <v-progress-linear
-            value="55"
-          ></v-progress-linear>
-          <br>
-          <b>Back-End</b>
-          <v-progress-linear
-            value="80"
-          ></v-progress-linear>
-          <br>
-          <b>Vue.js</b>
-          <v-progress-linear
-            value="55"
-          ></v-progress-linear>
-          <br>
-          <b>Nuxt.js</b>
-          <v-progress-linear
-            value="70"
-          ></v-progress-linear>
-          <br>
-          <b>Node.js</b>
-          <v-progress-linear
-            value="70"
-          ></v-progress-linear>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row wrap>
       <v-col cols="12">
-        <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
-          <i18n path="sections.start" tag="span">
-            <template #section>
-              <span class="primary--text">{{ $t('sections.works') }}</span>
-            </template>
-          </i18n>
-        </h1>
+        <p>Since beginning my journey as a freelance developer nearly 5 years ago, I’ve done remote work for agencies, consulted for startups, and collaborated with talented people to create web products for both business and consumer use. I create successful responsive websites that are fast, easy to use, and built with best practices.</p>
       </v-col>
-      <v-col xs="12" sm="12" md="12" lg="12">
-        <v-item-group active-class="primary">
-          <v-container class="pa-4 text-center">
-            <v-row
-              class="fill-height"
-              align="center"
-              justify="center"
-            >
-              <template v-for="(item, i) in projects">
-                <v-col
-                  :key="i"
-                  cols="12"
-                  md="4"
-                >
-                  <project-card :item="item" />
-                </v-col>
-              </template>
-            </v-row>
-          </v-container>
-        </v-item-group>
+      <v-col cols="12">
+        <v-row
+          class="mt-2 mb-3"
+          justify="center"
+          no-gutters
+        >
+          <skill-icon
+            v-for="(skill, i) in skills"
+            :key="i"
+            :skill="skill"
+          />
+        </v-row>
       </v-col>
     </v-row>
     <v-row wrap>
@@ -151,6 +88,38 @@
           :description="work.description"
           :website="work.website"
         />
+      </v-col>
+    </v-row>
+    <v-row wrap>
+      <v-col cols="12">
+        <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
+          <i18n path="sections.start" tag="span">
+            <template #section>
+              <span id="works" class="primary--text">{{ $t('sections.works') }}</span>
+            </template>
+          </i18n>
+        </h1>
+      </v-col>
+      <v-col xs="12" sm="12" md="12" lg="12">
+        <v-item-group active-class="primary">
+          <v-container class="pa-4 text-center">
+            <v-row
+              class="fill-height"
+              align="center"
+              justify="center"
+            >
+              <template v-for="(item, i) in projects">
+                <v-col
+                  :key="i"
+                  cols="12"
+                  md="4"
+                >
+                  <project-card :item="item" />
+                </v-col>
+              </template>
+            </v-row>
+          </v-container>
+        </v-item-group>
       </v-col>
     </v-row>
   </v-container>
