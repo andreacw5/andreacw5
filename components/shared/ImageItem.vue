@@ -3,6 +3,7 @@
     :alt="altText"
     :height="height"
     :src="imageUrl"
+    :lazy-src="defaultWorkUrl"
     class="grey darken-3"
   >
     <template #placeholder>
@@ -30,11 +31,16 @@ export default {
     },
     altText: {
       type: String,
-      default: 'Immage'
+      default: 'Image'
     },
     height: {
       type: Number,
       default: 300
+    }
+  },
+  computed: {
+    defaultWorkUrl () {
+      return require('~/assets/img/works/default.webp')
     }
   }
 }

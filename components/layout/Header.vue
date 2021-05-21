@@ -9,18 +9,33 @@
       <v-col cols="12">
         <v-app-bar dense class="card">
           <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = true"></v-app-bar-nav-icon>
-          <v-img max-height="40" max-width="40" :src="imageUrl" alt="AT Logo" />
-          <v-app-bar-title>
+          <nuxt-link to="/">
+            <v-img max-height="40" max-width="40" :src="imageUrl" alt="AT Logo" />
+          </nuxt-link>
+          <nuxt-link to="/">
+            <v-app-bar-title>
             <span class="text-uppercase hidden-md-and-up ml-4 white--text">
-              Andrea <span class="primary--text">Tombolato</span>
+              Andrea <span class="primary--text hidden-sm-and-down">Tombolato</span>
             </span>
-          </v-app-bar-title>
+            </v-app-bar-title>
+          </nuxt-link>
           <v-spacer />
-          <v-btn v-for="(link,i) in links" :key="i" text :href="link.url" nuxt class="hidden-sm-and-down up raise">
+          <template v-if="!links">
+            <v-skeleton-loader
+              ref="skeleton"
+              type="button"
+              class="mx-auto"
+            />
+            <v-skeleton-loader
+              ref="skeleton"
+              type="button"
+              class="mx-auto"
+            />
+          </template>
+          <v-btn v-for="(link,i) in links" v-else :key="i" text :href="link.url" nuxt class="hidden-sm-and-down up raise">
             {{ $t(link.name) }}
           </v-btn>
           <v-divider vertical inset class="mr-2 ml-2 hidden-sm-and-down" />
-          <language-menu />
           <v-tooltip bottom>
             <template #activator="{ on, attrs }">
               <v-btn
@@ -76,6 +91,11 @@
               </v-list-item>
             </v-list-item-group>
           </v-list>
+          <template #append>
+            <div class="pa-2">
+              <v-btn block @click="drawer = false">Logout</v-btn>
+            </div>
+          </template>
         </v-navigation-drawer>
       </v-col>
     </v-row>
@@ -84,9 +104,7 @@
 
 <script>
 import navigation from '@/static/data/navigation'
-import LanguageMenu from './LanguageMenu'
 export default {
-  components: { LanguageMenu },
   data: () => ({
     links: navigation.links,
     drawer: false,

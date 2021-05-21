@@ -37,24 +37,65 @@
           </i18n>
         </div>
       </v-col>
-      <v-col xs="12" sm="12" md="12" lg="12">
+    </v-row>
+    <v-row wrap>
+      <v-col cols="12">
+        <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
+          <i18n path="sections.start" tag="span">
+            <template #section>
+              <span class="primary--text">{{ $t('sections.about.skills') }}</span>
+            </template>
+          </i18n>
+        </h1>
+      </v-col>
+      <v-col cols="12">
+        <p>Since starting my journey as a developer nearly 5 years ago, I have partnered with talented people and worked on numerous projects to create web products for both corporate and consumer use. I create successful responsive websites that are fast, easy to use, and built with best practices.</p>
+      </v-col>
+      <v-col cols="12">
         <v-row
-          class="mt-4"
+          class="mt-2 mb-3"
           justify="center"
           no-gutters
         >
-          <skills-area
+          <skill-icon
             v-for="(skill, i) in skills"
             :key="i"
             :skill="skill"
           />
         </v-row>
       </v-col>
+    </v-row>
+    <v-row wrap>
       <v-col cols="12">
         <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
           <i18n path="sections.start" tag="span">
             <template #section>
-              <span class="primary--text">{{ $t('sections.works') }}</span>
+              <span class="primary--text">{{ $t('sections.about.experience') }}</span>
+            </template>
+          </i18n>
+        </h1>
+      </v-col>
+      <v-col
+        v-for="(work, i) in works"
+        :key="i"
+        cols="12"
+        lg="6"
+      >
+        <work-card
+          :title="work.title"
+          :company="work.company"
+          :period="work.period"
+          :description="work.description"
+          :website="work.website"
+        />
+      </v-col>
+    </v-row>
+    <v-row wrap>
+      <v-col cols="12">
+        <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
+          <i18n path="sections.start" tag="span">
+            <template #section>
+              <span id="works" class="primary--text">{{ $t('sections.works') }}</span>
             </template>
           </i18n>
         </h1>
@@ -73,25 +114,7 @@
                   cols="12"
                   md="4"
                 >
-                  <v-hover v-slot="{ hover }">
-                    <v-card
-                      :elevation="hover ? 22 : 2"
-                      :class="{ 'on-hover': !hover }"
-                    >
-                      <v-img
-                        :src="wipUrl"
-                        height="225px"
-                      >
-                        <v-expand-transition>
-                          <v-card v-if="hover" style="height: 100%;" class="transition-fast-in-fast-out primary darken-2 v-card--reveal white--text">
-                            <v-card-title>
-                              {{ item.title }}
-                            </v-card-title>
-                          </v-card>
-                        </v-expand-transition>
-                      </v-img>
-                    </v-card>
-                  </v-hover>
+                  <project-card :item="item" />
                 </v-col>
               </template>
             </v-row>
@@ -103,40 +126,37 @@
 </template>
 
 <script>
-import project from '@/static/data/project'
 import skill from '@/static/data/skills'
 import socials from '@/static/data/socials'
-import SkillsArea from '../components/SkillsArea'
+import about from '@/static/data/about'
+import SkillIcon from '../components/SkillIcon'
 import ImageItem from '../components/shared/ImageItem'
+import ProjectCard from '../components/ProjectCard'
+import WorkCard from '../components/about/WorkCard'
 export default {
-  components: { ImageItem, SkillsArea },
+  components: { WorkCard, ProjectCard, ImageItem, SkillIcon },
   data: () => ({
-    projects: project.projects,
     skills: skill.skills,
+    works: about.works,
     socials
   }),
   computed: {
     imageUrl () {
       return require('~/assets/img/profile.webp')
     },
-    wipUrl () {
-      return require('~/assets/img/wip.webp')
+    projects () {
+      return this.$store.state.projects.projects
     }
   }
 }
 </script>
 
 <style scoped>
-.on-hover {
-  opacity: 0.7;
+
+.group {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
 }
 
-.v-card--reveal {
-  align-items: center;
-  bottom: 0;
-  justify-content: center;
-  opacity: .9;
-  position: absolute;
-  width: 100%;
-}
 </style>
