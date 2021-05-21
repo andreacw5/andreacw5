@@ -49,7 +49,7 @@
         </h1>
       </v-col>
       <v-col cols="12">
-        <p>Since beginning my journey as a freelance developer nearly 5 years ago, I’ve done remote work for agencies, consulted for startups, and collaborated with talented people to create web products for both business and consumer use. I create successful responsive websites that are fast, easy to use, and built with best practices.</p>
+        <p>Since starting my journey as a developer nearly 5 years ago, I have partnered with talented people and worked on numerous projects to create web products for both corporate and consumer use. I create successful responsive websites that are fast, easy to use, and built with best practices.</p>
       </v-col>
       <v-col cols="12">
         <v-row

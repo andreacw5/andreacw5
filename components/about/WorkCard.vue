@@ -10,7 +10,7 @@
       {{ company }}
     </v-card-subtitle>
     <v-card-actions>
-      <span class="ml-4 white--text">
+      <span class="ml-4 card-text">
         {{ period }}
       </span>
       <v-spacer />
