@@ -10,8 +10,9 @@
 #### About me
 - 👨‍💻 I’m currently working as Board member at [Element Gaming](http://https://www.element-gaming.eu) & Developer at [Medas Solutions](https://medas-solutions.it/).
 - 🚣 Volunteer for [civil protection](https://comune.settimomilanese.mi.it/category/protezione-civile/).
-- :man_scientist: [INFJ-A](https://www.16personalities.com/infj-personality) personality
+- 👮 [INFJ-A](https://www.16personalities.com/infj-personality) personality
 - 📫 reach me on [my linkedin page](https://www.linkedin.com/in/andrea-tombolato-57147986/).
+- 🌐 Visit my website at [andreacw.dev](https://andreacw.dev) for more info!
 
 ---
 
@@ -36,17 +37,5 @@
 * infrastructure:
 ![heroku](https://img.shields.io/badge/-Heroku-black?style=flat-square&logo=heroku)
 ![docker](https://img.shields.io/badge/-Docker-black?style=flat-square&logo=docker)
-
----
-
-<!--START_SECTION:waka-->
-```text
-PHP          23 hrs 53 mins  ████████████████▓░░░░░░░░   66.70 % 
-JavaScript   2 hrs 59 mins   ██░░░░░░░░░░░░░░░░░░░░░░░   08.35 % 
-C++          2 hrs 31 mins   █▓░░░░░░░░░░░░░░░░░░░░░░░   07.05 % 
-Other        1 hr 40 mins    █▒░░░░░░░░░░░░░░░░░░░░░░░   04.67 % 
-Bash         1 hr 26 mins    █░░░░░░░░░░░░░░░░░░░░░░░░   04.04 % 
-```
-<!--END_SECTION:waka-->
 
 ---
