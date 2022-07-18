@@ -8,38 +8,18 @@
       </p>
     <![endif]-->
 
-    <v-main>
-      <ul class="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-      <v-container>
-        <v-layout column justify-center align-center>
-          <Header @toggleDarkMode="toggleDarkMode" />
-          <nuxt />
-        </v-layout>
-      </v-container>
+    <v-main class="gradient">
+      <Header @toggleDarkMode="toggleDarkMode" />
+      <nuxt />
     </v-main>
-    <fab-to-top />
-    <Footer />
   </v-app>
 </template>
 
 <script>
-import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
-import FabToTop from '../components/layout/FabToTop'
 export default {
   name: 'DefaultLayout',
-  components: { FabToTop, Footer, Header },
+  components: { Header },
   head: {
     titleTemplate: '%s'
   },
@@ -58,3 +38,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.back {
+  background: url("https://helm.sh/img/topography.png") repeat scroll left top;
+}
+</style>

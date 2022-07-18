@@ -1,23 +1,11 @@
 <template>
   <v-container grid-list-md text-xs-center>
     <v-row wrap>
-      <v-col cols="12" class="hidden-sm-and-down">
-        <h1 class="text-uppercase" style="font-size: xxx-large; font-weight: bolder">
-          Andrea <span class="primary--text">Tombolato</span>
-        </h1>
-      </v-col>
       <v-col cols="12">
-        <v-app-bar dense class="card">
+        <v-app-bar class="secondary-border mt-3 card" style="border-radius: 10px;">
           <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = true"></v-app-bar-nav-icon>
           <nuxt-link to="/">
             <v-img max-height="40" max-width="40" :src="imageUrl" alt="AT Logo" />
-          </nuxt-link>
-          <nuxt-link to="/">
-            <v-app-bar-title>
-            <span class="text-uppercase hidden-md-and-up ml-4 white--text">
-              Andrea <span class="primary--text hidden-sm-and-down">Tombolato</span>
-            </span>
-            </v-app-bar-title>
           </nuxt-link>
           <v-spacer />
           <template v-if="!links">
@@ -32,10 +20,44 @@
               class="mx-auto"
             />
           </template>
-          <v-btn v-for="(link,i) in links" v-else :key="i" text :href="link.url" nuxt class="hidden-sm-and-down up raise">
+          <v-btn v-for="(link,i) in links" v-else :key="i" text :to="link.url" nuxt class="hidden-sm-and-down up raise white-text mr-1">
             {{ $t(link.name) }}
           </v-btn>
-          <v-divider vertical inset class="mr-2 ml-2 hidden-sm-and-down" />
+          <v-divider vertical inset class="mr-2 ml-2 hidden-sm-and-down white-text" />
+          <v-tooltip bottom>
+            <template #activator="{ on, attrs }">
+              <v-btn
+                v-bind="attrs"
+                icon
+                href="https://github.com/andreacw5"
+                target="_blank"
+                alt-text="Github profile"
+                v-on="on"
+              >
+                <v-icon size="27" class="white-text">
+                  mdi-github
+                </v-icon>
+              </v-btn>
+            </template>
+            <span>{{ $t('socials.prefix', { name: 'Github' }) }}</span>
+          </v-tooltip>
+          <v-tooltip bottom>
+            <template #activator="{ on, attrs }">
+              <v-btn
+                v-bind="attrs"
+                icon
+                href="https://www.linkedin.com/in/atombolato"
+                target="_blank"
+                alt-text="Linkedin profile"
+                v-on="on"
+              >
+                <v-icon size="27" class="white-text">
+                  mdi-linkedin
+                </v-icon>
+              </v-btn>
+            </template>
+            <span>{{ $t('socials.prefix', { name: 'Linkedin' }) }}</span>
+          </v-tooltip>
           <v-tooltip bottom>
             <template #activator="{ on, attrs }">
               <v-btn
@@ -45,10 +67,10 @@
                 v-on="on"
                 @click="toggleDarkMode"
               >
-                <v-icon v-if="isDarkMode()" size="27">
+                <v-icon v-if="isDarkMode()" size="27" class="white-text">
                   mdi-lightbulb-outline
                 </v-icon>
-                <v-icon v-else size="27">
+                <v-icon v-else size="27" class="white-text">
                   mdi-lightbulb-on
                 </v-icon>
               </v-btn>
@@ -69,7 +91,7 @@
               </v-list-item-avatar>
 
               <v-list-item-content>
-                <v-list-item-title>Andrea <span class="primary--text">Tombolato</span></v-list-item-title>
+                <v-list-item-title>Andrea <span class="primary-text">Tombolato</span></v-list-item-title>
                 <v-list-item-subtitle>Web Developer</v-list-item-subtitle>
               </v-list-item-content>
             </v-list-item>
@@ -81,7 +103,7 @@
           >
             <v-list-item-group
               v-model="group"
-              active-class="primary--text text--accent-4"
+              active-class="primary-text text--accent-4"
             >
               <v-list-item v-for="(link,i) in links" :key="i" :href="link.url" nuxt>
                 <v-list-item-icon>

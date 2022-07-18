@@ -1,17 +1,17 @@
 <template>
-  <v-container grid-list-md text-xs-center>
-    <v-row wrap>
-      <v-col xs="12" sm="12" md="5" lg="5">
-        <v-card
-          class="d-flex align-center ml-3"
-          dark
-        >
-          <image-item alt-text="Intro image" :image-url="imageUrl" :height="290" />
-        </v-card>
-      </v-col>
-      <v-col xs="12" sm="12" md="7" lg="7">
-        <h2 class="mb-2 mt-2">{{ $t('greetings') }}</h2>
-        <div>
+  <!-- Loading -->
+  <loading-component v-if="loading" />
+  <!-- Page content -->
+  <div v-else>
+    <v-container grid-list-sm text-xs-center class="mt-10">
+      <v-row wrap>
+        <v-col xs="12" sm="12" md="5" lg="5" order-lg="2">
+          <div class="d-flex align-center ml-3">
+            <image-item alt-text="Intro image" image-url="https://firebasestorage.googleapis.com/v0/b/pw-9483234.appspot.com/o/IMG_1104.jpg?alt=media&token=d226d956-bc7f-40b7-aed5-4c5356227449" :height="290" />
+          </div>
+        </v-col>
+        <v-col xs="12" sm="12" md="7" lg="7" order-lg="1">
+          <h1 class="mb-2 mt-1 large-title">Hi there!</h1>
           <i18n path="intro.welcome" tag="p">
             <template #name>
               <b>Andrea Tombolato</b>
@@ -20,6 +20,28 @@
               <b>andreacw</b>
             </template>
           </i18n>
+          <i18n path="intro.extension" tag="p">
+            <template #first>
+              <b class="primary-text">Node.js</b>
+            </template>
+            <template #second>
+              <b class="primary-text">Javascript</b>
+            </template>
+            <template #third>
+              <b class="primary-text">Nuxt.js</b>
+            </template>
+          </i18n>
+          <div class="mt-5">
+            <v-btn large color="primary card-text" nuxt to="/projects">I miei progetti</v-btn>
+            <v-btn large class="secondary-color secondary-border" text outlined href="#contacts">Contattami</v-btn>
+          </div>
+        </v-col>
+      </v-row>
+      <v-row wrap>
+        <v-col cols="12">
+          <h1 class="text-uppercase mt-5 large-title" style="font-size: x-large; font-weight: bolder">
+            {{ $t('common.prefix.abt') }} <span class="primary-text">me</span>
+          </h1>
           <i18n path="intro.resume" tag="p">
             <template #medas>
               <a href="https://medas-solutions.it" target="_blank">Medas Solutions</a>
@@ -35,94 +57,92 @@
               </a>
             </template>
           </i18n>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row wrap>
-      <v-col cols="12">
-        <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
-          <i18n path="sections.start" tag="span">
-            <template #section>
-              <span class="primary--text">{{ $t('sections.about.skills') }}</span>
-            </template>
-          </i18n>
-        </h1>
-      </v-col>
-      <v-col cols="12">
-        <p>Since starting my journey as a developer nearly 5 years ago, I have partnered with talented people and worked on numerous projects to create web products for both corporate and consumer use. I create successful responsive websites that are fast, easy to use, and built with best practices.</p>
-      </v-col>
-      <v-col cols="12">
-        <v-row
-          class="mt-2 mb-3"
-          justify="center"
-          no-gutters
-        >
-          <skill-icon
-            v-for="(skill, i) in skills"
-            :key="i"
-            :skill="skill"
-          />
-        </v-row>
-      </v-col>
-    </v-row>
-    <v-row wrap>
-      <v-col cols="12">
-        <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
-          <i18n path="sections.start" tag="span">
-            <template #section>
-              <span class="primary--text">{{ $t('sections.about.experience') }}</span>
-            </template>
-          </i18n>
-        </h1>
-      </v-col>
-      <v-col
-        v-for="(work, i) in works"
-        :key="i"
-        cols="12"
-        lg="6"
-      >
-        <work-card
-          :title="work.title"
-          :company="work.company"
-          :period="work.period"
-          :description="work.description"
-          :website="work.website"
-        />
-      </v-col>
-    </v-row>
-    <v-row wrap>
-      <v-col cols="12">
-        <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
-          <i18n path="sections.start" tag="span">
-            <template #section>
-              <span id="works" class="primary--text">{{ $t('sections.works') }}</span>
-            </template>
-          </i18n>
-        </h1>
-      </v-col>
-      <v-col xs="12" sm="12" md="12" lg="12">
-        <v-item-group active-class="primary">
-          <v-container class="pa-4 text-center">
-            <v-row
-              class="fill-height"
-              align="center"
-              justify="center"
-            >
-              <template v-for="(item, i) in projects">
-                <v-col
-                  :key="i"
-                  cols="12"
-                  md="4"
-                >
-                  <project-card :item="item" />
-                </v-col>
+        </v-col>
+        <v-col cols="12">
+          <v-row
+            class="mt-2 mb-3"
+            justify="center"
+            no-gutters
+          >
+            <skill-icon
+              v-for="(skill, i) in skills"
+              :key="i"
+              :skill="skill"
+            />
+          </v-row>
+        </v-col>
+      </v-row>
+      <v-row wrap>
+        <v-col cols="12">
+          <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
+            What <span class="primary-text">I do</span>
+          </h1>
+        </v-col>
+        <v-col cols="12" md="4">
+          <div class="services">
+            <v-icon x-large class="mb-2 white-text">mdi-code-json</v-icon>
+            <h3 class="text-uppercase mb-2  white-text">Web Development</h3>
+            <p class="secondary-color">If you already have an existing design, I can help transform it into a fast, responsive & SEO-friendly website.</p>
+          </div>
+        </v-col>
+        <v-col cols="12" md="4">
+          <div class="services">
+            <v-icon x-large class="mb-2 white-text">mdi-palette-swatch-variant</v-icon>
+            <h3 class="text-uppercase mb-2  white-text">UI/UX Design</h3>
+            <p class="secondary-color">I can design your next beautiful website based on existing content, or even redesign your current to improve conversions.</p>
+          </div>
+        </v-col>
+        <v-col cols="12" md="4">
+          <div class="services">
+            <v-icon x-large class="mb-2 white-text">mdi-clipboard-check-multiple</v-icon>
+            <h3 class="text-uppercase mb-2 white-text">Project</h3>
+            <p class="secondary-color">Setup project  </p>
+          </div>
+        </v-col>
+      </v-row>
+      <v-row wrap>
+        <v-col cols="12">
+          <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
+            <i18n path="sections.start" tag="span">
+              <template #section>
+                <span class="primary-text">{{ $t('sections.about.experience') }}</span>
               </template>
-            </v-row>
-          </v-container>
-        </v-item-group>
-      </v-col>
-    </v-row>
-  </v-container>
+            </i18n>
+          </h1>
+        </v-col>
+        <v-col
+          v-for="(work, i) in works"
+          :key="i"
+          cols="12"
+          lg="6"
+        >
+          <work-card
+            :title="work.title"
+            :company="work.company"
+            :period="work.period"
+            :description="work.description"
+            :website="work.website"
+          />
+        </v-col>
+      </v-row>
+      <v-row class="mb-4" wrap id="contacts">
+        <v-col cols="12">
+          <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
+            Want to  <span class="primary-text">work together?</span>
+          </h1>
+        </v-col>
+        <v-col cols="12">
+          <p>
+            If you wanna get in touch, talk to me about a project collaboration or just say hi, send an email to
+            <a href="mailto:andreacw96@gmail.com">andreacw96@gmail.com</a> or find me on socials.
+          </p>
+        </v-col>
+        <v-col cols="12">
+          <socials-buttons :socials="socials" />
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
 </template>
 
 <script>
@@ -133,17 +153,16 @@ import SkillIcon from '../components/SkillIcon'
 import ImageItem from '../components/shared/ImageItem'
 import ProjectCard from '../components/ProjectCard'
 import WorkCard from '../components/about/WorkCard'
+import LoadingComponent from "@/components/Loading";
 export default {
-  components: { WorkCard, ProjectCard, ImageItem, SkillIcon },
+  components: {LoadingComponent, WorkCard, ProjectCard, ImageItem, SkillIcon },
   data: () => ({
     skills: skill.skills,
     works: about.works,
-    socials
+    socials: socials.one,
+    loading: false
   }),
   computed: {
-    imageUrl () {
-      return require('~/assets/img/profile.webp')
-    },
     projects () {
       return this.$store.state.projects.projects
     }
@@ -152,11 +171,11 @@ export default {
 </script>
 
 <style scoped>
-
-.group {
-  display: flex;
-  flex: 1;
-  justify-content: space-around;
+.large-title {
+  font-size: 3rem;
 }
-
+.services {
+  margin-right: 10px;
+  margin-left: 10px;
+}
 </style>

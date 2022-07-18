@@ -1,11 +1,11 @@
 <template>
   <v-card
     elevation="2"
+    dense
+    class="secondary-border card"
     outlined
-    tile
-    class="card"
   >
-    <v-card-title class="display-5 primary--text">{{ title }}</v-card-title>
+    <v-card-title class="display-5 primary-text">{{ title }}</v-card-title>
     <v-card-subtitle>
       {{ company }}
     </v-card-subtitle>
