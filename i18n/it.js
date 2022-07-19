@@ -21,21 +21,21 @@ module.exports = {
     hobbies: 'Nel mio tempo libero sono un volontario della {prociv}, mi dedico ai videogames e qualche volta alle serie TV.'
   },
   expiriences: {
-    title: 'Esperienze lavorative',
+    title: 'Esperienze lavorative'
   },
   services: {
     title: 'Servizi',
     web: {
       title: 'Web Development',
-      description: 'Creo siti web personalizzati, in base alle esigenze del cliente con le tecnologie più recenti.',
+      description: 'Creo siti web personalizzati, in base alle esigenze del cliente con le tecnologie più recenti.'
     },
     ux: {
       title: 'UI/UX Design',
-      description: 'Realizzo siti web con attenzione al design e alla qualità del prodotto.',
+      description: 'Realizzo siti web con attenzione al design e alla qualità del prodotto.'
     },
     projects: {
       title: 'Progetti',
-      description: 'Progetto il lavoro secondo strategie agile, mostrando al cliente il risultato in corso d\'opera per prevenire errori.',
+      description: 'Progetto il lavoro secondo strategie agile, mostrando al cliente il risultato in corso d\'opera per prevenire errori.'
     }
   },
   validations: {
@@ -45,7 +45,7 @@ module.exports = {
   contacts: {
     title: 'lavorare con me?',
     description: 'Se vuoi entrare in contatto con me, scrivimi all\'indirizzo email',
-    ending: 'o cercami tramite i miei social network.',
+    ending: 'o cercami tramite i miei social network.'
   },
   sections: {
     home: 'Home',

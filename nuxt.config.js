@@ -112,13 +112,13 @@ export default {
 
   firebase: {
     config: {
-      apiKey: "AIzaSyDa5vP7y1XWwAbyoj8EJG_NA0zgTrSX-m0",
-      authDomain: "pw-9483234.firebaseapp.com",
-      projectId: "pw-9483234",
-      storageBucket: "pw-9483234.appspot.com",
-      messagingSenderId: "152708470086",
-      appId: "1:152708470086:web:8ba318bc59111f0f0b0147",
-      measurementId: "G-DWYWYGE1BG"
+      apiKey: 'AIzaSyDa5vP7y1XWwAbyoj8EJG_NA0zgTrSX-m0',
+      authDomain: 'pw-9483234.firebaseapp.com',
+      projectId: 'pw-9483234',
+      storageBucket: 'pw-9483234.appspot.com',
+      messagingSenderId: '152708470086',
+      appId: '1:152708470086:web:8ba318bc59111f0f0b0147',
+      measurementId: 'G-DWYWYGE1BG'
     },
     services: {
       firestore: true,

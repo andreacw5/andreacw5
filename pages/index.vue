@@ -121,7 +121,7 @@
           />
         </v-col>
       </v-row>
-      <v-row class="mb-4" wrap id="contacts">
+      <v-row id="contacts" class="mb-4" wrap>
         <v-col cols="12">
           <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
             {{ $t('common.prefix.wrk') }} <span class="primary-text">{{ $t('contacts.title') }}</span>
@@ -141,28 +141,22 @@
 </template>
 
 <script>
-import skill from '@/static/data/skills'
-import socials from '@/static/data/socials'
-import about from '@/static/data/about'
 import SkillIcon from '../components/SkillIcon'
 import ImageItem from '../components/shared/ImageItem'
-import ProjectCard from '../components/ProjectCard'
 import WorkCard from '../components/about/WorkCard'
-import LoadingComponent from "@/components/Loading";
-import { createSEOMeta } from "~/utils/seo";
+import about from '@/static/data/about'
+import socials from '@/static/data/socials'
+import skill from '@/static/data/skills'
+import LoadingComponent from '@/components/Loading'
+import { createSEOMeta } from '~/utils/seo'
 export default {
-  components: {LoadingComponent, WorkCard, ProjectCard, ImageItem, SkillIcon },
+  components: { LoadingComponent, WorkCard, ImageItem, SkillIcon },
   data: () => ({
     skills: skill.skills,
     works: about.works,
     socials: socials.one,
     loading: false
   }),
-  computed: {
-    projects () {
-      return this.$store.state.projects.projects
-    }
-  },
   head () {
     return {
       title: 'Home - Andrea Tombolato',
@@ -174,6 +168,11 @@ export default {
           image: 'https://firebasestorage.googleapis.com/v0/b/pw-9483234.appspot.com/o/IMG_1104.jpg?alt=media&token=d226d956-bc7f-40b7-aed5-4c5356227449'
         })
       ]
+    }
+  },
+  computed: {
+    projects () {
+      return this.$store.state.projects.projects
     }
   }
 }

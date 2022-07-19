@@ -38,32 +38,17 @@
 </template>
 
 <script>
-import LoadingComponent from "~/components/Loading";
-import { createSEOMeta } from "@/utils/seo";
+import LoadingComponent from '~/components/Loading'
+import { createSEOMeta } from '@/utils/seo'
 export default {
-  name: "workListIndex",
+  name: 'WorkListIndex',
   components: {
     LoadingComponent
   },
-  data() {
+  data () {
     return {
       loading: false,
       projects: []
-    };
-  },
-  created() {
-    this.loading = true;
-    this.getProjects();
-  },
-  methods: {
-    getProjects () {
-      this.$fire.firestore.collection('projects').get().then(resp => {
-        const respData = resp.docs.map(doc => doc.data());
-        this.projects = respData.sort((a, b) => {
-          return b.startDate - a.startDate;
-        });
-        this.loading = false;
-      })
     }
   },
   head () {
@@ -77,6 +62,21 @@ export default {
           image: 'https://firebasestorage.googleapis.com/v0/b/pw-9483234.appspot.com/o/IMG_1104.jpg?alt=media&token=d226d956-bc7f-40b7-aed5-4c5356227449'
         })
       ]
+    }
+  },
+  created () {
+    this.loading = true
+    this.getProjects()
+  },
+  methods: {
+    getProjects () {
+      this.$fire.firestore.collection('projects').get().then((resp) => {
+        const respData = resp.docs.map(doc => doc.data())
+        this.projects = respData.sort((a, b) => {
+          return b.startDate - a.startDate
+        })
+        this.loading = false
+      })
     }
   }
 }

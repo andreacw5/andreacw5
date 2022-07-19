@@ -1,9 +1,9 @@
 import Vue from 'vue'
-import {format, fromUnixTime} from 'date-fns'
+import { format, fromUnixTime } from 'date-fns'
 import { it } from 'date-fns/locale'
 const { utcToZonedTime } = require('date-fns-tz')
 
-export default ({}) => {
+export default () => {
   Vue.filter('formatDate', (value, filterFormat) => {
     if (value) {
       const date = fromUnixTime(value)

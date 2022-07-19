@@ -33,7 +33,7 @@
 
 <script>
 export default {
-  name: "SocialsButtons",
+  name: 'SocialsButtons',
   props: {
     socials: {
       type: Array,
@@ -47,7 +47,6 @@ export default {
   }
 }
 </script>
-
 
 <style scoped>
 

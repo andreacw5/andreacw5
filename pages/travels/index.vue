@@ -29,34 +29,32 @@
 </template>
 
 <script>
-import LoadingComponent from "~/components/Loading";
-import ImageItem from "@/components/shared/ImageItem";
-import TravelListCard from "@/components/travels/TravelListCard";
+import LoadingComponent from '~/components/Loading'
+import TravelListCard from '@/components/travels/TravelListCard'
 export default {
-  name: "travelListIndex",
+  name: 'TravelListIndex',
   components: {
     TravelListCard,
-    ImageItem,
     LoadingComponent
   },
-  data() {
+  data () {
     return {
       loading: false,
       travels: []
-    };
+    }
   },
-  created() {
-    this.loading = true;
-    this.getTravels();
+  created () {
+    this.loading = true
+    this.getTravels()
   },
   methods: {
     getTravels () {
-      this.$fire.firestore.collection('travels').get().then(resp => {
-        const respData = resp.docs.map(doc => doc.data());
+      this.$fire.firestore.collection('travels').get().then((resp) => {
+        const respData = resp.docs.map(doc => doc.data())
         this.travels = respData.sort((a, b) => {
-          return b.startDate - a.startDate;
-        });
-        this.loading = false;
+          return b.startDate - a.startDate
+        })
+        this.loading = false
       })
     }
   }
