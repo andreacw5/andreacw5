@@ -20,27 +20,27 @@
 </template>
 
 <script>
-import LoadingComponent from "~/components/Loading";
+import LoadingComponent from '~/components/Loading'
 export default {
-  name: "singleWorkPage",
+  name: 'SingleWorkPage',
   components: {
     LoadingComponent
   },
-  data() {
+  data () {
     return {
       loading: false,
       project: {}
-    };
+    }
   },
-  created() {
-    this.loading = true;
-    this.getProject();
+  created () {
+    this.loading = true
+    this.getProject()
   },
   methods: {
     getProject () {
-      this.$fire.firestore.collection('projects').where('slug', '==', this.$route.params.slug).get().then(resp => {
-        this.project = resp.docs.map(doc => doc.data())[0];
-        this.loading = false;
+      this.$fire.firestore.collection('projects').where('slug', '==', this.$route.params.slug).get().then((resp) => {
+        this.project = resp.docs.map(doc => doc.data())[0]
+        this.loading = false
       })
     }
   }

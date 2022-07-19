@@ -4,7 +4,7 @@
       <v-row wrap>
         <v-col cols="12" md="6">
           <div class="pa-2">
-            <image-item :imageUrl="item.src" alt-text="Project image" :height="300" class="project-image" />
+            <image-item :image-url="item.src" alt-text="Project image" :height="300" class="project-image" />
           </div>
         </v-col>
         <v-col cols="12" md="6">
@@ -13,12 +13,12 @@
               {{ item.title }}
               <span>
                 <v-tooltip v-if="item.technical.main" top>
-                  <template v-slot:activator="{ on }">
+                  <template #activator="{ on }">
                     <v-btn
-                      v-on="on"
                       :color="item.technical.main.color"
                       class="transition pb-1"
                       icon
+                      v-on="on"
                     >
                       <v-icon large>{{ item.technical.main.icon }}</v-icon>
                     </v-btn>
@@ -42,14 +42,14 @@
             </div>
             <div class="mb-2">
               <div class="text-body-1 font-weight-bold">{{ $t('projects.technologies') }}</div>
-              <v-tooltip top v-for="(lang,i) in item.technical.technologies" :key="i">
+              <v-tooltip v-for="(lang,i) in item.technical.technologies" :key="i" top>
                 <template #activator="{ on }">
                   <v-btn
                     icon
                     href="website"
                     target="_blank"
-                    v-on="on"
                     class="ma-1 transition icon"
+                    v-on="on"
                   >
                     <v-icon>{{lang.icon}}</v-icon>
                   </v-btn>
@@ -82,8 +82,8 @@
             outlined
             :href="item.github"
             target="_blank"
-            v-on="on"
             class="ml-2"
+            v-on="on"
           >
             <v-icon>mdi-github</v-icon>
           </v-btn>
@@ -96,8 +96,8 @@
             outlined
             nuxt
             :to="{ path: '/projects/' + item.slug }"
-            v-on="on"
             class="ml-2"
+            v-on="on"
           >
             {{ $t('projects.study_case') }}
           </v-btn>
@@ -109,10 +109,10 @@
 </template>
 
 <script>
-import ImageItem from "@/components/shared/ImageItem";
+import ImageItem from '@/components/shared/ImageItem'
 export default {
   name: 'ProjectCard',
-  components: {ImageItem},
+  components: { ImageItem },
 
   props: {
     item: {

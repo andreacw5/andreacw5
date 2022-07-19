@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "loadingComponent"
+  name: 'Loading'
 }
 </script>
 

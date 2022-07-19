@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "TravelListCard",
+  name: 'TravelListCard',
   props: {
     travel: {
       type: Object,
