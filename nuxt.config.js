@@ -7,10 +7,10 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s',
-    title: 'Andrea Tombolato',
+    titleTemplate: '%s - Andrea Tombolato',
+    title: 'Home',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'it'
     },
     meta: [
       { charset: 'utf-8' },
@@ -36,7 +36,7 @@ export default {
       { rel: 'apple-touch-icon', sizes: '144x144', href: 'icons/apple-icon-144x144.png' },
       { rel: 'apple-touch-icon', sizes: '152x152', href: 'icons/apple-icon-152x152.png' },
       { rel: 'apple-touch-icon', sizes: '180x180', href: 'icons/apple-icon-180x180.png' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Rubik&display=swap' }
     ]
   },
 
@@ -52,19 +52,21 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    { src: '~/filters/formatDate.js' }
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
     '@nuxtjs/color-mode',
-    'nuxt-i18n'
+    '@nuxtjs/firebase',
+    'nuxt-i18n',
+    '@nuxtjs/sitemap'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -89,17 +91,57 @@ export default {
     linkActiveClass: 'active-link'
   },
 
+  // Color mode configuration
+  colorMode: {
+    preference: 'dark',
+    fallback: 'dark'
+  },
+
   // I18N Configuration
   i18n: {
     locales: [
       { code: 'en', iso: 'en-US', file: 'en.js' },
       { code: 'it', iso: 'it-IT', file: 'it.js' }
     ],
-    defaultLocale: 'en',
+    defaultLocale: 'it',
     vueI18n: {
       fallbackLocale: 'en',
       messages: { en, it }
     }
+  },
+
+  firebase: {
+    config: {
+      apiKey: "AIzaSyDa5vP7y1XWwAbyoj8EJG_NA0zgTrSX-m0",
+      authDomain: "pw-9483234.firebaseapp.com",
+      projectId: "pw-9483234",
+      storageBucket: "pw-9483234.appspot.com",
+      messagingSenderId: "152708470086",
+      appId: "1:152708470086:web:8ba318bc59111f0f0b0147",
+      measurementId: "G-DWYWYGE1BG"
+    },
+    services: {
+      firestore: true,
+      storage: true
+    },
+    firestore: {
+      memoryOnly: false, // default
+      chunkName: process.env.NODE_ENV !== 'production' ? 'firebase-auth' : '[id]', // default
+      enablePersistence: true,
+      emulatorPort: 8080,
+      emulatorHost: 'localhost'
+    }
+  },
+
+  // Sitemap Configuration
+  sitemap: {
+    hostname: 'https://andreacw.dev',
+    gzip: true,
+    routes: [
+      '/',
+      '/projects',
+      '/travels'
+    ]
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

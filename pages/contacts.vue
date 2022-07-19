@@ -5,7 +5,7 @@
         <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
           <i18n path="sections.contact.end" tag="span">
             <template #contact>
-              <span class="primary--text">{{ $t('sections.contact.title') }}</span>
+              <span class="primary-text">{{ $t('sections.contact.title') }}</span>
             </template>
           </i18n>
         </h1>
@@ -13,10 +13,7 @@
     </v-row>
     <v-row wrap>
       <v-col cols="12">
-        <p>
-          If you wanna get in touch, talk to me about a project collaboration or just say hi, fill up the awesome form below or send an email to
-          <a href="mailto:andreacw96@gmail.com">andreacw96@gmail.com</a> and talk.
-        </p>
+        v
       </v-col>
       <v-col cols="12" lg="7">
         <v-card

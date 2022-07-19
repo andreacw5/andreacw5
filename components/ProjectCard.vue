@@ -1,50 +1,119 @@
 <template>
-  <v-hover v-slot="{ hover }">
-    <v-card
-      :elevation="hover ? 40 : 2"
-      :class="{ 'on-hover': !hover }"
-    >
-      <v-list-item>
-        <div class="special-channel-bg" :style="bannerBackground" />
-        <v-list-item-content>
-          <v-list-item-title class="streamer-name text-center pt-7 pb-7" style="min-height: 150px">
-          </v-list-item-title>
-          <v-list-item-subtitle class="d-flex align-center mt-2">
-            <v-spacer />
-            <v-chip v-if="item.technical">
-              <span class="group">
-                <v-icon
-                  v-for="(icon,i) in item.technical.icons"
-                  :key="i"
-                  class="ma-1"
-                >
-                  {{icon}}
-                </v-icon>
+  <v-card class="secondary-border card">
+    <v-container grid-list-md text-xs-center style="padding-bottom: 0">
+      <v-row wrap>
+        <v-col cols="12" md="6">
+          <div class="pa-2">
+            <image-item :imageUrl="item.src" alt-text="Project image" :height="300" class="project-image" />
+          </div>
+        </v-col>
+        <v-col cols="12" md="6">
+          <div class="text-left">
+            <h1 class="text-uppercase mt-2 text-left" style="font-size: xx-large; font-weight: bolder">
+              {{ item.title }}
+              <span>
+                <v-tooltip v-if="item.technical.main" top>
+                  <template v-slot:activator="{ on }">
+                    <v-btn
+                      v-on="on"
+                      :color="item.technical.main.color"
+                      class="transition pb-1"
+                      icon
+                    >
+                      <v-icon large>{{ item.technical.main.icon }}</v-icon>
+                    </v-btn>
+                  </template>
+                  <span>{{ $t('projects.main_tech') }}</span>
+                </v-tooltip>
               </span>
-            </v-chip>
-            <v-spacer />
-            </v-list-item-subtitle>
-          </v-list-item-content>
-      </v-list-item>
-      <v-expand-transition>
-        <v-card v-if="hover" style="height: 100%;" class="transition-fast-in-fast-out gray darken-2 v-card--reveal white--text">
-          <v-card-title>
-            {{ item.title }}
-            <v-spacer />
-            <v-btn v-if="item.explore" outlined small color="primary" nuxt :to="'/project/' + item.id">Explore</v-btn>
-          </v-card-title>
-          <v-card-text>
-            <span class="white--text">{{item.description}}</span>
-          </v-card-text>
-        </v-card>
-      </v-expand-transition>
-    </v-card>
-  </v-hover>
+            </h1>
+            <h4 class="mt-2 text-left">
+              <template v-if="item.startDate">
+                <v-icon class="mb-1" size="20">mdi-calendar</v-icon>
+                {{ item.startDate.seconds | formatDate('yyyy') }}<span v-if="item.endDate">/{{ item.endDate.seconds | formatDate('yyyy') }}</span><span v-else-if="item.current">/{{ $t('common.today') }}</span>
+              </template>
+              <template v-if="item.company">
+                - <v-icon class="mb-1" size="20">mdi-office-building-outline</v-icon> {{ item.company }}
+              </template>
+            </h4>
+            <v-divider class="my-2"></v-divider>
+            <div class="mb-2">
+              <div class="mb-1">{{ item.description }}</div>
+            </div>
+            <div class="mb-2">
+              <div class="text-body-1 font-weight-bold">{{ $t('projects.technologies') }}</div>
+              <v-tooltip top v-for="(lang,i) in item.technical.technologies" :key="i">
+                <template #activator="{ on }">
+                  <v-btn
+                    icon
+                    href="website"
+                    target="_blank"
+                    v-on="on"
+                    class="ma-1 transition icon"
+                  >
+                    <v-icon>{{lang.icon}}</v-icon>
+                  </v-btn>
+                </template>
+                <span>{{lang.name}}</span>
+              </v-tooltip>
+            </div>
+          </div>
+        </v-col>
+      </v-row>
+    </v-container>
+    <v-card-actions>
+      <v-spacer />
+      <v-tooltip v-if="item.website" top>
+        <template #activator="{ on }">
+          <v-btn
+            outlined
+            :href="item.website"
+            target="_blank"
+            v-on="on"
+          >
+            <v-icon>mdi-earth</v-icon>
+          </v-btn>
+        </template>
+        <span>{{ $t('actions.visit.website') }}</span>
+      </v-tooltip>
+      <v-tooltip v-if="item.github" top>
+        <template #activator="{ on }">
+          <v-btn
+            outlined
+            :href="item.github"
+            target="_blank"
+            v-on="on"
+            class="ml-2"
+          >
+            <v-icon>mdi-github</v-icon>
+          </v-btn>
+        </template>
+        <span>{{ $t('actions.visit.github') }}</span>
+      </v-tooltip>
+      <v-tooltip v-if="false" top>
+        <template #activator="{ on }">
+          <v-btn
+            outlined
+            nuxt
+            :to="{ path: '/projects/' + item.slug }"
+            v-on="on"
+            class="ml-2"
+          >
+            {{ $t('projects.study_case') }}
+          </v-btn>
+        </template>
+        <span>{{ $t('actions.visit.study_case') }}</span>
+      </v-tooltip>
+    </v-card-actions>
+  </v-card>
 </template>
 
 <script>
+import ImageItem from "@/components/shared/ImageItem";
 export default {
   name: 'ProjectCard',
+  components: {ImageItem},
+
   props: {
     item: {
       type: Object,
@@ -66,34 +135,21 @@ export default {
 </script>
 
 <style scoped>
-.on-hover {
-  opacity: .8;
-}
-
-.v-card--reveal {
-  align-items: center;
-  bottom: 0;
-  justify-content: center;
-  opacity: .9;
-  position: absolute;
-  width: 100%;
-}
-.special-channel-bg {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: absolute;
+.project-image {
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
+  object-fit: cover;
+  border: solid 1px #e0e0e0;
+  border-radius: 15px;
 }
-.v-list-item__content {
-  position: relative;
+ .transition:hover {
+   transform: scale(1.3);
+ }
+.icon {
+  color: var(--color);
 }
-.streamer-name {
-  color: #f1f1f1;
-  font-weight: bolder;
-  font-size: 2em;
+
+.icon:hover {
+  color: var(--color-hover);
 }
 </style>

@@ -1,28 +1,39 @@
 :root {
-  --color: #243746;
-  --color-primary: #00A86B;
+  --color: #1f2123;
+  --color-primary: #005b3c;
   --color-secondary: #0e2233;
   --bg: #dadcdb;
   --bg-secondary: #fff;
   --border-color: #ddd;
   --card-color: #717171;
   --card-text: #e0e0e0;
+  --bg-trs: #fcfcfc;
+  --bg-ending: #bdbdbd;
   --circle-color: rgba(14, 14, 14, 0.64)
 }
 
 .dark-mode {
-  --color: #ebf4f1;
-  --color-secondary: #fdf9f3;
-  --bg: #202124;
+  --color: #ffffff;
+  --color-secondary: #9c9d9e;
+  --color-primary: #00A86B;
+  --bg: #1c1f21;
   --bg-secondary: #071521;
   --border-color: #0d2538;
-  --card-color: #1c1d1e;
+  --card-color: #1f1f1f;
   --card-text: #ebf4f1;
-  --circle-color: rgba(135, 135, 135, 0.15)
+  --circle-color: rgba(135, 135, 135, 0.15);
+  --bg-trs: #1f2123;
+  --bg-ending: #1f1f1f;
+}
+
+.gradient {
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(at 300px 300px, var(--bg-trs) 0, var(--bg-ending) 80%);
 }
 
 main {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Rubik', sans-serif;
   background-color: var(--bg);
   color: var(--color);
   font-size: 16px;
@@ -36,114 +47,36 @@ main {
 
 .card {
   color: var(--card-text) !important;
-  background-color: var(--card-color) !important;
+  background: rgba(21,20,20,0) !important;
+  border: solid 1px var(--card-color) !important;
   transition: background-color .5s;
+  border-radius: 10px !important;
 }
 
 .card-text {
   color: var(--card-text) !important;
 }
 
+.primary-text {
+  color: var(--color-primary) !important;
+}
+
 a {
   color: var(--color-primary);
   text-decoration: none;
+  font-weight: bold;
 }
 
-.circles{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+.white-text {
+  color: var(--color) !important;
 }
 
-.circles li{
-  position: absolute;
-  display: block;
-  list-style: none;
-  width: 20px;
-  height: 20px;
-  background: var(--circle-color);
-  animation: animate 35s linear infinite;
-  bottom: -150px;
-
+.secondary-color {
+  color: var(--color-secondary) !important;
 }
 
-.circles li:nth-child(1){
-  left: 25%;
-  width: 80px;
-  height: 80px;
-  animation-delay: 0s;
-}
-
-
-.circles li:nth-child(2){
-  left: 10%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 2s;
-  animation-duration: 25s;
-}
-
-.circles li:nth-child(3){
-  left: 70%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 4s;
-}
-
-.circles li:nth-child(4){
-  left: 40%;
-  width: 60px;
-  height: 60px;
-  animation-delay: 0s;
-  animation-duration: 20s;
-}
-
-.circles li:nth-child(5){
-  left: 65%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 0s;
-}
-
-.circles li:nth-child(6){
-  left: 75%;
-  width: 110px;
-  height: 110px;
-  animation-delay: 3s;
-}
-
-.circles li:nth-child(7){
-  left: 35%;
-  width: 150px;
-  height: 150px;
-  animation-delay: 7s;
-}
-
-.circles li:nth-child(8){
-  left: 50%;
-  width: 25px;
-  height: 25px;
-  animation-delay: 15s;
-  animation-duration: 45s;
-}
-
-.circles li:nth-child(9){
-  left: 20%;
-  width: 15px;
-  height: 15px;
-  animation-delay: 2s;
-  animation-duration: 35s;
-}
-
-.circles li:nth-child(10){
-  left: 85%;
-  width: 150px;
-  height: 150px;
-  animation-delay: 0s;
-  animation-duration: 20s;
+.secondary-border {
+  border: solid 1px var(--color-secondary) !important;
 }
 
 @keyframes animate {
@@ -196,8 +129,8 @@ a {
 /* Animation effect */
 .raise:hover,
 .raise:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--color-primary);
-  transform: translateY(-0.25em);
+  box-shadow: 0 0.3em 0.3em -0.2em var(--color-primary);
+  transform: translateY(-0.10em);
 }
 
 .up:hover,
@@ -206,5 +139,5 @@ a {
 }
 
 .transition-h:hover {
-  transform: scale(1.3);
+  transform: scale(1.1);
 }

@@ -5,6 +5,7 @@
     :src="imageUrl"
     :lazy-src="defaultWorkUrl"
     class="grey darken-3"
+    style="border-radius: 10px;"
   >
     <template #placeholder>
       <v-row

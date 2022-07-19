@@ -6,6 +6,7 @@
         class="transition-big ma-2 icon"
         size="40px"
         :style="styleObject"
+        style="border-radius: 10px;"
         v-bind="attrs"
         v-on="on"
       >
