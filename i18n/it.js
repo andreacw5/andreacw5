@@ -34,8 +34,8 @@ module.exports = {
       description: 'Realizzo siti web con attenzione al design e alla qualità del prodotto.'
     },
     projects: {
-      title: 'Progetti',
-      description: 'Progetto il lavoro secondo strategie agile, mostrando al cliente il risultato in corso d\'opera per prevenire errori.'
+      title: 'Modalità Agile',
+      description: 'Progetto il lavoro secondo strategie agile, mostrando al cliente il risultato in corso e con frequenti review.'
     }
   },
   validations: {
