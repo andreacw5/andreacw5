@@ -12,14 +12,6 @@ export default {
     htmlAttrs: {
       lang: 'it'
     },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Sito e portfolio di Andrea Tombolato' },
-      { name: 'msapplication-TileColor', content: '#202124' },
-      { name: 'msapplication-TileImage', content: 'icons/ms-icon-144x144.png' },
-      { name: 'theme-color', content: '#00A86B' }
-    ],
     link: [
       { rel: 'manifest', href: 'icons/manifest.json' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

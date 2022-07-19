@@ -5,19 +5,17 @@
     class="secondary-border card"
     outlined
   >
-    <v-card-title class="display-5 primary-text">{{ title }}</v-card-title>
-    <v-card-subtitle>
+    <v-card-title style="font-size: x-large; font-weight: bolder" class="primary-text">{{ title }}</v-card-title>
+    <v-card-subtitle class="secondary-color">
       {{ company }}
     </v-card-subtitle>
     <v-card-actions>
-      <span class="ml-4 card-text">
-        {{ period }}
-      </span>
+      <span class="ml-2 white-text">{{ period }}</span>
       <v-spacer />
       <v-btn
         v-if="description !== ''"
         text
-        class="hidden-sm-and-down"
+        class="hidden-sm-and-down white-text"
         @click="reveal = true"
       >
         MORE
@@ -30,7 +28,7 @@
             target="_blank"
             v-on="on"
           >
-            <v-icon>mdi-earth</v-icon>
+            <v-icon class="white-text">mdi-earth</v-icon>
           </v-btn>
         </template>
         <span>{{ $t('actions.website') }}</span>

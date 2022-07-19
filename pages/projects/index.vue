@@ -33,17 +33,20 @@
           </v-item-group>
         </v-col>
       </v-row>
+      <Footer />
     </v-container>
   </div>
 </template>
 
 <script>
+import Footer from '~/components/layout/Footer'
 import LoadingComponent from '~/components/Loading'
 import { createSEOMeta } from '@/utils/seo'
 export default {
   name: 'WorkListIndex',
   components: {
-    LoadingComponent
+    LoadingComponent,
+    Footer
   },
   data () {
     return {
