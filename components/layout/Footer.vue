@@ -2,7 +2,7 @@
   <v-container grid-list-md text-xs-center>
     <v-row wrap>
       <v-col cols="12">
-        <v-footer class="secondary-border mt-3 card text-center">
+        <v-footer class="secondary-border mt-3 card text-center white-text">
           <v-row wrap class="mt-1 mb-1">
             <v-col cols="12">
               <span class="text-uppercase">Designed & Developed with <v-icon size="25" class="mb-1" color="red">mdi-fire</v-icon> by</span>

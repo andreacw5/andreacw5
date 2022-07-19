@@ -1,6 +1,6 @@
 :root {
   --color: #1f2123;
-  --color-primary: #005b3c;
+  --color-primary: #00A86B;
   --color-secondary: #0e2233;
   --bg: #dadcdb;
   --bg-secondary: #fff;
@@ -53,6 +53,10 @@ main {
   border-radius: 10px !important;
 }
 
+.v-list {
+  border-radius: 10px !important;
+}
+
 .card-text {
   color: var(--card-text) !important;
 }
@@ -79,52 +83,8 @@ a {
   border: solid 1px var(--color-secondary) !important;
 }
 
-@keyframes animate {
-
-  0%{
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-    border-radius: 0;
-  }
-
-  100%{
-    transform: translateY(-1000px) rotate(720deg);
-    opacity: 0;
-    border-radius: 50%;
-  }
-
-}
-
-@media screen and (min-width: 1008px) {
-
-  /* during entering and leaving : */
-  .page-enter-active, .page-leave-active {
-    position:absolute;
-    max-width:725px; /*make sur our content keep it's original width*/
-    transition: all .2s ease;
-  }
-
-  /* entering start */
-  .page-enter {
-    left: -100%;
-  }
-
-  /* entering end */
-  .page-enter-to {
-    left: 0;
-  }
-
-  /* leaving start */
-  .page-leave {
-    opacity: 1;
-  }
-
-  /* leaving end */
-  .page-leave-to {
-    opacity: 0;
-  }
-
-}
+.home-enter-active, .home-leave-active { transition: opacity .10s; }
+.home-enter, .home-leave-active { opacity: 0; }
 
 /* Animation effect */
 .raise:hover,
