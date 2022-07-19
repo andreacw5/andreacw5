@@ -9,7 +9,7 @@
         </v-col>
         <v-col cols="12" md="6">
           <div class="text-left">
-            <h1 class="text-uppercase mt-2 text-left" style="font-size: xx-large; font-weight: bolder">
+            <h1 class="text-uppercase mt-2 text-left white-text" style="font-size: xx-large; font-weight: bolder">
               {{ item.title }}
               <span>
                 <v-tooltip v-if="item.technical.main" top>
@@ -29,19 +29,19 @@
             </h1>
             <h4 class="mt-2 text-left">
               <template v-if="item.startDate">
-                <v-icon class="mb-1" size="20">mdi-calendar</v-icon>
-                {{ item.startDate.seconds | formatDate('yyyy') }}<span v-if="item.endDate">/{{ item.endDate.seconds | formatDate('yyyy') }}</span><span v-else-if="item.current">/{{ $t('common.today') }}</span>
+                <v-icon class="mb-1 white-text" size="20">mdi-calendar</v-icon>
+                <span class="white-text">{{ item.startDate.seconds | formatDate('yyyy') }}<span v-if="item.endDate">/{{ item.endDate.seconds | formatDate('yyyy') }}</span><span v-else-if="item.current">/{{ $t('common.today') }}</span></span>
               </template>
               <template v-if="item.company">
-                - <v-icon class="mb-1" size="20">mdi-office-building-outline</v-icon> {{ item.company }}
+                <span class="white-text"> - <v-icon class="mb-1 white-text" size="20">mdi-office-building-outline</v-icon> {{ item.company }}</span>
               </template>
             </h4>
             <v-divider class="my-2"></v-divider>
             <div class="mb-2">
-              <div class="mb-1">{{ item.description }}</div>
+              <div class="mb-1 white-text">{{ item.description }}</div>
             </div>
             <div class="mb-2">
-              <div class="text-body-1 font-weight-bold">{{ $t('projects.technologies') }}</div>
+              <div class="text-body-1 font-weight-bold white-text">{{ $t('projects.technologies') }}</div>
               <v-tooltip v-for="(lang,i) in item.technical.technologies" :key="i" top>
                 <template #activator="{ on }">
                   <v-btn
@@ -51,7 +51,7 @@
                     class="ma-1 transition icon"
                     v-on="on"
                   >
-                    <v-icon>{{lang.icon}}</v-icon>
+                    <v-icon class="white-text">{{lang.icon}}</v-icon>
                   </v-btn>
                 </template>
                 <span>{{lang.name}}</span>
@@ -69,6 +69,7 @@
             outlined
             :href="item.website"
             target="_blank"
+            class="white-text"
             v-on="on"
           >
             <v-icon>mdi-earth</v-icon>
@@ -82,7 +83,7 @@
             outlined
             :href="item.github"
             target="_blank"
-            class="ml-2"
+            class="ml-2 white-text"
             v-on="on"
           >
             <v-icon>mdi-github</v-icon>
@@ -96,7 +97,7 @@
             outlined
             nuxt
             :to="{ path: '/projects/' + item.slug }"
-            class="ml-2"
+            class="ml-2 white-text"
             v-on="on"
           >
             {{ $t('projects.study_case') }}
