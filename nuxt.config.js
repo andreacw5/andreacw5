@@ -7,8 +7,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s',
-    title: 'Andrea Tombolato',
+    titleTemplate: '%s - Andrea Tombolato',
+    title: 'Home',
     htmlAttrs: {
       lang: 'it'
     },
@@ -65,7 +65,8 @@ export default {
     '@nuxtjs/vuetify',
     '@nuxtjs/color-mode',
     '@nuxtjs/firebase',
-    'nuxt-i18n'
+    'nuxt-i18n',
+    '@nuxtjs/sitemap'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -130,6 +131,17 @@ export default {
       emulatorPort: 8080,
       emulatorHost: 'localhost'
     }
+  },
+
+  // Sitemap Configuration
+  sitemap: {
+    hostname: 'https://andreacw.dev',
+    gzip: true,
+    routes: [
+      '/',
+      '/projects',
+      '/travels'
+    ]
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

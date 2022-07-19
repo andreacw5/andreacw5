@@ -8,7 +8,7 @@
         <v-col cols="12">
           <div class="text-center">
             <h1 class="text-uppercase mt-5" style="font-size: xxx-large; font-weight: bolder">
-              {{ $t('common.prefix.wrk') }} <span class="primary-text">{{ $t('projects.title') }}</span>
+              {{ $t('common.prefix.prj') }} <span class="primary-text">{{ $t('projects.title') }}</span>
             </h1>
           </div>
         </v-col>
@@ -39,6 +39,7 @@
 
 <script>
 import LoadingComponent from "~/components/Loading";
+import { createSEOMeta } from "@/utils/seo";
 export default {
   name: "workListIndex",
   components: {
@@ -49,11 +50,6 @@ export default {
       loading: false,
       projects: []
     };
-  },
-  computed: {
-    projects2 () {
-      return this.$store.state.projects.projects
-    }
   },
   created() {
     this.loading = true;
@@ -68,6 +64,19 @@ export default {
         });
         this.loading = false;
       })
+    }
+  },
+  head () {
+    return {
+      title: 'Progetti - Andrea Tombolato',
+      meta: [
+        ...createSEOMeta({
+          title: 'Progetti',
+          description: 'Elenco dei progetti a cui ho lavorato nel corso degli anni e le tecnologie utilizzate',
+          url: this.$route.path,
+          image: 'https://firebasestorage.googleapis.com/v0/b/pw-9483234.appspot.com/o/IMG_1104.jpg?alt=media&token=d226d956-bc7f-40b7-aed5-4c5356227449'
+        })
+      ]
     }
   }
 }

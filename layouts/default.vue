@@ -11,15 +11,17 @@
     <v-main class="gradient">
       <Header @toggleDarkMode="toggleDarkMode" />
       <nuxt />
+      <Footer />
     </v-main>
   </v-app>
 </template>
 
 <script>
+import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 export default {
   name: 'DefaultLayout',
-  components: { Header },
+  components: { Header, Footer },
   head: {
     titleTemplate: '%s'
   },
@@ -38,9 +40,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.back {
-  background: url("https://helm.sh/img/topography.png") repeat scroll left top;
-}
-</style>

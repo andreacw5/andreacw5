@@ -2,7 +2,7 @@
   <v-container grid-list-md text-xs-center>
     <v-row wrap>
       <v-col cols="12">
-        <v-app-bar class="secondary-border mt-3 card" style="border-radius: 10px;">
+        <v-app-bar class="secondary-border mt-3 card">
           <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = true"></v-app-bar-nav-icon>
           <nuxt-link to="/">
             <v-img max-height="40" max-width="40" :src="imageUrl" alt="AT Logo" />

@@ -1,9 +1,9 @@
 <template>
-    <v-row wrap>
+    <v-row wrap class="mr-5">
       <v-col
         v-for="(social, i) in socials" :key="i" xs="12" sm="12" md="4"
         lg="4"
-        style="padding-bottom: 5px"
+        style="padding-bottom: 5px;"
       >
         <v-btn
           target="_blank"

@@ -75,39 +75,35 @@
       <v-row wrap>
         <v-col cols="12">
           <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
-            What <span class="primary-text">I do</span>
+            {{ $t('common.prefix.my') }} <span class="primary-text">{{ $t('services.title') }}</span>
           </h1>
         </v-col>
         <v-col cols="12" md="4">
           <div class="services">
             <v-icon x-large class="mb-2 white-text">mdi-code-json</v-icon>
-            <h3 class="text-uppercase mb-2  white-text">Web Development</h3>
-            <p class="secondary-color">If you already have an existing design, I can help transform it into a fast, responsive & SEO-friendly website.</p>
+            <h3 class="text-uppercase mb-2  white-text">{{ $t('services.web.title') }}</h3>
+            <p class="secondary-color">{{ $t('services.web.description') }}</p>
           </div>
         </v-col>
         <v-col cols="12" md="4">
           <div class="services">
             <v-icon x-large class="mb-2 white-text">mdi-palette-swatch-variant</v-icon>
-            <h3 class="text-uppercase mb-2  white-text">UI/UX Design</h3>
-            <p class="secondary-color">I can design your next beautiful website based on existing content, or even redesign your current to improve conversions.</p>
+            <h3 class="text-uppercase mb-2  white-text">{{ $t('services.ux.title') }}</h3>
+            <p class="secondary-color">{{ $t('services.ux.description') }}</p>
           </div>
         </v-col>
         <v-col cols="12" md="4">
           <div class="services">
             <v-icon x-large class="mb-2 white-text">mdi-clipboard-check-multiple</v-icon>
-            <h3 class="text-uppercase mb-2 white-text">Project</h3>
-            <p class="secondary-color">Setup project  </p>
+            <h3 class="text-uppercase mb-2 white-text">{{ $t('services.projects.title') }}</h3>
+            <p class="secondary-color">{{ $t('services.projects.description') }}</p>
           </div>
         </v-col>
       </v-row>
       <v-row wrap>
         <v-col cols="12">
           <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
-            <i18n path="sections.start" tag="span">
-              <template #section>
-                <span class="primary-text">{{ $t('sections.about.experience') }}</span>
-              </template>
-            </i18n>
+            {{ $t('common.prefix.skl') }} <span class="primary-text">{{ $t('expiriences.title') }}</span>
           </h1>
         </v-col>
         <v-col
@@ -128,13 +124,12 @@
       <v-row class="mb-4" wrap id="contacts">
         <v-col cols="12">
           <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
-            Want to  <span class="primary-text">work together?</span>
+            {{ $t('common.prefix.wrk') }} <span class="primary-text">{{ $t('contacts.title') }}</span>
           </h1>
         </v-col>
         <v-col cols="12">
           <p>
-            If you wanna get in touch, talk to me about a project collaboration or just say hi, send an email to
-            <a href="mailto:andreacw96@gmail.com">andreacw96@gmail.com</a> or find me on socials.
+            {{ $t('contacts.description') }} <a href="mailto:andreacw96@gmail.com">andreacw96@gmail.com</a> {{ $t('contacts.ending') }}
           </p>
         </v-col>
         <v-col cols="12">
@@ -154,6 +149,7 @@ import ImageItem from '../components/shared/ImageItem'
 import ProjectCard from '../components/ProjectCard'
 import WorkCard from '../components/about/WorkCard'
 import LoadingComponent from "@/components/Loading";
+import { createSEOMeta } from "~/utils/seo";
 export default {
   components: {LoadingComponent, WorkCard, ProjectCard, ImageItem, SkillIcon },
   data: () => ({
@@ -165,6 +161,19 @@ export default {
   computed: {
     projects () {
       return this.$store.state.projects.projects
+    }
+  },
+  head () {
+    return {
+      title: 'Home - Andrea Tombolato',
+      meta: [
+        ...createSEOMeta({
+          title: 'Home',
+          description: 'Andrea Tombolato, Web Developer con base a Milano e questo è il mio sito personale!',
+          url: this.$route.path,
+          image: 'https://firebasestorage.googleapis.com/v0/b/pw-9483234.appspot.com/o/IMG_1104.jpg?alt=media&token=d226d956-bc7f-40b7-aed5-4c5356227449'
+        })
+      ]
     }
   }
 }
