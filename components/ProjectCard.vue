@@ -18,6 +18,7 @@
                       :color="item.technical.main.color"
                       class="transition pb-1"
                       icon
+                      to=""
                       v-on="on"
                     >
                       <v-icon large>{{ item.technical.main.icon }}</v-icon>
@@ -38,16 +39,15 @@
             </h4>
             <v-divider class="my-2"></v-divider>
             <div class="mb-2">
-              <div class="mb-1 white-text">{{ item.description }}</div>
+              <div class="mb-1 white-text">{{ currentLocale === 'it' ? item.description : item.description_en }}</div>
             </div>
             <div class="mb-2">
               <div class="text-body-1 font-weight-bold white-text">{{ $t('projects.technologies') }}</div>
               <v-tooltip v-for="(lang,i) in item.technical.technologies" :key="i" top>
                 <template #activator="{ on }">
                   <v-btn
+                    to=""
                     icon
-                    href="website"
-                    target="_blank"
                     class="ma-1 transition icon"
                     v-on="on"
                   >
@@ -122,6 +122,9 @@ export default {
     }
   },
   computed: {
+    currentLocale () {
+      return this.$i18n.locale
+    },
     defaultWorkUrl () {
       return require('~/assets/img/works/default.webp')
     },
