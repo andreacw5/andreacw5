@@ -105,7 +105,7 @@
               v-model="group"
               active-class="primary-text text--accent-4"
             >
-              <v-list-item v-for="(link,i) in links" :key="i" :href="link.url" nuxt>
+              <v-list-item v-for="(link,i) in links" :key="i" :href="localePath(link.url, currentLocale)" nuxt>
                 <v-list-item-icon>
                   <v-icon>{{ link.icon }}</v-icon>
                 </v-list-item-icon>
@@ -133,6 +133,9 @@ export default {
     group: null
   }),
   computed: {
+    currentLocale () {
+      return this.$i18n.locale
+    },
     imageUrl () {
       return require('~/assets/img/logo.webp')
     }
