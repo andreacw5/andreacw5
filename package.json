@@ -27,7 +27,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^7.14.0",
     "firebase": "^9.12.1",
-    "nuxt": "^2.15.8",
+    "nuxt": "^2.16.0",
     "nuxt-i18n": "^6.28.1"
   },
   "devDependencies": {
