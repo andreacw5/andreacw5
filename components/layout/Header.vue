@@ -8,20 +8,11 @@
             <v-img max-height="40" max-width="40" :src="imageUrl" alt="AT Logo" />
           </nuxt-link>
           <v-spacer />
-          <template v-if="!links">
-            <v-skeleton-loader
-              ref="skeleton"
-              type="button"
-              class="mx-auto"
-            />
-            <v-skeleton-loader
-              ref="skeleton"
-              type="button"
-              class="mx-auto"
-            />
-          </template>
-          <v-btn v-for="(link,i) in links" v-else :key="i" text :to="link.url" nuxt class="hidden-sm-and-down up raise white-text mr-1">
-            {{ $t(link.name) }}
+          <v-btn text to="/" nuxt class="hidden-sm-and-down up raise white-text mr-1">
+            Home
+          </v-btn>
+          <v-btn text to="/projects" nuxt class="hidden-sm-and-down up raise white-text mr-1">
+            Progetti
           </v-btn>
           <v-divider vertical inset class="mr-2 ml-2 hidden-sm-and-down white-text" />
           <v-tooltip bottom>
@@ -57,25 +48,6 @@
               </v-btn>
             </template>
             <span>{{ $t('socials.prefix', { name: 'Linkedin' }) }}</span>
-          </v-tooltip>
-          <v-tooltip bottom>
-            <template #activator="{ on, attrs }">
-              <v-btn
-                v-bind="attrs"
-                icon
-                :aria-label="isDarkMode() ? $t('actions.changeColor.light') : $t('actions.changeColor.dark')"
-                v-on="on"
-                @click="toggleDarkMode"
-              >
-                <v-icon v-if="isDarkMode()" size="27" class="white-text">
-                  mdi-lightbulb-outline
-                </v-icon>
-                <v-icon v-else size="27" class="white-text">
-                  mdi-lightbulb-on
-                </v-icon>
-              </v-btn>
-            </template>
-            <span>{{isDarkMode() ? $t('actions.changeColor.light') : $t('actions.changeColor.dark')}}</span>
           </v-tooltip>
         </v-app-bar>
         <v-navigation-drawer
@@ -125,10 +97,8 @@
 </template>
 
 <script>
-import navigation from '@/static/data/navigation'
 export default {
   data: () => ({
-    links: navigation.links,
     drawer: false,
     group: null
   }),
