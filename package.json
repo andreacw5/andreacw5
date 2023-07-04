@@ -15,6 +15,7 @@
   "dependencies": {
     "@nuxtjs/firebase": "^8.2.2",
     "@nuxtjs/sitemap": "^2.4.0",
+    "@nuxtjs/eslint-config": "^8.0.0",
     "@nuxtjs/color-mode": "^2.1.1",
     "@nuxtjs/vuetify": "^1.12.3",
     "@nuxtjs/eslint-config": "^6.0.1",
@@ -25,10 +26,10 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-nuxt": "^3.1.0",
     "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-vue": "^7.14.0",
-    "firebase": "^9.21.0",
+    "firebase": "^9.20.0",
+    "eslint-plugin-vue": "^8.0.0",
     "nuxt": "^2.16.3",
     "nuxt-i18n": "^6.28.1"
   },
