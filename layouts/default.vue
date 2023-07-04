@@ -9,7 +9,7 @@
     <![endif]-->
 
     <v-main class="gradient">
-      <Header @toggleDarkMode="toggleDarkMode" />
+      <Header />
       <nuxt />
     </v-main>
   </v-app>
@@ -22,19 +22,6 @@ export default {
   components: { Header },
   head: {
     titleTemplate: '%s'
-  },
-  methods: {
-    toggleDarkMode () {
-      if (
-        this.$colorMode.preference === 'dark' ||
-        (this.$colorMode.preference === 'system' &&
-          this.$colorMode.value === 'dark')
-      ) {
-        this.$colorMode.preference = 'light'
-      } else {
-        this.$colorMode.preference = 'dark'
-      }
-    }
   }
 }
 </script>

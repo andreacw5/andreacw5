@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "private": true,
   "description": "My personal website",
   "author": "Andrea Tombolato <andreacw96@gmail.com> (https://github.com/andreacw5)",
@@ -15,6 +15,8 @@
   "dependencies": {
     "@nuxtjs/firebase": "^8.2.2",
     "@nuxtjs/sitemap": "^2.4.0",
+    "@nuxtjs/color-mode": "^2.1.1",
+    "@nuxtjs/vuetify": "^1.12.3",
     "@nuxtjs/eslint-config": "^6.0.1",
     "@nuxtjs/eslint-module": "^3.0.2",
     "date-fns": "^2.29.3",
@@ -32,8 +34,6 @@
   },
   "devDependencies": {
     "@nuxt/types": "~2.15.8",
-    "@nuxtjs/color-mode": "^2.1.1",
-    "@nuxtjs/vuetify": "^1.12.3",
     "prettier": "^2.7.1"
   }
 }
