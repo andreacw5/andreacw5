@@ -109,16 +109,6 @@ export default {
     imageUrl () {
       return require('~/assets/img/logo.webp')
     }
-  },
-  methods: {
-    toggleDarkMode () {
-      this.$emit('toggleDarkMode')
-    },
-    isDarkMode () {
-      return this.$colorMode.preference === 'dark' ||
-        (this.$colorMode.preference === 'system' &&
-          this.$colorMode.value === 'dark')
-    }
   }
 }
 </script>
