@@ -32,7 +32,7 @@
             </template>
           </i18n>
           <div class="mt-5">
-            <v-btn large color="primary card-text" nuxt :href="localePath('/projects', currentLocale)">{{ $t('common.prefix.my') }} {{ $t('sections.projects') }}</v-btn>
+            <v-btn large color="card-text" nuxt :href="localePath('/projects', currentLocale)">{{ $t('common.prefix.my') }} {{ $t('sections.projects') }}</v-btn>
             <v-btn large class="secondary-color secondary-border" text outlined href="#contacts">{{ $t('sections.contact.title') }}</v-btn>
           </div>
         </v-col>
@@ -133,7 +133,7 @@ export default {
   }),
   head () {
     return {
-      title: 'Home - Andrea Tombolato',
+      title: 'Andrea Tombolato',
       meta: [
         ...createSEOMeta({
           title: 'Home',

@@ -4,8 +4,8 @@
     :height="height"
     :src="imageUrl"
     :lazy-src="defaultWorkUrl"
-    class="grey darken-3"
-    style="border-radius: 10px;"
+    :aspect-ratio="1"
+    class="grey darken-3 image-transition"
   >
     <template #placeholder>
       <v-row

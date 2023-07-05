@@ -50,7 +50,7 @@ module.exports = {
   sections: {
     home: 'Home',
     start: 'I miei {section}',
-    projects: 'Progetti',
+    projects: 'Portfolio',
     contact: {
       title: 'Contattami',
       end: '{contact}',
@@ -82,7 +82,7 @@ module.exports = {
     send: 'Invia'
   },
   projects: {
-    title: 'Progetti',
+    title: 'Portfolio',
     description: 'I progetti più recenti a cui ho lavorato',
     technologies: 'Tecnologie usate',
     main_tech: 'Tecnologia principale',

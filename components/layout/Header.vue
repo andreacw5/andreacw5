@@ -8,47 +8,18 @@
             <v-img max-height="40" max-width="40" :src="imageUrl" alt="AT Logo" />
           </nuxt-link>
           <v-spacer />
-          <v-btn text to="/" nuxt class="hidden-sm-and-down up raise white-text mr-1">
-            Home
+          <v-btn text to="/" nuxt class="hidden-sm-and-down white-text mr-1">
+            About
           </v-btn>
-          <v-btn text to="/projects" nuxt class="hidden-sm-and-down up raise white-text mr-1">
-            Progetti
+          <v-btn text to="/portfolio" nuxt class="hidden-sm-and-down white-text mr-1">
+            Portfolio
           </v-btn>
-          <v-divider vertical inset class="mr-2 ml-2 hidden-sm-and-down white-text" />
-          <v-tooltip bottom>
-            <template #activator="{ on, attrs }">
-              <v-btn
-                v-bind="attrs"
-                icon
-                href="https://github.com/andreacw5"
-                target="_blank"
-                alt-text="Github profile"
-                v-on="on"
-              >
-                <v-icon size="27" class="white-text">
-                  mdi-github
-                </v-icon>
-              </v-btn>
-            </template>
-            <span>{{ $t('socials.prefix', { name: 'Github' }) }}</span>
-          </v-tooltip>
-          <v-tooltip bottom>
-            <template #activator="{ on, attrs }">
-              <v-btn
-                v-bind="attrs"
-                icon
-                href="https://www.linkedin.com/in/atombolato"
-                target="_blank"
-                alt-text="Linkedin profile"
-                v-on="on"
-              >
-                <v-icon size="27" class="white-text">
-                  mdi-linkedin
-                </v-icon>
-              </v-btn>
-            </template>
-            <span>{{ $t('socials.prefix', { name: 'Linkedin' }) }}</span>
-          </v-tooltip>
+<!--          <v-btn text to="/blog" nuxt class="hidden-sm-and-down white-text mr-1">
+            Blog
+          </v-btn>
+          <v-btn text to="/github" nuxt class="hidden-sm-and-down white-text mr-1">
+            Github
+          </v-btn>-->
         </v-app-bar>
         <v-navigation-drawer
           v-model="drawer"
@@ -97,10 +68,13 @@
 </template>
 
 <script>
+import navigations from '@/static/data/navigation.json'
 export default {
+  name: 'MainHeader',
   data: () => ({
     drawer: false,
-    group: null
+    group: null,
+    links: navigations.links
   }),
   computed: {
     currentLocale () {

@@ -32,12 +32,6 @@ export default {
     ]
   },
 
-  loadingIndicator: {
-    name: 'wandering-cubes',
-    color: '#00A86B',
-    background: '#202124'
-  },
-
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     { src: '~assets/css/global.css', lang: 'css' }

@@ -2,10 +2,10 @@
   <v-card
     elevation="2"
     dense
-    class="secondary-border card"
+    class="secondary-border card-gradient"
     outlined
   >
-    <v-card-title style="font-size: x-large; font-weight: bolder" class="primary-text">{{ title }}</v-card-title>
+    <v-card-title style="font-size: x-large; font-weight: bolder">{{ title }}</v-card-title>
     <v-card-subtitle class="secondary-color">
       {{ company }}
     </v-card-subtitle>
