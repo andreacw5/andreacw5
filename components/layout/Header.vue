@@ -14,12 +14,22 @@
           <v-btn text to="/portfolio" nuxt class="hidden-sm-and-down white-text mr-1">
             Portfolio
           </v-btn>
-<!--          <v-btn text to="/blog" nuxt class="hidden-sm-and-down white-text mr-1">
-            Blog
+          <v-divider vertical inset class="mr-2 ml-2 hidden-sm-and-down white-text" />
+          <v-btn
+            v-for="locale in availableLocales"
+            :key="locale.code"
+            text
+            @click="setNewLocale(locale.code)"
+          >
+            {{ locale.name }}
           </v-btn>
-          <v-btn text to="/github" nuxt class="hidden-sm-and-down white-text mr-1">
-            Github
-          </v-btn>-->
+
+          <!--          <v-btn text to="/blog" nuxt class="hidden-sm-and-down white-text mr-1">
+                      Blog
+                    </v-btn>
+                    <v-btn text to="/github" nuxt class="hidden-sm-and-down white-text mr-1">
+                      Github
+                    </v-btn>-->
         </v-app-bar>
         <v-navigation-drawer
           v-model="drawer"
@@ -77,11 +87,20 @@ export default {
     links: navigations.links
   }),
   computed: {
+    availableLocales () {
+      return this.$i18n.locales.filter(l => l.code !== this.currentLocale)
+    },
     currentLocale () {
       return this.$i18n.locale
     },
     imageUrl () {
       return require('~/assets/img/logo.webp')
+    }
+  },
+  methods: {
+    setNewLocale (locale) {
+      this.$i18n.setLocaleCookie(locale)
+      this.$i18n.setLocale(locale)
     }
   }
 }

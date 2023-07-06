@@ -11,15 +11,17 @@
     <v-main>
       <main-header />
       <nuxt />
+      <main-footer />
     </v-main>
   </v-app>
 </template>
 
 <script>
 import MainHeader from '../components/layout/Header.vue'
+import MainFooter from '@/components/layout/Footer.vue'
 export default {
   name: 'DefaultLayout',
-  components: { MainHeader },
+  components: { MainHeader, MainFooter },
   head: {
     titleTemplate: '%s' || 'Andrea Tombolato'
   }

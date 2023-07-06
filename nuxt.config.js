@@ -86,13 +86,18 @@ export default {
 
   // I18N Configuration
   i18n: {
+    skipSettingLocaleOnNavigate: true,
     locales: [
-      { code: 'en', iso: 'en-US', file: 'en.js' },
-      { code: 'it', iso: 'it-IT', file: 'it.js' }
+      { code: 'en', iso: 'en-US', file: 'en.js', name: 'English' },
+      { code: 'it', iso: 'it-IT', file: 'it.js', name: 'Italian' }
     ],
     defaultLocale: 'it',
+    strategy: 'no_prefix',
+    detectBrowserLanguage: {
+      useCookie: false
+    },
     vueI18n: {
-      fallbackLocale: 'en',
+      fallbackLocale: 'it',
       messages: { en, it }
     }
   },
