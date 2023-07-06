@@ -1,32 +1,31 @@
 <template>
   <v-container grid-list-md text-xs-center>
-    <v-row wrap dense>
-      <v-col cols="12">
-        <h2 class="mt-3 ml-4" style="font-size: xxx-large; font-weight: bolder">
+    <v-card class="card">
+      <v-card-title class="card-header">
+        <h2 class="mt-2 mb-2 ml-4" style="font-size: xxx-large; font-weight: bolder">
           Portfolio
         </h2>
-      </v-col>
-      <v-col cols="12">
-        <v-bottom-navigation
-          style="background: transparent; box-shadow: none;"
-          :value="value"
-          horizontal
-          @change="techFilterChanged"
-        >
-          <template v-for="item in technologies">
-            <v-btn :key="item.name" :value="item.name" class="button-hover">
+      </v-card-title>
+      <v-bottom-navigation
+        style="background: transparent; box-shadow: none;"
+        class="mt-4 round-border"
+        :value="value"
+        horizontal
+        @change="techFilterChanged"
+      >
+        <template v-for="item in technologies">
+          <v-btn :key="item.name" :value="item.name" class="button-hover round-border">
             <span>{{ item.name }}</span>
             <v-icon class="hidden-sm-and-down">{{ item.icon }}</v-icon>
-            </v-btn>
-          </template>
-        </v-bottom-navigation>
-      </v-col>
-      <v-col cols="12">
+          </v-btn>
+        </template>
+      </v-bottom-navigation>
+      <v-card-text>
         <!-- Loading -->
         <loading-component v-if="loading" />
         <!-- Page content -->
         <v-item-group v-else active-class="primary">
-          <v-container class="pa-4 text-center">
+          <v-container class="text-center">
             <v-row
               class="fill-height"
               align="center"
@@ -35,7 +34,11 @@
               <template v-for="(item, i) in projects">
                 <v-col
                   :key="i"
-                  cols="6"
+                  cols="12"
+                  sm="12"
+                  md="6"
+                  lg="6"
+                  xl="6"
                 >
                   <project-card :item="item" />
                 </v-col>
@@ -43,21 +46,20 @@
             </v-row>
           </v-container>
         </v-item-group>
-      </v-col>
-    </v-row>
-    <Footer />
+      </v-card-text>
+    </v-card>
   </v-container>
 </template>
 
 <script>
-import Footer from '@/components/layout/Footer.vue'
 import LoadingComponent from '@/components/Loading.vue'
 import { createSEOMeta } from '@/utils/seo'
+import ProjectCard from '@/components/portfolio/ProjectCard.vue'
 export default {
   name: 'WorkListIndex',
   components: {
-    LoadingComponent,
-    Footer
+    ProjectCard,
+    LoadingComponent
   },
   data () {
     return {

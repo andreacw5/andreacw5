@@ -5,6 +5,7 @@
     :src="imageUrl"
     :lazy-src="defaultWorkUrl"
     :aspect-ratio="1"
+    :position="position"
     class="grey darken-3 image-transition"
   >
     <template #placeholder>
@@ -37,6 +38,10 @@ export default {
     height: {
       type: Number,
       default: 300
+    },
+    position: {
+      type: String,
+      default: 'center center'
     }
   },
   computed: {

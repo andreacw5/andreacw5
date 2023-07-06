@@ -13,7 +13,7 @@ module.exports = {
   },
   projects: {
     title: 'Projects',
-    description: 'Here you can find some of my projects, both personal and professional.',
+    description: 'Description',
     technologies: 'Technologies used',
     main_tech: 'Main technologies used',
     time: 'Time',

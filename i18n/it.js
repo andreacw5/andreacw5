@@ -83,7 +83,7 @@ module.exports = {
   },
   projects: {
     title: 'Portfolio',
-    description: 'I progetti più recenti a cui ho lavorato',
+    description: 'Descrizione',
     technologies: 'Tecnologie usate',
     main_tech: 'Tecnologia principale',
     time: 'Tempo',
