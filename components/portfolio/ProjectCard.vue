@@ -1,6 +1,6 @@
 <template>
   <a @click.stop="dialog = true">
-    <v-card class="atom-card mx-auto card-gradient">
+    <v-card class="atom-card common-card mx-auto card-gradient">
       <image-item
         :image-url="item.preview"
         :alt-text="item.title + ' cover image'"
@@ -29,7 +29,6 @@
                   :color="item.technical.main.color"
                   class="transition pb-1"
                   icon
-                  to=""
                   v-on="on"
                 >
                   <v-icon large>{{ item.technical.main.icon }}</v-icon>

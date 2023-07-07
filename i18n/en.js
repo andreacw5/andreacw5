@@ -69,15 +69,10 @@ module.exports = {
     }
   },
   actions: {
+    language: 'Change language',
     changeColor: {
       dark: 'Turn off the light',
       light: 'Turn on the light'
-    },
-    changeLang: {
-      translation: 'Translations',
-      it: 'Italian',
-      en: 'English',
-      fr: 'French'
     },
     visit: {
       github: 'Visit project Github page',
@@ -90,6 +85,7 @@ module.exports = {
   },
   travels: {
     title: 'Travels',
+    description: 'All my travels arround the world',
     days: 'Days',
     photos: 'Photos',
     start: 'Departure'

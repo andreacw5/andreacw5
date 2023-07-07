@@ -10985,6 +10985,11 @@ uuid@^8.0.0, uuid@^8.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
 
+v-flag-icons@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/v-flag-icons/-/v-flag-icons-1.0.5.tgz#7dbd69962d454850f3c3f65a1fb4fb065004fe80"
+  integrity sha512-kMFxPfG4YArrfZsBIH0sBAFRWXLSVaTe0dDPzwfvnlE2Qh5kzeHJ4NxUnX5AtucZiOV7yOQ6HDKH8BYGlJsHNQ==
+
 v8-compile-cache@^2.0.3:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.3.0.tgz#2de19618c66dc247dcfb6f99338035d8245a2cee"

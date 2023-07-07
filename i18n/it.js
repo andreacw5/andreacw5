@@ -64,15 +64,10 @@ module.exports = {
     }
   },
   actions: {
+    language: 'Cambia lingua',
     changeColor: {
       dark: 'Spegni la luce',
       light: 'Accendi la luce'
-    },
-    changeLang: {
-      translation: 'Traduzioni',
-      it: 'Italiano',
-      en: 'Inglese',
-      fr: 'Francese'
     },
     visit: {
       github: 'Vai al repo GitHub',
@@ -80,6 +75,7 @@ module.exports = {
       company: 'Vai alla pagina dell\'azienda',
       study_case: 'Vai alla pagina del progetto'
     },
+    website: 'Vai al sito web',
     send: 'Invia'
   },
   projects: {
@@ -94,6 +90,7 @@ module.exports = {
   },
   travels: {
     title: 'Viaggi',
+    description: 'Tutti i miei viaggi in giro per il mondo',
     days: 'Giorni',
     photos: 'Foto',
     start: 'Partenza'

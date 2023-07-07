@@ -28,7 +28,8 @@ export default {
       { rel: 'apple-touch-icon', sizes: '144x144', href: 'icons/apple-icon-144x144.png' },
       { rel: 'apple-touch-icon', sizes: '152x152', href: 'icons/apple-icon-152x152.png' },
       { rel: 'apple-touch-icon', sizes: '180x180', href: 'icons/apple-icon-180x180.png' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Rubik&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Rubik&display=swap' },
+      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css' }
     ]
   },
 
@@ -45,7 +46,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/filters/formatDate.js' }
+    { src: '~/filters/formatDate.js' },
+    { src: '~/plugins/flags.js' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -94,8 +96,8 @@ export default {
   i18n: {
     skipSettingLocaleOnNavigate: true,
     locales: [
-      { code: 'en', iso: 'en-US', file: 'en.js', name: 'English' },
-      { code: 'it', iso: 'it-IT', file: 'it.js', name: 'Italian' }
+      { code: 'en', iso: 'en-US', file: 'en.js', name: 'English', icon: 'it' },
+      { code: 'it', iso: 'it-IT', file: 'it.js', name: 'Italian', icon: 'gb' }
     ],
     defaultLocale: 'it',
     strategy: 'no_prefix',

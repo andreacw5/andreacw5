@@ -1,6 +1,7 @@
 export const state = () => ({
   travels: [
     {
+      code: 'scottland-2022',
       title: {
         it: 'Regno unito - Scozia',
         en: 'United Kingdom - Scotland'
@@ -11,6 +12,7 @@ export const state = () => ({
       days: 14
     },
     {
+      code: 'route-66-2022',
       title: {
         it: 'Stati Uniti - Route 66',
         en: 'United States - Route 66'
@@ -21,6 +23,7 @@ export const state = () => ({
       days: 22
     },
     {
+      code: 'lisbon-2019',
       title: {
         it: 'Portogallo - Lisbona',
         en: 'Portugal - Lisbon'
@@ -31,6 +34,7 @@ export const state = () => ({
       days: 4
     },
     {
+      code: 'andalusia-2019',
       title: {
         it: 'Spagna - Andalusia',
         en: 'Spain - Andalusia'
@@ -41,6 +45,7 @@ export const state = () => ({
       days: 14
     },
     {
+      code: 'london-2014',
       title: {
         it: 'Regno unito - Londra',
         en: 'United Kingdom - London'
