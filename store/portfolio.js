@@ -1,10 +1,10 @@
 export const state = () => ({
   technologies: [
     { icon: 'mdi-expand-all-outline', name: 'All' },
-    { icon: 'mdi-language-typescript', name: 'Typescript' },
-    { icon: 'mdi-language-javascript', name: 'Javascript' },
-    { icon: 'mdi-nuxt', name: 'Nuxt.js' },
-    { icon: 'mdi-nodejs', name: 'Node.js' }
+    { icon: 'devicon-javascript-plain', name: 'Javascript' },
+    { icon: 'devicon-nestjs-plain', name: 'Nest.js' },
+    { icon: 'devicon-nuxtjs-plain', name: 'Nuxt.js' },
+    { icon: 'devicon-nodejs-plain', name: 'Node.js' }
   ],
   portfolio: [
     {
@@ -24,10 +24,13 @@ export const state = () => ({
       github: 'https://github.com/andreacw5/puma-arts',
       company: 'Puma Arts',
       technical: {
-        main: { icon: 'mdi-nuxt', name: 'Nuxt.js', color: '#00A86B' },
+        main: { icon: 'devicon-nuxtjs-plain', name: 'Nuxt.js', color: '#00A86B' },
         technologies: [
-          { icon: 'mdi-nuxt', name: 'Nuxt.js' },
-          { icon: 'mdi-nodejs', name: 'Node.js' }
+          { icon: 'devicon-nuxtjs-plain', name: 'Nuxt.js' },
+          { icon: 'devicon-nodejs-plain', name: 'Node.js' },
+          { icon: 'devicon-vuetify-plain', name: 'Vuetify' },
+          { icon: 'devicon-nginx-plain', name: 'NGINX' },
+          { icon: 'devicon-firebase-plain', name: 'Firebase' }
         ]
       }
     },
@@ -48,12 +51,13 @@ export const state = () => ({
       preview: 'https://firebasestorage.googleapis.com/v0/b/pw-9483234.appspot.com/o/projects%2FLink%20..%20(1).jpg?alt=media&token=34111aee-65c5-49d1-9633-c594eb1c8c56',
       technical: {
         main: {
-          name: 'Typescript',
-          icon: 'mdi-language-typescript',
-          color: '#2d79c7'
+          name: 'Nest.js',
+          icon: 'devicon-nestjs-plain',
+          color: '#e0234e'
         },
         technologies: [
-          { icon: 'mdi-language-typescript', name: 'Typescript' }
+          { name: 'Nest.js', icon: 'devicon-nestjs-plain' },
+          { icon: 'devicon-typescript-plain', name: 'Typescript' }
         ]
       }
     },
@@ -73,10 +77,13 @@ export const state = () => ({
       website: 'https://element-gaming.eu',
       company: 'Element Gaming',
       technical: {
-        main: { icon: 'mdi-nuxt', name: 'Nuxt.js', color: '#00A86B' },
+        main: { icon: 'devicon-nuxtjs-plain', name: 'Nuxt.js', color: '#00A86B' },
         technologies: [
-          { icon: 'mdi-nuxt', name: 'Nuxt.js' },
-          { icon: 'mdi-nodejs', name: 'Node.js' }
+          { icon: 'devicon-nuxtjs-plain', name: 'Nuxt.js' },
+          { icon: 'devicon-nodejs-plain', name: 'Node.js' },
+          { icon: 'devicon-vuetify-plain', name: 'Vuetify' },
+          { icon: 'devicon-nginx-plain', name: 'NGINX' },
+          { icon: 'devicon-sass-original', name: 'Sass' }
         ]
       }
     },
@@ -96,11 +103,13 @@ export const state = () => ({
       },
       preview: 'https://i.imgur.com/s5TUOg6.jpg',
       technical: {
-        main: { icon: 'mdi-nuxt', color: '#00A86B', name: 'Nuxt.js' },
+        main: { icon: 'devicon-nuxtjs-plain', color: '#00A86B', name: 'Nuxt.js' },
         technologies: [
-          { icon: 'mdi-nuxt', name: 'Nuxt.js' },
-          { icon: 'mdi-nodejs', name: 'Node.js' },
-          { icon: 'mdi-firebase', name: 'Firebase' }
+          { icon: 'devicon-nuxtjs-plain', name: 'Nuxt.js' },
+          { icon: 'devicon-nodejs-plain', name: 'Node.js' },
+          { icon: 'devicon-vuetify-plain', name: 'Vuetify' },
+          { icon: 'devicon-nginx-plain', name: 'NGINX' },
+          { icon: 'devicon-firebase-plain', name: 'Firebase' }
         ]
       }
     },
@@ -117,12 +126,12 @@ export const state = () => ({
         en: 'Web application for the management of remote customers of a personal trainer, which allows you to manage clients and fitness sessions. Also assigning remote exercises to customers.'
       },
       technical: {
-        main: { color: '#68a063', name: 'Node.js', icon: 'mdi-nodejs' },
+        main: { color: '#68a063', name: 'Node.js', icon: 'devicon-nodejs-plain' },
         technologies: [
-          { name: 'Node.js', icon: 'mdi-nodejs' },
-          { icon: 'mdi-language-html5', name: 'HTML5' },
-          { name: 'CSS3', icon: 'mdi-language-css3' },
-          { icon: 'mdi-language-javascript', name: 'Javascript' }
+          { name: 'Node.js', icon: 'devicon-nodejs-plain' },
+          { icon: 'devicon-html5-plain', name: 'HTML5' },
+          { name: 'CSS3', icon: 'devicon-css3-plain' },
+          { icon: 'devicon-javascript-plain', name: 'Javascript' }
         ]
       },
       current: false,
@@ -140,14 +149,14 @@ export const state = () => ({
       website: 'https://db.alir.community',
       technical: {
         main: {
-          icon: 'mdi-language-javascript',
+          icon: 'devicon-javascript-plain',
           color: '#f0db4f',
           name: 'Javascript'
         },
         technologies: [
-          { icon: 'mdi-language-html5', name: 'HTML5' },
-          { name: 'CSS3', icon: 'mdi-language-css3' },
-          { icon: 'mdi-language-javascript', name: 'Javascript' }
+          { icon: 'devicon-html5-plain', name: 'HTML5' },
+          { name: 'CSS3', icon: 'devicon-css3-plain' },
+          { icon: 'devicon-javascript-plain', name: 'Javascript' }
         ]
       },
       current: false,
@@ -173,14 +182,14 @@ export const state = () => ({
       company: 'ALIR Community',
       technical: {
         technologies: [
-          { name: 'HTML5', icon: 'mdi-language-html5' },
-          { icon: 'mdi-language-css3', name: 'CSS3' },
-          { icon: 'mdi-language-javascript', name: 'Javascript' },
-          { icon: 'mdi-language-php', name: 'PHP' }
+          { name: 'HTML5', icon: 'devicon-html5-plain' },
+          { icon: 'devicon-css3-plain', name: 'CSS3' },
+          { icon: 'devicon-javascript-plain', name: 'Javascript' },
+          { icon: 'devicon-php-plain', name: 'PHP' }
         ],
         main: {
           color: '#f0db4f',
-          icon: 'mdi-language-javascript',
+          icon: 'devicon-javascript-plain',
           name: 'Javascript'
         }
       }
