@@ -1,6 +1,6 @@
 <template>
   <a @click.stop="dialog = true">
-    <v-card class="mx-auto card-gradient">
+    <v-card class="atom-card mx-auto card-gradient">
       <image-item
         :image-url="item.preview"
         :alt-text="item.title + ' cover image'"
