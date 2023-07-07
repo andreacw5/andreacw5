@@ -21,13 +21,19 @@
           <v-btn
             v-for="locale in availableLocales"
             :key="locale.code"
-            text
+            icon
             @click="setNewLocale(locale.code)"
           >
-            {{ locale.name }}
+            <vf-icon
+              style="font-size: xx-large"
+              :country="locale.icon"
+              type="rounded-rectangle"
+              design="ds2"
+            />
           </v-btn>
 
-          <!--          <v-btn text to="/blog" nuxt class="hidden-sm-and-down white-text mr-1">
+          <!--          <v-btn text to="/blog" nuxt class="hidden-sm-and-down white-text mr-1"
+>
                       Blog
                     </v-btn>
                     <v-btn text to="/github" nuxt class="hidden-sm-and-down white-text mr-1">
