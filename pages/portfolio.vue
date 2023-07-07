@@ -3,7 +3,7 @@
     <v-card class="card">
       <v-card-title class="card-header">
         <h2 class="mt-2 mb-2 ml-4" style="font-size: xxx-large; font-weight: bolder">
-          Portfolio
+          {{ $t('sections.projects') }}
         </h2>
       </v-card-title>
       <v-bottom-navigation
