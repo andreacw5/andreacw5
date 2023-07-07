@@ -1,5 +1,5 @@
 <template>
-  <v-card class="atom-card common-card">
+  <v-card class="atom-card card-gradient common-card">
     <v-img
       :src="image"
       class="image"
@@ -84,13 +84,10 @@ export default {
   background: #333333;
   border-radius: 14px !important;
   border: 1px solid #414141;
-  box-shadow: none;
 }
 .image {
+  min-height: 125px;
   border-radius: 14px !important;
-}
-.common-card:hover {
-  transform: translateY(-2px);
 }
 .card-title {
   background-color: transparentize($color: #1d1d1d, $amount: 0.25);

@@ -7,7 +7,7 @@
         </h2>
       </v-card-title>
       <v-card-text class="mt-4">
-        <v-container>
+        <v-container grid-list-md text-xs-center>
           <v-row v-if="loading">
             <v-col v-for="(item, i) in 6" :key="i" cols="12">
               <v-skeleton-loader
