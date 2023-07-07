@@ -5,7 +5,7 @@
         <v-footer class="secondary-border mt-3 card text-center white-text">
           <v-row wrap class="mt-1 mb-1">
             <v-col cols="12">
-              © {{ new Date().getFullYear() }} - All rights reserved
+              © 2021-{{ new Date().getFullYear() }} - All rights reserved
             </v-col>
           </v-row>
         </v-footer>
@@ -16,6 +16,6 @@
 
 <script>
 export default {
-  name: 'Footer'
+  name: 'MainFooter'
 }
 </script>
