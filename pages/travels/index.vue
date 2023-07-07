@@ -34,6 +34,7 @@
 
 <script>
 import TravelListCard from '~/components/travels/TravelListCard.vue'
+import { createSEOMeta } from '@/utils/seo'
 export default {
   name: 'TravelListIndex',
   components: {
@@ -43,6 +44,19 @@ export default {
     return {
       loading: false,
       travels: []
+    }
+  },
+  head () {
+    return {
+      title: this.$t('travels.title') + ' - Andrea Tombolato',
+      meta: [
+        ...createSEOMeta({
+          title: this.$t('travels.title'),
+          description: this.$t('travels.description'),
+          url: this.$route.path,
+          image: 'https://firebasestorage.googleapis.com/v0/b/pw-9483234.appspot.com/o/IMG_1104.jpg?alt=media&token=d226d956-bc7f-40b7-aed5-4c5356227449'
+        })
+      ]
     }
   },
   created () {

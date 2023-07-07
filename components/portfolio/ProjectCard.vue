@@ -29,7 +29,6 @@
                   :color="item.technical.main.color"
                   class="transition pb-1"
                   icon
-                  to=""
                   v-on="on"
                 >
                   <v-icon large>{{ item.technical.main.icon }}</v-icon>
