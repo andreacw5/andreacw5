@@ -81,13 +81,13 @@ export const state = () => ({
     {
       icon: 'devicon-nestjs-plain',
       title: 'Nest.js',
-      color: '#f06529',
+      color: '#e0234e',
       url: 'https://nestjs.com/'
     },
     {
       icon: 'devicon-grails-plain',
       title: 'Grails',
-      color: '#0db7ed',
+      color: '#ec7b3f',
       url: 'https://grails.org'
     },
     {
