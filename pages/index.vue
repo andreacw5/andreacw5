@@ -86,10 +86,10 @@
             lg="6"
           >
             <work-card
-              :title="work.title"
+              :title="isLocaleItalian ? work.title.it : work.title.en"
               :company="work.company"
               :period="work.period"
-              :description="work.description"
+              :description="isLocaleItalian ? work.description.it : work.description.en"
               :website="work.website"
             />
           </v-col>
@@ -118,17 +118,14 @@
 import SkillIcon from '../components/SkillIcon'
 import ImageItem from '../components/shared/ImageItem'
 import WorkCard from '../components/about/WorkCard'
-import about from '@/static/data/about'
-import socials from '@/static/data/socials'
-import skill from '@/static/data/skills'
 import LoadingComponent from '@/components/Loading'
 import { createSEOMeta } from '~/utils/seo'
 export default {
   components: { LoadingComponent, WorkCard, ImageItem, SkillIcon },
   data: () => ({
-    skills: skill.skills,
-    works: about.works,
-    socials: socials.one,
+    skills: [],
+    works: [],
+    socials: [],
     loading: false
   }),
   head () {
@@ -145,8 +142,24 @@ export default {
     }
   },
   computed: {
-    currentLocale () {
-      return this.$i18n.locale
+    isLocaleItalian () {
+      return this.$i18n.locale === 'it'
+    }
+  },
+  created () {
+    this.getSkills()
+    this.getWorks()
+    this.getSocials()
+  },
+  methods: {
+    getSkills () {
+      this.skills = this.$store.getters['about/getAllSkills']
+    },
+    getWorks () {
+      this.works = this.$store.getters['about/getAllWorks']
+    },
+    getSocials () {
+      this.socials = this.$store.getters['about/getAllSocials']
     }
   }
 }
