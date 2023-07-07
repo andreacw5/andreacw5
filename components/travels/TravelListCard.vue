@@ -1,30 +1,60 @@
 <template>
-  <v-card style="border-radius: 10px;">
-    <v-img :src="travel.background" max-height="300" alt="travel cover background" cover no-repeat>
-      <v-card-actions class="hidden-md-and-down" style="background: rgba(21,20,20,0.4);">
-        <h1 class="travel-title">{{ travel.title }}</h1> <v-spacer></v-spacer>
-        <h2 class="travel-title">{{ travel.startDate.seconds | formatDate('yyyy') }}</h2>
-      </v-card-actions>
-    </v-img>
-  </v-card>
+  <common-card
+    :title="isLocaleItalian ? travel.title.it : travel.title.en"
+    :image="travel.background"
+    :gradient="true"
+    :title-centered="true"
+    :aspect-ratio="805 / 140"
+     url=""
+    >
+    <template #card-content>
+      <v-row class="fill-height align-center">
+        <v-col cols="4" class="date-col travels-col px-1">
+          <div class="mb-1 text-h6">
+            {{ $t('travels.start') }}
+          </div>
+          <div>{{ travel.startDate }}</div>
+        </v-col>
+        <v-col cols="4" class="date-col travels-col px-1">
+          <div class="mb-1 text-h6">
+            {{ $t('travels.photos') }}
+          </div>
+          <div>{{ travel.photos || 0 }}</div>
+        </v-col>
+        <v-col cols="4" class="attendants-col travels-col px-1">
+          <div class="mb-1 text-h6">
+            {{ $t('travels.days') }}
+          </div>
+          <div>{{ travel.days || 0 }}</div>
+        </v-col>
+      </v-row>
+    </template>
+  </common-card>
 </template>
 
 <script>
+import CommonCard from '@/components/CommonCard.vue'
 export default {
   name: 'TravelListCard',
+  components: {
+    CommonCard
+  },
   props: {
     travel: {
       type: Object,
       required: true
     }
+  },
+  computed: {
+    isLocaleItalian () {
+      return this.$i18n.locale === 'it'
+    }
   }
 }
 </script>
 
-<style scoped>
-.travel-title {
-  text-shadow: 0 0 1.2em rgba(0,0,0,.3);
-  font-weight: 400 !important;
-  font-size: xxx-large;
+<style scoped lang="scss">
+.travels-col + .travels-col {
+  border-left: 1px solid transparentize(#fafafa, 0.7);
 }
 </style>

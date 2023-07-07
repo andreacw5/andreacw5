@@ -4,8 +4,9 @@
     :height="height"
     :src="imageUrl"
     :lazy-src="defaultWorkUrl"
-    class="grey darken-3"
-    style="border-radius: 10px;"
+    :aspect-ratio="1"
+    :position="position"
+    class="grey darken-3 image-transition"
   >
     <template #placeholder>
       <v-row
@@ -37,6 +38,10 @@ export default {
     height: {
       type: Number,
       default: 300
+    },
+    position: {
+      type: String,
+      default: 'center center'
     }
   },
   computed: {

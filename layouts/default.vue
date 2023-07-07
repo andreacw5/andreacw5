@@ -8,20 +8,22 @@
       </p>
     <![endif]-->
 
-    <v-main class="gradient">
-      <Header />
+    <v-main>
+      <main-header />
       <nuxt />
+      <main-footer />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Header from '../components/layout/Header'
+import MainHeader from '../components/layout/Header.vue'
+import MainFooter from '@/components/layout/Footer.vue'
 export default {
   name: 'DefaultLayout',
-  components: { Header },
+  components: { MainHeader, MainFooter },
   head: {
-    titleTemplate: '%s'
+    titleTemplate: '%s' || 'Andrea Tombolato'
   }
 }
 </script>

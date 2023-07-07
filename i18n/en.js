@@ -13,7 +13,7 @@ module.exports = {
   },
   projects: {
     title: 'Projects',
-    description: 'Here you can find some of my projects, both personal and professional.',
+    description: 'Description',
     technologies: 'Technologies used',
     main_tech: 'Main technologies used',
     time: 'Time',
@@ -43,10 +43,11 @@ module.exports = {
     ending: 'or find me on my social networks.'
   },
   sections: {
-    home: 'Home',
+    home: 'About',
     start: 'My {section}',
     works: 'Works',
-    projects: 'Projects',
+    projects: 'Portfolio',
+    travels: 'Travels',
     contact: {
       title: 'Contact me',
       end: '{contact} Me',
@@ -86,6 +87,12 @@ module.exports = {
     },
     send: 'Send Message',
     website: 'Visit website'
+  },
+  travels: {
+    title: 'Travels',
+    days: 'Days',
+    photos: 'Photos',
+    start: 'Departure'
   },
   socials: {
     prefix: 'Follow me on {name}',
