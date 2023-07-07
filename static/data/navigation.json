@@ -9,6 +9,11 @@
       "name": "sections.projects",
       "icon": "mdi-briefcase",
       "url": "/portfolio"
+    },
+    {
+      "name": "sections.travels",
+      "icon": "mdi-beach",
+      "url": "/travels"
     }
   ]
 }
