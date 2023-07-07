@@ -75,11 +75,6 @@ main {
   border-radius: 14px !important;
 }
 
-.atom-card {
-  border-bottom: solid 1px var(--color-primary) !important;
-  border-right: solid 1px var(--color-primary) !important;
-}
-
 .atom-card:hover {
   border-bottom: solid 2px var(--color-primary) !important;
   border-right: solid 2px var(--color-primary) !important;
@@ -101,6 +96,10 @@ main {
   border: solid 1px var(--border-color) !important;
   transition: background-color .5s;
   border-radius: 14px !important;
+}
+
+.common-card:hover {
+  transform: translateY(-2px);
 }
 
 .button-hover:hover > span {
