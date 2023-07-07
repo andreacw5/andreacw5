@@ -43,10 +43,11 @@ module.exports = {
     ending: 'or find me on my social networks.'
   },
   sections: {
-    home: 'Home',
+    home: 'About',
     start: 'My {section}',
     works: 'Works',
-    projects: 'Projects',
+    projects: 'Portfolio',
+    travels: 'Travels',
     contact: {
       title: 'Contact me',
       end: '{contact} Me',
@@ -86,6 +87,12 @@ module.exports = {
     },
     send: 'Send Message',
     website: 'Visit website'
+  },
+  travels: {
+    title: 'Travels',
+    days: 'Days',
+    photos: 'Photos',
+    start: 'Departure'
   },
   socials: {
     prefix: 'Follow me on {name}',

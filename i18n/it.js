@@ -48,9 +48,10 @@ module.exports = {
     ending: 'o cercami tramite i miei social network.'
   },
   sections: {
-    home: 'Home',
+    home: 'About',
     start: 'I miei {section}',
     projects: 'Portfolio',
+    travels: 'Viaggi',
     contact: {
       title: 'Contattami',
       end: '{contact}',
@@ -93,7 +94,9 @@ module.exports = {
   },
   travels: {
     title: 'Viaggi',
-    description: 'Le mie avventure per il mondo'
+    days: 'Giorni',
+    photos: 'Foto',
+    start: 'Partenza'
   },
   visitWebsite: 'Visita il sito {name}',
   copyright: 'Tutti i diritti riservati',

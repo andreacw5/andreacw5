@@ -9,10 +9,13 @@
           </nuxt-link>
           <v-spacer />
           <v-btn text to="/" nuxt class="hidden-sm-and-down white-text mr-1">
-            About
+            {{ $t('sections.home') }}
           </v-btn>
           <v-btn text to="/portfolio" nuxt class="hidden-sm-and-down white-text mr-1">
-            Portfolio
+            {{ $t('sections.projects') }}
+          </v-btn>
+          <v-btn text to="/travels" nuxt class="hidden-sm-and-down white-text mr-1">
+            {{ $t('sections.travels') }}
           </v-btn>
           <v-divider vertical inset class="mr-2 ml-2 hidden-sm-and-down white-text" />
           <v-btn

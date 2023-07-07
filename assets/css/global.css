@@ -75,6 +75,22 @@ main {
   border-radius: 14px !important;
 }
 
+.atom-card {
+  border-bottom: solid 1px var(--color-primary) !important;
+  border-right: solid 1px var(--color-primary) !important;
+}
+
+.atom-card:hover {
+  border-bottom: solid 2px var(--color-primary) !important;
+  border-right: solid 2px var(--color-primary) !important;
+}
+
+.travels-col {
+  text-align: center;
+  color: var(--card-text);
+  font-weight: 600;
+}
+
 .round-border {
   border-radius: 14px !important;
 }

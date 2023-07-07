@@ -1,41 +1,43 @@
 <template>
-  <!-- Loading -->
-  <loading-component v-if="loading" />
-  <!-- Page content -->
-  <div v-else>
-    <v-container grid-list-sm text-xs-center>
-      <v-row wrap>
-        <v-col cols="12">
-          <div class="text-center">
-            <h1 class="text-uppercase mt-5" style="font-size: xxx-large; font-weight: bolder">
-              {{ $t('common.prefix.wrk') }} <span class="primary-text">{{ $t('travels.title') }}</span>
-            </h1>
-            <p>{{ $t('travels.description') }}</p>
-          </div>
-        </v-col>
-      </v-row>
-      <v-row wrap>
-        <template v-for="(travel, i) in travels">
-          <v-col
-            :key="i"
-            cols="12"
-          >
-            <travel-list-card :travel="travel" />
-          </v-col>
-        </template>
-      </v-row>
-    </v-container>
-  </div>
+  <v-container grid-list-md text-xs-center>
+    <v-card class="card">
+      <v-card-title class="card-header">
+        <h2 class="mt-2 mb-2 ml-4" style="font-size: xxx-large; font-weight: bolder">
+          {{ $t('travels.title') }}
+        </h2>
+      </v-card-title>
+      <v-card-text class="mt-4">
+        <v-container>
+          <v-row v-if="loading">
+            <v-col v-for="(item, i) in 6" :key="i" cols="12">
+              <v-skeleton-loader
+                type="image"
+                class="round-border card"
+              ></v-skeleton-loader>
+            </v-col>
+          </v-row>
+          <v-row v-else>
+            <template v-for="(travel, i) in travels">
+              <v-col
+                :key="i"
+                cols="12"
+              >
+                <travel-list-card :travel="travel" />
+              </v-col>
+            </template>
+          </v-row>
+        </v-container>
+      </v-card-text>
+    </v-card>
+  </v-container>
 </template>
 
 <script>
-import LoadingComponent from '~/components/Loading'
-import TravelListCard from '@/components/travels/TravelListCard'
+import TravelListCard from '~/components/travels/TravelListCard.vue'
 export default {
   name: 'TravelListIndex',
   components: {
-    TravelListCard,
-    LoadingComponent
+    TravelListCard
   },
   data () {
     return {
@@ -49,13 +51,8 @@ export default {
   },
   methods: {
     getTravels () {
-      this.$fire.firestore.collection('travels').get().then((resp) => {
-        const respData = resp.docs.map(doc => doc.data())
-        this.travels = respData.sort((a, b) => {
-          return b.startDate - a.startDate
-        })
-        this.loading = false
-      })
+      this.travels = this.$store.getters['travels/getAllTravels']
+      this.loading = false
     }
   }
 }
