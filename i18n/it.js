@@ -1,24 +1,28 @@
 module.exports = {
   greetings: 'Ciao,',
-  prociv: 'protezione civile',
+  prociv: 'Protezione civile',
   common: {
     description: 'Descrizione',
-    today: 'In corso',
-    prefix: {
-      wrk: 'Vuoi',
-      prj: 'I',
-      exp: 'La mia',
-      skl: 'Le mie',
-      abt: 'Su di',
-      do: 'Cosa',
-      my: 'I miei'
-    }
+    today: 'In corso'
   },
   intro: {
-    welcome: 'Sono {name}, aka {username}, Web Developer con base a Milano.',
-    extension: 'Nel 2015 ho iniziato ad appassionarmi al mondo dell\'informatica, iniziando con Wordpress e successivamente mi sono specializzato in {first}, {second} e {third}.',
-    resume: 'Attualmente lavoro dal 2016 presso {medas}, un’azienda italiana operante in ambito medicale. Sono membro del consiglio direttivo di {element}, un\'associazione no-profit dedicata al mondo gaming.',
-    hobbies: 'Nel mio tempo libero sono un volontario della {prociv}, mi dedico ai videogames e qualche volta alle serie TV.'
+    welcome: 'Nel 2016 inizia la mia carriera come sviluppatore Full-stack presso {medas}, un\'azienda italiana nel settore sanitario. Membro del consiglio direttivo di {element}, un\'associazione no-profit dedicata al gaming. Occasionalmente lavoro come freelance per piccoli progetti, evidenziati nel mio {portfolio}',
+    extension: 'Nel tempo libero, svolgo volontariato nella {prociv} come responsabile di turno. Sono appassionato di escursioni in montagna e di viaggi in giro per il mondo!',
+    portfolio: 'portfolio personale.'
+  },
+  tech: {
+    title: {
+      one: 'Le mie',
+      two: 'tecnologie'
+    },
+    description: 'Lavoro con tecnologie web basate su {js} o {java}, come {node}, {grails}, {nest}, {vue} e {nuxt}. Sempre alla ricerca di nuove tecnologie da imparare, al fine di migliorare le mie competenze. Inoltre, mi occupo della UX e UI, mettendo l\'accento sul design e la qualità del prodotto, con particolare attenzione ai dettagli e alla semplicità d\'uso.'
+  },
+  works: {
+    title: {
+      one: 'Le mie',
+      two: 'esperienze lavorative'
+    },
+    today: 'In corso'
   },
   expiriences: {
     title: 'Esperienze lavorative'

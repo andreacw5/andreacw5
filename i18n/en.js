@@ -1,11 +1,24 @@
 module.exports = {
   greetings: 'Hello,',
-  prociv: 'civil defence office',
+  prociv: 'civil defence',
   intro: {
-    welcome: 'My name is {name} aka {username}, and Welcome to my personal website.',
-    extension: 'In 2015 I started to get passionate about the world of computer science, starting with Wordpress and later I specialized in {first}, {second} and {third}.',
-    resume: 'I\'m a Web Developer from Milano and work as Developer from 2016 at {medas} an Italian company that offers IT services in the medical field. I\'m also working as Board member for {element}, a no-profit organization operating in the e-sports sector.',
-    hobbies: 'In my free time I dedicate myself as volunteer for my local {prociv}, videogames and sometimes TV series.'
+    welcome: 'In 2016 I started my career as a Full-stack developer at {medas}, an Italian company in the health sector. Member of the board of directors of {element}, a non-profit association dedicated to gaming. Occasionally I work as a freelancer for small projects, highlighted in my {portfolio}',
+    extension: 'In my spare time, I do volunteer work in the {prociv} as a shift manager. I am passionate about hiking in the mountains and traveling around the world!',
+    portfolio: 'personal portfolio.'
+  },
+  tech: {
+    title: {
+      one: 'My',
+      two: 'tech stack'
+    },
+    description: 'I work with web technologies based on {js} or {java}, such as {node}, {grails}, {nest}, {vue} and {nuxt}. I am always looking for new technologies to learn, in order to improve my skills. In addition, I take care of UX and UI, focusing on design and product quality, with particular attention to details and ease of use.'
+  },
+  works: {
+    title: {
+      one: 'My',
+      two: 'work experiences'
+    },
+    today: 'In progress'
   },
   validations: {
     email: 'Please enter a valid email',
@@ -23,16 +36,7 @@ module.exports = {
   },
   common: {
     description: 'Description',
-    today: 'In progress',
-    prefix: {
-      wrk: 'Want to',
-      prj: 'My',
-      exp: 'My',
-      skl: 'My',
-      abt: 'About',
-      do: 'What',
-      my: 'My'
-    }
+    today: 'In progress'
   },
   expiriences: {
     title: 'Work Expiriences'
