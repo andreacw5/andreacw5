@@ -1,6 +1,8 @@
 export const state = () => ({
   works: [
     {
+      color: 'blue',
+      logo: 'https://media.licdn.com/dms/image/C4D0BAQF72EBU4Oy1rw/company-logo_100_100/0/1563457264913?e=1697068800&v=beta&t=GvF7D1qTVMVUBGaff7Y0VJzUochYsligTOLgTRDMdvE',
       title: {
         en: 'Full-stack Developer',
         it: 'Full-stack Developer'
@@ -14,6 +16,8 @@ export const state = () => ({
       }
     },
     {
+      color: 'red',
+      logo: 'https://media.licdn.com/dms/image/C4D0BAQFwncel8Mc1PA/company-logo_100_100/0/1643793727984?e=1697068800&v=beta&t=PdZcgoGE-K99NNawEEFb2_2nOuCjRBMAwGlUOdFzrdg',
       title: {
         en: 'Board Member',
         it: 'Membro del Consiglio Direttivo'
@@ -27,6 +31,8 @@ export const state = () => ({
       }
     },
     {
+      color: 'red',
+      logo: 'https://media.licdn.com/dms/image/C4D0BAQFwncel8Mc1PA/company-logo_100_100/0/1643793727984?e=1697068800&v=beta&t=PdZcgoGE-K99NNawEEFb2_2nOuCjRBMAwGlUOdFzrdg',
       title: {
         en: 'Full Stack Developer & Project Manager',
         it: 'Full Stack Developer & Project Manager'

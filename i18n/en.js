@@ -8,15 +8,15 @@ module.exports = {
   },
   tech: {
     title: {
-      one: 'My',
-      two: 'tech stack'
+      one: 'Technical',
+      two: 'skills'
     },
     description: 'I work with web technologies based on {js} or {java}, such as {node}, {grails}, {nest}, {vue} and {nuxt}. I am always looking for new technologies to learn, in order to improve my skills. In addition, I take care of UX and UI, focusing on design and product quality, with particular attention to details and ease of use.'
   },
   works: {
     title: {
-      one: 'My',
-      two: 'work experiences'
+      one: 'Working',
+      two: 'experiences'
     },
     today: 'In progress'
   },

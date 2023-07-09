@@ -12,15 +12,15 @@ module.exports = {
   },
   tech: {
     title: {
-      one: 'Le mie',
-      two: 'tecnologie'
+      one: 'Competenze',
+      two: 'tecniche'
     },
     description: 'Lavoro con tecnologie web basate su {js} o {java}, come {node}, {grails}, {nest}, {vue} e {nuxt}. Sempre alla ricerca di nuove tecnologie da imparare, al fine di migliorare le mie competenze. Inoltre, mi occupo della UX e UI, mettendo l\'accento sul design e la qualità del prodotto, con particolare attenzione ai dettagli e alla semplicità d\'uso.'
   },
   works: {
     title: {
-      one: 'Le mie',
-      two: 'esperienze lavorative'
+      one: 'Esperienze',
+      two: 'lavorative'
     },
     today: 'In corso'
   },

@@ -2,13 +2,23 @@
   <v-card
     elevation="2"
     dense
-    class="secondary-border card-gradient"
+    class="atom-card common-card mx-auto card-gradient"
     outlined
   >
-    <v-card-title style="font-size: x-large; font-weight: bolder">{{ title }}</v-card-title>
-    <v-card-subtitle class="secondary-color">
-      {{ company }}
-    </v-card-subtitle>
+    <v-list two-line style="background: transparent">
+      <v-list-item style="background: transparent">
+        <v-list-item-avatar tile>
+          <v-img
+            :src="logo"
+            :alt="title"
+          />
+        </v-list-item-avatar>
+        <v-list-item-content>
+          <v-list-item-title>{{ title }}</v-list-item-title>
+          <v-list-item-subtitle>{{ company }}</v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+    </v-list>
     <v-card-actions>
       <span class="ml-2 white-text">{{ period }}</span>
       <v-spacer />
@@ -18,7 +28,7 @@
         class="hidden-sm-and-down white-text"
         @click="reveal = true"
       >
-        MORE
+        Altro
       </v-btn>
       <v-tooltip top>
         <template #activator="{ on }">
@@ -77,6 +87,10 @@ export default {
       default: ''
     },
     website: {
+      type: String,
+      default: ''
+    },
+    logo: {
       type: String,
       default: ''
     }
