@@ -17,7 +17,11 @@ export const state = () => ({
         it: 'Sito web per l\'artista Emanuele Puma, una vetrina sulle sue opere, i suoi progetti e le sue collaborazioni.',
         en: 'Website for the artist Emanuele Puma, a showcase on his works, his projects and his collaborations.'
       },
-      preview: 'https://i.imgur.com/nPcLGI5.jpg',
+      images: [
+        'https://cdn.andreacw.dev/uploads/works/puma/home_puma_image.webp',
+        'https://cdn.andreacw.dev/uploads/works/puma/home_puma__with_modal_image.webp'
+      ],
+      preview: 'https://cdn.andreacw.dev/uploads/works/puma/home_puma_image.webp',
       startDate: '2023',
       current: true,
       website: 'https://studioartepuma.it/',
@@ -48,7 +52,10 @@ export const state = () => ({
       current: true,
       github: 'https://github.com/andreacw5/url-manager-app',
       company: 'Open source',
-      preview: 'https://firebasestorage.googleapis.com/v0/b/pw-9483234.appspot.com/o/projects%2FLink%20..%20(1).jpg?alt=media&token=34111aee-65c5-49d1-9633-c594eb1c8c56',
+      images: [
+        'https://cdn.andreacw.dev/uploads/works/url/urlmanager.webp'
+      ],
+      preview: 'https://cdn.andreacw.dev/uploads/works/url/urlmanager.webp',
       technical: {
         main: {
           name: 'Nest.js',
@@ -71,7 +78,17 @@ export const state = () => ({
         it: 'Applicazione web di gestione di una associazione no-profit operante nel campo e-sport. I giocatori iscritti possono partecipare ad eventi, creare team e cercare giocatori con cui giocare in base alle proprie preferenze.',
         en: 'Web application for the management of a non-profit association operating in the e-sports field. Registered players can participate in events, create teams and search for players to play with based on their preferences.'
       },
-      preview: 'https://i.imgur.com/glSLPVL.png',
+      images: [
+        'https://cdn.andreacw.dev/uploads/works/element/home-image.webp',
+        'https://cdn.andreacw.dev/uploads/works/element/streamers-list-image.webp',
+        'https://cdn.andreacw.dev/uploads/works/element/events-image.webp',
+        'https://cdn.andreacw.dev/uploads/works/element/games-image.webp',
+        'https://cdn.andreacw.dev/uploads/works/element/news-image.webp',
+        'https://cdn.andreacw.dev/uploads/works/element/teams-image.webp',
+        'https://cdn.andreacw.dev/uploads/works/element/single-news-image.webp',
+        'https://cdn.andreacw.dev/uploads/works/element/dashboard-image.webp'
+      ],
+      preview: 'https://cdn.andreacw.dev/uploads/works/element/home-image.webp',
       startDate: '2019',
       current: true,
       website: 'https://element-gaming.eu',
@@ -88,7 +105,7 @@ export const state = () => ({
       }
     },
     {
-      slug: 'prociv',
+      slug: 'works/prociv',
       title: {
         it: 'Sito web per la Protezione Civile',
         en: 'Website for Civil Defence'
@@ -96,12 +113,19 @@ export const state = () => ({
       company: 'Comune di Settimo Milanese',
       current: false,
       startDate: '2019',
-      website: 'https://procivsettimomi.it',
+      website: 'https://works/procivsettimomi.it',
       description: {
         it: 'Sito web per l\'associazione di Protezione Civile di Settimo Milanese, una vetrina sulle attività dell\'associazione, il personale, la formazione e le attrezzature impiegate.',
         en: 'Website for the Civil Protection Association of Settimo Milanese, a showcase on the activities of the association, the staff, training and equipment used.'
       },
-      preview: 'https://i.imgur.com/s5TUOg6.jpg',
+      images: [
+        'https://cdn.andreacw.dev/uploads/works/prociv/home_page_image.webp',
+        'https://cdn.andreacw.dev/uploads/works/prociv/activity_page_image.webp',
+        'https://cdn.andreacw.dev/uploads/works/prociv/intervention_page_image.webp',
+        'https://cdn.andreacw.dev/uploads/works/prociv/personal_page_image.webp',
+        'https://cdn.andreacw.dev/uploads/works/prociv/create_activity_page_image.webp'
+      ],
+      preview: 'https://cdn.andreacw.dev/uploads/works/prociv/home_page_image.webp',
       technical: {
         main: { icon: 'devicon-nuxtjs-plain', color: '#00A86B', name: 'Nuxt.js' },
         technologies: [
@@ -119,7 +143,10 @@ export const state = () => ({
         it: 'Gym Track',
         en: 'Gym Track'
       },
-      preview: 'https://firebasestorage.googleapis.com/v0/b/pw-9483234.appspot.com/o/projects%2Fgymapp.webp?alt=media&token=b74c501e-3f5b-4a6d-a5e7-4b8333b9a6e0',
+      images: [
+        'https://cdn.andreacw.dev/uploads/works/gymtrack/gymapp.webp'
+      ],
+      preview: 'https://cdn.andreacw.dev/uploads/works/gymtrack/gymapp.webp',
       company: 'Gigante Studio',
       description: {
         it: 'Applicazione web per la gestione dei clienti remoti di un personal trainer, che permette di gestire i clienti e le sessioni di fitness. Assegnando anche esercizi da remoto ai clienti.',
@@ -144,7 +171,10 @@ export const state = () => ({
         en: 'An online portal for viewing your personal data and progress within the Arma 3 game. It provides data on players\' vehicles, assignments, weapons, roles, and bank accounts.'
       },
       startDate: '2017',
-      preview: 'https://firebasestorage.googleapis.com/v0/b/pw-9483234.appspot.com/o/projects%2Falirdb.webp?alt=media&token=7c6ee20f-05fe-4cfa-bb06-62b3004c8701',
+      images: [
+        'https://cdn.andreacw.dev/uploads/works/alir/alirdb.webp'
+      ],
+      preview: 'https://cdn.andreacw.dev/uploads/works/alir/alirdb.webp',
       slug: 'alirdb',
       website: 'https://db.alir.community',
       technical: {
@@ -177,7 +207,10 @@ export const state = () => ({
       },
       startDate: '2016',
       slug: 'alircommunity',
-      preview: 'https://firebasestorage.googleapis.com/v0/b/pw-9483234.appspot.com/o/projects%2Falircommunity.webp?alt=media&token=91d8b574-9509-4756-9434-aa9be5bf687b',
+      images: [
+        'https://cdn.andreacw.dev/uploads/works/alir/alircommunity.webp'
+      ],
+      preview: 'https://cdn.andreacw.dev/uploads/works/alir/alircommunity.webp',
       website: 'https://alir.community',
       company: 'ALIR Community',
       technical: {

@@ -2,7 +2,7 @@ export const state = () => ({
   works: [
     {
       color: 'blue',
-      logo: 'https://media.licdn.com/dms/image/C4D0BAQF72EBU4Oy1rw/company-logo_100_100/0/1563457264913?e=1697068800&v=beta&t=GvF7D1qTVMVUBGaff7Y0VJzUochYsligTOLgTRDMdvE',
+      logo: 'https://cdn.andreacw.dev/uploads/company/medas.webp',
       title: {
         en: 'Full-stack Developer',
         it: 'Full-stack Developer'
@@ -17,7 +17,7 @@ export const state = () => ({
     },
     {
       color: 'red',
-      logo: 'https://media.licdn.com/dms/image/C4D0BAQFwncel8Mc1PA/company-logo_100_100/0/1643793727984?e=1697068800&v=beta&t=PdZcgoGE-K99NNawEEFb2_2nOuCjRBMAwGlUOdFzrdg',
+      logo: 'https://cdn.andreacw.dev/uploads/company/element.webp',
       title: {
         en: 'Board Member',
         it: 'Membro del Consiglio Direttivo'
@@ -32,7 +32,7 @@ export const state = () => ({
     },
     {
       color: 'red',
-      logo: 'https://media.licdn.com/dms/image/C4D0BAQFwncel8Mc1PA/company-logo_100_100/0/1643793727984?e=1697068800&v=beta&t=PdZcgoGE-K99NNawEEFb2_2nOuCjRBMAwGlUOdFzrdg',
+      logo: 'https://cdn.andreacw.dev/uploads/company/element.webp',
       title: {
         en: 'Full Stack Developer & Project Manager',
         it: 'Full Stack Developer & Project Manager'
@@ -143,9 +143,23 @@ export const state = () => ({
   ],
   socials: [
     {
+      title: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/atombolato',
+      subtitle: '/in/atombolato',
+      color: '#0a66c2',
+      icon: 'mdi-linkedin'
+    },
+    {
+      title: 'Github',
+      href: 'https://github.com/andreacw5',
+      subtitle: 'andreacw5',
+      color: '#636a70',
+      icon: 'mdi-github'
+    },
+    {
       title: 'Steam',
-      subtitle: '/id/andreacw',
-      href: 'https://steamcommunity.com/id/andreacw',
+      subtitle: '/id/andreacw96',
+      href: 'https://steamcommunity.com/id/andreacw96',
       color: '#636a70',
       icon: 'mdi-steam'
     },
@@ -165,24 +179,10 @@ export const state = () => ({
     },
     {
       title: 'Twitter',
-      href: 'https://twitter.com/andreacw5',
-      subtitle: '@andreacw5',
+      href: 'https://twitter.com/atomweb96',
+      subtitle: '@atomweb96',
       color: '#1DA1F2',
       icon: 'mdi-twitter'
-    },
-    {
-      title: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/atombolato',
-      subtitle: '/in/atombolato',
-      color: '#0a66c2',
-      icon: 'mdi-linkedin'
-    },
-    {
-      title: 'Github',
-      href: 'https://github.com/andreacw5',
-      subtitle: 'andreacw5',
-      color: '#636a70',
-      icon: 'mdi-github'
     }
   ]
 })
