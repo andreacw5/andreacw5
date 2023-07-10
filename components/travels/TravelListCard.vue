@@ -13,7 +13,7 @@
           <div class="mb-1 text-h6">
             {{ $t('travels.start') }}
           </div>
-          <div>{{ travel.startDate }}</div>
+          <div>{{ travel.time.start | formatDate('dd/MM/yyyy') }}</div>
         </v-col>
         <v-col cols="4" class="date-col travels-col px-1">
           <div class="mb-1 text-h6">
@@ -25,7 +25,7 @@
           <div class="mb-1 text-h6">
             {{ $t('travels.days') }}
           </div>
-          <div>{{ travel.days || 0 }}</div>
+          <div>{{ countDays || 0 }}</div>
         </v-col>
       </v-row>
     </template>
@@ -33,6 +33,7 @@
 </template>
 
 <script>
+import { intervalToDuration } from 'date-fns'
 import CommonCard from '@/components/CommonCard.vue'
 export default {
   name: 'TravelListCard',
@@ -48,6 +49,12 @@ export default {
   computed: {
     isLocaleItalian () {
       return this.$i18n.locale === 'it'
+    },
+    countDays () {
+      return intervalToDuration({
+        start: new Date(this.travel.time.start),
+        end: new Date(this.travel.time.end)
+      }).days + 1
     }
   }
 }
