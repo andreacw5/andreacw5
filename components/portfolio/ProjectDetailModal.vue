@@ -1,12 +1,6 @@
 <template>
   <v-card class="card">
-      <image-item
-        :image-url="item.preview"
-        :alt-text="item.title + ' cover image'"
-        :height="400"
-        class="project-image"
-        position="absolute"
-      />
+      <image-slider class="project-image" :images="item.images" :height="400" :interval-val="5000" />
       <v-list
         style="background: transparent !important;"
         class="card-header mb-4"
@@ -98,14 +92,24 @@
 </template>
 
 <script>
-import ImageItem from '@/components/shared/ImageItem.vue'
 export default {
   name: 'ProjectDetailModal',
-  components: { ImageItem },
   props: {
     item: {
       type: Object,
       required: true
+    }
+  },
+  data () {
+    return {
+      selectedUrl: '',
+      imageArray: [
+        'https://cdn.andreacw.dev/uploads/prociv/home_page_image.webp',
+        'https://cdn.andreacw.dev/uploads/prociv/activity_page_image.webp',
+        'https://cdn.andreacw.dev/uploads/prociv/intervention_page_image.webp',
+        'https://cdn.andreacw.dev/uploads/prociv/personal_page_image.webp',
+        'https://cdn.andreacw.dev/uploads/prociv/create_activity_page_image.webp'
+      ]
     }
   },
   computed: {
