@@ -8,21 +8,7 @@
       <!-- My working path section -->
       <my-works-section :works="works" />
       <!-- Contacts section -->
-      <v-row id="contacts" class="mb-4" wrap>
-        <v-col cols="12">
-          <h1 class="text-uppercase mt-5" style="font-size: x-large; font-weight: bolder">
-            {{ $t('common.prefix.wrk') }} <span class="primary-text">{{ $t('contacts.title') }}</span>
-          </h1>
-        </v-col>
-        <v-col cols="12">
-          <p>
-            {{ $t('contacts.description') }} <a href="mailto:andreacw96@gmail.com">andreacw96@gmail.com</a> {{ $t('contacts.ending') }}
-          </p>
-        </v-col>
-        <v-col cols="12">
-          <socials-buttons :socials="socials" />
-        </v-col>
-      </v-row>
+      <contact-section :socials="socials" />
     </v-container>
   </v-container>
 </template>
@@ -32,8 +18,9 @@ import { createSEOMeta } from '~/utils/seo'
 import TechSection from '@/components/home/TechSection.vue'
 import MyWorksSection from '@/components/home/MyWorksSection.vue'
 import MainAboutSection from '@/components/home/MainAboutSection.vue'
+import ContactSection from '@/components/home/ContactSection.vue'
 export default {
-  components: { MainAboutSection, MyWorksSection, TechSection },
+  components: { ContactSection, MainAboutSection, MyWorksSection, TechSection },
   data: () => ({
     skills: [],
     works: [],
