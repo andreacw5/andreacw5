@@ -113,10 +113,7 @@ export default {
       return this.$i18n.locale === 'it'
     },
     defaultWorkUrl () {
-      return require('assets/img/works/default.webp')
-    },
-    selectedUrl () {
-      return require(`~/assets/img/works/${this.item.src}`)
+      return require('assets/img/loading.webp')
     },
     bannerBackground () {
       return `background-image:url(${this.selectedUrl})`

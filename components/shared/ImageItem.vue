@@ -3,7 +3,7 @@
     :alt="altText"
     :height="height"
     :src="imageUrl"
-    :lazy-src="defaultWorkUrl"
+    :lazy-src="lazyLoadingImage"
     :aspect-ratio="1"
     :position="position"
     class="grey darken-3 image-transition"
@@ -45,8 +45,8 @@ export default {
     }
   },
   computed: {
-    defaultWorkUrl () {
-      return require('~/assets/img/works/default.webp')
+    lazyLoadingImage () {
+      return require('~/assets/img/loading.webp')
     }
   }
 }

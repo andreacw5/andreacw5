@@ -17,11 +17,11 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         name: 'msapplication-TileColor',
-        content: '#da532c'
+        content: '#212123'
       },
       {
         name: 'theme-color',
-        content: '#121212FF'
+        content: '#212123'
       }
     ],
     link: [
@@ -45,13 +45,16 @@ export default {
       {
         rel: 'mask-icon',
         href: '/favicon/safari-pinned-tab.svg',
-        color: '#575757'
+        color: '#212123'
       },
       {
         rel: 'manifest',
         href: '/favicon/site.webmanifest'
       },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: true },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Rubik&display=swap' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap' },
       { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css' }
     ]
   },

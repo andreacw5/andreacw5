@@ -1,5 +1,5 @@
 module.exports = {
-  greetings: 'Hello,',
+  greetings: 'Hi there!',
   prociv: 'civil defence',
   intro: {
     welcome: 'In 2016 I started my career as a Full-stack developer at {medas}, an Italian company in the health sector. Member of the board of directors of {element}, a non-profit association dedicated to gaming. Occasionally I work as a freelancer for small projects, highlighted in my {portfolio}',
@@ -42,9 +42,11 @@ module.exports = {
     title: 'Work Expiriences'
   },
   contacts: {
-    title: 'work with me?',
-    description: 'If you want to contact me, write me at',
-    ending: 'or find me on my social networks.'
+    title: {
+      one: 'Contact',
+      two: 'me'
+    },
+    description: 'Contact me via the form below or use one of the available social networks. I will reply as soon as possible!'
   },
   sections: {
     home: 'About',

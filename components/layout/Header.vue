@@ -6,7 +6,7 @@
           <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = true" />
           <v-divider vertical inset class="mr-4 ml-2 hidden-md-and-up white-text" />
           <nuxt-link to="/">
-            <v-img max-height="45" max-width="45" :src="imageUrl" alt="AT Logo" />
+            <v-img max-height="50" max-width="50" :src="imageUrl" alt="AT Logo" />
           </nuxt-link>
           <v-spacer />
           <v-btn text to="/" nuxt class="hidden-sm-and-down white-text mr-1">

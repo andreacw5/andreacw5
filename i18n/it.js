@@ -1,5 +1,5 @@
 module.exports = {
-  greetings: 'Ciao,',
+  greetings: 'Ciao!',
   prociv: 'Protezione civile',
   common: {
     description: 'Descrizione',
@@ -47,12 +47,14 @@ module.exports = {
     required: 'Questo campo è obbligatorio'
   },
   contacts: {
-    title: 'lavorare con me?',
-    description: 'Se vuoi entrare in contatto con me, scrivimi all\'indirizzo email',
-    ending: 'o cercami tramite i miei social network.'
+    title: {
+      one: 'Contattami',
+      two: ''
+    },
+    description: 'Contattami tramite il form sottostante oppure usa uno dei social network disponibili. Risponderò il prima possibile!'
   },
   sections: {
-    home: 'About',
+    home: 'Su di me',
     start: 'I miei {section}',
     projects: 'Portfolio',
     travels: 'Viaggi',
