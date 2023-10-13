@@ -9,7 +9,9 @@ export const state = () => ({
       },
       company: 'Medas',
       website: 'https://medas-solutions.it',
-      period: 'Jul 2016 – Present',
+      period: {
+        start: '2016-06-15'
+      },
       description: {
         en: 'A company focused on developing web tools for patients to access their medical information. Develop with Vue.js, Java and some other framework.',
         it: 'Una società specializzata nello sviluppo di strumenti web per consentire ai pazienti di accedere alle proprie informazioni mediche. Sviluppo con Vue.js, Java e altri framework.'
@@ -24,7 +26,9 @@ export const state = () => ({
       },
       company: 'Element Gaming',
       website: 'https://element-gaming.eu',
-      period: 'Nov 2020 – Present',
+      period: {
+        start: '2020-11-03'
+      },
       description: {
         en: "Management of the company's R&D, graphic and social department personnel.",
         it: 'Gestione del personale del dipartimento R&D, grafico e social della società.'
@@ -39,7 +43,10 @@ export const state = () => ({
       },
       company: 'Element Gaming',
       website: 'https://element-gaming.eu',
-      period: 'Feb 2019 – Nov 2020',
+      period: {
+        start: '2019-02-01',
+        end: '2020-11-02'
+      },
       description: {
         en: 'Development of web apps for the automation and management of the group streamers. Develop with Nuxt.js, Node.js and some other framework.',
         it: 'Sviluppo di web app per l\'automazione e la gestione degli streamer del gruppo. Sviluppo con Nuxt.js, Node.js e altri framework.'
