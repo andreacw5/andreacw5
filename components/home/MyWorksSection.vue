@@ -1,16 +1,16 @@
 <template>
   <v-card class="card mt-4">
-    <v-card-title>
-      <h1 class="text-uppercase large-title" style="font-size: x-large; font-weight: bolder">
+    <v-card-title class="card-header">
+      <h2 class="ml-2" style="font-size: xx-large; font-weight: bolder">
         <template v-if="isLocaleItalian">
           <span class="primary-text">{{ $t('works.title.one') }}</span> {{ $t('works.title.two') }}
         </template>
         <template v-else>
           {{ $t('works.title.one') }} <span class="primary-text">{{ $t('works.title.two') }}</span>
         </template>
-      </h1>
+      </h2>
     </v-card-title>
-    <v-card-text>
+    <v-card-text class="mt-4">
       <v-row wrap>
         <v-col
           v-for="(work, i) in works"
