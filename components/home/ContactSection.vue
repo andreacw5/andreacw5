@@ -23,6 +23,7 @@
                 <v-form
                   ref="form"
                   v-model="valid"
+                  disabled
                 >
                   <v-text-field
                     v-model="name"
