@@ -2,24 +2,35 @@
   <v-card
     elevation="2"
     dense
-    class="secondary-border card-gradient"
+    class="atom-card common-card mx-auto card-gradient"
     outlined
   >
-    <v-card-title style="font-size: x-large; font-weight: bolder">{{ title }}</v-card-title>
-    <v-card-subtitle class="secondary-color">
-      {{ company }}
-    </v-card-subtitle>
+    <v-list two-line style="background: transparent">
+      <v-list-item style="background: transparent">
+        <v-list-item-avatar tile>
+          <v-img
+            :src="logo"
+            :alt="title"
+          />
+        </v-list-item-avatar>
+        <v-list-item-content>
+          <v-list-item-title>{{ title }}</v-list-item-title>
+          <v-list-item-subtitle>{{ company }}</v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+    </v-list>
     <v-card-actions>
-      <span class="ml-2 white-text">{{ period }}</span>
+      <span class="ml-2 white-text">
+        {{ period.start | formatDate('MM/yyyy', currentLocale)}}
+        <span>-</span>
+        <template v-if="period.end">
+          {{ period.end | formatDate('MM/yyyy', currentLocale) }}
+        </template>
+        <template v-else>
+          {{ $t('works.today') }}
+        </template>
+      </span>
       <v-spacer />
-      <v-btn
-        v-if="description !== ''"
-        text
-        class="hidden-sm-and-down white-text"
-        @click="reveal = true"
-      >
-        MORE
-      </v-btn>
       <v-tooltip top>
         <template #activator="{ on }">
           <v-btn
@@ -34,25 +45,6 @@
         <span>{{ $t('actions.website') }}</span>
       </v-tooltip>
     </v-card-actions>
-    <v-expand-transition>
-      <v-card
-        v-if="reveal"
-        class="transition-fast-in-fast-out v-card--reveal"
-      >
-        <v-card-text>
-          <p>{{ description }}</p>
-        </v-card-text>
-        <v-card-actions class="pt-0">
-          <v-spacer />
-          <v-btn
-            text
-            @click="reveal = false"
-          >
-            Close
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-expand-transition>
   </v-card>
 </template>
 
@@ -79,9 +71,18 @@ export default {
     website: {
       type: String,
       default: ''
+    },
+    logo: {
+      type: String,
+      default: ''
     }
   },
-  data: () => ({ reveal: false })
+  data: () => ({ reveal: false }),
+  computed: {
+    currentLocale () {
+      return this.$i18n.locale
+    }
+  }
 }
 </script>
 

@@ -1,43 +1,35 @@
 <template>
-    <v-row wrap class="mr-5">
-      <v-col
-        v-for="(social, i) in socials" :key="i" xs="12" sm="12" md="4"
-        lg="4"
-        style="padding-bottom: 5px;"
+  <v-btn
+    target="_blank"
+    :href="social.href"
+    class="mx-md-4 transition-h social-button"
+    :color="social.color || 'white darken-4'"
+    large
+    block
+    :data-hover="social.subtitle"
+    :outlined="isDarkMode"
+  >
+    <div>
+      <v-icon
+        :color="isDarkMode ? social.color : 'gray darken-2'"
+        size="38px"
       >
-        <v-btn
-          target="_blank"
-          :href="social.href"
-          class="mx-md-4 transition-h social-button"
-          :color="social.color || 'white darken-4'"
-          large
-          block
-          :data-hover="social.subtitle"
-          :outlined="isDarkMode"
-        >
-          <div>
-            <v-icon
-              :color="isDarkMode ? social.color : 'gray darken-2'"
-              size="38px"
-            >
-              {{ social.icon }}
-            </v-icon>
-            <span class="hidden-xs-and-down" style="padding-left: 8px">
-              {{ social.title }}
-            </span>
-          </div>
-        </v-btn>
-      </v-col>
-    </v-row>
+        {{ social.icon }}
+      </v-icon>
+      <span class="hidden-xs-and-down" style="padding-left: 8px">
+        {{ social.title }}
+      </span>
+    </div>
+  </v-btn>
 </template>
 
 <script>
 export default {
   name: 'SocialsButtons',
   props: {
-    socials: {
-      type: Array,
-      default: () => []
+    social: {
+      type: Object,
+      default: () => {}
     }
   },
   computed: {
