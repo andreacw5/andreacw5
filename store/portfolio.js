@@ -8,6 +8,201 @@ export const state = () => ({
   ],
   portfolio: [
     {
+      slug: 'element',
+      title: {
+        it: 'Sito web per i gamer',
+        en: 'Web application for gamers'
+      },
+      description: {
+        it: 'Applicazione web di gestione di una associazione no-profit operante nel campo e-sport. I giocatori iscritti possono partecipare ad eventi, creare team e cercare giocatori con cui giocare in base alle proprie preferenze.',
+        en: 'Web application for the management of a non-profit association operating in the e-sports field. Registered players can participate in events, create teams and search for players to play with based on their preferences.'
+      },
+      images: [
+        'https://harbor.andreacw.dev/api/v1/files/6b319d775a8a9be85142abfbd612054b',
+        'https://harbor.andreacw.dev/api/v1/files/0e63b3906b488c86b7aeca3ef50d8528',
+        'https://harbor.andreacw.dev/api/v1/files/1d4e64ee41ed8cf44af6ec0825421930',
+        'https://harbor.andreacw.dev/api/v1/files/f33ccd994a53ae2b7482366069587013',
+        'https://harbor.andreacw.dev/api/v1/files/d2089dd002171ebac8fbd502e8b58548',
+        'https://harbor.andreacw.dev/api/v1/files/fd09dad0ac1e2f5ef91e0f5d42064239',
+        'https://harbor.andreacw.dev/api/v1/files/4cfffc3bff2b5bf313aa64d3e4d609f5',
+        'https://harbor.andreacw.dev/api/v1/files/fe11b090557d6fd55591e9268b27f5c7',
+        'https://harbor.andreacw.dev/api/v1/files/744c4944c340df5ee798e504f21d7233',
+        'https://harbor.andreacw.dev/api/v1/files/d14f5b3279fb6f91fa3e58000369cf8a',
+        'https://harbor.andreacw.dev/api/v1/files/ad8b2389cd3415fde1c54d2dcae7e420',
+        'https://harbor.andreacw.dev/api/v1/files/1554a5baeb81107c94cb13ee9e23fd40',
+        'https://harbor.andreacw.dev/api/v1/files/af88406da3e46ea2eec2852e0cd6f68a',
+        'https://harbor.andreacw.dev/api/v1/files/b85c608090674ecfaa2924d564c7309e'
+      ],
+      preview: 'https://harbor.andreacw.dev/api/v1/files/6b319d775a8a9be85142abfbd612054b',
+      startDate: '2019',
+      current: true,
+      website: 'https://element-gaming.eu',
+      company: 'Element Gaming ASD',
+      technical: {
+        main: { icon: 'devicon-nuxtjs-plain', name: 'Nuxt.js', color: '#00A86B' },
+        technologies: [
+          { icon: 'devicon-nuxtjs-plain', name: 'Nuxt.js' },
+          { icon: 'devicon-nodejs-plain', name: 'Node.js' },
+          { icon: 'devicon-vuetify-plain', name: 'Vuetify' },
+          { icon: 'devicon-nginx-plain', name: 'NGINX' },
+          { icon: 'devicon-sass-original', name: 'Sass' }
+        ]
+      }
+    },
+    {
+      slug: 'emt-links',
+      title: {
+        it: 'Linktree website',
+        en: 'Linktree website'
+      },
+      description: {
+        it: 'Applicazione web di gestione di una associazione no-profit operante nel campo e-sport. I giocatori iscritti possono partecipare ad eventi, creare team e cercare giocatori con cui giocare in base alle proprie preferenze.',
+        en: 'Web application for the management of a non-profit association operating in the e-sports field. Registered players can participate in events, create teams and search for players to play with based on their preferences.'
+      },
+      images: [
+        'https://harbor.andreacw.dev/api/v1/files/33925b190be7f512bc95f9062dce6d4f'
+      ],
+      preview: 'https://harbor.andreacw.dev/api/v1/files/33925b190be7f512bc95f9062dce6d4f',
+      startDate: '2023',
+      current: true,
+      website: 'https://links.element-gaming.eu',
+      company: 'Element Gaming ASD',
+      technical: {
+        main: { icon: 'devicon-nuxtjs-plain', name: 'Nuxt.js', color: '#00A86B' },
+        technologies: [
+          { icon: 'devicon-nuxtjs-plain', name: 'Nuxt.js' },
+          { icon: 'devicon-nodejs-plain', name: 'Node.js' },
+          { icon: 'devicon-vuetify-plain', name: 'Vuetify' },
+          { icon: 'devicon-nginx-plain', name: 'NGINX' },
+          { icon: 'devicon-sass-original', name: 'Sass' }
+        ]
+      }
+    },
+    {
+      slug: 'ziplink',
+      title: {
+        it: 'ZipLink',
+        en: 'ZipLink'
+      },
+      description: {
+        it: 'ZipLink è un sistema gestore di url con Rest API per la gestione di url accorciati, statistiche sui click e reindirizzamenti tramite codici personalizzati.',
+        en: 'ZipLink, is an url manager system with Rest API for management of short urls, click statistics and redirects by personalized codes'
+      },
+      startDate: '2022',
+      current: true,
+      github: 'https://github.com/andreacw5/ziplink',
+      company: 'Open source',
+      images: [
+        'https://harbor.andreacw.dev/api/v1/files/aa446189ee45f5b45daa112ad43861c6'
+      ],
+      preview: 'https://harbor.andreacw.dev/api/v1/files/aa446189ee45f5b45daa112ad43861c6',
+      technical: {
+        main: {
+          name: 'Nest.js',
+          icon: 'devicon-nestjs-plain',
+          color: '#e0234e'
+        },
+        technologies: [
+          { name: 'Nest.js', icon: 'devicon-nestjs-plain' },
+          { icon: 'devicon-typescript-plain', name: 'Typescript' }
+        ]
+      }
+    },
+    {
+      slug: 'fileharbor',
+      title: {
+        it: 'FileHarbor',
+        en: 'FileHarbor'
+      },
+      description: {
+        it: 'Servizio costruito con Nest.js dedicato alla gestione degli upload di immagini, come avatar, copertine di post e altri asset.',
+        en: 'Service built with Nest.js dedicated to handling image uploads, such as avatars, post covers, and other assets. '
+      },
+      startDate: '2024',
+      current: true,
+      github: 'https://github.com/andreacw5/fileharbor',
+      company: 'Open source',
+      images: [
+        'https://harbor.andreacw.dev/api/v1/files/9eb12aade81517f5a5e63909d6ef1ae6'
+      ],
+      preview: 'https://harbor.andreacw.dev/api/v1/files/9eb12aade81517f5a5e63909d6ef1ae6',
+      technical: {
+        main: {
+          name: 'Nest.js',
+          icon: 'devicon-nestjs-plain',
+          color: '#e0234e'
+        },
+        technologies: [
+          { name: 'Nest.js', icon: 'devicon-nestjs-plain' },
+          { icon: 'devicon-typescript-plain', name: 'Typescript' }
+        ]
+      }
+    },
+    {
+      slug: 'alertconnector',
+      title: {
+        it: 'AlertConnector',
+        en: 'AlertConnector'
+      },
+      description: {
+        it: 'ZipLink è un sistema gestore di url con Rest API per la gestione di url accorciati, statistiche sui click e reindirizzamenti tramite codici personalizzati.',
+        en: 'ZipLink, is an url manager system with Rest API for management of short urls, click statistics and redirects by personalized codes'
+      },
+      startDate: '2024',
+      current: true,
+      github: 'https://github.com/prociv-sm/management-api',
+      company: 'Open source',
+      images: [
+        'https://harbor.andreacw.dev/api/v1/files/2880cba043f55f209b3ecb92e3b69a00'
+      ],
+      preview: 'https://harbor.andreacw.dev/api/v1/files/2880cba043f55f209b3ecb92e3b69a00',
+      technical: {
+        main: {
+          name: 'Nest.js',
+          icon: 'devicon-nestjs-plain',
+          color: '#e0234e'
+        },
+        technologies: [
+          { name: 'Nest.js', icon: 'devicon-nestjs-plain' },
+          { icon: 'devicon-typescript-plain', name: 'Typescript' }
+        ]
+      }
+    },
+    {
+      slug: 'prociv',
+      title: {
+        it: 'Sito web per la Protezione Civile',
+        en: 'Website for Civil Defence'
+      },
+      company: 'Comune di Settimo Milanese',
+      current: false,
+      startDate: '2019',
+      website: 'https://works/procivsettimomi.it',
+      description: {
+        it: 'Sito web per l\'associazione di Protezione Civile di Settimo Milanese, una vetrina sulle attività dell\'associazione, il personale, la formazione e le attrezzature impiegate.',
+        en: 'Website for the Civil Protection Association of Settimo Milanese, a showcase on the activities of the association, the staff, training and equipment used.'
+      },
+      images: [
+        'https://harbor.andreacw.dev/api/v1/files/7c461f4d8a1a2f286d5d7af35f98bc9d',
+        'https://harbor.andreacw.dev/api/v1/files/a4dbd2135b6b264b8db13f0e57c50ee0',
+        'https://harbor.andreacw.dev/api/v1/files/395fdefc12d2ea2a13cd6ef88045b247',
+        'https://harbor.andreacw.dev/api/v1/files/3a252f4a7b30fb8ca0e614fd1927590b',
+        'https://harbor.andreacw.dev/api/v1/files/3c32584e42ddac97888b52b217102c7d',
+        'https://harbor.andreacw.dev/api/v1/files/a9f4d55e3c8365691b6fb18ae738351b'
+      ],
+      preview: 'https://harbor.andreacw.dev/api/v1/files/7c461f4d8a1a2f286d5d7af35f98bc9d',
+      technical: {
+        main: { icon: 'devicon-nuxtjs-plain', color: '#00A86B', name: 'Nuxt.js' },
+        technologies: [
+          { icon: 'devicon-nuxtjs-plain', name: 'Nuxt.js' },
+          { icon: 'devicon-nodejs-plain', name: 'Node.js' },
+          { icon: 'devicon-vuetify-plain', name: 'Vuetify' },
+          { icon: 'devicon-nginx-plain', name: 'NGINX' },
+          { icon: 'devicon-firebase-plain', name: 'Firebase' }
+        ]
+      }
+    },
+    {
       slug: 'puma-arts',
       title: {
         it: 'Sito web per Puma Arts',
@@ -18,10 +213,10 @@ export const state = () => ({
         en: 'Website for the artist Emanuele Puma, a showcase on his works, his projects and his collaborations.'
       },
       images: [
-        'https://cdn.andreacw.dev/uploads/works/puma/home_puma_image.webp',
-        'https://cdn.andreacw.dev/uploads/works/puma/home_puma__with_modal_image.webp'
+        'https://harbor.andreacw.dev/api/v1/files/2be3bf23f7972b37436e489c4cb0620f',
+        'https://harbor.andreacw.dev/api/v1/files/c1a29911ee6523239b024e9e5669b1e4'
       ],
-      preview: 'https://cdn.andreacw.dev/uploads/works/puma/home_puma_image.webp',
+      preview: 'https://harbor.andreacw.dev/api/v1/files/2be3bf23f7972b37436e489c4cb0620f',
       startDate: '2023',
       current: true,
       website: 'https://studioartepuma.it/',
@@ -39,114 +234,16 @@ export const state = () => ({
       }
     },
     {
-      title: {
-        it: 'Gestore di URL',
-        en: 'Url Manager'
-      },
-      description: {
-        it: 'Sistema gestore di url con Rest API per la gestione di url accorciati, statistiche sui click e reindirizzamenti tramite codici personalizzati.',
-        en: 'Url manager system with Rest API for management of short urls, click statistics and redirects by personalized codes'
-      },
-      slug: 'url-manager-app',
-      startDate: '2022',
-      current: true,
-      github: 'https://github.com/andreacw5/url-manager-app',
-      company: 'Open source',
-      images: [
-        'https://cdn.andreacw.dev/uploads/works/url/urlmanager.webp'
-      ],
-      preview: 'https://cdn.andreacw.dev/uploads/works/url/urlmanager.webp',
-      technical: {
-        main: {
-          name: 'Nest.js',
-          icon: 'devicon-nestjs-plain',
-          color: '#e0234e'
-        },
-        technologies: [
-          { name: 'Nest.js', icon: 'devicon-nestjs-plain' },
-          { icon: 'devicon-typescript-plain', name: 'Typescript' }
-        ]
-      }
-    },
-    {
-      slug: 'element',
-      title: {
-        it: 'Sito web per Element Gaming',
-        en: 'Website for Element Gaming'
-      },
-      description: {
-        it: 'Applicazione web di gestione di una associazione no-profit operante nel campo e-sport. I giocatori iscritti possono partecipare ad eventi, creare team e cercare giocatori con cui giocare in base alle proprie preferenze.',
-        en: 'Web application for the management of a non-profit association operating in the e-sports field. Registered players can participate in events, create teams and search for players to play with based on their preferences.'
-      },
-      images: [
-        'https://cdn.andreacw.dev/uploads/works/element/home-image.webp',
-        'https://cdn.andreacw.dev/uploads/works/element/streamers-list-image.webp',
-        'https://cdn.andreacw.dev/uploads/works/element/events-image.webp',
-        'https://cdn.andreacw.dev/uploads/works/element/games-image.webp',
-        'https://cdn.andreacw.dev/uploads/works/element/news-image.webp',
-        'https://cdn.andreacw.dev/uploads/works/element/teams-image.webp',
-        'https://cdn.andreacw.dev/uploads/works/element/single-news-image.webp',
-        'https://cdn.andreacw.dev/uploads/works/element/dashboard-image.webp'
-      ],
-      preview: 'https://cdn.andreacw.dev/uploads/works/element/home-image.webp',
-      startDate: '2019',
-      current: true,
-      website: 'https://element-gaming.eu',
-      company: 'Element Gaming',
-      technical: {
-        main: { icon: 'devicon-nuxtjs-plain', name: 'Nuxt.js', color: '#00A86B' },
-        technologies: [
-          { icon: 'devicon-nuxtjs-plain', name: 'Nuxt.js' },
-          { icon: 'devicon-nodejs-plain', name: 'Node.js' },
-          { icon: 'devicon-vuetify-plain', name: 'Vuetify' },
-          { icon: 'devicon-nginx-plain', name: 'NGINX' },
-          { icon: 'devicon-sass-original', name: 'Sass' }
-        ]
-      }
-    },
-    {
-      slug: 'works/prociv',
-      title: {
-        it: 'Sito web per la Protezione Civile',
-        en: 'Website for Civil Defence'
-      },
-      company: 'Comune di Settimo Milanese',
-      current: false,
-      startDate: '2019',
-      website: 'https://works/procivsettimomi.it',
-      description: {
-        it: 'Sito web per l\'associazione di Protezione Civile di Settimo Milanese, una vetrina sulle attività dell\'associazione, il personale, la formazione e le attrezzature impiegate.',
-        en: 'Website for the Civil Protection Association of Settimo Milanese, a showcase on the activities of the association, the staff, training and equipment used.'
-      },
-      images: [
-        'https://cdn.andreacw.dev/uploads/works/prociv/home_page_image.webp',
-        'https://cdn.andreacw.dev/uploads/works/prociv/activity_page_image.webp',
-        'https://cdn.andreacw.dev/uploads/works/prociv/intervention_page_image.webp',
-        'https://cdn.andreacw.dev/uploads/works/prociv/personal_page_image.webp',
-        'https://cdn.andreacw.dev/uploads/works/prociv/create_activity_page_image.webp'
-      ],
-      preview: 'https://cdn.andreacw.dev/uploads/works/prociv/home_page_image.webp',
-      technical: {
-        main: { icon: 'devicon-nuxtjs-plain', color: '#00A86B', name: 'Nuxt.js' },
-        technologies: [
-          { icon: 'devicon-nuxtjs-plain', name: 'Nuxt.js' },
-          { icon: 'devicon-nodejs-plain', name: 'Node.js' },
-          { icon: 'devicon-vuetify-plain', name: 'Vuetify' },
-          { icon: 'devicon-nginx-plain', name: 'NGINX' },
-          { icon: 'devicon-firebase-plain', name: 'Firebase' }
-        ]
-      }
-    },
-    {
+      slug: 'gymtrack',
       startDate: '2018',
       title: {
         it: 'Gym Track',
         en: 'Gym Track'
       },
       images: [
-        'https://cdn.andreacw.dev/uploads/works/gymtrack/gymapp.webp'
+        'https://harbor.andreacw.dev/api/v1/files/dd294ba4654b994e9f921882215726ae'
       ],
-      preview: 'https://cdn.andreacw.dev/uploads/works/gymtrack/gymapp.webp',
+      preview: 'https://harbor.andreacw.dev/api/v1/files/dd294ba4654b994e9f921882215726ae',
       company: 'Gigante Studio',
       description: {
         it: 'Applicazione web per la gestione dei clienti remoti di un personal trainer, che permette di gestire i clienti e le sessioni di fitness. Assegnando anche esercizi da remoto ai clienti.',
@@ -161,10 +258,10 @@ export const state = () => ({
           { icon: 'devicon-javascript-plain', name: 'Javascript' }
         ]
       },
-      current: false,
-      slug: 'gymtrack'
+      current: false
     },
     {
+      slug: 'alirdb',
       company: 'ALIR Community',
       description: {
         it: 'Un portale online per la visualizzazione dei propri dati e progressi personali all\'interno del gioco Arma 3. Fornisce dati sui veicoli, incarichi, armi, ruoli e conti bancari dei giocatori.',
@@ -172,10 +269,9 @@ export const state = () => ({
       },
       startDate: '2017',
       images: [
-        'https://cdn.andreacw.dev/uploads/works/alir/alirdb.webp'
+        'https://harbor.andreacw.dev/api/v1/files/e0f298cb75d18b5a6ee5b273d22f101a'
       ],
-      preview: 'https://cdn.andreacw.dev/uploads/works/alir/alirdb.webp',
-      slug: 'alirdb',
+      preview: 'https://harbor.andreacw.dev/api/v1/files/e0f298cb75d18b5a6ee5b273d22f101a',
       website: 'https://db.alir.community',
       technical: {
         main: {
@@ -197,6 +293,7 @@ export const state = () => ({
       github: 'https://github.com/andreacw5/ALIRDB'
     },
     {
+      slug: 'alircommunity',
       title: {
         it: 'Sito web per ALIR',
         en: 'Website for ALIR'
@@ -206,11 +303,10 @@ export const state = () => ({
         it: 'Sito web e forum per la community di Arma 3. Il sito web è una piattaforma di discussione e di supporto alla community di ALIR, giocante nel server dedicato basato su Altis Life, una modalità di gioco.'
       },
       startDate: '2016',
-      slug: 'alircommunity',
       images: [
-        'https://cdn.andreacw.dev/uploads/works/alir/alircommunity.webp'
+        'https://harbor.andreacw.dev/api/v1/files/f265f76e62f263a4a76b57652ea5ed40'
       ],
-      preview: 'https://cdn.andreacw.dev/uploads/works/alir/alircommunity.webp',
+      preview: 'https://harbor.andreacw.dev/api/v1/files/f265f76e62f263a4a76b57652ea5ed40',
       website: 'https://alir.community',
       company: 'ALIR Community',
       technical: {
