@@ -1,16 +1,16 @@
 <template>
   <v-row wrap>
-    <v-col xs="12" sm="12" md="12" lg="5" order-lg="2">
+    <v-col cols="12" xs="12" sm="12" md="12" lg="5" order-lg="2">
       <div class="d-flex align-center ml-3">
         <image-item
           class="card-gradient round-border"
           alt-text="Intro image"
-          image-url="https://cdn.andreacw.dev/uploads/personal-texas-image.webp"
+          image-url="https://harbor.andreacw.dev/api/v1/files/59eede5fb0b097a63e0eb276add71e83"
           :height="290"
         />
       </div>
     </v-col>
-    <v-col xs="12" sm="12" md="12" lg="7" order-lg="1">
+    <v-col cols="12" xs="12" sm="12" md="12" lg="7" order-lg="1">
       <h1 class="mb-2 mt-1 large-title">{{ $t('greetings') }}</h1>
       <i18n path="intro.welcome" tag="p">
         <template #medas>
