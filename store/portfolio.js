@@ -203,6 +203,32 @@ export const state = () => ({
       }
     },
     {
+      slug: 'nuxt3-vuetify',
+      title: {
+        it: 'Nuxt 3 Vuetify Template',
+        en: 'Nuxt 3 Vuetify Template'
+      },
+      description: {
+        it: 'Modello di partenza per Nuxt 3 con Vuetify. Ottimo punto di partenza per la costruzione di un nuovo progetto Nuxt 3 con Vuetify.',
+        en: 'Minimal Nuxt 3 starter template with Vuetify. Good starting point for building a new Nuxt 3 project with Vuetify. '
+      },
+      images: [
+        'https://harbor.andreacw.dev/api/v1/files/1d1516da142bc712ae31b3a8504c9e75'
+      ],
+      preview: 'https://harbor.andreacw.dev/api/v1/files/1d1516da142bc712ae31b3a8504c9e75',
+      startDate: '2023',
+      current: true,
+      github: 'https://github.com/andreacw5/nuxt3-vuetify',
+      company: 'Open source',
+      technical: {
+        main: { icon: 'devicon-nuxtjs-plain', name: 'Nuxt.js', color: '#00A86B' },
+        technologies: [
+          { icon: 'devicon-nuxtjs-plain', name: 'Nuxt.js' },
+          { icon: 'devicon-vuetify-plain', name: 'Vuetify' }
+        ]
+      }
+    },
+    {
       slug: 'puma-arts',
       title: {
         it: 'Sito web per Puma Arts',
