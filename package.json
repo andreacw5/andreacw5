@@ -30,7 +30,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^8.0.0",
     "firebase": "^10.2.0",
-    "nuxt": "^2.17.1",
+    "nuxt": "^3.0.0",
     "nuxt-i18n": "^6.28.1",
     "v-flag-icons": "^1.0.5"
   },
