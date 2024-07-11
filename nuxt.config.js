@@ -83,7 +83,6 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
-    '@nuxtjs/firebase',
     'nuxt-i18n',
     '@nuxtjs/sitemap'
   ],
@@ -133,29 +132,6 @@ export default {
     vueI18n: {
       fallbackLocale: 'it',
       messages: { en, it }
-    }
-  },
-
-  firebase: {
-    config: {
-      apiKey: 'AIzaSyDa5vP7y1XWwAbyoj8EJG_NA0zgTrSX-m0',
-      authDomain: 'pw-9483234.firebaseapp.com',
-      projectId: 'pw-9483234',
-      storageBucket: 'pw-9483234.appspot.com',
-      messagingSenderId: '152708470086',
-      appId: '1:152708470086:web:8ba318bc59111f0f0b0147',
-      measurementId: 'G-DWYWYGE1BG'
-    },
-    services: {
-      firestore: true,
-      storage: true
-    },
-    firestore: {
-      memoryOnly: false, // default
-      chunkName: process.env.NODE_ENV !== 'production' ? 'firebase-auth' : '[id]', // default
-      enablePersistence: true,
-      emulatorPort: 8080,
-      emulatorHost: 'localhost'
     }
   },
 
