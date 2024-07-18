@@ -18,22 +18,22 @@ export const state = () => ({
         en: 'Web application for the management of a non-profit association operating in the e-sports field. Registered players can participate in events, create teams and search for players to play with based on their preferences.'
       },
       images: [
-        'https://fileharbor.eu/api/v1/files/6b319d775a8a9be85142abfbd612054b',
-        'https://fileharbor.eu/api/v1/files/0e63b3906b488c86b7aeca3ef50d8528',
-        'https://fileharbor.eu/api/v1/files/1d4e64ee41ed8cf44af6ec0825421930',
-        'https://fileharbor.eu/api/v1/files/f33ccd994a53ae2b7482366069587013',
-        'https://fileharbor.eu/api/v1/files/d2089dd002171ebac8fbd502e8b58548',
-        'https://fileharbor.eu/api/v1/files/fd09dad0ac1e2f5ef91e0f5d42064239',
-        'https://fileharbor.eu/api/v1/files/4cfffc3bff2b5bf313aa64d3e4d609f5',
-        'https://fileharbor.eu/api/v1/files/fe11b090557d6fd55591e9268b27f5c7',
-        'https://fileharbor.eu/api/v1/files/744c4944c340df5ee798e504f21d7233',
-        'https://fileharbor.eu/api/v1/files/d14f5b3279fb6f91fa3e58000369cf8a',
-        'https://fileharbor.eu/api/v1/files/ad8b2389cd3415fde1c54d2dcae7e420',
-        'https://fileharbor.eu/api/v1/files/1554a5baeb81107c94cb13ee9e23fd40',
-        'https://fileharbor.eu/api/v1/files/af88406da3e46ea2eec2852e0cd6f68a',
-        'https://fileharbor.eu/api/v1/files/b85c608090674ecfaa2924d564c7309e'
+        'https://file-harbor.com/api/v1/files/6b319d775a8a9be85142abfbd612054b',
+        'https://file-harbor.com/api/v1/files/0e63b3906b488c86b7aeca3ef50d8528',
+        'https://file-harbor.com/api/v1/files/1d4e64ee41ed8cf44af6ec0825421930',
+        'https://file-harbor.com/api/v1/files/f33ccd994a53ae2b7482366069587013',
+        'https://file-harbor.com/api/v1/files/d2089dd002171ebac8fbd502e8b58548',
+        'https://file-harbor.com/api/v1/files/fd09dad0ac1e2f5ef91e0f5d42064239',
+        'https://file-harbor.com/api/v1/files/4cfffc3bff2b5bf313aa64d3e4d609f5',
+        'https://file-harbor.com/api/v1/files/fe11b090557d6fd55591e9268b27f5c7',
+        'https://file-harbor.com/api/v1/files/744c4944c340df5ee798e504f21d7233',
+        'https://file-harbor.com/api/v1/files/d14f5b3279fb6f91fa3e58000369cf8a',
+        'https://file-harbor.com/api/v1/files/ad8b2389cd3415fde1c54d2dcae7e420',
+        'https://file-harbor.com/api/v1/files/1554a5baeb81107c94cb13ee9e23fd40',
+        'https://file-harbor.com/api/v1/files/af88406da3e46ea2eec2852e0cd6f68a',
+        'https://file-harbor.com/api/v1/files/b85c608090674ecfaa2924d564c7309e'
       ],
-      preview: 'https://fileharbor.eu/api/v1/files/6b319d775a8a9be85142abfbd612054b',
+      preview: 'https://file-harbor.com/api/v1/files/6b319d775a8a9be85142abfbd612054b',
       startDate: '2019',
       current: true,
       website: 'https://element-gaming.eu',
@@ -60,9 +60,9 @@ export const state = () => ({
         en: 'Web application for the management of a non-profit association operating in the e-sports field. Registered players can participate in events, create teams and search for players to play with based on their preferences.'
       },
       images: [
-        'https://fileharbor.eu/api/v1/files/33925b190be7f512bc95f9062dce6d4f'
+        'https://file-harbor.com/api/v1/files/33925b190be7f512bc95f9062dce6d4f'
       ],
-      preview: 'https://fileharbor.eu/api/v1/files/33925b190be7f512bc95f9062dce6d4f',
+      preview: 'https://file-harbor.com/api/v1/files/33925b190be7f512bc95f9062dce6d4f',
       startDate: '2023',
       current: true,
       website: 'https://links.element-gaming.eu',
@@ -93,9 +93,9 @@ export const state = () => ({
       github: 'https://github.com/andreacw5/ziplink',
       company: 'Open source',
       images: [
-        'https://fileharbor.eu/api/v1/files/aa446189ee45f5b45daa112ad43861c6'
+        'https://file-harbor.com/api/v1/files/aa446189ee45f5b45daa112ad43861c6'
       ],
-      preview: 'https://fileharbor.eu/api/v1/files/aa446189ee45f5b45daa112ad43861c6',
+      preview: 'https://file-harbor.com/api/v1/files/aa446189ee45f5b45daa112ad43861c6',
       technical: {
         main: {
           name: 'Nest.js',
@@ -123,9 +123,9 @@ export const state = () => ({
       github: 'https://github.com/andreacw5/fileharbor',
       company: 'Open source',
       images: [
-        'https://fileharbor.eu/api/v1/files/9eb12aade81517f5a5e63909d6ef1ae6'
+        'https://file-harbor.com/api/v1/files/9eb12aade81517f5a5e63909d6ef1ae6'
       ],
-      preview: 'https://fileharbor.eu/api/v1/files/9eb12aade81517f5a5e63909d6ef1ae6',
+      preview: 'https://file-harbor.com/api/v1/files/9eb12aade81517f5a5e63909d6ef1ae6',
       technical: {
         main: {
           name: 'Nest.js',
@@ -153,9 +153,9 @@ export const state = () => ({
       github: 'https://github.com/prociv-sm/management-api',
       company: 'Open source',
       images: [
-        'https://fileharbor.eu/api/v1/files/2880cba043f55f209b3ecb92e3b69a00'
+        'https://file-harbor.com/api/v1/files/2880cba043f55f209b3ecb92e3b69a00'
       ],
-      preview: 'https://fileharbor.eu/api/v1/files/2880cba043f55f209b3ecb92e3b69a00',
+      preview: 'https://file-harbor.com/api/v1/files/2880cba043f55f209b3ecb92e3b69a00',
       technical: {
         main: {
           name: 'Nest.js',
@@ -183,14 +183,14 @@ export const state = () => ({
         en: 'Website for the Civil Protection Association of Settimo Milanese, a showcase on the activities of the association, the staff, training and equipment used.'
       },
       images: [
-        'https://fileharbor.eu/api/v1/files/7c461f4d8a1a2f286d5d7af35f98bc9d',
-        'https://fileharbor.eu/api/v1/files/a4dbd2135b6b264b8db13f0e57c50ee0',
-        'https://fileharbor.eu/api/v1/files/395fdefc12d2ea2a13cd6ef88045b247',
-        'https://fileharbor.eu/api/v1/files/3a252f4a7b30fb8ca0e614fd1927590b',
-        'https://fileharbor.eu/api/v1/files/3c32584e42ddac97888b52b217102c7d',
-        'https://fileharbor.eu/api/v1/files/a9f4d55e3c8365691b6fb18ae738351b'
+        'https://file-harbor.com/api/v1/files/7c461f4d8a1a2f286d5d7af35f98bc9d',
+        'https://file-harbor.com/api/v1/files/a4dbd2135b6b264b8db13f0e57c50ee0',
+        'https://file-harbor.com/api/v1/files/395fdefc12d2ea2a13cd6ef88045b247',
+        'https://file-harbor.com/api/v1/files/3a252f4a7b30fb8ca0e614fd1927590b',
+        'https://file-harbor.com/api/v1/files/3c32584e42ddac97888b52b217102c7d',
+        'https://file-harbor.com/api/v1/files/a9f4d55e3c8365691b6fb18ae738351b'
       ],
-      preview: 'https://fileharbor.eu/api/v1/files/7c461f4d8a1a2f286d5d7af35f98bc9d',
+      preview: 'https://file-harbor.com/api/v1/files/7c461f4d8a1a2f286d5d7af35f98bc9d',
       technical: {
         main: { icon: 'devicon-nuxtjs-plain', color: '#00A86B', name: 'Nuxt.js' },
         technologies: [
@@ -213,9 +213,9 @@ export const state = () => ({
         en: 'Minimal Nuxt 3 starter template with Vuetify. Good starting point for building a new Nuxt 3 project with Vuetify. '
       },
       images: [
-        'https://fileharbor.eu/api/v1/files/1d1516da142bc712ae31b3a8504c9e75'
+        'https://file-harbor.com/api/v1/files/1d1516da142bc712ae31b3a8504c9e75'
       ],
-      preview: 'https://fileharbor.eu/api/v1/files/1d1516da142bc712ae31b3a8504c9e75',
+      preview: 'https://file-harbor.com/api/v1/files/1d1516da142bc712ae31b3a8504c9e75',
       startDate: '2023',
       current: true,
       github: 'https://github.com/andreacw5/nuxt3-vuetify',
@@ -239,10 +239,10 @@ export const state = () => ({
         en: 'Website for the artist Emanuele Puma, a showcase on his works, his projects and his collaborations.'
       },
       images: [
-        'https://fileharbor.eu/api/v1/files/2be3bf23f7972b37436e489c4cb0620f',
-        'https://fileharbor.eu/api/v1/files/c1a29911ee6523239b024e9e5669b1e4'
+        'https://file-harbor.com/api/v1/files/2be3bf23f7972b37436e489c4cb0620f',
+        'https://file-harbor.com/api/v1/files/c1a29911ee6523239b024e9e5669b1e4'
       ],
-      preview: 'https://fileharbor.eu/api/v1/files/2be3bf23f7972b37436e489c4cb0620f',
+      preview: 'https://file-harbor.com/api/v1/files/2be3bf23f7972b37436e489c4cb0620f',
       startDate: '2023',
       current: true,
       website: 'https://studioartepuma.it/',
@@ -267,9 +267,9 @@ export const state = () => ({
         en: 'Gym Track'
       },
       images: [
-        'https://fileharbor.eu/api/v1/files/dd294ba4654b994e9f921882215726ae'
+        'https://file-harbor.com/api/v1/files/dd294ba4654b994e9f921882215726ae'
       ],
-      preview: 'https://fileharbor.eu/api/v1/files/dd294ba4654b994e9f921882215726ae',
+      preview: 'https://file-harbor.com/api/v1/files/dd294ba4654b994e9f921882215726ae',
       company: 'Gigante Studio',
       description: {
         it: 'Applicazione web per la gestione dei clienti remoti di un personal trainer, che permette di gestire i clienti e le sessioni di fitness. Assegnando anche esercizi da remoto ai clienti.',
@@ -295,9 +295,9 @@ export const state = () => ({
       },
       startDate: '2017',
       images: [
-        'https://fileharbor.eu/api/v1/files/e0f298cb75d18b5a6ee5b273d22f101a'
+        'https://file-harbor.com/api/v1/files/e0f298cb75d18b5a6ee5b273d22f101a'
       ],
-      preview: 'https://fileharbor.eu/api/v1/files/e0f298cb75d18b5a6ee5b273d22f101a',
+      preview: 'https://file-harbor.com/api/v1/files/e0f298cb75d18b5a6ee5b273d22f101a',
       website: 'https://db.alir.community',
       technical: {
         main: {
@@ -330,9 +330,9 @@ export const state = () => ({
       },
       startDate: '2016',
       images: [
-        'https://fileharbor.eu/api/v1/files/f265f76e62f263a4a76b57652ea5ed40'
+        'https://file-harbor.com/api/v1/files/f265f76e62f263a4a76b57652ea5ed40'
       ],
-      preview: 'https://fileharbor.eu/api/v1/files/f265f76e62f263a4a76b57652ea5ed40',
+      preview: 'https://file-harbor.com/api/v1/files/f265f76e62f263a4a76b57652ea5ed40',
       website: 'https://alir.community',
       company: 'ALIR Community',
       technical: {
