@@ -2,7 +2,7 @@ export const state = () => ({
   works: [
     {
       color: 'blue',
-      logo: 'https://fileharbor.eu/api/v1/files/351ebcaa1378244c4c1fdf78000c7bf9',
+      logo: 'https://file-harbor.com/api/v1/files/351ebcaa1378244c4c1fdf78000c7bf9',
       title: {
         en: 'Full-stack Developer',
         it: 'Full-stack Developer'
@@ -19,7 +19,7 @@ export const state = () => ({
     },
     {
       color: 'red',
-      logo: 'https://fileharbor.eu/api/v1/files/53cb109ede17055fcf4280649b9906e5',
+      logo: 'https://file-harbor.com/api/v1/files/53cb109ede17055fcf4280649b9906e5',
       title: {
         en: 'Board Member',
         it: 'Membro del Consiglio Direttivo'
@@ -36,7 +36,7 @@ export const state = () => ({
     },
     {
       color: 'red',
-      logo: 'https://fileharbor.eu/api/v1/files/53cb109ede17055fcf4280649b9906e5',
+      logo: 'https://file-harbor.com/api/v1/files/53cb109ede17055fcf4280649b9906e5',
       title: {
         en: 'Full Stack Developer & Project Manager',
         it: 'Full Stack Developer & Project Manager'

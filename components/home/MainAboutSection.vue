@@ -5,7 +5,7 @@
         <image-item
           class="card-gradient round-border"
           alt-text="Intro image"
-          image-url="https://fileharbor.eu/api/v1/files/59eede5fb0b097a63e0eb276add71e83"
+          image-url="https://file-harbor.com/api/v1/files/59eede5fb0b097a63e0eb276add71e83"
           :height="290"
         />
       </div>
