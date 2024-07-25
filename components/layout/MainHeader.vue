@@ -32,7 +32,7 @@ const closeOrOpenDrawer = () => {
         <v-divider vertical inset class="mr-4 ml-2 hidden-md-and-up white-text" />
 
         <nuxt-link :to="localePath('/')" class="mt-2">
-          <img :height="40" :width="100" src="~/assets/branding/atom-web.webp" alt="AT Logo" />
+          <img :height="40" :width="125" src="~/assets/branding/atom-web.webp" alt="AT Logo" />
         </nuxt-link>
 
         <v-spacer />
