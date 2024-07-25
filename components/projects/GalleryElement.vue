@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import OptimizeImage from "~/components/shared/OptimizeImage.vue";
+
 defineProps({
   image: {
     type: String,
@@ -15,10 +17,9 @@ const dialog = ref(false)
 <template>
   <a @click="dialog = true" style="cursor: pointer">
     <v-card class="atom-card common-card mx-auto card-gradient round-border">
-      <v-img
+      <optimize-image
         :src="image"
-        position="top"
-        cover
+        :height="200"
       />
       <v-card-text class="mt-0 mb-0">
         <p class="text-center text-subtitle-2">{{ title }}</p>

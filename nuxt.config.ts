@@ -30,6 +30,7 @@ export default defineNuxtConfig({
     "@vite-pwa/nuxt",
     "@pinia/nuxt",
     "@nuxtjs/i18n",
+    '@nuxt/image',
     async (options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) => {
         config.plugins ||= [];

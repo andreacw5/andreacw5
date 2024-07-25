@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { useProjectStore } from "~/stores/portfolio"
 import TitleCard from "~/components/shared/TitleCard.vue";
-const projectStore = useProjectStore();
 import { useI18n } from '#imports'
 import ProjectCard from "~/components/projects/ProjectCard.vue";
 import GalleryElement from "~/components/projects/GalleryElement.vue";
+import OptimizeImage from "~/components/shared/OptimizeImage.vue";
+const projectStore = useProjectStore();
 const { t } = useI18n();
 const route = useRoute();
 let project = projectStore.getProjectBySlug(route.params.slug);
@@ -46,12 +47,12 @@ const breadcrumb = [
         <v-card-text class="mt-4">
           <v-row>
             <v-col cols="12" lg="6" xl="6">
-              <v-img
+              <optimize-image
                 class="round-border card"
-                :src="project?.preview"
+                :src="project.preview"
                 position="top"
                 cover
-              ></v-img>
+              />
             </v-col>
             <v-col cols="12" lg="6" xl="6">
               <div class="mb-2">
@@ -67,7 +68,11 @@ const breadcrumb = [
                   >
                     <template v-slot:prepend>
                       <v-avatar color="grey-lighten-1" tile class="round-border" size="large">
-                        <v-img :src="project?.client?.logo" />
+                        <optimize-image
+                          :src="project?.client?.logo"
+                          alt-text="Client logo"
+                          :height="50"
+                        />
                       </v-avatar>
                     </template>
 

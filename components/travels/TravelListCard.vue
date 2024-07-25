@@ -17,13 +17,16 @@ function formatDate(time: string) {
 
 const currentLocale = useI18n().locale;
 const currentLocaleIsItalian = computed(() => currentLocale.value === 'it-IT');
+
+const img = useImage()
+const optimizedImage = (src: string) => img(src, { quality: 70, format: 'webp', fit: 'crop' })
 </script>
 
 <template>
 <!--  <nuxt-link :to="'travels/' + travel.code">-->
     <v-card
       class="mx-auto atom-card card-gradient common-card round-border text-center"
-      :image="travel.background"
+      :image="optimizedImage(travel.background)"
       min-height="190"
     >
       <template v-slot:image>

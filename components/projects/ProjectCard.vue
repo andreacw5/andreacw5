@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ImageItem from "~/components/shared/ImageItem.vue";
 import { Icon } from "@iconify/vue";
+import OptimizeImage from "~/components/shared/OptimizeImage.vue";
 
 defineProps({
   item: {
@@ -20,8 +20,8 @@ const currentLocaleIsItalian = computed(() => currentLocale.value === 'it-IT');
 <template>
   <nuxt-link :to="'/projects/' + item.slug">
     <v-card class="atom-card common-card mx-auto card-gradient round-border">
-      <image-item
-        :image-url="item.preview"
+      <optimize-image
+        :src="item.preview"
         :alt-text="item.title + ' cover image'"
         :height="imageHeight"
         class="project-image"

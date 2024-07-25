@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import ImageItem from "~/components/shared/ImageItem.vue";
+import OptimizeImage from "~/components/shared/OptimizeImage.vue";
 </script>
 
 <template>
   <v-row wrap>
     <v-col cols="12" xs="12" sm="12" md="12" lg="5" order-lg="2">
       <div class="d-flex align-center ml-3">
-        <image-item
+        <optimize-image
           class="card-gradient round-border"
           alt="Intro image"
-          image-url="https://file-harbor.com/api/v1/files/59eede5fb0b097a63e0eb276add71e83"
+          src="https://file-harbor.com/api/v1/files/59eede5fb0b097a63e0eb276add71e83"
           :height="290"
-        ></image-item>
+        />
       </div>
     </v-col>
     <v-col cols="12" xs="12" sm="12" md="12" lg="7" order-lg="1">
