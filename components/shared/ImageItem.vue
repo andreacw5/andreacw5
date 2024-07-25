@@ -1,11 +1,30 @@
+<script setup lang="ts">
+// Add props to the component
+
+const props = defineProps({
+  imageUrl: {
+    type: String,
+    required: true
+  },
+  altText: {
+    type: String,
+    default: 'Image'
+  },
+  height: {
+    type: Number,
+    default: 300
+  },
+})
+</script>
+
 <template>
   <v-img
     :alt="altText"
     :height="height"
     :src="imageUrl"
-    :lazy-src="lazyLoadingImage"
+    lazy-src="~/assets/branding/loading.webp"
     :aspect-ratio="1"
-    :position="position"
+    :cover="true"
     class="grey darken-3 image-transition"
   >
     <template #placeholder>
@@ -23,31 +42,6 @@
   </v-img>
 </template>
 
-<script>
-export default {
-  name: 'ImageItem',
-  props: {
-    imageUrl: {
-      type: String,
-      required: true
-    },
-    altText: {
-      type: String,
-      default: 'Image'
-    },
-    height: {
-      type: Number,
-      default: 300
-    },
-    position: {
-      type: String,
-      default: 'center center'
-    }
-  },
-  computed: {
-    lazyLoadingImage () {
-      return require('~/assets/img/loading.webp')
-    }
-  }
-}
-</script>
+<style scoped>
+
+</style>

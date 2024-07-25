@@ -1,0 +1,22 @@
+.button-hover:hover > span {
+  color: var(--color-primary) !important;
+  transition: all 0.25s;
+  transform: scale(1.1);
+}
+
+.button-hover.v-btn--active > span {
+  color: var(--color-primary) !important;
+  font-weight: bold;
+}
+
+a {
+  color: var(--color) !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--color-primary) !important;
+  text-decoration: none;
+  font-weight: bold;
+}

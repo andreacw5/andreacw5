@@ -1,67 +1,95 @@
-<template>
-  <common-card
-    :title="isLocaleItalian ? travel.title.it : travel.title.en"
-    :image="travel.background"
-    :gradient="true"
-    :title-centered="true"
-    :aspect-ratio="805 / 140"
-     url=""
-    >
-    <template #card-content>
-      <v-row class="fill-height align-center">
-        <v-col cols="4" class="date-col travels-col px-1">
-          <div class="mb-1 text-h6">
-            {{ $t('travels.start') }}
-          </div>
-          <div>{{ travel.time.start | formatDate('dd/MM/yyyy') }}</div>
-        </v-col>
-        <v-col cols="4" class="date-col travels-col px-1">
-          <div class="mb-1 text-h6">
-            {{ $t('travels.photos') }}
-          </div>
-          <div>{{ travel.photos || 0 }}</div>
-        </v-col>
-        <v-col cols="4" class="attendants-col travels-col px-1">
-          <div class="mb-1 text-h6">
-            {{ $t('travels.days') }}
-          </div>
-          <div>{{ countDays || 0 }}</div>
-        </v-col>
-      </v-row>
-    </template>
-  </common-card>
-</template>
+<script setup lang="ts">
+import { formatInTimeZone } from "date-fns-tz";
+import { it } from "date-fns/locale";
 
-<script>
-import { intervalToDuration } from 'date-fns'
-import CommonCard from '@/components/CommonCard.vue'
-export default {
-  name: 'TravelListCard',
-  components: {
-    CommonCard
-  },
-  props: {
-    travel: {
-      type: Object,
-      required: true
-    }
-  },
-  computed: {
-    isLocaleItalian () {
-      return this.$i18n.locale === 'it'
-    },
-    countDays () {
-      return intervalToDuration({
-        start: new Date(this.travel.time.start),
-        end: new Date(this.travel.time.end)
-      }).days + 1
-    }
+defineProps({
+  travel: {
+    type: Object,
+    required: true
   }
+})
+function formatDate(time: string) {
+  const timeZone = 'Europe/Rome';
+  return formatInTimeZone(new Date(time), timeZone, 'MM/yyyy', {
+    locale: it
+  });
 }
+
+const currentLocale = useI18n().locale;
+const currentLocaleIsItalian = computed(() => currentLocale.value === 'it-IT');
 </script>
 
+<template>
+<!--  <nuxt-link :to="'travels/' + travel.code">-->
+    <v-card
+      class="mx-auto atom-card card-gradient common-card round-border text-center"
+      :image="travel.background"
+      min-height="190"
+    >
+      <template v-slot:image>
+        <v-img gradient="to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)"
+        ></v-img>
+      </template>
+      <v-card-actions class="text-white">
+        <v-chip prepend-icon="mdi-map" tile variant="elevated" class="round-border chip-transparent">
+          {{ currentLocaleIsItalian ? travel.state.it : travel.state.en }}
+        </v-chip>
+        <v-spacer />
+        <v-tooltip text="Data di inizio del viaggio" location="top">
+          <template v-slot:activator="{ props }">
+            <v-chip prepend-icon="mdi-calendar" tile variant="elevated" class="round-border mr-2 chip-transparent" v-bind="props">
+              {{ formatDate(travel.time.start) }}
+            </v-chip>
+          </template>
+        </v-tooltip>
+        <v-tooltip text="Foto scattate" location="top">
+          <template v-slot:activator="{ props }">
+            <v-chip prepend-icon="mdi-camera" tile variant="elevated" class="round-border chip-transparent" v-bind="props">
+              {{ travel.photos || 0 }}
+            </v-chip>
+          </template>
+        </v-tooltip>
+      </v-card-actions>
+      <v-card-text>
+        <div class="card-content-wrapper fill-height title-centered">
+          <div class="card-title">
+            {{ currentLocaleIsItalian ? travel.title.it : travel.title.en }}
+          </div>
+        </div>
+      </v-card-text>
+    </v-card>
+<!--  </nuxt-link>-->
+</template>
+
 <style scoped lang="scss">
-.travels-col + .travels-col {
-  border-left: 1px solid transparentize(#fafafa, 0.7);
+.card-title {
+  background-color: transparentize($color: #1d1d1d, $amount: 0.25);
+  padding: 12px;
+  transition: 0.3s ease all;
+  border-radius: 14px;
+  font-size: 1.06rem;
+  font-weight: 600;
+}
+.chip-transparent {
+  background-color: rgba(45, 45, 46, 0.85);
+  color: white;
+}
+.card-content-wrapper {
+  position: relative;
+  display: block;
+
+  &.title-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card-title {
+      position: static;
+      width: auto;
+      border-radius: 14px !important;
+      padding: 10px;
+      font-size: 2rem;
+    }
+  }
 }
 </style>
