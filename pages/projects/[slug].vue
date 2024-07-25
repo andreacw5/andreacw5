@@ -67,7 +67,7 @@ const breadcrumb = [
                     :subtitle="project?.client?.bio"
                   >
                     <template v-slot:prepend>
-                      <v-avatar color="grey-lighten-1" tile class="round-border" size="large">
+                      <v-avatar color="grey-lighten-1" tile class="round-border card" size="large">
                         <optimize-image
                           :src="project?.client?.logo"
                           alt-text="Client logo"
