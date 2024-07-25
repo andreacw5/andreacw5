@@ -1,6 +1,6 @@
 <script setup lang="ts">
-defineProps({
-  imageUrl: {
+const props = defineProps({
+  src: {
     type: String,
     required: true
   },
@@ -13,17 +13,30 @@ defineProps({
     default: 300
   },
 })
+const LAZY_IMG = '~/assets/branding/loading.webp'
+const img = useImage()
+const _srcset = computed(() => {
+  return img.getSizes(props.src, {
+    modifiers: {
+      format: 'webp',
+      quality: 70,
+      height: props.height
+    }
+  })
+})
 </script>
 
 <template>
   <v-img
-    :alt="altText"
-    :height="height"
-    :src="imageUrl"
     lazy-src="~/assets/branding/loading.webp"
+    :src="img(src, { height, quality: 70 })"
+    :srcset="_srcset.srcset"
+    :height="height"
+    :sizes="_srcset.sizes"
+    :alt="altText"
     :aspect-ratio="1"
-    :cover="true"
     class="grey darken-3 image-transition"
+    cover
   >
     <template #placeholder>
       <v-row
@@ -39,7 +52,3 @@ defineProps({
     </template>
   </v-img>
 </template>
-
-<style scoped>
-
-</style>

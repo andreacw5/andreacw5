@@ -1,3 +1,6 @@
-.history
-.nuxt
-node_modules
+/.nuxt
+/.output
+/node_modules
+
+.gitignore
+README.md
