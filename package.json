@@ -7,6 +7,8 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "start": "nuxt start",
+    "start:prod": "node .output/server/index.mjs",
     "generate": "nuxt generate",
     "reset": "rm -rf .nuxt node_modules .output package-lock.json && npm install",
     "preview": "nuxt preview",
@@ -20,9 +22,9 @@
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/i18n": "^8.3.1",
     "@vite-pwa/nuxt": "^0.9.1",
-    "nuxt": "3.12.3",
+    "nuxt": "3.12.4",
     "sass": "^1.77.8",
-    "vuetify": "^3.6.12"
+    "vuetify": "^3.6.13"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.5.1",
