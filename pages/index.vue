@@ -1,5 +1,5 @@
 <template>
-  <v-container class="v-col-auto grid-list-sm text-xs-center ms-auto">
+  <v-container class="v-col-auto grid-list-sm text-xs-center ms-auto fill-height" fluid>
     <v-container class="grid-list-sm text-xs-center mb-10">
       <!-- Main about section -->
       <about-section />
@@ -17,20 +17,21 @@ import TechSection from "~/components/homepage/TechSection.vue";
 import WorkSection from "~/components/homepage/WorkSection.vue";
 useHead({
   title: 'Andrea Tombolato',
-  titleTemplate: null,
-  meta: [
-    {
-      name: 'description',
-      content: 'Andrea Tombolato, Web Developer con base a Milano e questo è il mio sito personale!'
-    },
-    {
-      property: 'og:image',
-      content: 'https://file-harbor.com/api/v1/files/59eede5fb0b097a63e0eb276add71e83'
-    },
-    {
-      property: 'url',
-      content: 'https://andreacw.dev'
-    }
-  ]
+  titleTemplate: null
+})
+const TITLE = 'Andrea Tombolato - Web Developer'
+const DESCRIPTION = 'Andrea Tombolato, Web Developer con base a Milano e questo è il mio sito personale!'
+useServerSeoMeta({
+  ogTitle: () => TITLE,
+  title: () => TITLE,
+  description: () => DESCRIPTION,
+  ogDescription: () => DESCRIPTION,
+  ogImage: () => 'https://file-harbor.com/api/v1/files/59eede5fb0b097a63e0eb276add71e83',
+  ogImageUrl: () => 'https://file-harbor.com/api/v1/files/59eede5fb0b097a63e0eb276add71e83',
+  twitterCard: () => 'summary_large_image',
+  twitterTitle: () => TITLE,
+  twitterDescription: () => DESCRIPTION,
+  twitterImage: () => 'https://file-harbor.com/api/v1/files/59eede5fb0b097a63e0eb276add71e83',
+  ogUrl: () => 'https://andreacw.dev'
 })
 </script>
