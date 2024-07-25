@@ -1,8 +1,9 @@
 {
-  "name": "website-portfolio",
+  "name": "portfolio",
+  "version": "2.0.0",
   "private": true,
   "license": "MIT",
-  "description": "My personal portfolio website",
+  "description": "My personal website",
   "author": "Andrea Tombolato <andreacw96@gmail.com> (https://github.com/andreacw5)",
   "scripts": {
     "build": "nuxt build",
