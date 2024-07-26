@@ -1,4 +1,5 @@
 import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
+import removeConsole from "vite-plugin-remove-console";
 
 // PWA Config
 const title = "Andrea Tombolato";
@@ -11,7 +12,7 @@ const themeColor = "#00A86B";
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   // Nuxt compatibility date
-  compatibilityDate: '2024-07-15',
+  compatibilityDate: '2024-07-25',
   // import styles
   css: ["@/assets/main.scss"],
   devtools: { enabled: true },
@@ -25,6 +26,7 @@ export default defineNuxtConfig({
         transformAssetUrls,
       },
     },
+    plugins: [removeConsole()]
   },
   modules: [
     "@vite-pwa/nuxt",
@@ -37,6 +39,19 @@ export default defineNuxtConfig({
         config.plugins.push(vuetify());
       });
     },
+    [
+      'nuxt-purgecss',
+      {
+        content: [
+          /* Copy of 'dist' from first npm run generate */
+          'modules/purgecss/static-generated-html/**/*.html',
+        ],
+        greedy: [
+          /* Generated as runtime, keep all related selectors */
+          /v-ripple/,
+        ],
+      },
+    ]
   ],
   app: {
     head: {

@@ -13,10 +13,10 @@ const props = defineProps({
     default: 300
   },
 })
-const LAZY_IMG = '~/assets/branding/loading.webp'
 const img = useImage()
 const _srcset = computed(() => {
   return img.getSizes(props.src, {
+    sizes: '100vw sm:50vw md:400px',
     modifiers: {
       format: 'webp',
       quality: 70,
@@ -28,7 +28,6 @@ const _srcset = computed(() => {
 
 <template>
   <v-img
-    lazy-src="~/assets/branding/loading.webp"
     :src="img(src, { height, quality: 70 })"
     :srcset="_srcset.srcset"
     :height="height"

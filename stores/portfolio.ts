@@ -155,7 +155,7 @@ export const useProjectStore = defineStore('project', {
                name: 'Open Source',
                bio: 'Progetto open source',
                website: 'https://github.com/andreacw5/ziplink',
-               logo: ''
+               logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
             },
             preview: 'https://file-harbor.com/api/v1/files/aa446189ee45f5b45daa112ad43861c6',
             technical: {
@@ -187,7 +187,7 @@ export const useProjectStore = defineStore('project', {
                name: 'Open Source',
                bio: 'Progetto open source',
                website: 'https://github.com/andreacw5/fileharbor',
-               logo: ''
+               logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
             },
             preview: 'https://file-harbor.com/api/v1/files/9eb12aade81517f5a5e63909d6ef1ae6',
             technical: {
@@ -219,7 +219,7 @@ export const useProjectStore = defineStore('project', {
                name: 'Open Source',
                bio: 'Progetto open source',
                website: 'https://github.com/prociv-sm/management-api',
-               logo: ''
+               logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
             },
             preview: 'https://file-harbor.com/api/v1/files/2880cba043f55f209b3ecb92e3b69a00',
             technical: {
@@ -244,7 +244,7 @@ export const useProjectStore = defineStore('project', {
                name: 'Protezione Civile di Settimo Milanese',
                bio: 'Associazione di Protezione Civile',
                website: 'https://procivsettimomi.it',
-               logo: 'https://file-harbor.com/api/v1/files/8b3b3f1b4d9b8e4c2f6b9d4c0b4f5c3b'
+               logo: 'https://file-harbor.com/api/v1/files/0163bb330af52453b2735bf5186d8b25'
             },
             current: false,
             startDate: '2019',
@@ -305,7 +305,7 @@ export const useProjectStore = defineStore('project', {
                name: 'Open Source',
                bio: 'Progetto open source',
                website: 'https://github.com/andreacw5/nuxt3-vuetify',
-               logo: ''
+               logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
             },
             technical: {
                main: { icon: 'simple-icons:nuxtdotjs', name: 'Nuxt.js', color: '#00A86B' },
@@ -344,7 +344,7 @@ export const useProjectStore = defineStore('project', {
                name: 'Private Client',
                bio: 'Piccola bottega artistica',
                website: 'https://studioartepuma.it',
-               logo: ''
+               logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
             },
             technical: {
                main: { icon: 'simple-icons:nuxtdotjs', name: 'Nuxt.js', color: '#00A86B' },
@@ -367,7 +367,7 @@ export const useProjectStore = defineStore('project', {
             client: {
                name: 'Private Client',
                bio: 'Personal Trainer',
-               logo: ''
+               logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
             },
             description: {
                it: 'Applicazione web per la gestione dei clienti remoti di un personal trainer, che permette di gestire i clienti e le sessioni di fitness. Assegnando anche esercizi da remoto ai clienti.',
@@ -389,7 +389,7 @@ export const useProjectStore = defineStore('project', {
             client: {
                name: 'ALIR Community',
                bio: 'Community di Arma 3',
-               logo: ''
+               logo: 'https://file-harbor.com/api/v1/files/b770e4eef73c37303ffe66d40db35a05'
             },
             description: {
                it: 'Un portale online per la visualizzazione dei propri dati e progressi personali all\'interno del gioco Arma 3. Fornisce dati sui veicoli, incarichi, armi, ruoli e conti bancari dei giocatori.',
@@ -431,7 +431,7 @@ export const useProjectStore = defineStore('project', {
             client: {
                name: 'ALIR Community',
                bio: 'Community di Arma 3',
-               logo: ''
+               logo: 'https://file-harbor.com/api/v1/files/b770e4eef73c37303ffe66d40db35a05'
             },
             technical: {
                technologies: [
