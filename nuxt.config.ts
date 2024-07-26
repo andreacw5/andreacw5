@@ -38,20 +38,7 @@ export default defineNuxtConfig({
         config.plugins ||= [];
         config.plugins.push(vuetify());
       });
-    },
-    [
-      'nuxt-purgecss',
-      {
-        content: [
-          /* Copy of 'dist' from first npm run generate */
-          'modules/purgecss/static-generated-html/**/*.html',
-        ],
-        greedy: [
-          /* Generated as runtime, keep all related selectors */
-          /v-ripple/,
-        ],
-      },
-    ]
+    }
   ],
   app: {
     head: {
