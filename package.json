@@ -22,7 +22,7 @@
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/i18n": "^8.3.1",
     "@vite-pwa/nuxt": "^0.9.1",
-    "nuxt": "3.12.4",
+    "nuxt": "3.0.0",
     "sass": "^1.77.8",
     "vuetify": "^3.6.13",
     "vite-plugin-remove-console": "^2.2.0"
