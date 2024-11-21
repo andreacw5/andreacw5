@@ -36,12 +36,18 @@ const currentLocaleIsItalian = computed(() => currentLocale.value === 'it-IT');
         </template>
         <template v-slot:append>
           <v-btn
-            class="transition"
-            style="background-color: transparent !important;"
             :icon="true"
+            class="round-border ma-2 card icon transition"
+            size="large"
+            rounded="lg"
+            tile
             alt="Project Main Technology"
           >
-            <Icon :icon="item.technical.main.icon" :color="item.technical.main.color" height="40" />
+            <v-icon
+              :color="item.technical.main.color"
+              size="30">
+              {{ item.technical.main.icon }}
+            </v-icon>
           </v-btn>
         </template>
       </v-card>

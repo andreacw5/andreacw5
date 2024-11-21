@@ -14,7 +14,6 @@
         <slot />
         <v-fab
           class="ms-4 mb-4 round-border"
-          :icon="true"
           location="bottom end"
           size="64"
           color="#00A86B"

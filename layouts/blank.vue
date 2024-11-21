@@ -1,7 +1,7 @@
 <template>
-  <VApp class="area">
-    <VMain>
+  <v-app>
+    <v-layout>
       <slot />
-    </VMain>
-  </VApp>
+    </v-layout>
+  </v-app>
 </template>
