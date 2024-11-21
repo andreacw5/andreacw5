@@ -22,32 +22,51 @@ const links = [
 const closeOrOpenDrawer = () => {
   drawer.value = !drawer.value
 }
+
+const appBarItems = computed(() => {
+  return [
+    {
+      "name": "sections.home",
+      "url": "/"
+    },
+    {
+      "name": "sections.projects",
+      "url": "/projects"
+    },
+    {
+      "name": "sections.travels",
+      "url": "/travels"
+    }
+  ]
+})
 </script>
 
 <template>
   <div class="header">
-    <v-app-bar class="card-gradient pl-0">
+    <v-app-bar class="card-gradient pl-0 gradient-border-bottom">
       <v-container class="d-flex align-center py-0">
         <v-app-bar-nav-icon class="hidden-md-and-up" @click="closeOrOpenDrawer" />
         <v-divider vertical inset class="mr-4 ml-2 hidden-md-and-up white-text" />
 
         <nuxt-link :to="localePath('/')" class="mt-2">
-          <img :height="40" :width="125" src="~/assets/branding/atom-web.webp" alt="AT Logo" />
+          <img :height="35" :width="115" src="@/assets/branding/atom-web.webp" alt="AT Logo" />
         </nuxt-link>
 
         <v-spacer />
-        <v-btn variant="text" :to="localePath('/')" nuxt class="hidden-sm-and-down white-text mr-1">
-          {{ $t('sections.home') }}
-        </v-btn>
-        <v-btn variant="text" :to="localePath('/projects')" nuxt class="hidden-sm-and-down white-text mr-1">
-          {{ $t('sections.projects') }}
-        </v-btn>
-        <v-btn variant="text" :to="localePath('/travels')" nuxt class="hidden-sm-and-down white-text mr-1">
-          {{ $t('sections.travels') }}
+        <v-btn
+          v-for="item in appBarItems"
+          :key="item.name"
+          class="hidden-sm-and-down white-text mr-1"
+          :to="localePath(item.url)"
+        >
+          {{ $t(item.name) }}
         </v-btn>
         <v-divider vertical inset class="mr-2 ml-2 hidden-sm-and-down white-text" />
-        <v-btn variant="text" class="white-text mr-1" href="https://github.com/andreacw5" target="_blank">
+        <v-btn variant="text" class="white-text mr-1" :icon="true" href="https://github.com/andreacw5" target="_blank">
           <v-icon size="25">line-md:github</v-icon>
+        </v-btn>
+        <v-btn variant="text" class="white-text" :icon="true" :to="localePath('/auth/login')">
+          <v-icon size="25">line-md:login</v-icon>
         </v-btn>
         <!--          <v-divider vertical inset class="mr-2 ml-2 hidden-sm-and-down white-text" />
               <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">
@@ -55,6 +74,7 @@ const closeOrOpenDrawer = () => {
               </NuxtLink>-->
       </v-container>
     </v-app-bar>
+
     <v-navigation-drawer
       v-model="drawer"
       class="card-gradient"
