@@ -69,6 +69,23 @@
       }
     }
   },
+  "auth": {
+    "login": {
+      "title": "Accedi",
+      "subtitle": "Inserisci le tue credenziali",
+      "email": "Email",
+      "emailPlaceholder": "Inserisci la tua email",
+      "password": "Password",
+      "passwordPlaceholder": "Inserisci la tua password",
+      "submit": "Accedi",
+      "forgot": "Password dimenticata?",
+      "back": "Torna alla home",
+      "errors": {
+        "invalid": "Email o password non corretti"
+      },
+      "retry": "Prova di nuovo con delle credenziali valide"
+    }
+  },
   "actions": {
     "language": "Cambia lingua",
     "changeColor": {
