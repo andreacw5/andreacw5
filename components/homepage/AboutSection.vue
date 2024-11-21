@@ -18,10 +18,14 @@ import OptimizeImage from "~/components/shared/OptimizeImage.vue";
       <h1 class="mb-2 mt-1 text-h3" style="font-weight: bolder">{{ $t('greetings') }}</h1>
       <i18n-t keypath="intro.welcome" tag="p">
         <template #medas>
-          <a href="https://medas-solutions.it" class="effect" target="_blank">Medas Solutions</a>
+          <a href="https://medas-solutions.it" target="_blank">
+            Medas Solutions
+          </a>
         </template>
         <template #element>
-          <a href="https://element-gaming.eu" target="_blank">Element Gaming</a>
+          <a href="https://element-gaming.eu" target="_blank">
+            Element Gaming
+          </a>
         </template>
         <template #portfolio>
           <nuxt-link to="/projects">
@@ -32,7 +36,7 @@ import OptimizeImage from "~/components/shared/OptimizeImage.vue";
       <span class="ma-1" />
       <i18n-t keypath="intro.extension" tag="p">
         <template #prociv>
-          <a href="https://comune.settimomilanese.mi.it/category/protezione-civile/" target="_blank">
+          <a href="https://procivsettimomi.it" target="_blank">
             {{ $t('prociv') }}
           </a>
         </template>

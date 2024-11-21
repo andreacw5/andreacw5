@@ -73,9 +73,9 @@ const skills = [
 
 <template>
   <v-card class="card mt-6 round-border">
-    <v-card-title class="card-header round-border">
+    <v-card-title class="gradient-border-bottom round-border">
       <h2 class="ml-2" style="font-size: xx-large; font-weight: bolder">
-        {{ $t('tech.title.one') }} <span class="primary-text">{{ $t('tech.title.two') }}</span>
+        {{ $t('tech.title.one') }}
       </h2>
     </v-card-title>
     <v-card-text class="mt-4">
