@@ -10,7 +10,7 @@ const props = defineProps({
   },
   height: {
     type: Number,
-    default: 300
+    default: 350
   },
 })
 const img = useImage()
