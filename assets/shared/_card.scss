@@ -36,6 +36,17 @@
   transition: background-color .5s;
 }
 
+.snackbar__wrapper {
+  border-radius: 14px !important;
+  background: var(--card-color) !important;
+}
+
+.v-snackbar__content {
+  border: solid 1px var(--border-color) !important;
+  border-radius: 14px !important;
+  background: var(--card-color) !important;
+}
+
 .v-sheet {
   color: var(--card-text);
   background: var(--card-color) !important;
@@ -80,4 +91,15 @@
   width: 100%;
   height: 2px; /* Adjust the height as needed */
   background: linear-gradient(to right, transparent, var(--color-primary), transparent);
+}
+
+.green-border {
+  transition: border-color 0.3s ease-in-out;
+}
+
+.green-border:hover {
+  border-bottom: solid 2px transparent !important;
+  border-right: solid 2px transparent !important;
+  border-bottom-color: var(--color-primary) !important;
+  border-right-color: var(--color-primary) !important;
 }

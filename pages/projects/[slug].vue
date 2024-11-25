@@ -66,7 +66,7 @@ const breadcrumb = [
               <optimize-image
                 class="round-border card"
                 :src="projectPreview"
-                position="top"
+                position="center"
                 cover
               />
             </v-col>

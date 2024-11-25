@@ -74,44 +74,46 @@ const skills = [
 <template>
   <v-card class="card mt-6 round-border">
     <v-card-title class="gradient-border-bottom round-border">
-      <h2 class="ml-2" style="font-size: xx-large; font-weight: bolder">
+      <h4 class="font-weight-bold text-h4 mb-2">
         {{ $t('tech.title.one') }}
-      </h2>
+      </h4>
     </v-card-title>
-    <v-card-text class="mt-4">
-      <i18n-t keypath="tech.description" tag="p">
-        <template #js>
-          <b class="primary-text">Javascript</b>
-        </template>
-        <template #java>
-          <b class="primary-text">Java</b>
-        </template>
-        <template #node>
-          <a href="https://nodejs.org" target="_blank">
-            Node.js
-          </a>
-        </template>
-        <template #grails>
-          <a href="https://grails.org" target="_blank">
-            Grails
-          </a>
-        </template>
-        <template #nest>
-          <a href="https://nestjs.com" target="_blank">
-            Nest.js
-          </a>
-        </template>
-        <template #vue>
-          <a href="https://vuejs.org" target="_blank">
-            Vue.js
-          </a>
-        </template>
-        <template #nuxt>
-          <a href="https://nuxt.com" target="_blank">
-            Nuxt.js
-          </a>
-        </template>
-      </i18n-t>
+    <v-container class="pr-6 pl-6" fluid>
+      <v-responsive class="mb-6">
+        <i18n-t keypath="tech.description" tag="p" class="text-body-3">
+          <template #js>
+            <b class="primary-text">Javascript</b>
+          </template>
+          <template #java>
+            <b class="primary-text">Java</b>
+          </template>
+          <template #node>
+            <a href="https://nodejs.org" target="_blank">
+              Node.js
+            </a>
+          </template>
+          <template #grails>
+            <a href="https://grails.org" target="_blank">
+              Grails
+            </a>
+          </template>
+          <template #nest>
+            <a href="https://nestjs.com" target="_blank">
+              Nest.js
+            </a>
+          </template>
+          <template #vue>
+            <a href="https://vuejs.org" target="_blank">
+              Vue.js
+            </a>
+          </template>
+          <template #nuxt>
+            <a href="https://nuxt.com" target="_blank">
+              Nuxt.js
+            </a>
+          </template>
+        </i18n-t>
+      </v-responsive>
       <v-row
         class="mt-6"
         justify="center"
@@ -123,7 +125,7 @@ const skills = [
           :skill="skill"
         />
       </v-row>
-    </v-card-text>
+    </v-container>
   </v-card>
 </template>
 

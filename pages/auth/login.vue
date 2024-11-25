@@ -13,7 +13,6 @@
 
           <div class="d-flex align-center justify-space-between text-body-1 text-sm-h6 font-weight-regular mb-4">
             {{ $t('auth.login.subtitle') }}
-
 <!--            <v-btn-->
 <!--              class="text-none px-0 opacity-100"-->
 <!--              color="primary"-->

@@ -5,6 +5,8 @@
       <about-section />
       <!-- My tech stack section -->
       <tech-section />
+      <!-- Key number section -->
+      <key-number-section />
       <!-- My working path section -->
       <work-section />
     </v-container>
@@ -15,6 +17,8 @@
 import AboutSection from "~/components/homepage/AboutSection.vue";
 import TechSection from "~/components/homepage/TechSection.vue";
 import WorkSection from "~/components/homepage/WorkSection.vue";
+import KeyNumberSection from "~/components/homepage/KeyNumberSection.vue";
+
 useHead({
   title: 'Andrea Tombolato',
   titleTemplate: null

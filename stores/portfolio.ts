@@ -122,7 +122,7 @@ export const useProjectStore = defineStore('project', {
             preview: 'https://file-harbor.com/api/v1/files/33925b190be7f512bc95f9062dce6d4f',
             startDate: '2023',
             current: true,
-            website: 'https://links.emt.gg',
+            website: 'https://links.element-gaming.eu',
             client: {
                name: 'Element Gaming ASD',
                bio: 'Associazione operante nel campo e-sport',

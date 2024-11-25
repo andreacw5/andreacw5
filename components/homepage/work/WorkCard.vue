@@ -44,7 +44,7 @@ const show = ref(false);
 <template>
   <v-card
     :title="title"
-    class="mx-auto atom-card mx-auto card-gradient round-border"
+    class="mx-auto green-border mx-auto card-gradient round-border"
     elevation="2"
     density="comfortable"
   >

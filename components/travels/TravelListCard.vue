@@ -30,8 +30,7 @@ const optimizedImage = (src: string) => img(src, { quality: 70, format: 'webp', 
       min-height="190"
     >
       <template v-slot:image>
-        <v-img gradient="to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)"
-        ></v-img>
+        <v-img gradient="to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)" />
       </template>
       <v-card-actions class="text-white">
         <v-chip prepend-icon="mdi-map" tile variant="elevated" class="round-border chip-transparent">
