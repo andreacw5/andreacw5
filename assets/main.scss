@@ -2,7 +2,7 @@
 @use "shared/buttons";
 @use "shared/text";
 
-$family: "Roboto", apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
+$family: "Ubuntu", apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
   Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
 @use "vuetify" with (
@@ -10,11 +10,11 @@ $family: "Roboto", apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-
 );
 
 :root {
-  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 @supports (font-variation-settings: normal) {
   :root {
-    font-family: "Roboto", sans-serif;
+    font-family: "Ubuntu", sans-serif;
   }
 }
 

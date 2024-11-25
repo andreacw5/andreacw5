@@ -23,6 +23,7 @@
         >
           <v-icon size="40" color="white">line-md:arrow-small-up</v-icon>
         </v-fab>
+        <snack-bar />
       </v-main>
       <main-footer />
     </v-main>
@@ -31,6 +32,8 @@
 <script setup lang="ts">
 import MainHeader from "~/components/layout/MainHeader.vue";
 import MainFooter from "~/components/layout/MainFooter.vue";
+import SnackBar from "~/components/shared/SnackBar.vue";
+
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,

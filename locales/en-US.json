@@ -1,5 +1,6 @@
 {
-  "greetings": "Hi there!",
+  "greetings": "Nice to meet you,",
+  "presentation": "I'm Andrea Tombolato",
   "prociv": "civil defence",
   "intro": {
     "welcome": "In 2016 I started my career as a Full-stack developer at {medas}, an Italian company in the health sector. Member of the board of directors of {element}, a non-profit association dedicated to gaming. Occasionally I work as a freelancer for small projects, highlighted in my {portfolio}",
