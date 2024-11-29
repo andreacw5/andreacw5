@@ -9,6 +9,8 @@
       <key-number-section />
       <!-- My working path section -->
       <work-section />
+      <!-- Contact me section -->
+      <contact-me />
     </v-container>
   </v-container>
 </template>
@@ -18,6 +20,7 @@ import AboutSection from "~/components/homepage/AboutSection.vue";
 import TechSection from "~/components/homepage/TechSection.vue";
 import WorkSection from "~/components/homepage/WorkSection.vue";
 import KeyNumberSection from "~/components/homepage/KeyNumberSection.vue";
+import ContactMe from "~/components/homepage/ContactMe.vue";
 
 useHead({
   title: 'Andrea Tombolato',
