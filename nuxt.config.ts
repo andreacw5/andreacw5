@@ -1,6 +1,3 @@
-import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
-import removeConsole from "vite-plugin-remove-console";
-
 // PWA Config
 const title = "Andrea Tombolato";
 const shortTitle = "Andrea Tombolato";
@@ -11,35 +8,11 @@ const themeColor = "#00A86B";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  // Nuxt compatibility date
-  compatibilityDate: '2024-07-25',
-  // import styles
-  css: ["@/assets/main.scss"],
-  devtools: { enabled: true },
-  // enable takeover mode
-  typescript: { shim: false },
-  build: { transpile: ["vuetify"] },
-  // Based on docs found here - https://vuetifyjs.com/en/getting-started/installation/#using-nuxt-3
-  vite: {
-    vue: {
-      template: {
-        transformAssetUrls,
-      },
-    },
-    plugins: [removeConsole()]
+  alias: {
+    assets: '/<rootDir>/assets',
+    composables: '/<rootDir>/composables'
   },
-  modules: [
-    "@vite-pwa/nuxt",
-    "@pinia/nuxt",
-    "@nuxtjs/i18n",
-    '@nuxt/image',
-    async (options, nuxt) => {
-      nuxt.hooks.hook("vite:extendConfig", (config) => {
-        config.plugins ||= [];
-        config.plugins.push(vuetify());
-      });
-    }
-  ],
+
   app: {
     head: {
       titleTemplate: '%s - Andrea Tombolato',
@@ -48,7 +21,7 @@ export default defineNuxtConfig({
         lang: 'it'
       },
       link: [
-        { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" },
+        { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" },
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
@@ -73,6 +46,25 @@ export default defineNuxtConfig({
     },
   },
 
+  css: ['vuetify/styles', "@/assets/main.scss"],
+
+  devtools: { enabled: true },
+
+  typescript: {
+    typeCheck: true
+  },
+
+  build: { transpile: ["vuetify"] },
+
+  plugins: ['~/plugins/vuetify.ts'],
+
+  modules: [
+    "@vite-pwa/nuxt",
+    "@pinia/nuxt",
+    "@nuxtjs/i18n",
+    '@nuxt/image'
+  ],
+
   // I18N Configuration
   i18n: {
     /* module options */
@@ -82,13 +74,13 @@ export default defineNuxtConfig({
     locales: [
       {
         code: "en-US",
-        iso: "en-US",
+        language: "en-US",
         icon: 'flagpack:gb-ukm',
         name: "English",
         file: "en-US.json",
       },{
         code: "it-IT",
-        iso: "it-IT",
+        language: "it-IT",
         icon: 'flagpack:it',
         name: "Italiano",
         file: "it-IT.json",
@@ -125,4 +117,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  // Nuxt compatibility date
+  compatibilityDate: '2024-07-25',
 });

@@ -1,5 +1,6 @@
 {
-  "greetings": "Ciao!",
+  "greetings": "Piacere di conoscerti,",
+  "presentation": "Sono Andrea Tombolato",
   "prociv": "Protezione civile",
   "common": {
     "description": "Descrizione",
@@ -22,7 +23,9 @@
       "one": "Esperienze",
       "two": "lavorative"
     },
-    "today": "In corso"
+    "today": "In corso",
+    "years": "anni",
+    "days": "mesi"
   },
   "expiriences": {
     "title": "Esperienze lavorative"
@@ -47,26 +50,78 @@
     "required": "Questo campo è obbligatorio"
   },
   "contacts": {
-    "title": {
-      "one": "Contattami",
-      "two": ""
-    },
-    "description": "Contattami tramite il form sottostante oppure usa uno dei social network disponibili. Risponderò il prima possibile!"
+    "title": "Contattami",
+    "description": "Sono sempre aperto a nuovi progetti, collaborazioni o semplicemente una chiacchierata. Non esitare a contattarmi.",
+    "form": {
+      "name": "Nome",
+      "surname": "Nome",
+      "company": "Azienda",
+      "email": "Email",
+      "content": "Messaggio",
+      "submit": "Parliamone"
+    }
   },
   "sections": {
     "home": "Su di me",
     "start": "I miei {section}",
     "projects": "Portfolio",
-    "travels": "Viaggi",
-    "contact": {
-      "title": "Contattami",
-      "end": "{contact}",
-      "others": "Puoi trovarmi anche su:",
-      "form": {
-        "name": "Nome",
-        "email": "Email",
-        "content": "Messaggio"
-      }
+    "travels": "Viaggi"
+  },
+  "auth": {
+    "login": {
+      "title": "Accedi",
+      "subtitle": "Inserisci le tue credenziali",
+      "email": "Email",
+      "emailPlaceholder": "Inserisci la tua email",
+      "password": "Password",
+      "passwordPlaceholder": "Inserisci la tua password",
+      "submit": "Accedi",
+      "forgot": "Password dimenticata?",
+      "back": "Torna alla home",
+      "errors": {
+        "invalid": "Email o password non corretti"
+      },
+      "retry": "Prova di nuovo con delle credenziali valide"
+    },
+    "forgot": {
+      "title": "Password dimenticata?",
+      "subtitle": "Inserisci la tua mail per ricevere il link di ripristino della password.",
+      "email": "Email",
+      "emailPlaceholder": "Inserisci la tua email",
+      "submit": "Richiedi il ripristino",
+      "back": "Home",
+      "login": "Accedi al tuo account",
+      "errors": {
+        "invalid": "Email non valida"
+      },
+      "notifications": {
+        "success": {
+            "title": "Email inviata",
+            "content": "Ti abbiamo inviato una email a {email} con le istruzioni per il ripristino della password."
+        }
+      },
+      "retry": "Prova di nuovo con una email valida"
+    },
+    "reset": {
+      "title": "Imposta la password",
+      "subtitle": "Scegli una nuova password per il tuo account.",
+      "password": "Password",
+      "passwordPlaceholder": "Inserisci la tua nuova password",
+      "passwordConfirm": "Conferma password",
+      "passwordConfirmPlaceholder": "Conferma la tua nuova password",
+      "submit": "Conferma",
+      "back": "Home",
+      "login": "Accedi al tuo account",
+      "errors": {
+          "invalidToken": "Token di sicurezza scaduto o non valido."
+      },
+      "notifications": {
+          "success": {
+              "title": "Password aggiornata",
+              "content": "La tua password è stata aggiornata con successo."
+          }
+      },
+      "retry": "Prova di nuovo con una password valida"
     }
   },
   "actions": {

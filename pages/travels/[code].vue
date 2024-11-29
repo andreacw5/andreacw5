@@ -6,6 +6,7 @@ import OptimizeImage from "~/components/shared/OptimizeImage.vue";
 const { t } = useI18n();
 const travelStore = useTravelStore();
 const route = useRoute();
+//@ts-ignore
 let travel = travelStore.getTravelByCode(route.params.code);
 
 const currentLocale = useI18n().locale;

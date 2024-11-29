@@ -5,6 +5,7 @@ import { useI18n } from '#imports'
 import ProjectCard from "~/components/projects/ProjectCard.vue";
 import GalleryElement from "~/components/projects/GalleryElement.vue";
 import OptimizeImage from "~/components/shared/OptimizeImage.vue";
+import CompanyCard from "~/components/projects/CompanyCard.vue";
 const projectStore = useProjectStore();
 const { t } = useI18n();
 const route = useRoute();
@@ -26,12 +27,22 @@ useHead({
   title: projectTitle,
 })
 
+const features = [
+  'Padded Laptop Compartment',
+  'Water Bottle Holder',
+  'Anti-Theft Pockets',
+  'Ventilated Back Panel',
+]
+
+//@ts-ignore
 const projectHaveImages = computed(() => project?.images?.length > 0 || false);
+
+const projectPreview = project?.preview ? project.preview : '@/assets/images/loading.webp';
 
 const breadcrumb = [
   { title: 'Home', to: '/' },
   { title: t('projects.title'), to: '/projects' },
-  { title: projectTitle, active: true },
+  { title: projectTitle, to: '', active: true },
 ];
 </script>
 
@@ -46,72 +57,114 @@ const breadcrumb = [
         />
         <v-card-text class="mt-4">
           <v-row>
-            <v-col cols="12" lg="6" xl="6">
+            <v-col
+              cols="12"
+              md="7"
+              order="2"
+              order-md="1"
+            >
               <optimize-image
                 class="round-border card"
-                :src="project.preview"
-                position="top"
+                :src="projectPreview"
+                position="center"
                 cover
               />
             </v-col>
-            <v-col cols="12" lg="6" xl="6">
-              <div class="mb-2">
-                <div class="text-body-1 font-weight-bold white-text">{{ $t('projects.description') }}</div>
+            <v-col
+              class="px-md-4"
+              cols="12"
+              md="5"
+              order="1"
+              order-md="2"
+            >
+<!--              <p
+                v-if="project?.version && project?.updated"
+                class="text-caption font-weight-bold mb-4 text-medium-emphasis"
+              >
+                Version {{ project?.version }} (Updated {{ project?.updated }})
+              </p>-->
+
+              <div class="text-body-1 mb-4 text-medium-emphasis">
                 {{ currentLocaleIsItalian ? project?.description?.it : project?.description?.en }}
               </div>
-              <div class="mb-2">
-                <div class="text-body-1 font-weight-bold white-text mb-1">{{ $t('projects.company') }}</div>
-                <v-list class="round-border" rounded style="background-color: #282829">
-                  <v-list-item
-                    :title="project?.client?.name"
-                    :subtitle="project?.client?.bio"
-                  >
-                    <template v-slot:prepend>
-                      <v-avatar color="grey-lighten-1" tile class="round-border card" size="large">
-                        <optimize-image
-                          :src="project?.client?.logo"
-                          alt-text="Client logo"
-                          :height="50"
-                        />
-                      </v-avatar>
-                    </template>
 
-                    <template v-if="project?.client?.website" v-slot:append>
-                      <v-btn
-                        color="grey-lighten-1"
-                        icon="line-md:external-link"
-                        variant="text"
-                        size="large"
-                        :href="project?.client?.website"
-                        target="_blank"
-                      ></v-btn>
-                    </template>
-                  </v-list-item>
-                </v-list>
-              </div>
-              <div class="mb-1">
-                <div class="text-body-1 font-weight-bold white-text">{{ $t('projects.technologies') }}</div>
-                <v-tooltip v-for="(lang,i) in project?.technical?.technologies" :key="i" location="top">
-                  <template v-slot:activator="{ props }">
-                    <v-btn
-                      :icon="true"
-                      class="ma-2 icon"
-                      size="large"
-                      style="background-color: transparent !important;"
-                      v-bind="props"
-                    >
-                      <v-icon class="white-text" size="30">{{ lang.icon }}</v-icon>
-                    </v-btn>
-                  </template>
-                  <span>{{ lang.name }}</span>
-                </v-tooltip>
-              </div>
+              <v-row v-if="project?.website || project?.github">
+                <v-col v-if="project?.website" cols="6" lg="6" md="12">
+                  <v-btn
+                    :href="project?.website"
+                    block
+                    class="text-none"
+                    color="primary"
+                    flat
+                    target="_blank"
+                    rounded="lg"
+                    size="large"
+                    text="Visualizza"
+                    prepend-icon="line-md:external-link"
+                    variant="tonal"
+                  />
+                </v-col>
+
+                <v-col v-if="project?.github" cols="6" lg="6" md="12">
+                  <v-btn
+                    block
+                    class="text-none"
+                    color="primary"
+                    flat
+                    rounded="lg"
+                    size="large"
+                    prepend-icon="line-md:github"
+                    text="GitHub"
+                    variant="tonal"
+                  />
+                </v-col>
+              </v-row>
+
+              <v-divider class="my-4" />
+
+              <p class="text-body-1 font-weight-bold mt-4 mb-2">{{ $t('projects.company') }}</p>
+
+              <company-card
+                :title="project?.client?.name"
+                :image="project?.client?.logo"
+                :website="project?.client?.website"
+                :instagram="project?.client?.instagram"
+                :linkedin="project?.client?.linkedin"
+              />
+
+              <v-divider class="my-4" />
+
+              <p class="text-body-1 font-weight-bold mt-4 mb-2">{{ $t('projects.technologies') }}</p>
+
+              <v-tooltip v-for="(lang,i) in project?.technical?.technologies" :key="i" location="top">
+                <template v-slot:activator="{ props }">
+                  <v-btn
+                    :icon="true"
+                    class="round-border ma-2 card icon"
+                    size="large"
+                    v-bind="props"
+                    rounded="lg"
+                    tile
+                  >
+                    <v-icon class="white-text" size="30">{{ lang.icon }}</v-icon>
+                  </v-btn>
+                </template>
+                <span>{{ lang.name }}</span>
+              </v-tooltip>
             </v-col>
-            <v-col v-if="projectHaveImages" cols="12">
+            <v-col
+              v-if="projectHaveImages"
+              class="px-md-4"
+              cols="12"
+              order="3"
+              order-md="3"
+            >
               <v-expansion-panels elevation="2">
                 <v-expansion-panel
                   :title="$t('projects.moreImages')"
-                  class="round-border" rounded style="background-color: #282829"
+                  class="round-border text-body-1 font-weight-bold"
+                  rounded="l"
+                  style="background-color: #282829"
                 >
                   <template v-slot:text>
                     <v-row>
@@ -125,49 +178,14 @@ const breadcrumb = [
             </v-col>
           </v-row>
         </v-card-text>
-        <v-card-actions v-if="project?.website || project?.github">
-          <v-spacer />
-          <v-btn
-            v-if="project?.website"
-            :href="project?.website"
-            target="_blank"
-            variant="outlined"
-            class="round-border button-hover"
-          >
-            <v-icon>line-md:external-link</v-icon>
-            <span class="hidden-xs-and-down ml-1">
-                Visualizza
-              </span>
-          </v-btn>
-          <v-btn
-            v-if="project?.github"
-            variant="outlined"
-            :href="project?.github"
-            target="_blank"
-            class="ml-2 round-border button-hover"
-          >
-            <v-icon>line-md:github</v-icon>
-            <span class="hidden-xs-and-down ml-1">
-                GitHub
-              </span>
-          </v-btn>
-        </v-card-actions>
       </v-card>
       <!-- SIMILAR PROJECTS -->
-      <v-container class="mb-8">
+      <v-container class="pa-md-6" fluid>
+        <h3 class="text-h5 font-weight-bold mb-4">{{ $t('projects.similar') }}</h3>
+
         <v-row>
-          <v-col cols="12">
-            <v-divider class="white--text mt-4 mb-4" />
-          </v-col>
-          <v-col cols="12">
-            <div class="text-h4 white--text">{{ $t('projects.similar') }}</div>
-          </v-col>
-          <v-col cols="12">
-            <v-row>
-              <v-col v-for="(project, i) in similarProjects" :key="i" cols="12" sm="6" md="4" lg="4">
-                <project-card :item="project" :image-height="150" />
-              </v-col>
-            </v-row>
+          <v-col v-for="(project, i) in similarProjects" :key="i" cols="12" sm="6" md="4" lg="4">
+            <project-card :item="project" :image-height="150" />
           </v-col>
         </v-row>
       </v-container>

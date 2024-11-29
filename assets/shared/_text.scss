@@ -66,3 +66,25 @@
   color: var(--color-primary);
   animation: pulse 2s infinite;
 }
+
+.link {
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--color) !important;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease-in-out;
+}
+
+.link:hover::after {
+  width: 100%;
+}

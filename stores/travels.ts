@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-
+//@ts-ignore
 export const useTravelStore = defineStore('travels', {
    state: () => ({
       travels:  [
@@ -286,6 +286,7 @@ export const useTravelStore = defineStore('travels', {
       },
       getTravelByCode (state: string) {
           return (code: string) => {
+             //@ts-ignore
               return state.travels.find(travel => travel.code === code)
           }
       }

@@ -88,7 +88,9 @@ export const useProjectStore = defineStore('project', {
                name: 'Element Gaming ASD',
                bio: 'Associazione operante nel campo e-sport',
                website: 'https://element-gaming.eu',
-               logo: 'https://file-harbor.com/api/v1/files/53cb109ede17055fcf4280649b9906e5'
+               logo: 'https://file-harbor.com/api/v1/files/53cb109ede17055fcf4280649b9906e5',
+               instagram: 'https://www.instagram.com/elementgaming.eu',
+               linkedin: 'https://www.linkedin.com/company/elementgaming'
             },
             technical: {
                main: { icon: 'simple-icons:nuxtdotjs', name: 'Nuxt.js', color: '#00A86B' },
@@ -120,12 +122,14 @@ export const useProjectStore = defineStore('project', {
             preview: 'https://file-harbor.com/api/v1/files/33925b190be7f512bc95f9062dce6d4f',
             startDate: '2023',
             current: true,
-            website: 'https://links.emt.gg',
+            website: 'https://links.element-gaming.eu',
             client: {
                name: 'Element Gaming ASD',
                bio: 'Associazione operante nel campo e-sport',
                website: 'https://element-gaming.eu',
-               logo: 'https://file-harbor.com/api/v1/files/53cb109ede17055fcf4280649b9906e5'
+               logo: 'https://file-harbor.com/api/v1/files/53cb109ede17055fcf4280649b9906e5',
+               instagram: 'https://www.instagram.com/elementgaming.eu',
+               linkedin: 'https://www.linkedin.com/company/elementgaming'
             },
             technical: {
                main: { icon: 'simple-icons:nuxtdotjs', name: 'Nuxt.js', color: '#00A86B' },
@@ -244,7 +248,8 @@ export const useProjectStore = defineStore('project', {
                name: 'Protezione Civile di Settimo Milanese',
                bio: 'Associazione di Protezione Civile',
                website: 'https://procivsettimomi.it',
-               logo: 'https://file-harbor.com/api/v1/files/0163bb330af52453b2735bf5186d8b25'
+               logo: 'https://file-harbor.com/api/v1/files/0163bb330af52453b2735bf5186d8b25',
+               instagram: 'https://www.instagram.com/procivsettimomi'
             },
             current: false,
             startDate: '2019',
@@ -344,7 +349,8 @@ export const useProjectStore = defineStore('project', {
                name: 'Private Client',
                bio: 'Piccola bottega artistica',
                website: 'https://studioartepuma.it',
-               logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
+               logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28',
+               instagram: 'https://www.instagram.com/puma_art_lab'
             },
             technical: {
                main: { icon: 'simple-icons:nuxtdotjs', name: 'Nuxt.js', color: '#00A86B' },
@@ -389,7 +395,8 @@ export const useProjectStore = defineStore('project', {
             client: {
                name: 'ALIR Community',
                bio: 'Community di Arma 3',
-               logo: 'https://file-harbor.com/api/v1/files/b770e4eef73c37303ffe66d40db35a05'
+               logo: 'https://file-harbor.com/api/v1/files/b770e4eef73c37303ffe66d40db35a05',
+               instagram: 'https://www.instagram.com/alircommunity'
             },
             description: {
                it: 'Un portale online per la visualizzazione dei propri dati e progressi personali all\'interno del gioco Arma 3. Fornisce dati sui veicoli, incarichi, armi, ruoli e conti bancari dei giocatori.',
@@ -431,7 +438,8 @@ export const useProjectStore = defineStore('project', {
             client: {
                name: 'ALIR Community',
                bio: 'Community di Arma 3',
-               logo: 'https://file-harbor.com/api/v1/files/b770e4eef73c37303ffe66d40db35a05'
+               logo: 'https://file-harbor.com/api/v1/files/b770e4eef73c37303ffe66d40db35a05',
+               instagram: 'https://www.instagram.com/alircommunity'
             },
             technical: {
                technologies: [
