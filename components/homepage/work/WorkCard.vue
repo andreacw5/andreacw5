@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { formatInTimeZone } from 'date-fns-tz'
 import { it, enGB } from 'date-fns/locale'
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 defineProps({
   title: {
@@ -32,13 +35,30 @@ defineProps({
   }
 })
 
+/**
+ * Format the date in the correct format
+ * @param time
+ */
 function formatDate(time: string) {
   const timeZone = 'Europe/Rome';
   return formatInTimeZone(new Date(time), timeZone, 'MM/yyyy', {
     locale: it
   });
 }
-const show = ref(false);
+
+/**
+ * Calculate the total time spent in a company
+ * @param start
+ * @param end
+ */
+function totalTime(start: string, end: string) {
+  const startDate = new Date(start);
+  const endDate = end ? new Date(end) : new Date();
+  const diff = Math.abs(endDate.getTime() - startDate.getTime());
+  const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+  return days > 365 ? `(${Math.floor(days / 365)} ${t('works.years')})` : `(${days} ${t('works.days')})`;
+}
+
 </script>
 
 <template>
@@ -53,43 +73,42 @@ const show = ref(false);
     </template>
     <template v-slot:prepend>
       <v-avatar
-        color="blue-darken-2 mr-1 common-card round-border"
+        class="border card"
+        style="border-radius: 7px !important;"
+        color="mr-1 common-card round-border"
         size="50"
         :image="image"
         tile
       />
     </template>
     <v-card-actions>
-      <span class="ml-2 white-text">
+      <span class="ml-2 white-text font-weight-medium">
         {{ formatDate(period.start) }}
         <span> - </span>
         <template v-if="period.end">
           {{ formatDate(period.end) }}
+          <span class="text-medium-emphasis">{{ totalTime(period.start, period.end) }}</span>
         </template>
         <template v-else>
           {{ $t('works.today') }}
+          <span class="text-medium-emphasis">{{ totalTime(period.start, new Date().toString()) }}</span>
         </template>
       </span>
       <v-spacer />
       <v-btn
+        :href="website"
         :icon="true"
-        @click="show = !show"
+        tile
+        size="small"
+        class="text-none"
+        rounded="lg"
+        color="primary"
       >
-        <v-icon size="x-large">{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-      </v-btn>
-      <v-btn :href="website" :icon="true">
-        <v-icon size="x-large" class="white-text">mdi-earth</v-icon>
+        <v-icon class="white-text font-weight-medium">
+          line-md:external-link
+        </v-icon>
       </v-btn>
     </v-card-actions>
-    <v-expand-transition>
-      <div v-show="show">
-        <v-divider></v-divider>
-
-        <v-card-text>
-          {{ description }}
-        </v-card-text>
-      </div>
-    </v-expand-transition>
   </v-card>
 </template>
 

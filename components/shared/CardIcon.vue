@@ -10,16 +10,43 @@ const props = defineProps({
     })
   }
 })
+
+const isHovered = ref(false);
+
+const handleMouseOver = () => {
+  isHovered.value = true;
+};
+
+const handleMouseLeave = () => {
+  isHovered.value = false;
+};
 </script>
 
 <template>
   <v-tooltip :text="item.hover" location="top">
     <template v-slot:activator="{ props }">
-      <v-card class="mx-auto d-flex flex-column card green-border" outlined rounded="lg" v-bind="props">
+      <v-card
+        class="mx-auto d-flex flex-column card green-border"
+        rounded="lg"
+        v-bind="props"
+        @mouseover="handleMouseOver"
+        @mouseleave="handleMouseLeave"
+      >
         <v-card-item :subtitle="item.subtitle" :title="item.title">
           <template #prepend>
-            <v-avatar class="border" color="surface-light" :icon="item.icon" size="45">
-              <v-icon color="medium-emphasis" class="icon" />
+            <v-avatar
+              class="border card icon"
+              style="border-radius: 7px !important;"
+              :icon="item.icon"
+              size="50"
+              tile
+            >
+              <v-icon
+                :class="{ 'icon-hover': isHovered }"
+                color="medium-emphasis"
+                class="icon"
+                size="30"
+              />
             </v-avatar>
           </template>
         </v-card-item>
@@ -33,7 +60,7 @@ const props = defineProps({
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.icon:hover {
+.icon-hover {
   transform: scale(1.3);
   color: var(--color-primary) !important;
 }

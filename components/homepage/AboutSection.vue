@@ -87,24 +87,5 @@ const downloadCV = () => {
 </template>
 
 <style scoped>
-.link {
-  position: relative;
-  text-decoration: none;
-  font-weight: 500;
-}
 
-.link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color: currentColor;
-  transition: width 0.3s ease-in-out;
-}
-
-.link:hover::after {
-  width: 100%;
-}
 </style>

@@ -41,7 +41,7 @@ const stats = [
           md="6"
           sm="6"
         >
-          <card-icon :item="stat" />
+          <card-icon :item="stat" :key="stat.title" />
         </v-col>
       </v-row>
     </v-container>
