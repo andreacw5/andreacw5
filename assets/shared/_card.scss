@@ -49,7 +49,7 @@
 
 .v-sheet {
   color: var(--card-text);
-  background: var(--card-color) !important;
+  background: var(--card-color);
   border: solid 1px var(--border-color) !important;
   transition: background-color .5s;
 }

@@ -19,7 +19,9 @@
       "one": "Working",
       "two": "experiences"
     },
-    "today": "In progress"
+    "today": "In progress",
+    "years": "years",
+    "days": "months"
   },
   "validations": {
     "email": "Please enter a valid email",
@@ -45,37 +47,23 @@
     "title": "Work Expiriences"
   },
   "contacts": {
-    "title": {
-      "one": "Contact",
-      "two": "me"
-    },
-    "description": "Contact me via the form below or use one of the available social networks. I will reply as soon as possible!"
+    "title": "Contact me",
+    "description": "I'm always open to new projects, collaborations, or just a chat. Feel free to reach out to me.",
+    "form": {
+      "name": "Name",
+      "surname": "Surname",
+      "company": "Company",
+      "email": "Email",
+      "content": "Your message",
+      "submit": "Let's talk"
+    }
   },
   "sections": {
     "home": "About",
     "start": "My {section}",
     "works": "Works",
     "projects": "Portfolio",
-    "travels": "Travels",
-    "contact": {
-      "title": "Contact me",
-      "end": "{contact} Me",
-      "others": "You can also find me on:",
-      "form": {
-        "name": "Name",
-        "email": "Email",
-        "content": "Message"
-      }
-    },
-    "about": {
-      "title": "About",
-      "end": "{contact} Me",
-      "download": "Download my resume",
-      "skills": "Skills",
-      "experience": "Experience",
-      "languages": "Languages",
-      "other": "Also busy with"
-    }
+    "travels": "Travels"
   },
   "auth": {
     "login": {
@@ -90,6 +78,25 @@
       "back": "Back to home",
       "errors": {
         "invalid": "Email or password is incorrect"
+      },
+      "retry": "Please try again"
+    },
+    "forgot": {
+      "title": "Forgot password?",
+      "subtitle": "Enter your email to receive the password reset link.",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "submit": "Request reset",
+      "back": "Home",
+      "login": "Login to your account",
+      "errors": {
+        "invalid": "Invalid email"
+      },
+      "notifications": {
+        "success": {
+          "title": "Email sent",
+          "content": "We have sent an email to {email} with instructions to reset your password."
+        }
       },
       "retry": "Please try again"
     }

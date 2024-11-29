@@ -63,17 +63,17 @@
               type="password"
               variant="outlined"
             >
-<!--              <template #counter>
+              <template #counter>
                 <v-btn
-                  to="/auth/reset-password"
+                  to="/auth/password/forgot"
                   class="text-body-2 px-0 me-n8"
                   color="primary"
                   :ripple="false"
                   size="small"
-                  text="Forgot Password?"
+                  :text="$t('auth.login.forgot')"
                   variant="plain"
                 />
-              </template>-->
+              </template>
             </v-text-field>
           </div>
 
@@ -118,18 +118,16 @@
             />
           </div>-->
 
-          <v-card-actions>
-            <nuxt-link
-              class="mt-4"
+          <v-card-actions class="mt-3">
+            <v-btn
+              variant="text"
+              prepend-icon="mdi-arrow-left"
               to="/"
             >
-              <v-icon left class="mr-1 mb-1" size="small">
-                mdi-arrow-left
-              </v-icon>
-              <span>
-                {{ $t('auth.login.back') }}
-              </span>
-            </nuxt-link>
+              {{ $t('auth.login.back') }}
+            </v-btn>
+
+            <v-spacer />
           </v-card-actions>
         </v-card>
       </v-col>
