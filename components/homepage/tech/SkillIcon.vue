@@ -25,42 +25,35 @@ const avatarColor = computed(() => {
 </script>
 
 <template>
-  <a :href="skill.url" target="_blank">
-    <v-tooltip :text="skill.title" location="top">
-      <template v-slot:activator="{ props }">
-        <v-avatar
-          size="75"
-          class="border card ma-2"
-          style="border-radius: 7px !important;"
-          color="transparent"
-          tile
+  <v-tooltip :text="skill.title" location="top">
+    <template v-slot:activator="{ props }">
+      <a :href="skill.url" target="_blank" v-bind="props" class="mr-2 mb-2 mb-lg-0 mb-md-2">
+        <v-card
+          class="mx-auto d-flex flex-column card green-border"
+          rounded="lg"
           @mouseover="handleMouseOver"
           @mouseleave="handleMouseLeave"
         >
-          <Icon
-            :icon="skill.icon"
-            height="45"
-            class="transition-big ma-2 icon"
-            v-bind="props"
-          />
-        </v-avatar>
-      </template>
-      <span>{{ skill.title }}</span>
-    </v-tooltip>
-  </a>
+          <v-avatar size="75" tile>
+            <Icon
+              :class="{ 'icon-hover': isHovered }"
+              :icon="skill.icon"
+              height="45"
+              class="icon"
+            />
+          </v-avatar>
+        </v-card>
+      </a>
+    </template>
+  </v-tooltip>
 </template>
 
 <style scoped lang="scss">
-.transition-big:hover {
-  transform: scale(1.3);
-}
-
 .icon {
-  color: rgba(var(--v-theme-on-background), var(--v-medium-emphasis-opacity));
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.icon:hover {
+.icon-hover {
   transform: scale(1.3);
   color: var(--color-primary) !important;
 }

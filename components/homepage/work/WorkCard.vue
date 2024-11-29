@@ -96,18 +96,17 @@ function totalTime(start: string, end: string) {
       </span>
       <v-spacer />
       <v-btn
-        :href="website"
-        :icon="true"
-        tile
-        size="small"
+        v-if="website"
+        border
         class="text-none"
-        rounded="lg"
-        color="primary"
-      >
-        <v-icon class="white-text font-weight-medium">
-          line-md:external-link
-        </v-icon>
-      </v-btn>
+        prepend-icon="line-md:external-link"
+        rounded
+        size="small"
+        text="Website"
+        variant="text"
+        target="_blank"
+        :href="website"
+      />
     </v-card-actions>
   </v-card>
 </template>

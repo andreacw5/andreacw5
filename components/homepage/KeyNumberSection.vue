@@ -3,24 +3,28 @@ import CardIcon from "~/components/shared/CardIcon.vue";
 
 const stats = [
   {
+    type: 'key-number',
     icon: 'line-md:gauge-full',
     title: '10+',
     subtitle: 'Anni di esperienza',
     hover: '10+ anni di esperienza nello sviluppo di applicazioni web.'
   },
   {
+    type: 'key-number',
     icon: 'line-md:arrow-close-up',
     title: '200 +',
     subtitle: 'Pull request mergiate',
     hover: '200+ pull request mergiate su repository pubblici e privati.'
   },
   {
+    type: 'key-number',
     icon: 'line-md:folder-check',
     title: '55',
     subtitle: 'Progetti completati',
     hover: 'Da piccoli tool a piattaforme aziendali.'
   },
   {
+    type: 'key-number',
     icon: 'line-md:coffee-loop',
     title: '645',
     subtitle: 'Tazze di caffè',

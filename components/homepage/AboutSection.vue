@@ -17,7 +17,6 @@ const downloadCV = () => {
     }
   );
 
-
   const link = document.createElement('a');
   link.href = '/CV_2024.pdf';
   link.download = 'CV_2024.pdf';

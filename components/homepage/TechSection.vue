@@ -3,66 +3,77 @@ import SkillIcon from "~/components/homepage/tech/SkillIcon.vue";
 
 const skills = [
   {
+    type: 'skill',
     icon: 'simple-icons:nuxtdotjs',
     title: 'Nuxt.js',
     color: '#58b2bb',
     url: 'https://nuxtjs.org'
   },
   {
+    type: 'skill',
     icon: 'simple-icons:vuedotjs',
     title: 'Vue.js',
     color: '#41b883',
     url: 'https://vuejs.org'
   },
   {
+    type: 'skill',
     icon: 'simple-icons:nodedotjs',
     title: 'Node.js',
     color: '#68a063',
     url: 'https://nodejs.org/en/'
   },
   {
+    type: 'skill',
     icon: 'simple-icons:nestjs',
     title: 'Nest.js',
     color: '#e0234e',
     url: 'https://nestjs.com/'
   },
   {
+    type: 'skill',
     icon: 'simple-icons:javascript',
     title: 'Javascript',
     color: '#f0db4f',
     url: 'https://javascript.com'
   },
   {
+    type: 'skill',
     icon: 'simple-icons:typescript',
     title: 'Typescript',
     color: '#175db8',
     url: 'https://typescriptlang.org'
   },
   {
+    type: 'skill',
     icon: 'devicon-plain:java',
     title: 'Java',
     color: '#5382a1',
     url: 'https://java.com'
   },
   {
+    type: 'skill',
     icon: 'devicon-plain:grails',
     title: 'Grails',
     color: '#ec7b3f',
     url: 'https://grails.org'
   },
   {
+    type: 'skill',
     icon: 'devicon-plain:docker',
     title: 'Docker',
     color: '#0db7ed',
     url: 'https://docker.com'
   },
   {
+    type: 'skill',
     icon: 'devicon-plain:firebase',
     title: 'Google firebase',
     color: '#FFA611',
     url: 'https://firebase.google.com'
   },
   {
+    type: 'skill',
     icon: 'devicon-plain:git',
     title: 'Git',
     color: '#f34f29',
@@ -115,7 +126,7 @@ const skills = [
         </i18n-t>
       </v-responsive>
       <v-row
-        class="mt-6"
+        class="mt-4"
         justify="center"
         no-gutters
       >

@@ -35,11 +35,10 @@ const handleMouseLeave = () => {
         <v-card-item :subtitle="item.subtitle" :title="item.title">
           <template #prepend>
             <v-avatar
-              class="border card icon"
+              class="card icon"
               style="border-radius: 7px !important;"
               :icon="item.icon"
               size="50"
-              tile
             >
               <v-icon
                 :class="{ 'icon-hover': isHovered }"
