@@ -89,8 +89,22 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px; /* Adjust the height as needed */
+  height: 2px;
   background: linear-gradient(to right, transparent, var(--color-primary), transparent);
+}
+
+.gradient-border-right {
+  position: relative;
+}
+
+.gradient-border-right::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, var(--color-primary), transparent);
 }
 
 .green-border {

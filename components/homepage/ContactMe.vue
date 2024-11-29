@@ -39,7 +39,7 @@ const contactInfo = [
         md="6"
       >
         <v-sheet height="100%" color="#222224">
-          <v-responsive class="mx-auto py-8 py-md-12 px-4 px-md-10" max-width="600" style="background: transparent !important;">
+          <v-responsive class="mx-auto py-8 py-md-6 px-4 px-md-10" max-width="600" style="background: transparent !important;">
             <p class="mt-sm-16 mt-5 text-h5 font-weight-bold text-sm-h4 text-white">
               {{ $t('contacts.title') }}
             </p>
@@ -162,9 +162,31 @@ const contactInfo = [
   border: none !important;
 }
 
+.v-sheet {
+  position: relative;
+}
+
 @media (min-width: 960px) {
-  .v-sheet {
-    border-right: solid 1px var(--border-color) !important;
+  .v-sheet::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, var(--color-primary), transparent);
+  }
+}
+
+@media (max-width: 960px) {
+  .v-sheet::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--color-primary), transparent);
   }
 }
 </style>
