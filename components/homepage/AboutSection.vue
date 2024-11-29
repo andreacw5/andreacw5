@@ -13,9 +13,29 @@ const downloadCV = () => {
       icon: 'line-md:downloading-loop',
       color: 'success',
       title: 'Download Started',
-      text: 'Your CV download has started successfully.'
+      text: 'Download has started successfully.'
     }
   );
+
+
+  const link = document.createElement('a');
+  link.href = '/CV_2024.pdf';
+  link.download = 'CV_2024.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  snackbarStore.setSnackbar(
+    { snackbar: snackbarStore.snackbar },
+    {
+      show: true,
+      icon: 'line-md:download',
+      color: 'success',
+      title: 'Download Completed',
+      text: 'Downloaded successfully, check your downloads folder.'
+    }
+  );
+
 };
 
 </script>
