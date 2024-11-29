@@ -3,16 +3,16 @@ import SkillIcon from "~/components/homepage/tech/SkillIcon.vue";
 
 const skills = [
   {
-    icon: 'simple-icons:vuedotjs',
-    title: 'Vue.js',
-    color: '#41b883',
-    url: 'https://vuejs.org'
-  },
-  {
     icon: 'simple-icons:nuxtdotjs',
     title: 'Nuxt.js',
     color: '#58b2bb',
     url: 'https://nuxtjs.org'
+  },
+  {
+    icon: 'simple-icons:vuedotjs',
+    title: 'Vue.js',
+    color: '#41b883',
+    url: 'https://vuejs.org'
   },
   {
     icon: 'simple-icons:nodedotjs',
@@ -80,35 +80,35 @@ const skills = [
     </v-card-title>
     <v-container class="pr-6 pl-6" fluid>
       <v-responsive class="mb-6">
-        <i18n-t keypath="tech.description" tag="p" class="text-body-3">
+        <i18n-t keypath="tech.description" tag="p" class="text-subtitle-3 text-medium-emphasis">
           <template #js>
-            <b class="primary-text">Javascript</b>
+            <b class="font-weight-medium text-primary">Javascript</b>
           </template>
           <template #java>
-            <b class="primary-text">Java</b>
+            <b class="font-weight-medium text-primary">Java</b>
           </template>
           <template #node>
-            <a href="https://nodejs.org" target="_blank">
+            <a href="https://nodejs.org" target="_blank" class="link">
               Node.js
             </a>
           </template>
           <template #grails>
-            <a href="https://grails.org" target="_blank">
+            <a href="https://grails.org" target="_blank" class="link">
               Grails
             </a>
           </template>
           <template #nest>
-            <a href="https://nestjs.com" target="_blank">
+            <a href="https://nestjs.com" target="_blank" class="link">
               Nest.js
             </a>
           </template>
           <template #vue>
-            <a href="https://vuejs.org" target="_blank">
+            <a href="https://vuejs.org" target="_blank" class="link">
               Vue.js
             </a>
           </template>
           <template #nuxt>
-            <a href="https://nuxt.com" target="_blank">
+            <a href="https://nuxt.com" target="_blank" class="link">
               Nuxt.js
             </a>
           </template>

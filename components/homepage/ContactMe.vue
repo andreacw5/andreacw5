@@ -40,11 +40,11 @@ const contactInfo = [
       >
         <v-sheet height="100%" color="#222224">
           <v-responsive class="mx-auto py-8 py-md-6 px-4 px-md-10" max-width="600" style="background: transparent !important;">
-            <p class="mt-sm-16 mt-5 text-h5 font-weight-bold text-sm-h4 text-white">
+            <p class="mt-sm-1 mt-md-16 mt-lg-16 font-weight-bold text-h4 text-white">
               {{ $t('contacts.title') }}
             </p>
 
-            <p class="mt-4 text-subtitle-2 text-medium-emphasis mb-4">
+            <p class="mt-4 text-subtitle-3 text-medium-emphasis mb-4">
               {{ $t('contacts.description') }}
             </p>
 

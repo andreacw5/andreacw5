@@ -28,7 +28,7 @@ const downloadCV = () => {
           class="card-gradient round-border"
           alt="Intro image"
           src="https://file-harbor.com/api/v1/files/59eede5fb0b097a63e0eb276add71e83"
-          :height="325"
+          :height="340"
         />
       </div>
     </v-col>
@@ -37,7 +37,7 @@ const downloadCV = () => {
       <h1 class="text-h3 font-weight-bold mb-4">
         {{ $t('presentation') }}
       </h1>
-      <i18n-t keypath="intro.welcome" tag="p" class="text-subtitle-2 text-medium-emphasis mb-4">
+      <i18n-t keypath="intro.welcome" tag="p" class="text-subtitle-3 text-medium-emphasis mb-4">
         <template #medas>
           <a href="https://medas-solutions.it" target="_blank" class="link">
             Medas Solutions
@@ -54,7 +54,7 @@ const downloadCV = () => {
           </nuxt-link>
         </template>
       </i18n-t>
-      <i18n-t keypath="intro.extension" tag="p" class="text-subtitle-2 text-medium-emphasis mb-6">
+      <i18n-t keypath="intro.extension" tag="p" class="text-subtitle-3 text-medium-emphasis mb-4">
         <template #prociv>
           <a href="https://procivsettimomi.it" target="_blank" class="link">
             {{ $t('prociv') }}
