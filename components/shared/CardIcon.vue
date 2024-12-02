@@ -27,6 +27,7 @@ const handleMouseLeave = () => {
     <template v-slot:activator="{ props }">
       <v-card
         class="mx-auto d-flex flex-column card green-border"
+        style="border-radius: 14px !important;"
         rounded="lg"
         v-bind="props"
         @mouseover="handleMouseOver"
