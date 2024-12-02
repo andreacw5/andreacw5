@@ -138,12 +138,18 @@ const appBarItems = computed(() => {
       <v-list density="comfortable" item-props :items="projects" nav>
         <template #prepend="{ item }">
           <v-avatar
-            class="border text-caption me-2"
-            rounded
-            size="25"
-            :text="item.title.charAt(0)"
+            class="pa-4"
+            color="surface-light"
             variant="tonal"
-          />
+            rounded="lg"
+            size="24"
+          >
+            <v-avatar
+              :text="item.title.charAt(0)"
+              rounded
+            >
+            </v-avatar>
+          </v-avatar>
         </template>
       </v-list>
 
