@@ -60,7 +60,7 @@ const breadcrumb = [
             <v-col
               cols="12"
               md="7"
-              order="2"
+              order="1"
               order-md="1"
             >
               <optimize-image
@@ -74,7 +74,7 @@ const breadcrumb = [
               class="px-md-4"
               cols="12"
               md="5"
-              order="1"
+              order="2"
               order-md="2"
             >
 <!--              <p
@@ -89,7 +89,7 @@ const breadcrumb = [
               </div>
 
               <v-row v-if="project?.website || project?.github">
-                <v-col v-if="project?.website" cols="6" lg="6" md="12">
+                <v-col v-if="project?.website" cols="12" lg="6">
                   <v-btn
                     :href="project?.website"
                     block
@@ -105,7 +105,7 @@ const breadcrumb = [
                   />
                 </v-col>
 
-                <v-col v-if="project?.github" cols="6" lg="6" md="12">
+                <v-col v-if="project?.github" cols="12" lg="6">
                   <v-btn
                     block
                     class="text-none"
@@ -180,11 +180,18 @@ const breadcrumb = [
         </v-card-text>
       </v-card>
       <!-- SIMILAR PROJECTS -->
-      <v-container class="pa-md-6" fluid>
+      <v-container class="pa-md-2" fluid>
         <h3 class="text-h5 font-weight-bold mb-4">{{ $t('projects.similar') }}</h3>
 
         <v-row>
-          <v-col v-for="(project, i) in similarProjects" :key="i" cols="12" sm="6" md="4" lg="4">
+          <v-col
+            v-for="(project, i) in similarProjects"
+            :key="i"
+            cols="12"
+            md="6"
+            lg="4"
+            class="px-0 px-sm-0 pa-md-2"
+          >
             <project-card :item="project" :image-height="150" />
           </v-col>
         </v-row>

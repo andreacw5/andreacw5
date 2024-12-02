@@ -1,6 +1,6 @@
 <template>
   <v-container class="v-col-auto grid-list-sm text-xs-center ms-auto fill-height" fluid>
-    <v-container class="grid-list-sm text-xs-center mb-10">
+    <v-container class="grid-list-sm text-xs-center mb-10 mt-sm-0">
       <!-- Main about section -->
       <about-section />
       <!-- My tech stack section -->

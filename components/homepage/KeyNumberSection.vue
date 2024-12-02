@@ -34,21 +34,19 @@ const stats = [
 </script>
 
 <template>
-  <v-card class="card mt-6 round-border">
-    <v-container class="pr-6 pl-6" fluid>
-      <v-row>
-        <v-col
-          v-for="stat in stats"
-          :key="stat.title"
-          cols="12"
-          lg="3"
-          md="6"
-          sm="6"
-        >
-          <card-icon :item="stat" :key="stat.title" />
-        </v-col>
-      </v-row>
-    </v-container>
+  <v-card class="card mt-6" style="background: transparent !important; border-color: transparent !important;">
+    <v-row dense>
+      <v-col
+        v-for="stat in stats"
+        :key="stat.title"
+        cols="12"
+        lg="3"
+        md="6"
+        sm="6"
+      >
+        <card-icon :item="stat" :key="stat.title" />
+      </v-col>
+    </v-row>
   </v-card>
 </template>
 

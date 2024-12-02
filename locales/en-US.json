@@ -2,6 +2,9 @@
   "greetings": "Nice to meet you,",
   "presentation": "I'm Andrea Tombolato",
   "prociv": "civil defence",
+  "navigation": {
+    "featured": "Featured projects"
+  },
   "intro": {
     "welcome": "In 2016 I started my career as a Full-stack developer at {medas}, an Italian company in the health sector. Member of the board of directors of {element}, a non-profit association dedicated to gaming. Occasionally I work as a freelancer for small projects, highlighted in my {portfolio}",
     "extension": "In my spare time, I do volunteer work in the {prociv} as a shift manager. I am passionate about hiking in the mountains and traveling around the world!",
@@ -66,6 +69,9 @@
     "travels": "Travels"
   },
   "auth": {
+    "terms": "Terms of service",
+    "privacy": "Privacy policy",
+    "status": "Service status",
     "login": {
       "title": "Login",
       "subtitle": "Enter your credentials",
@@ -127,6 +133,13 @@
     "prefix": "Follow me on {name}",
     "github": "GitHub",
     "linkedin": "LinkedIn"
+  },
+  "gpt": {
+    "title": "ChatGPT Integration",
+    "errors": {
+      "title": "Missing token or message",
+      "subtitle": "Please provide a valid token and message"
+    }
   },
   "visitWebsite": "Visit {name} website",
   "copyright": "All rights reserved"

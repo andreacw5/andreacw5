@@ -64,7 +64,7 @@ const breadcrumb = [
             </template>
           </v-tabs>
         <v-card-text>
-          <v-container grid-list-md text-xs-center>
+          <v-container class="grid-list-md text-xs-center">
             <v-row v-if="loading">
               <v-col v-for="(i) in 6" :key="i" cols="12">
                 <v-skeleton-loader
@@ -82,11 +82,12 @@ const breadcrumb = [
             >
               <template v-for="(project, i) in projects" :key="i">
                 <v-col
+                  class="px-0 px-sm-0 pa-md-2"
                   cols="12"
                   sm="12"
                   md="6"
                   lg="6"
-                  xl="6"
+                  xl="4"
                 >
                   <project-card :item="project" />
                 </v-col>
