@@ -17,14 +17,14 @@
     "unlighthouse": "npx unlighthouse --site https://andreatombolato.dev/"
   },
   "dependencies": {
-    "@pinia/nuxt": "^0.5.5",
+    "@pinia/nuxt": "^0.6.1",
     "date-fns": "^3.6.0",
     "date-fns-tz": "^3.2.0",
     "vite-plugin-vuetify": "^2.0.4",
-    "vuetify": "^3.7.3"
+    "vuetify": "^3.7.4"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^1.6.0",
+    "@nuxt/devtools": "^1.6.1",
     "@nuxt/types": "^2.18.1",
     "@iconify/vue": "^4.1.2",
     "@nuxt/image": "^1.8.1",
@@ -32,8 +32,8 @@
     "@nuxtjs/i18n": "^8.5.5",
     "@vite-pwa/nuxt": "^0.10.5",
     "nuxt": "^3.13.2",
-    "sass": "^1.69.5",
-    "sass-loader": "^12.2.0",
+    "sass": "^1.81.0",
+    "sass-loader": "^16.0.3",
     "vite-plugin-remove-console": "^2.2.0",
     "typescript": "^5.6.3",
     "vue": "^3.5.12",
