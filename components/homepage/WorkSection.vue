@@ -16,7 +16,7 @@ const currentLocaleIsItalian = computed(() => currentLocale.value === 'it-IT');
       </h2>
     </v-card-title>
     <v-card-text class="mt-4">
-      <v-row dense>
+      <v-row class="px-0 px-sm-0 pa-md-2">
         <v-col v-for="(work, i) in works" :key="i" cols="12" md="6">
           <work-card
             :title="currentLocaleIsItalian ? work.title.it : work.title.en"

@@ -42,7 +42,7 @@ const breadcrumb = [
             </v-row>
             <v-row v-else>
               <template v-for="(travel, i) in travels" :key="i">
-                <v-col cols="12">
+                <v-col cols="12" class="px-0 px-sm-0 pa-md-2">
                   <travel-list-card :travel="travel" />
                 </v-col>
               </template>
