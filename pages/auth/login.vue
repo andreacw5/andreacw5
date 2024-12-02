@@ -1,5 +1,5 @@
 <template>
-  <v-container class="h-100 pa-0 background" fluid>
+  <v-container class="h-100 pa-0" fluid>
     <v-row align="center" class="h-100" justify="center">
       <v-col class="d-flex justify-center" cols="12" lg="6">
         <v-card
@@ -160,11 +160,6 @@ useHead({
 </script>
 
 <style scoped>
-.background {
-  background: #121212FF; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #121212FF, #00A86B); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #121212FF, #00A86B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
 .atom-card:hover {
   border-bottom: solid 2px var(--color-primary) !important;
   border-right: solid 2px var(--color-primary) !important;

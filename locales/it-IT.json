@@ -71,6 +71,9 @@
     "travels": "Viaggi"
   },
   "auth": {
+    "terms": "Condizioni d'uso",
+    "privacy": "Informativa sulla privacy",
+    "status": "Stato dei servizi",
     "login": {
       "title": "Accedi",
       "subtitle": "Inserisci le tue credenziali",
@@ -160,6 +163,13 @@
     "days": "Giorni",
     "photos": "Foto",
     "start": "Partenza"
+  },
+  "gpt": {
+    "title": "Integrazione con ChatGPT",
+    "errors": {
+      "title": "Token o messaggio non validi",
+      "subtitle": "Per favore, inserisci un messaggio valido"
+    }
   },
   "visitWebsite": "Visita il sito {name}",
   "copyright": "Tutti i diritti riservati",

@@ -69,6 +69,9 @@
     "travels": "Travels"
   },
   "auth": {
+    "terms": "Terms of service",
+    "privacy": "Privacy policy",
+    "status": "Service status",
     "login": {
       "title": "Login",
       "subtitle": "Enter your credentials",
@@ -130,6 +133,13 @@
     "prefix": "Follow me on {name}",
     "github": "GitHub",
     "linkedin": "LinkedIn"
+  },
+  "gpt": {
+    "title": "ChatGPT Integration",
+    "errors": {
+      "title": "Missing token or message",
+      "subtitle": "Please provide a valid token and message"
+    }
   },
   "visitWebsite": "Visit {name} website",
   "copyright": "All rights reserved"
