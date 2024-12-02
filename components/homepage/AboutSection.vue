@@ -80,7 +80,28 @@ const downloadCV = () => {
           </a>
         </template>
       </i18n-t>
-      <div class="text-center">
+      <div class="text-center hidden-lg-and-up">
+        <v-btn
+          class="mr-4 text-none mt-4 mb-4"
+          color="primary"
+          block
+          prepend-icon="line-md:file-download"
+          text="Scarica il mio CV"
+          variant="flat"
+          @click="downloadCV"
+        />
+
+        <v-btn
+          append-icon="line-md:arrow-right"
+          class="text-none mt-4 mb-4"
+          block
+          border
+          to="/projects"
+          text="Vai al portfolio"
+          variant="text"
+        />
+      </div>
+      <div class="text-center hidden-md-and-down">
         <v-btn
           class="mr-4 text-none"
           color="primary"
