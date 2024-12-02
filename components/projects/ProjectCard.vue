@@ -29,15 +29,30 @@ const currentLocaleIsItalian = computed(() => currentLocale.value === 'it-IT');
       />
       <v-card class="mx-auto" style="background: transparent !important;">
         <template v-slot:title>
-          <h2 class="title-project">{{ currentLocaleIsItalian ? item.title.it : item.title.en }}</h2>
+          <h2 class="title-project">
+            {{ currentLocaleIsItalian ? item.title.it : item.title.en }}
+          </h2>
         </template>
         <template v-slot:subtitle>
-          <span class="project-subtitle">{{ item.client.name }}</span>
+          <span class="project-subtitle">
+            {{ item.client.name }}
+            <span class="hidden-md-and-up">
+              <br>
+              <v-icon
+                :color="item.technical.main.color"
+                size="15"
+                class="mr-1"
+              >
+                {{ item.technical.main.icon }}
+              </v-icon>
+              Made with {{ item.technical.main.name }}
+            </span>
+          </span>
         </template>
         <template v-slot:append>
           <v-btn
             :icon="true"
-            class="round-border ma-2 card icon transition"
+            class="round-border ma-2 card icon transition hidden-sm-and-down"
             size="large"
             rounded="lg"
             tile
