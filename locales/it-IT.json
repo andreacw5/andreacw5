@@ -6,6 +6,9 @@
     "description": "Descrizione",
     "today": "In corso"
   },
+  "navigation": {
+    "featured": "Progetti in evidenza"
+  },
   "intro": {
     "welcome": "Nel 2016 inizia la mia carriera come sviluppatore Full-stack presso {medas}, un'azienda italiana nel settore sanitario. Membro del consiglio direttivo di {element}, un'associazione no-profit dedicata al gaming. Occasionalmente lavoro come freelance per piccoli progetti, evidenziati nel mio {portfolio}",
     "extension": "Nel tempo libero, svolgo volontariato nella {prociv} come responsabile della comunicazione con il pubblico. Sono appassionato di escursioni in montagna e di viaggi in giro per il mondo!",

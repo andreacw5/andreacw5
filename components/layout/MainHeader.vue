@@ -28,7 +28,7 @@ const links = ref([
 const projects = ref([
   {
     type: 'subheader',
-    title: 'Featured projects',
+    title: t('navigation.featured'),
     class: 'text-white',
   },
   {
@@ -160,7 +160,7 @@ const appBarItems = computed(() => {
           nav
           :to="localePath('/auth/login')"
           prepend-icon="line-md:login"
-          title="Login"
+          :title="$t('auth.login.title')"
         />
       </template>
 
