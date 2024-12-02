@@ -37,14 +37,14 @@ defineProps({
       <div class="d-flex ml-3 ps-1">
         <v-avatar
           v-if="image"
-          class="mr-1 common-card round-border"
+          class="mr-1 common-card round-border hidden-sm-and-down"
           size="60"
           :image="image"
           tile
         />
         <v-icon
           v-if="icon"
-          class="mr-1 common-card"
+          class="mr-1 common-card hidden-sm-and-down"
           size="60"
         >
           {{ icon }}
