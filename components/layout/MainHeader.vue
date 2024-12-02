@@ -72,9 +72,16 @@ const appBarItems = computed(() => {
 
 <template>
   <div class="header">
-    <v-app-bar class="card-gradient pl-0 gradient-border-bottom">
+    <v-app-bar
+      class="card-gradient pl-0 gradient-border-bottom"
+    >
       <v-container class="d-flex align-center py-0">
-        <v-app-bar-nav-icon class="hidden-md-and-up" @click="closeOrOpenDrawer" />
+        <v-app-bar-nav-icon
+          variant="text"
+          class="hidden-md-and-up text-white"
+          :icon="drawer ? 'line-md:menu-to-close-transition' : 'line-md:menu-fold-right'"
+          @click="closeOrOpenDrawer"
+        />
         <v-divider vertical inset class="mr-4 ml-2 hidden-md-and-up white-text" />
 
         <nuxt-link :to="localePath('/')" class="mt-2">
