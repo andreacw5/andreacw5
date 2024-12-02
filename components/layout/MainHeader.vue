@@ -1,24 +1,53 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 const drawer = ref(false)
 const localePath = useLocalePath()
 
-const links = [
+const links = ref([
   {
-    "name": "sections.home",
-    "icon": "mdi-home",
-    "url": "/"
+    title: t("sections.home"),
+    prependIcon: "line-md:home",
+    to: '/',
+    link: true
   },
   {
-    "name": "sections.projects",
-    "icon": "mdi-briefcase",
-    "url": "/projects"
+    title: t("sections.projects"),
+    prependIcon: "line-md:briefcase",
+    to: '/projects',
+    link: true
   },
   {
-    "name": "sections.travels",
-    "icon": "mdi-beach",
-    "url": "/travels"
+    title: t("sections.travels"),
+    prependIcon: "line-md:map-marker-filled",
+    to: '/travels',
+    link: true
   }
-]
+])
+
+const projects = ref([
+  {
+    type: 'subheader',
+    title: 'Featured projects',
+    class: 'text-white',
+  },
+  {
+    title: 'Element Gaming',
+    to: '/projects/element',
+    link: true,
+  },
+  {
+    title: 'ProCiv Settimo',
+    to: '/projects/prociv',
+    link: true,
+  },
+  {
+    title: 'ZipLink',
+    to: '/projects/ziplink',
+    link: true,
+  },
+])
+
 const closeOrOpenDrawer = () => {
   drawer.value = !drawer.value
 }
@@ -65,7 +94,12 @@ const appBarItems = computed(() => {
         <v-btn variant="text" class="white-text mr-1" :icon="true" href="https://github.com/andreacw5" target="_blank">
           <v-icon size="25">line-md:github</v-icon>
         </v-btn>
-        <v-btn variant="text" class="white-text" :icon="true" :to="localePath('/auth/login')">
+        <v-btn
+          variant="text"
+          class="white-text hidden-sm-and-down"
+          :icon="true"
+          :to="localePath('/auth/login')"
+        >
           <v-icon size="25">line-md:login</v-icon>
         </v-btn>
         <!--          <v-divider vertical inset class="mr-2 ml-2 hidden-sm-and-down white-text" />
@@ -78,28 +112,52 @@ const appBarItems = computed(() => {
     <v-navigation-drawer
       v-model="drawer"
       class="card-gradient"
-      absolute
       temporary
     >
-      <v-list>
+      <v-list class="mt-2 mb-1">
         <v-list-item
-          prepend-avatar="https://file-harbor.com/api/v1/files/59eede5fb0b097a63e0eb276add71e83"
-          subtitle="Web Developer"
           title="Andrea Tombolato"
-        />
+          subtitle="Web Developer"
+        >
+          <template #prepend>
+            <v-avatar tile class="card" size="40">
+              <v-img src="https://file-harbor.com/api/v1/files/59eede5fb0b097a63e0eb276add71e83" alt="Avatar" />
+            </v-avatar>
+          </template>
+        </v-list-item>
       </v-list>
-      <v-divider />
-      <v-list density="compact" nav>
+
+      <v-list
+        density="comfortable"
+        item-props
+        :items="links"
+        nav
+        rounded
+      />
+
+      <v-list density="comfortable" item-props :items="projects" nav>
+        <template #prepend="{ item }">
+          <v-avatar
+            class="border text-caption me-2"
+            rounded
+            size="25"
+            :text="item.title.charAt(0)"
+            variant="tonal"
+          />
+        </template>
+      </v-list>
+
+      <template #append>
         <v-list-item
-          v-for="link in links"
-          :key="link.name"
-          :to="localePath(link.url)"
-          nuxt
-          :prepend-icon="link.icon"
-          :title="$t(link.name)"
-          :value="link.url"
+          class="ma-2"
+          link
+          nav
+          :to="localePath('/auth/login')"
+          prepend-icon="line-md:login"
+          title="Login"
         />
-      </v-list>
+      </template>
+
     </v-navigation-drawer>
   </div>
 </template>

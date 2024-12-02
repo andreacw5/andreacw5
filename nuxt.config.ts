@@ -4,7 +4,7 @@ const shortTitle = "Andrea Tombolato";
 const description = "Andrea Tombolato, Web Developer con base a Milano e questo è il mio sito personale!";
 const image = "https://file-harbor.com/api/v1/files/59eede5fb0b097a63e0eb276add71e83";
 const url = "https://andreatombolato.dev/";
-const themeColor = "#00A86B";
+const themeColor = "#212122";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({

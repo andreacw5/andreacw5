@@ -10,7 +10,7 @@
 
     <v-main>
       <main-header />
-      <v-main>
+      <v-main class="mt-sm-0">
         <slot />
         <v-fab
           class="ms-4 mb-4 round-border"
