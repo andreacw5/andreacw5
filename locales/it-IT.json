@@ -171,6 +171,99 @@
       "subtitle": "Per favore, inserisci un messaggio valido"
     }
   },
+  "terms": {
+    "lastUpdated": "Ultimo aggiornamento: 02/12/2024",
+    "title": "Termini e Condizioni",
+    "introduction": {
+      "heading": "1. Introduzione",
+      "content": "Accedendo a questo sito, accetti i termini e le condizioni qui descritti. Se non sei d'accordo con questi termini, ti preghiamo di non utilizzare il sito."
+    },
+    "access": {
+      "heading": "2. Accesso e Utenti Autorizzati",
+      "content1": "L'accesso al sito è riservato a un numero limitato di amministratori autorizzati. Gli utenti possono accedere tramite Discord o utilizzando un nome utente e una password forniti dall'amministratore del sito. L'accesso non è consentito al pubblico generale.",
+      "content2": "Gli utenti che non dispongono di credenziali di accesso valide non sono autorizzati a utilizzare alcuna funzionalità del sito."
+    },
+    "contactForm": {
+      "heading": "3. Modulo di Contatto",
+      "content": "Nella home page del sito è presente un modulo di contatto attraverso il quale gli utenti possono inviare richieste o domande. I campi obbligatori nel modulo includono:",
+      "fields": ["Nome", "Cognome", "Email", "Azienda", "Messaggio"],
+      "privacy": "I dati forniti saranno utilizzati esclusivamente per rispondere alle richieste di contatto e non saranno condivisi con terze parti, a meno che non venga fornito un consenso esplicito."
+    },
+    "minors": {
+      "heading": "4. Protezione dei Minori",
+      "content": "Questo sito non è destinato ai minori e non raccoglie intenzionalmente informazioni da utenti minorenni. Accedendo al sito, dichiari di avere almeno 18 anni."
+    },
+    "privacy": {
+      "heading": "5. Privacy",
+      "content1": "I dati personali forniti tramite il modulo di contatto o altri mezzi saranno trattati in conformità con le normative vigenti sulla protezione dei dati (GDPR - Regolamento UE 2016/679).",
+      "content2": "Per maggiori dettagli su come trattiamo i dati personali, si prega di consultare la nostra Privacy Policy."
+    },
+    "liability": {
+      "heading": "6. Responsabilità",
+      "content": "Il sito è fornito \"così com'è\" e senza alcuna garanzia espressa o implicita. L'amministratore del sito non è responsabile per eventuali danni derivanti dall'uso del sito o dall'impossibilità di accedervi."
+    },
+    "changes": {
+      "heading": "7. Modifiche ai Termini",
+      "content": "Ci riserviamo il diritto di aggiornare questi termini e condizioni in qualsiasi momento. Gli aggiornamenti saranno pubblicati su questa pagina con la data dell'ultima modifica."
+    },
+    "contacts": {
+      "heading": "8. Contatti",
+      "content": "Per qualsiasi domanda o dubbio riguardante i termini e le condizioni, si prega di contattarci utilizzando il modulo presente nella home page del sito."
+    }
+  },
+  "privacy": {
+    "lastUpdated": "Ultimo aggiornamento: 02/12/2024",
+    "title": "Informativa sulla Privacy",
+    "introduction": {
+      "heading": "1. Introduzione",
+      "content": "La presente Informativa sulla Privacy descrive come il sito andreatombolato.dev raccoglie, utilizza e protegge i tuoi dati personali in conformità al Regolamento Generale sulla Protezione dei Dati (GDPR - Regolamento UE 2016/679)."
+    },
+    "dataCollected": {
+      "heading": "2. Dati raccolti",
+      "content": "Il sito raccoglie esclusivamente i dati personali forniti volontariamente dagli utenti tramite il modulo di contatto presente nella home page. I dati raccolti includono:",
+      "fields": ["Nome", "Cognome", "Email", "Azienda", "Messaggio"],
+      "note": "Non vengono raccolti dati personali sensibili né dati relativi a minori."
+    },
+    "purpose": {
+      "heading": "3. Finalità del trattamento",
+      "content": "I dati forniti saranno utilizzati esclusivamente per le seguenti finalità:",
+      "items": ["Rispondere alle richieste inviate tramite il modulo di contatto;", "Gestire le comunicazioni relative ai servizi offerti dal sito;", "Garantire il corretto funzionamento del sito e migliorare l’esperienza utente."]
+    },
+    "legalBasis": {
+      "heading": "4. Base giuridica del trattamento",
+      "content": "Il trattamento dei dati personali si basa sul consenso espresso dall’utente al momento dell’invio del modulo di contatto. L’utente ha il diritto di revocare il consenso in qualsiasi momento."
+    },
+    "dataRetention": {
+      "heading": "5. Conservazione dei dati",
+      "content": "I dati personali saranno conservati per il tempo necessario a soddisfare le finalità per cui sono stati raccolti e, in ogni caso, non oltre 12 mesi dalla data di raccolta, salvo obblighi di legge che richiedano un periodo di conservazione più lungo."
+    },
+    "dataSharing": {
+      "heading": "6. Condivisione dei dati",
+      "content": "I dati personali non saranno condivisi con terze parti senza il consenso esplicito dell’utente, salvo nei casi previsti dalla legge o per adempiere ad obblighi contrattuali."
+    },
+    "userRights": {
+      "heading": "7. Diritti dell’utente",
+      "content": "In conformità al GDPR, gli utenti hanno il diritto di:",
+      "items": ["Accedere ai propri dati personali;", "Richiedere la correzione o l’aggiornamento dei dati;", "Richiedere la cancellazione dei dati ('diritto all’oblio');", "Limitare il trattamento dei dati;", "Ottenere una copia dei propri dati in formato strutturato (portabilità dei dati);", "Revocare il consenso al trattamento dei dati."],
+      "note": "Per esercitare questi diritti, l’utente può contattarci utilizzando il modulo di contatto presente sul sito."
+    },
+    "dataSecurity": {
+      "heading": "8. Sicurezza dei dati",
+      "content": "Il sito utilizza misure di sicurezza tecniche e organizzative adeguate per proteggere i dati personali da accessi non autorizzati, perdite accidentali, modifiche o divulgazioni non autorizzate."
+    },
+    "cookies": {
+      "heading": "9. Cookie",
+      "content": "Il sito non utilizza cookie per tracciare gli utenti o raccogliere informazioni personali. Eventuali cookie tecnici sono utilizzati esclusivamente per il corretto funzionamento del sito."
+    },
+    "changes": {
+      "heading": "10. Modifiche all’Informativa",
+      "content": "Ci riserviamo il diritto di aggiornare questa Informativa sulla Privacy in qualsiasi momento. Eventuali modifiche saranno pubblicate su questa pagina con la data dell’ultimo aggiornamento."
+    },
+    "contacts": {
+      "heading": "11. Contatti",
+      "content": "Per qualsiasi domanda o dubbio riguardo alla presente Informativa sulla Privacy, puoi contattarci utilizzando il modulo di contatto presente nella home page del sito."
+    }
+  },
   "visitWebsite": "Visita il sito {name}",
   "copyright": "Tutti i diritti riservati",
   "socials": {
