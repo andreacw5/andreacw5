@@ -9,69 +9,116 @@ useHead({
     <v-responsive
       class="text-center mx-auto mb-6 mb-md-12"
       max-width="800"
+      role="banner"
     >
-      <p class="font-weight-medium text-primary">Ultimo aggiornamento: 02/12/2024</p>
+      <p class="font-weight-medium text-primary" aria-live="polite">{{ $t('privacy.lastUpdated') }}</p>
 
-      <h1 class="text-h4 font-weight-bold mb-4">
-        Informativa sulla Privacy
+      <h1 class="text-h4 font-weight-bold mb-4" role="heading" aria-level="1">
+        {{ $t('privacy.title') }}
       </h1>
     </v-responsive>
 
-    <v-responsive class="mx-auto mb-8" max-width="800">
-      <h2 class="text-h5 font-weight-bold">1. Introduzione</h2>
-      <p class="text-subtitle-1 text-medium-emphasis">La presente Informativa sulla Privacy descrive come il sito <strong>andreatombolato.dev</strong> raccoglie, utilizza e protegge i tuoi dati personali in conformità al Regolamento Generale sulla Protezione dei Dati (GDPR - Regolamento UE 2016/679).</p>
+    <v-responsive class="mx-auto mb-8" max-width="800" role="main">
+      <h2 class="text-h5 font-weight-bold" role="heading" aria-level="2">{{ $t('privacy.introduction.heading') }}</h2>
+      <p class="text-subtitle-1 text-medium-emphasis">
+        {{ $t('privacy.introduction.content') }}
+      </p>
+
       <v-spacer class="mt-4 mb-4" />
-      <h2 class="text-h5 font-weight-bold">2. Dati raccolti</h2>
-      <p class="text-subtitle-1 text-medium-emphasis">Il sito raccoglie esclusivamente i dati personali forniti volontariamente dagli utenti tramite il modulo di contatto presente nella home page. I dati raccolti includono:</p>
-      <ul>
-        <li>Nome</li>
-        <li>Cognome</li>
-        <li>Email</li>
-        <li>Azienda</li>
-        <li>Messaggio</li>
+
+      <h2 class="text-h5 font-weight-bold" role="heading" aria-level="2">{{ $t('privacy.dataCollected.heading') }}</h2>
+      <p class="text-subtitle-1 text-medium-emphasis">
+        {{ $t('privacy.dataCollected.content') }}
+      </p>
+      <ul class="text-subtitle-1 text-medium-emphasis" role="list">
+        <li role="listitem">{{ $t('privacy.dataCollected.fields[0]') }}</li>
+        <li role="listitem">{{ $t('privacy.dataCollected.fields[1]') }}</li>
+        <li role="listitem">{{ $t('privacy.dataCollected.fields[2]') }}</li>
+        <li role="listitem">{{ $t('privacy.dataCollected.fields[3]') }}</li>
+        <li role="listitem">{{ $t('privacy.dataCollected.fields[4]') }}</li>
       </ul>
-      <p class="text-subtitle-1 text-medium-emphasis">Non vengono raccolti dati personali sensibili né dati relativi a minori.</p>
+      <p class="text-subtitle-1 text-medium-emphasis">
+        {{ $t('privacy.dataCollected.note') }}
+      </p>
+
       <v-spacer class="mt-4 mb-4" />
-      <h2 class="text-h5 font-weight-bold">3. Finalità del trattamento</h2>
-      <p class="text-subtitle-1 text-medium-emphasis">I dati forniti saranno utilizzati esclusivamente per le seguenti finalità:</p>
-      <ul>
-        <li>Rispondere alle richieste inviate tramite il modulo di contatto;</li>
-        <li>Gestire le comunicazioni relative ai servizi offerti dal sito;</li>
-        <li>Garantire il corretto funzionamento del sito e migliorare l’esperienza utente.</li>
+
+      <h2 class="text-h5 font-weight-bold" role="heading" aria-level="2">{{ $t('privacy.purpose.heading') }}</h2>
+      <p class="text-subtitle-1 text-medium-emphasis">
+        {{ $t('privacy.purpose.content') }}
+      </p>
+      <ul class="text-subtitle-1 text-medium-emphasis" role="list">
+        <li role="listitem">{{ $t('privacy.purpose.items[0]') }}</li>
+        <li role="listitem">{{ $t('privacy.purpose.items[1]') }}</li>
+        <li role="listitem">{{ $t('privacy.purpose.items[2]') }}</li>
       </ul>
+
       <v-spacer class="mt-4 mb-4" />
-      <h2 class="text-h5 font-weight-bold">4. Base giuridica del trattamento</h2>
-      <p class="text-subtitle-1 text-medium-emphasis">Il trattamento dei dati personali si basa sul consenso espresso dall’utente al momento dell’invio del modulo di contatto. L’utente ha il diritto di revocare il consenso in qualsiasi momento.</p>
+
+      <h2 class="text-h5 font-weight-bold" role="heading" aria-level="2">{{ $t('privacy.legalBasis.heading') }}</h2>
+      <p class="text-subtitle-1 text-medium-emphasis">
+        {{ $t('privacy.legalBasis.content') }}
+      </p>
+
       <v-spacer class="mt-4 mb-4" />
-      <h2 class="text-h5 font-weight-bold">5. Conservazione dei dati</h2>
-      <p class="text-subtitle-1 text-medium-emphasis">I dati personali saranno conservati per il tempo necessario a soddisfare le finalità per cui sono stati raccolti e, in ogni caso, non oltre 12 mesi dalla data di raccolta, salvo obblighi di legge che richiedano un periodo di conservazione più lungo.</p>
+
+      <h2 class="text-h5 font-weight-bold" role="heading" aria-level="2">{{ $t('privacy.dataRetention.heading') }}</h2>
+      <p class="text-subtitle-1 text-medium-emphasis">
+        {{ $t('privacy.dataRetention.content') }}
+      </p>
+
       <v-spacer class="mt-4 mb-4" />
-      <h2 class="text-h5 font-weight-bold">6. Condivisione dei dati</h2>
-      <p class="text-subtitle-1 text-medium-emphasis">I dati personali non saranno condivisi con terze parti senza il consenso esplicito dell’utente, salvo nei casi previsti dalla legge o per adempiere ad obblighi contrattuali.</p>
+
+      <h2 class="text-h5 font-weight-bold" role="heading" aria-level="2">{{ $t('privacy.dataSharing.heading') }}</h2>
+      <p class="text-subtitle-1 text-medium-emphasis">
+        {{ $t('privacy.dataSharing.content') }}
+      </p>
+
       <v-spacer class="mt-4 mb-4" />
-      <h2 class="text-h5 font-weight-bold">7. Diritti dell’utente</h2>
-      <p class="text-subtitle-1 text-medium-emphasis">In conformità al GDPR, gli utenti hanno il diritto di:</p>
-      <ul>
-        <li>Accedere ai propri dati personali;</li>
-        <li>Richiedere la correzione o l’aggiornamento dei dati;</li>
-        <li>Richiedere la cancellazione dei dati (“diritto all’oblio”);</li>
-        <li>Limitare il trattamento dei dati;</li>
-        <li>Ottenere una copia dei propri dati in formato strutturato (portabilità dei dati);</li>
-        <li>Revocare il consenso al trattamento dei dati.</li>
+
+      <h2 class="text-h5 font-weight-bold" role="heading" aria-level="2">{{ $t('privacy.userRights.heading') }}</h2>
+      <p class="text-subtitle-1 text-medium-emphasis">
+        {{ $t('privacy.userRights.content') }}
+      </p>
+      <ul class="text-subtitle-1 text-medium-emphasis" role="list">
+        <li role="listitem">{{ $t('privacy.userRights.items[0]') }}</li>
+        <li role="listitem">{{ $t('privacy.userRights.items[1]') }}</li>
+        <li role="listitem">{{ $t('privacy.userRights.items[2]') }}</li>
+        <li role="listitem">{{ $t('privacy.userRights.items[3]') }}</li>
+        <li role="listitem">{{ $t('privacy.userRights.items[4]') }}</li>
+        <li role="listitem">{{ $t('privacy.userRights.items[5]') }}</li>
       </ul>
-      <p class="text-subtitle-1 text-medium-emphasis">Per esercitare questi diritti, l’utente può contattarci utilizzando il modulo di contatto presente sul sito.</p>
+      <p class="text-subtitle-1 text-medium-emphasis">
+        {{ $t('privacy.userRights.note') }}
+      </p>
+
       <v-spacer class="mt-4 mb-4" />
-      <h2 class="text-h5 font-weight-bold">8. Sicurezza dei dati</h2>
-      <p class="text-subtitle-1 text-medium-emphasis">Il sito utilizza misure di sicurezza tecniche e organizzative adeguate per proteggere i dati personali da accessi non autorizzati, perdite accidentali, modifiche o divulgazioni non autorizzate.</p>
+
+      <h2 class="text-h5 font-weight-bold" role="heading" aria-level="2">{{ $t('privacy.dataSecurity.heading') }}</h2>
+      <p class="text-subtitle-1 text-medium-emphasis">
+        {{ $t('privacy.dataSecurity.content') }}
+      </p>
+
       <v-spacer class="mt-4 mb-4" />
-      <h2 class="text-h5 font-weight-bold">9. Cookie</h2>
-      <p class="text-subtitle-1 text-medium-emphasis">Il sito non utilizza cookie per tracciare gli utenti o raccogliere informazioni personali. Eventuali cookie tecnici sono utilizzati esclusivamente per il corretto funzionamento del sito.</p>
+
+      <h2 class="text-h5 font-weight-bold" role="heading" aria-level="2">{{ $t('privacy.cookies.heading') }}</h2>
+      <p class="text-subtitle-1 text-medium-emphasis">
+        {{ $t('privacy.cookies.content') }}
+      </p>
+
       <v-spacer class="mt-4 mb-4" />
-      <h2 class="text-h5 font-weight-bold">10. Modifiche all’Informativa</h2>
-      <p class="text-subtitle-1 text-medium-emphasis">Ci riserviamo il diritto di aggiornare questa Informativa sulla Privacy in qualsiasi momento. Eventuali modifiche saranno pubblicate su questa pagina con la data dell’ultimo aggiornamento.</p>
+
+      <h2 class="text-h5 font-weight-bold" role="heading" aria-level="2">{{ $t('privacy.changes.heading') }}</h2>
+      <p class="text-subtitle-1 text-medium-emphasis">
+        {{ $t('privacy.changes.content') }}
+      </p>
+
       <v-spacer class="mt-4 mb-4" />
-      <h2 class="text-h5 font-weight-bold">11. Contatti</h2>
-      <p class="text-subtitle-1 text-medium-emphasis">Per qualsiasi domanda o dubbio riguardo alla presente Informativa sulla Privacy, puoi contattarci utilizzando il modulo di contatto presente nella home page del sito.</p>
+
+      <h2 class="text-h5 font-weight-bold" role="heading" aria-level="2">{{ $t('privacy.contacts.heading') }}</h2>
+      <p class="text-subtitle-1 text-medium-emphasis">
+        {{ $t('privacy.contacts.content') }}
+      </p>
     </v-responsive>
   </v-container>
 </template>

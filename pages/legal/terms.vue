@@ -9,83 +9,83 @@ useHead({
     <v-responsive
       class="text-center mx-auto mb-6 mb-md-12"
       max-width="800"
+      role="banner"
     >
-      <p class="font-weight-medium text-primary">Ultimo aggiornamento: 02/12/2024</p>
+      <p class="font-weight-medium text-primary" aria-live="polite">{{ $t('terms.lastUpdated') }}</p>
 
-      <h1 class="text-h4 font-weight-bold mb-4">
-        Termini e condizioni
+      <h1 class="text-h4 font-weight-bold mb-4" role="heading" aria-level="1">
+        {{ $t('terms.title') }}
       </h1>
     </v-responsive>
 
-    <v-responsive class="mx-auto mb-8" max-width="800">
+    <v-responsive class="mx-auto mb-8" max-width="700" role="main">
       <p class="text-subtitle-1 text-medium-emphasis">
-        Benvenuto su <a href="https://andreatombolato.dev">andreatombolato.dev</a> (il "Sito"). <br>
-        Utilizzando il Sito, accetti di rispettare e di essere vincolato dai seguenti Termini e Condizioni d'Uso. Se non sei d'accordo con questi termini, ti invitiamo a non utilizzare il Sito.
+        {{ $t('terms.introduction.content') }}
       </p>
 
       <v-spacer class="mt-4 mb-4" />
 
-      <h2 class="text-h5 font-weight-bold">1. Introduzione</h2>
+      <h2 class="text-h5 font-weight-bold" role="heading" aria-level="2">{{ $t('terms.access.heading') }}</h2>
       <p class="text-subtitle-1 text-medium-emphasis">
-        Benvenuti su <strong>andreatombolato.dev</strong>. Accedendo a questo sito, accetti i termini e le condizioni qui descritti. Se non sei d'accordo con questi termini, ti invitiamo a non utilizzare il sito.
+        {{ $t('terms.access.content1') }}
+      </p>
+      <p class="text-subtitle-1 text-medium-emphasis">
+        {{ $t('terms.access.content2') }}
       </p>
 
       <v-spacer class="mt-4 mb-4" />
 
-      <h2 class="text-h5 font-weight-bold">2. Accesso e Utenti Autorizzati</h2>
+      <h2 class="text-h5 font-weight-bold" role="heading" aria-level="2">{{ $t('terms.contactForm.heading') }}</h2>
       <p class="text-subtitle-1 text-medium-emphasis">
-        L'accesso al sito è riservato a un numero limitato di amministratori autorizzati. Gli utenti possono accedere tramite <strong>Discord</strong> oppure utilizzando un nome utente e una password forniti dall'amministratore del sito. L'accesso non è consentito al grande pubblico.
+        {{ $t('terms.contactForm.content') }}
       </p>
+      <ul class="text-subtitle-1 text-medium-emphasis" role="list">
+        <li role="listitem">{{ $t('terms.contactForm.fields[0]') }}</li>
+        <li role="listitem">{{ $t('terms.contactForm.fields[1]') }}</li>
+        <li role="listitem">{{ $t('terms.contactForm.fields[2]') }}</li>
+        <li role="listitem">{{ $t('terms.contactForm.fields[3]') }}</li>
+        <li role="listitem">{{ $t('terms.contactForm.fields[4]') }}</li>
+      </ul>
       <p class="text-subtitle-1 text-medium-emphasis">
-        Gli utenti che non dispongono delle credenziali di accesso valide non sono autorizzati a utilizzare alcuna funzionalità del sito.
-      </p>
-
-      <v-spacer class="mt-4 mb-4" />
-
-      <h2 class="text-h5 font-weight-bold">3. Modulo di Contatto</h2>
-      <p class="text-subtitle-1 text-medium-emphasis">
-        Sulla home page del sito è presente un modulo di contatto attraverso il quale gli utenti possono inviare richieste o domande. I campi richiesti nel modulo includono: <strong>Nome, Cognome, Email, Azienda, Messaggio</strong>.
-      </p>
-      <p class="text-subtitle-1 text-medium-emphasis">
-        I dati forniti saranno utilizzati esclusivamente per rispondere alle richieste di contatto e non saranno condivisi con terze parti, salvo esplicito consenso.
+        {{ $t('terms.contactForm.privacy') }}
       </p>
 
       <v-spacer class="mt-4 mb-4" />
 
-      <h2 class="text-h5 font-weight-bold">4. Protezione dei Minori</h2>
+      <h2 class="text-h5 font-weight-bold" role="heading" aria-level="2">{{ $t('terms.minors.heading') }}</h2>
       <p class="text-subtitle-1 text-medium-emphasis">
-        Questo sito non è destinato a minori di età e non raccoglie intenzionalmente informazioni da utenti minorenni. Accedendo al sito, dichiari di avere almeno 18 anni.
+        {{ $t('terms.minors.content') }}
       </p>
 
       <v-spacer class="mt-4 mb-4" />
 
-      <h2 class="text-h5 font-weight-bold">5. Privacy</h2>
+      <h2 class="text-h5 font-weight-bold" role="heading" aria-level="2">{{ $t('terms.privacy.heading') }}</h2>
       <p class="text-subtitle-1 text-medium-emphasis">
-        I dati personali forniti tramite il modulo di contatto o altri mezzi saranno trattati in conformità alla normativa vigente sulla protezione dei dati personali (GDPR - Regolamento UE 2016/679).
+        {{ $t('terms.privacy.content1') }}
       </p>
       <p class="text-subtitle-1 text-medium-emphasis">
-        Per ulteriori dettagli su come gestiamo i dati personali, ti invitiamo a consultare la nostra <a href="/legal/privacy-policy">Informativa sulla Privacy</a>.
-      </p>
-
-      <v-spacer class="mt-4 mb-4" />
-
-      <h2 class="text-h5 font-weight-bold">6. Responsabilità</h2>
-      <p class="text-subtitle-1 text-medium-emphasis">
-        Il sito è fornito "così com'è" e senza alcuna garanzia esplicita o implicita. L'amministratore del sito non è responsabile per eventuali danni derivanti dall'uso del sito o dall'impossibilità di accedervi.
+        {{ $t('terms.privacy.content2') }}
       </p>
 
       <v-spacer class="mt-4 mb-4" />
 
-      <h2 class="text-h5 font-weight-bold">7. Modifiche ai Termini</h2>
+      <h2 class="text-h5 font-weight-bold" role="heading" aria-level="2">{{ $t('terms.liability.heading') }}</h2>
       <p class="text-subtitle-1 text-medium-emphasis">
-        Ci riserviamo il diritto di aggiornare questi termini e condizioni in qualsiasi momento. Gli aggiornamenti verranno pubblicati su questa pagina con la data dell'ultima modifica.
+        {{ $t('terms.liability.content') }}
       </p>
 
       <v-spacer class="mt-4 mb-4" />
 
-      <h2 class="text-h5 font-weight-bold">8. Contatti</h2>
+      <h2 class="text-h5 font-weight-bold" role="heading" aria-level="2">{{ $t('terms.changes.heading') }}</h2>
       <p class="text-subtitle-1 text-medium-emphasis">
-        Per qualsiasi domanda o dubbio in merito ai termini e condizioni, contattaci utilizzando il modulo presente nella home page del sito.
+        {{ $t('terms.changes.content') }}
+      </p>
+
+      <v-spacer class="mt-4 mb-4" />
+
+      <h2 class="text-h5 font-weight-bold" role="heading" aria-level="2">{{ $t('terms.contacts.heading') }}</h2>
+      <p class="text-subtitle-1 text-medium-emphasis">
+        {{ $t('terms.contacts.content') }}
       </p>
     </v-responsive>
   </v-container>

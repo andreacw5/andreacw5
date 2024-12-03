@@ -141,6 +141,99 @@
       "subtitle": "Please provide a valid token and message"
     }
   },
+  "terms": {
+    "lastUpdated": "Last updated: 02/12/2024",
+    "title": "Terms and Conditions",
+    "introduction": {
+      "heading": "1. Introduction",
+      "content": "By accessing this site, you agree to the terms and conditions described here. If you do not agree with these terms, please do not use the site."
+    },
+    "access": {
+      "heading": "2. Access and Authorized Users",
+      "content1": "Access to the site is restricted to a limited number of authorized administrators. Users can access via Discord or using a username and password provided by the site administrator. Access is not permitted to the general public.",
+      "content2": "Users who do not have valid access credentials are not authorized to use any functionality of the site."
+    },
+    "contactForm": {
+      "heading": "3. Contact Form",
+      "content": "On the home page of the site, there is a contact form through which users can send requests or questions. The required fields in the form include:",
+      "fields": ["Name", "Surname", "Email", "Company", "Message"],
+      "privacy": "The data provided will be used exclusively to respond to contact requests and will not be shared with third parties, unless explicit consent is given."
+    },
+    "minors": {
+      "heading": "4. Protection of Minors",
+      "content": "This site is not intended for minors and does not intentionally collect information from underage users. By accessing the site, you declare that you are at least 18 years old."
+    },
+    "privacy": {
+      "heading": "5. Privacy",
+      "content1": "Personal data provided through the contact form or other means will be processed in accordance with the current data protection regulations (GDPR - EU Regulation 2016/679).",
+      "content2": "For more details on how we handle personal data, please refer to our Privacy Policy."
+    },
+    "liability": {
+      "heading": "6. Liability",
+      "content": "The site is provided \"as is\" and without any express or implied warranty. The site administrator is not responsible for any damages resulting from the use of the site or the inability to access it."
+    },
+    "changes": {
+      "heading": "7. Changes to Terms",
+      "content": "We reserve the right to update these terms and conditions at any time. Updates will be posted on this page with the date of the last modification."
+    },
+    "contacts": {
+      "heading": "8. Contacts",
+      "content": "For any questions or concerns regarding the terms and conditions, please contact us using the form on the home page of the site."
+    }
+  },
+  "privacy": {
+    "lastUpdated": "Last updated: 02/12/2024",
+    "title": "Privacy Policy",
+    "introduction": {
+      "heading": "1. Introduction",
+      "content": "This Privacy Policy describes how the site andreatombolato.dev collects, uses, and protects your personal data in accordance with the General Data Protection Regulation (GDPR - EU Regulation 2016/679)."
+    },
+    "dataCollected": {
+      "heading": "2. Data Collected",
+      "content": "The site collects only the personal data voluntarily provided by users through the contact form on the home page. The data collected includes:",
+      "fields": ["Name", "Surname", "Email", "Company", "Message"],
+      "note": "No sensitive personal data or data related to minors is collected."
+    },
+    "purpose": {
+      "heading": "3. Purpose of Processing",
+      "content": "The data provided will be used exclusively for the following purposes:",
+      "items": ["Responding to requests sent through the contact form;", "Managing communications related to the services offered by the site;", "Ensuring the proper functioning of the site and improving the user experience."]
+    },
+    "legalBasis": {
+      "heading": "4. Legal Basis for Processing",
+      "content": "The processing of personal data is based on the consent expressed by the user when submitting the contact form. The user has the right to withdraw consent at any time."
+    },
+    "dataRetention": {
+      "heading": "5. Data Retention",
+      "content": "Personal data will be retained for the time necessary to fulfill the purposes for which it was collected and, in any case, no longer than 12 months from the date of collection, unless legal obligations require a longer retention period."
+    },
+    "dataSharing": {
+      "heading": "6. Data Sharing",
+      "content": "Personal data will not be shared with third parties without the explicit consent of the user, except in cases provided by law or to fulfill contractual obligations."
+    },
+    "userRights": {
+      "heading": "7. User Rights",
+      "content": "In accordance with the GDPR, users have the right to:",
+      "items": ["Access their personal data;", "Request correction or updating of data;", "Request deletion of data ('right to be forgotten');", "Restrict the processing of data;", "Obtain a copy of their data in a structured format (data portability);", "Withdraw consent to data processing."],
+      "note": "To exercise these rights, the user can contact us using the contact form on the site."
+    },
+    "dataSecurity": {
+      "heading": "8. Data Security",
+      "content": "The site uses appropriate technical and organizational security measures to protect personal data from unauthorized access, accidental loss, alteration, or unauthorized disclosure."
+    },
+    "cookies": {
+      "heading": "9. Cookies",
+      "content": "The site does not use cookies to track users or collect personal information. Any technical cookies are used solely for the proper functioning of the site."
+    },
+    "changes": {
+      "heading": "10. Changes to the Privacy Policy",
+      "content": "We reserve the right to update this Privacy Policy at any time. Any changes will be posted on this page with the date of the last update."
+    },
+    "contacts": {
+      "heading": "11. Contacts",
+      "content": "For any questions or concerns regarding this Privacy Policy, you can contact us using the contact form on the home page of the site."
+    }
+  },
   "visitWebsite": "Visit {name} website",
   "copyright": "All rights reserved"
 }
