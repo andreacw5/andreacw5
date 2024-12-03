@@ -43,7 +43,7 @@ const sendRequest = async () => {
   response.value = await $fetch<ResponseData>('https://andreatombolato.dev/gpt/stories/input', {
     method: 'POST',
     headers: {
-      'Authorization': `X-API-Key ${form.value.usageToken}`
+      'X-API-KEY': `${form.value.usageToken}`
     },
     body: {
       prompt: form.value.message,
@@ -94,10 +94,10 @@ const breadcrumb = [
           <v-textarea
             class="mx-auto"
             density="compact"
-            label="Leave a reply"
+            label="Start a conversation"
             v-model="form.message"
             persistent-placeholder
-            placeholder="I'm writing you to..."
+            placeholder="Create a story with the following prompt: Once upon a time..."
             variant="outlined"
           />
         </v-card-text>
