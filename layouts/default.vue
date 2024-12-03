@@ -20,6 +20,7 @@
           app
           appear
           @click="scrollToTop"
+          aria-label="Back to top button"
         >
           <v-icon size="40" color="white">line-md:arrow-small-up</v-icon>
         </v-fab>

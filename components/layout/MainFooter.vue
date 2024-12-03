@@ -3,22 +3,26 @@ const icons = [
   {
     icon: 'mdi-linkedin',
     code: 'linkedin',
-    link: 'https://www.linkedin.com/in/atombolato/'
+    link: 'https://www.linkedin.com/in/atombolato/',
+    aria: 'LinkedIn profile'
   },
   {
     icon: 'mdi-github',
     code: 'github',
-    link: 'https://github.com/andreacw5'
+    link: 'https://github.com/andreacw5',
+    aria: 'GitHub profile'
   },
   {
     icon: 'mdi-steam',
     code: 'steam',
-    link: 'https://steamcommunity.com/id/andreacw96'
+    link: 'https://steamcommunity.com/id/andreacw96',
+    aria: 'Steam profile'
   },
   {
     icon: 'mdi-instagram',
     code: 'instagram',
-    link: 'https://www.instagram.com/andreacw96'
+    link: 'https://www.instagram.com/andreacw96',
+    aria: 'Instagram profile'
   }
 ];
 </script>
@@ -34,6 +38,7 @@ const icons = [
         variant="text"
         :href="icon.link"
         :class="icon.code"
+        :aria-label="icon.aria"
       >
         <v-icon :class="icon.code" size="30">{{ icon.icon }}</v-icon>
       </v-btn>

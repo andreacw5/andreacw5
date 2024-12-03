@@ -9,19 +9,22 @@ const links = ref([
     title: t("sections.home"),
     prependIcon: "line-md:home",
     to: '/',
-    link: true
+    link: true,
+    aria: 'Home section'
   },
   {
     title: t("sections.projects"),
     prependIcon: "line-md:briefcase",
     to: '/projects',
-    link: true
+    link: true,
+    aria: 'Projects section'
   },
   {
     title: t("sections.travels"),
     prependIcon: "line-md:map-marker-filled",
     to: '/travels',
-    link: true
+    link: true,
+    aria: 'Travels section'
   }
 ])
 
@@ -35,16 +38,19 @@ const projects = ref([
     title: 'Element Gaming',
     to: '/projects/element',
     link: true,
+    aria: 'Element Gaming project'
   },
   {
     title: 'ProCiv Settimo',
     to: '/projects/prociv',
     link: true,
+    aria: 'ProCiv Settimo project'
   },
   {
     title: 'ZipLink',
     to: '/projects/ziplink',
     link: true,
+    aria: 'ZipLink project'
   },
 ])
 
@@ -81,11 +87,18 @@ const appBarItems = computed(() => {
           class="hidden-md-and-up text-white"
           :icon="drawer ? 'line-md:menu-to-close-transition' : 'line-md:menu-fold-right'"
           @click="closeOrOpenDrawer"
+          aria-label="Menu button"
         />
         <v-divider vertical inset class="mr-4 ml-2 hidden-md-and-up white-text" />
 
         <nuxt-link :to="localePath('/')" class="mt-2">
-          <img :height="35" :width="115" src="@/assets/branding/atom-web.webp" alt="AT Logo" />
+          <img
+            :height="35"
+            :width="115"
+            src="@/assets/branding/atom-web.webp"
+            alt="Andrea Tombolato website logo"
+            aria-label="Andrea Tombolato website logo"
+          />
         </nuxt-link>
 
         <v-spacer />
@@ -98,7 +111,14 @@ const appBarItems = computed(() => {
           {{ $t(item.name) }}
         </v-btn>
         <v-divider vertical inset class="mr-2 ml-2 hidden-sm-and-down white-text" />
-        <v-btn variant="text" class="white-text mr-1" :icon="true" href="https://github.com/andreacw5" target="_blank">
+        <v-btn
+          variant="text"
+          class="white-text mr-1"
+          :icon="true"
+          href="https://github.com/andreacw5"
+          target="_blank"
+          aria-label="GitHub profile"
+        >
           <v-icon size="25">line-md:github</v-icon>
         </v-btn>
         <v-btn
@@ -106,6 +126,7 @@ const appBarItems = computed(() => {
           class="white-text hidden-sm-and-down"
           :icon="true"
           :to="localePath('/auth/login')"
+          aria-label="Login"
         >
           <v-icon size="25">line-md:login</v-icon>
         </v-btn>
@@ -142,7 +163,12 @@ const appBarItems = computed(() => {
         rounded
       />
 
-      <v-list density="comfortable" item-props :items="projects" nav>
+      <v-list
+        density="comfortable"
+        item-props
+        :items="projects"
+        nav
+      >
         <template #prepend="{ item }">
           <v-avatar
             class="pa-4"
