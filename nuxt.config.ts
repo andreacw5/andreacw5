@@ -122,7 +122,7 @@ export default defineNuxtConfig({
   auth: {
     // https://github.com/geraldmuvengei06/nuxt-3-auth-credentials/blob/main/nuxt.config.ts
     isEnabled: true,
-    baseURL: 'http://localhost:8080/api/',
+    baseURL: 'https://andreatombolato.dev/api/',
     provider: {
       type: 'local',
       pages: {
@@ -130,7 +130,7 @@ export default defineNuxtConfig({
       },
       endpoints: {
         signIn: { path: 'users/login', method: 'post' },
-        signOut: { path: 'logout', method: 'post' },
+        signOut: { path: 'users/logout', method: 'post' },
         getSession: { path: 'users/me', method: 'get' }
       },
     }
