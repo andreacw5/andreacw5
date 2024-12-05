@@ -49,7 +49,7 @@ const sendRequest = async () => {
   }
 
   try {
-    response.value = await $fetch<ResponseData>('https://andreatombolato.dev/api/chatgpt', {
+    response.value = await $fetch<ResponseData>('https://andreatombolato.dev/api/v1/chatgpt', {
       method: 'POST',
       body: {
         prompt: form.value.message,
