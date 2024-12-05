@@ -3,6 +3,7 @@ import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 const drawer = ref(false)
 const localePath = useLocalePath()
+const { data, status, signOut } = useAuth()
 
 const links = ref([
   {
@@ -122,6 +123,7 @@ const appBarItems = computed(() => {
           <v-icon size="25">line-md:github</v-icon>
         </v-btn>
         <v-btn
+          v-if="status === 'unauthenticated'"
           variant="text"
           class="white-text hidden-sm-and-down"
           :icon="true"
@@ -130,10 +132,45 @@ const appBarItems = computed(() => {
         >
           <v-icon size="25">line-md:login</v-icon>
         </v-btn>
+
+        <v-btn v-else class="ms-1" icon rounded="lg">
+          <v-avatar
+            tile
+            rounded="lg"
+            class="card"
+            image="https://cdn.vuetifyjs.com/images/john.png"
+          />
+
+          <v-menu activator="parent" origin="top">
+            <v-list
+              lines="two"
+              link
+              rounded="lg"
+              class="card"
+            >
+              <v-list-item
+                link
+                prepend-icon="line-md:chat"
+                to="/ai-caller"
+                title="ChatGPT Integration"
+                subtitle="Chat with an AI"
+              />
+              <v-list-item
+                prepend-icon="line-md:logout"
+                link
+                title="Sign out"
+                subtitle="Log out from the website"
+                @click="signOut"
+              />
+            </v-list>
+          </v-menu>
+        </v-btn>
+
         <!--          <v-divider vertical inset class="mr-2 ml-2 hidden-sm-and-down white-text" />
               <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">
                 <Icon :icon="locale.icon" height="25"/>
               </NuxtLink>-->
+
       </v-container>
     </v-app-bar>
 

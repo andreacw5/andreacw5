@@ -40,7 +40,7 @@
 
             <v-text-field
               :rules="[ruleRequired, ruleEmail]"
-              v-model="email"
+              v-model="formData.email"
               color="primary"
               density="comfortable"
               :placeholder="$t('auth.login.emailPlaceholder')"
@@ -55,7 +55,7 @@
 
             <v-text-field
               :rules="[ruleRequired]"
-              v-model="password"
+              v-model="formData.password"
               color="primary"
               density="comfortable"
               persistent-counter
@@ -137,21 +137,47 @@
 
 <script setup>
 definePageMeta({
-  layout: 'blank'
+  layout: 'blank',
+  public: true,
+  auth: {
+    unauthenticatedOnly: true,
+    navigateAuthenticatedTo: '/',
+  }
 })
+const { signIn } = useAuth()
 
 const localePath = useLocalePath()
 
 const currentLocale = useI18n().locale;
+const router = useRouter()
 
-const email = ref("");
-const password = ref("");
 const error = ref(false);
+
+const formData = reactive({
+  email: '',
+  password: '',
+})
 
 const { ruleEmail, rulePassLen, ruleRequired } = useFormRules();
 
 const submit = async () => {
-  error.value = true;
+  try {
+    const response = await signIn({
+      user: {
+        ...formData
+      }
+    }, {
+      callbackUrl: '/'
+    });
+    if (response.error) {
+      error.value = true;
+    } else {
+      error.value = false;
+      await router.push({ path: "/" })
+    }
+  } catch (err) {
+    error.value = true;
+  }
 };
 
 useHead({

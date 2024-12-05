@@ -20,6 +20,10 @@ useHead({
   title: t('gpt.title'),
 })
 
+definePageMeta({
+  middleware: 'auth'
+})
+
 const loading = ref(false);
 
 const error = ref(false);
@@ -47,7 +51,7 @@ const sendRequest = async () => {
     },
     body: {
       prompt: form.value.message,
-      requestGPT: true
+      requestGPT: false
     }
   });
   loading.value = false;
