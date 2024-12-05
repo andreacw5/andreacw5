@@ -138,7 +138,7 @@ const appBarItems = computed(() => {
             tile
             rounded="lg"
             class="card"
-            image="https://cdn.vuetifyjs.com/images/john.png"
+            image="https://file-harbor.com/api/v1/files/59eede5fb0b097a63e0eb276add71e83"
           />
 
           <v-menu activator="parent" origin="top">
