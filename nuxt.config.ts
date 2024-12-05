@@ -60,6 +60,7 @@ export default defineNuxtConfig({
 
   modules: [
     "@vite-pwa/nuxt",
+    "@sidebase/nuxt-auth",
     "@pinia/nuxt",
     "@nuxtjs/i18n",
     '@nuxt/image'
@@ -118,6 +119,23 @@ export default defineNuxtConfig({
     },
   },
 
+  auth: {
+    // https://github.com/geraldmuvengei06/nuxt-3-auth-credentials/blob/main/nuxt.config.ts
+    isEnabled: true,
+    baseURL: 'https://andreatombolato.dev/v1/api/',
+    provider: {
+      type: 'local',
+      pages: {
+        login: '/auth/login'
+      },
+      endpoints: {
+        signIn: { path: 'users/login', method: 'post' },
+        signOut: { path: 'users/logout', method: 'post' },
+        getSession: { path: 'users/me', method: 'get' }
+      },
+    }
+  },
+
   // Nuxt compatibility date
-  compatibilityDate: '2024-07-25',
+  compatibilityDate: '2024-12-03',
 });

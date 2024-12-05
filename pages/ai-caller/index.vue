@@ -20,12 +20,20 @@ useHead({
   title: t('gpt.title'),
 })
 
+definePageMeta({
+  middleware: 'auth'
+})
+
+const { data, status } = useAuth();
+// @ts-ignore
+const token = data.value?.token;
+
 const loading = ref(false);
 
 const error = ref(false);
 
 const form = ref({
-  usageToken: '',
+  requestGPT: true,
   message: '',
 });
 
@@ -34,22 +42,31 @@ const response = ref<ResponseData | null>(null);
 const sendRequest = async () => {
   loading.value = true;
 
-  if (!form.value.usageToken || !form.value.message) {
+  if (!form.value.message) {
     error.value = true;
     loading.value = false;
     return;
   }
 
-  response.value = await $fetch<ResponseData>('https://andreatombolato.dev/gpt/stories/input', {
-    method: 'POST',
-    headers: {
-      'X-API-KEY': `${form.value.usageToken}`
-    },
-    body: {
-      prompt: form.value.message,
-      requestGPT: true
-    }
-  });
+  try {
+    response.value = await $fetch<ResponseData>('https://andreatombolato.dev/api/v1/chatgpt', {
+      method: 'POST',
+      body: {
+        prompt: form.value.message,
+        requestGPT: form.value.requestGPT,
+      },
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
+    });
+    error.value = false;
+    loading.value = false;
+  } catch (e) {
+    error.value = true;
+    loading.value = false;
+  }
+
   loading.value = false;
 };
 
@@ -80,17 +97,6 @@ const breadcrumb = [
             border-color="error"
           ></v-alert>
 
-          <v-text-field
-            class="mx-auto"
-            density="compact"
-            label="Usage token"
-            v-model="form.usageToken"
-            persistent-placeholder
-            placeholder="Insert your usage token"
-            prepend-inner-icon="mdi-key"
-            variant="outlined"
-          />
-
           <v-textarea
             class="mx-auto"
             density="compact"
@@ -100,10 +106,20 @@ const breadcrumb = [
             placeholder="Create a story with the following prompt: Once upon a time..."
             variant="outlined"
           />
+
+          <v-checkbox-btn
+            class="mx-auto"
+            color="primary"
+            v-model="form.requestGPT"
+            density="compact"
+            label="Enable response from ChatGPT"
+          />
+
         </v-card-text>
         <v-card-actions>
           <v-spacer />
           <v-btn
+            v-if="status === 'authenticated'"
             color="primary"
             variant="tonal"
             :loading="loading"
