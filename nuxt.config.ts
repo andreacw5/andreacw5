@@ -1,3 +1,5 @@
+import vuetify from 'vite-plugin-vuetify';
+
 // PWA Config
 const title = "Andrea Tombolato";
 const shortTitle = "Andrea Tombolato";
@@ -63,8 +65,16 @@ export default defineNuxtConfig({
     "@sidebase/nuxt-auth",
     "@pinia/nuxt",
     "@nuxtjs/i18n",
-    '@nuxt/image'
+    '@nuxt/image',
   ],
+    /* Treeshaking: https://vuetifyjs.com/en/features/treeshaking/#automatic-treeshaking */
+    async (options, nuxt) => {
+      nuxt.hooks.hook('vite:extendConfig', (config) => {
+        config?.plugins?.push(vuetify());
+      });
+    }
+  ],
+
 
   // I18N Configuration
   i18n: {
