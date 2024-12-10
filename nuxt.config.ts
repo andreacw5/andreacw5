@@ -66,7 +66,6 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxtjs/i18n",
     '@nuxt/image',
-  ],
     /* Treeshaking: https://vuetifyjs.com/en/features/treeshaking/#automatic-treeshaking */
     async (options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
@@ -74,7 +73,6 @@ export default defineNuxtConfig({
       });
     }
   ],
-
 
   // I18N Configuration
   i18n: {
