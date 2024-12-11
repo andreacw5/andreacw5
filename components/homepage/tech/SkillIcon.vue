@@ -2,12 +2,15 @@
 import { ref, computed } from 'vue';
 import { Icon } from "@iconify/vue";
 
-const props = defineProps({
-  skill: {
-    type: Object,
-    required: true
-  }
-});
+interface IconWithUrl {
+  url?: string;
+  icon: string;
+  title: string;
+}
+
+defineProps<{
+  skill: IconWithUrl;
+}>();
 
 const isHovered = ref(false);
 
@@ -18,10 +21,6 @@ const handleMouseOver = () => {
 const handleMouseLeave = () => {
   isHovered.value = false;
 };
-
-const avatarColor = computed(() => {
-  return isHovered.value ? props.skill.color : '#41b883';
-});
 </script>
 
 <template>
