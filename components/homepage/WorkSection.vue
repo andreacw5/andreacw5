@@ -12,7 +12,7 @@ const currentLocaleIsItalian = computed(() => currentLocale.value === 'it-IT');
   <v-card class="card mt-6 round-border">
     <v-card-title class="gradient-border-bottom round-border">
       <h2 class="ml-2" style="font-size: xx-large; font-weight: bolder">
-        {{ $t('works.title.one') }}
+        {{ $t('works.title') }}
       </h2>
     </v-card-title>
     <v-card-text class="mt-4">
