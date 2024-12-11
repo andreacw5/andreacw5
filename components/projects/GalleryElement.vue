@@ -34,7 +34,7 @@ const dialog = ref(false)
             {{ title }}
           </div>
           <v-btn
-            icon="mdi-close"
+            icon="line-md:close-small"
             variant="text"
             size="large"
             @click="isActive.value = false"

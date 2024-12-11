@@ -11,22 +11,22 @@ const contactInfo = [
   {
     title: 'Milano, Italy',
     link: 'https://www.google.it/maps/@45.4641861,9.1902176,2a,75y,100.87h,117.08t/data=!3m7!1e1!3m5!1sjx5KhL45sdebLvTaiVvqzQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-27.082840572510577%26panoid%3Djx5KhL45sdebLvTaiVvqzQ%26yaw%3D100.86768289617902!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoJLDEwMjExMjM0SAFQAw%3D%3D',
-    icon: 'mdi-domain',
+    icon: 'line-md:map-marker',
   },
   {
     title: 'atomweb96@gmail.com',
     link: 'mailto:atomweb96@gmail.com',
-    icon: 'mdi-email',
+    icon: 'line-md:email',
   },
   {
     title: 'atombolato',
     link: 'https://www.linkedin.com/in/atombolato',
-    icon: 'mdi-linkedin',
+    icon: 'line-md:linkedin',
   },
   {
     title: 'andreacw5',
     link: 'https://github.com/andreacw5',
-    icon: 'mdi-github',
+    icon: 'line-md:github',
   },
 ]
 </script>

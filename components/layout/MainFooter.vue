@@ -1,13 +1,13 @@
 <script setup lang="ts">
 const icons = [
   {
-    icon: 'mdi-linkedin',
+    icon: 'line-md:linkedin',
     code: 'linkedin',
     link: 'https://www.linkedin.com/in/atombolato/',
     aria: 'LinkedIn profile'
   },
   {
-    icon: 'mdi-github',
+    icon: 'line-md:github',
     code: 'github',
     link: 'https://github.com/andreacw5',
     aria: 'GitHub profile'
@@ -19,7 +19,7 @@ const icons = [
     aria: 'Steam profile'
   },
   {
-    icon: 'mdi-instagram',
+    icon: 'line-md:instagram',
     code: 'instagram',
     link: 'https://www.instagram.com/andreacw96',
     aria: 'Instagram profile'
@@ -31,6 +31,8 @@ const icons = [
   <v-footer class="card-gradient text-center d-flex flex-column">
     <div>
       <v-btn
+        rounded="lg"
+        tile
         v-for="icon in icons"
         :key="icon.code"
         :icon="true"

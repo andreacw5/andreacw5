@@ -33,20 +33,20 @@ const optimizedImage = (src: string) => img(src, { quality: 70, format: 'webp', 
         <v-img gradient="to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)" />
       </template>
       <v-card-actions class="text-white">
-        <v-chip prepend-icon="mdi-map" tile variant="elevated" class="round-border chip-transparent">
+        <v-chip prepend-icon="line-md:map-marker" tile variant="elevated" rounded="lg" class="round-border chip-transparent">
           {{ currentLocaleIsItalian ? travel.state.it : travel.state.en }}
         </v-chip>
         <v-spacer />
         <v-tooltip text="Data di inizio del viaggio" location="top">
           <template v-slot:activator="{ props }">
-            <v-chip prepend-icon="mdi-calendar" tile variant="elevated" class="round-border mr-2 chip-transparent" v-bind="props">
+            <v-chip prepend-icon="line-md:calendar" tile variant="elevated" class="round-border mr-2 chip-transparent" rounded="lg" v-bind="props">
               {{ formatDate(travel.time.start) }}
             </v-chip>
           </template>
         </v-tooltip>
         <v-tooltip text="Foto scattate" location="top">
           <template v-slot:activator="{ props }">
-            <v-chip prepend-icon="mdi-camera" tile variant="elevated" class="round-border chip-transparent" v-bind="props">
+            <v-chip prepend-icon="line-md:image" tile variant="elevated" class="round-border chip-transparent" rounded="lg" v-bind="props">
               {{ travel.photos || 0 }}
             </v-chip>
           </template>
