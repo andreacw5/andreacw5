@@ -19,9 +19,34 @@ export const useProjectStore = defineStore('project', {
                en: 'Website for gamers'
             },
             description: {
-               it: 'Applicazione web di gestione di una associazione no-profit operante nel campo e-sport. I giocatori iscritti possono partecipare ad eventi, creare team e cercare giocatori con cui giocare in base alle proprie preferenze.',
+               it: 'Ho progettato e sviluppato una piattaforma web per il monitoraggio in tempo reale degli utenti dei vari\n' +
+                 'team di streamer del Network Element Gaming. L’applicazione, integrata con le API di Twitch, consente di\n' +
+                 'visualizzare lo stato live di tutti gli streamer appartenenti al network, mostrando informazioni aggiornate\n' +
+                 'sugli utenti online, sullo streaming attivo, e dettagli sul gioco attualmente in uso.',
                en: 'Web application for the management of a non-profit association operating in the e-sports field. Registered players can participate in events, create teams and search for players to play with based on their preferences.'
             },
+            features: [
+               {
+                  title: 'Monitoraggio in tempo reale',
+                  subtitle: 'Il sistema aggiorna in tempo reale la lista degli streamer attivi, rendendo immediatamente visibile chi è online e in streaming',
+                  icon: 'line-md:document-report'
+               },
+               {
+                  title: 'Integrazione Twitch API',
+                  subtitle: 'Grazie all’integrazione diretta con le API di Twitch, l’applicazione recupera e visualizza informazioni precise sugli spettatori attivi, il titolo dello streaming e il gioco in corso',
+                  icon: 'line-md:document-code'
+               },
+               {
+                  title: 'Dashboard utente intuitiva',
+                  subtitle: 'La piattaforma è dotata di un’interfaccia user-friendly sviluppata in Nuxt.js, che offre una navigazione semplice e informazioni chiare sull\'attività dei membri del team di Element Gaming.',
+                  icon: 'line-md:person'
+               },
+               {
+                  title: 'Backend affdabile',
+                  subtitle: 'Sviluppato in Node.js per garantire performance elevate e la gestione efficiente dei dati in tempo reale.',
+                  icon: 'line-md:speedometer'
+               }
+            ],
             images: [
                {
                   image: 'https://file-harbor.com/api/v1/files/6b319d775a8a9be85142abfbd612054b',
@@ -95,11 +120,11 @@ export const useProjectStore = defineStore('project', {
             technical: {
                main: { icon: 'simple-icons:nuxtdotjs', name: 'Nuxt.js', color: '#00A86B' },
                technologies: [
-                  { icon: 'simple-icons:nuxtdotjs', name: 'Nuxt.js' },
-                  { icon: 'simple-icons:nodedotjs', name: 'Node.js' },
-                  { icon: 'simple-icons:vuetify', name: 'Vuetify' },
-                  { icon: 'simple-icons:nginx', name: 'NGINX' },
-                  { icon: 'simple-icons:sass', name: 'Sass' }
+                  { icon: 'simple-icons:nuxtdotjs', title: 'Nuxt.js' },
+                  { icon: 'simple-icons:nodedotjs', title: 'Node.js' },
+                  { icon: 'simple-icons:vuetify', title: 'Vuetify' },
+                  { icon: 'simple-icons:nginx', title: 'NGINX' },
+                  { icon: 'simple-icons:sass', title: 'Sass' }
                ]
             }
          },
@@ -134,11 +159,11 @@ export const useProjectStore = defineStore('project', {
             technical: {
                main: { icon: 'simple-icons:nuxtdotjs', name: 'Nuxt.js', color: '#00A86B' },
                technologies: [
-                  { icon: 'simple-icons:nuxtdotjs', name: 'Nuxt.js' },
-                  { icon: 'simple-icons:nodedotjs', name: 'Node.js' },
-                  { icon: 'simple-icons:vuetify', name: 'Vuetify' },
-                  { icon: 'simple-icons:nginx', name: 'NGINX' },
-                  { icon: 'simple-icons:sass', name: 'Sass' }
+                  { icon: 'simple-icons:nuxtdotjs', title: 'Nuxt.js' },
+                  { icon: 'simple-icons:nodedotjs', title: 'Node.js' },
+                  { icon: 'simple-icons:vuetify', title: 'Vuetify' },
+                  { icon: 'simple-icons:nginx', title: 'NGINX' },
+                  { icon: 'simple-icons:sass', title: 'Sass' }
                ]
             }
          },
@@ -152,6 +177,23 @@ export const useProjectStore = defineStore('project', {
                it: 'ZipLink è un sistema gestore di url con Rest API per la gestione di url accorciati, statistiche sui click e reindirizzamenti tramite codici personalizzati.',
                en: 'ZipLink, is an url manager system with Rest API for management of short urls, click statistics and redirects by personalized codes'
             },
+            features: [
+               {
+                  title: "Gestione di URL accorciati",
+                  subtitle: "ZipLink è un sistema gestore di URL con Rest API che consente la creazione e la gestione di URL accorciati.",
+                  icon: "line-md:folder-network"
+               },
+               {
+                  title: "Statistiche sui click",
+                  subtitle: "Il sistema fornisce statistiche dettagliate sui click ricevuti dagli URL accorciati.",
+                  icon: "line-md:check-list-3"
+               },
+               {
+                  title: "Reindirizzamenti tramite codici personalizzati",
+                  subtitle: "Permette la configurazione di reindirizzamenti utilizzando codici URL personalizzati.",
+                  icon: "line-md:edit"
+               }
+            ],
             startDate: '2022',
             current: true,
             github: 'https://github.com/andreacw5/ziplink',
@@ -169,8 +211,8 @@ export const useProjectStore = defineStore('project', {
                   color: '#e0234e'
                },
                technologies: [
-                  { name: 'Nest.js', icon: 'simple-icons:nestjs' },
-                  { icon: 'simple-icons:typescript', name: 'Typescript' }
+                  { title: 'Nest.js', icon: 'simple-icons:nestjs' },
+                  { icon: 'simple-icons:typescript', title: 'Typescript' }
                ]
             }
          },
@@ -193,6 +235,23 @@ export const useProjectStore = defineStore('project', {
                website: 'https://github.com/andreacw5/fileharbor',
                logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
             },
+            features: [
+               {
+                  "title": "Gestione degli upload",
+                  "subtitle": "Servizio costruito con Nest.js per la gestione degli upload di immagini.",
+                  "icon": "line-md:cloud-alt-upload"
+               },
+               {
+                  "title": "Supporto per Avatar",
+                  "subtitle": "Carica e gestisci immagini personalizzate come avatar per gli utenti.",
+                  "icon": "line-md:account"
+               },
+               {
+                  "title": "Owner dei contenuti",
+                  "subtitle": "I contenuti caricati sono assegnati ad un proprietario e viene salvato il dominio di provenienza, che può gestirli e modificarli.",
+                  "icon": "line-md:cloud-alt-braces"
+               }
+            ],
             preview: 'https://file-harbor.com/api/v1/files/9eb12aade81517f5a5e63909d6ef1ae6',
             technical: {
                main: {
@@ -201,8 +260,8 @@ export const useProjectStore = defineStore('project', {
                   color: '#e0234e'
                },
                technologies: [
-                  { name: 'Nest.js', icon: 'simple-icons:nestjs' },
-                  { icon: 'simple-icons:typescript', name: 'Typescript' }
+                  { title: 'Nest.js', icon: 'simple-icons:nestjs' },
+                  { icon: 'simple-icons:typescript', title: 'Typescript' }
                ]
             }
          },
@@ -233,8 +292,8 @@ export const useProjectStore = defineStore('project', {
                   color: '#e0234e'
                },
                technologies: [
-                  { name: 'Nest.js', icon: 'simple-icons:nestjs' },
-                  { icon: 'simple-icons:typescript', name: 'Typescript' }
+                  { title: 'Nest.js', icon: 'simple-icons:nestjs' },
+                  { icon: 'simple-icons:typescript', title: 'Typescript' }
                ]
             }
          },
@@ -259,6 +318,28 @@ export const useProjectStore = defineStore('project', {
                it: 'Sito web per l\'associazione di Protezione Civile di Settimo Milanese, una vetrina sulle attività dell\'associazione, il personale, la formazione e le attrezzature impiegate.',
                en: 'Website for the Civil Protection Association of Settimo Milanese, a showcase on the activities of the association, the staff, training and equipment used.'
             },
+            features: [
+               {
+                  title: "Monitoraggio delle allerte in tempo reale",
+                  subtitle: "Il sito fornisce aggiornamenti tempestivi sulle allerte in corso, permettendo ai cittadini di visualizzare i dettagli delle emergenze attive, gli avvisi di sicurezza e le linee guida da seguire.",
+                  icon: "line-md:phone-call"
+               },
+               {
+                  title: "Informazioni sugli eventi e sulle attività del gruppo",
+                  subtitle: "La piattaforma offre una panoramica delle iniziative della Protezione Civile, inclusi eventi di sensibilizzazione, corsi di formazione e opportunità di volontariato.",
+                  icon: "line-md:calendar"
+               },
+               {
+                  title: "Integrazione con sistemi di allerta e gestione delle emergenze",
+                  subtitle: "Grazie al backend sviluppato in NestJS, il sistema può ricevere e processare notiche da fonti di emergenza e pubblicare aggiornamenti in tempo reale.",
+                  icon: "line-md:alert"
+               },
+               {
+                  title: "Interfaccia user-friendly",
+                  subtitle: "Il sito, realizzato in Nuxt.js, presenta una struttura chiara e accessibile, ottimizzata per dispositivi mobili, che facilita la navigazione e l’accesso rapido alle informazioni critiche per la sicurezza pubblica.",
+                  icon: "line-md:computer"
+               }
+            ],
             images: [
                {
                   image: 'https://file-harbor.com/api/v1/files/7c461f4d8a1a2f286d5d7af35f98bc9d',
@@ -285,10 +366,10 @@ export const useProjectStore = defineStore('project', {
             technical: {
                main: { icon: 'simple-icons:nuxtdotjs', color: '#00A86B', name: 'Nuxt.js' },
                technologies: [
-                  { icon: 'simple-icons:nuxtdotjs', name: 'Nuxt.js' },
-                  { icon: 'simple-icons:nodedotjs', name: 'Node.js' },
-                  { icon: 'simple-icons:vuetify', name: 'Vuetify' },
-                  { icon: 'simple-icons:nginx', name: 'NGINX' }
+                  { icon: 'simple-icons:nuxtdotjs', title: 'Nuxt.js' },
+                  { icon: 'simple-icons:nodedotjs', title: 'Node.js' },
+                  { icon: 'simple-icons:vuetify', title: 'Vuetify' },
+                  { icon: 'simple-icons:nginx', title: 'NGINX' }
                ]
             }
          },
@@ -315,8 +396,8 @@ export const useProjectStore = defineStore('project', {
             technical: {
                main: { icon: 'simple-icons:nuxtdotjs', name: 'Nuxt.js', color: '#00A86B' },
                technologies: [
-                  { icon: 'simple-icons:nuxtdotjs', name: 'Nuxt.js' },
-                  { icon: 'simple-icons:vuetify', name: 'Vuetify' }
+                  { icon: 'simple-icons:nuxtdotjs', title: 'Nuxt.js' },
+                  { icon: 'simple-icons:vuetify', title: 'Vuetify' }
                ]
             }
          },
@@ -355,10 +436,10 @@ export const useProjectStore = defineStore('project', {
             technical: {
                main: { icon: 'simple-icons:nuxtdotjs', name: 'Nuxt.js', color: '#00A86B' },
                technologies: [
-                  { icon: 'simple-icons:nuxtdotjs', name: 'Nuxt.js' },
-                  { icon: 'simple-icons:nodedotjs', name: 'Node.js' },
-                  { icon: 'simple-icons:vuetify', name: 'Vuetify' },
-                  { icon: 'simple-icons:nginx', name: 'NGINX' }
+                  { icon: 'simple-icons:nuxtdotjs', title: 'Nuxt.js' },
+                  { icon: 'simple-icons:nodedotjs', title: 'Node.js' },
+                  { icon: 'simple-icons:vuetify', title: 'Vuetify' },
+                  { icon: 'simple-icons:nginx', title: 'NGINX' }
                ]
             }
          },
@@ -382,10 +463,10 @@ export const useProjectStore = defineStore('project', {
             technical: {
                main: { color: '#68a063', name: 'Node.js', icon: 'simple-icons:nodedotjs' },
                technologies: [
-                  { name: 'Node.js', icon: 'simple-icons:nodedotjs' },
-                  { icon: 'simple-icons:html5', name: 'HTML5' },
-                  { name: 'CSS3', icon: 'simple-icons:css3' },
-                  { icon: 'simple-icons:javascript', name: 'Javascript' }
+                  { title: 'Node.js', icon: 'simple-icons:nodedotjs' },
+                  { title: 'simple-icons:html5', name: 'HTML5' },
+                  { title: 'CSS3', icon: 'simple-icons:css3' },
+                  { icon: 'simple-icons:javascript', title: 'Javascript' }
                ]
             },
             current: false
@@ -411,9 +492,9 @@ export const useProjectStore = defineStore('project', {
                   name: 'Javascript'
                },
                technologies: [
-                  { icon: 'simple-icons:html5', name: 'HTML5' },
-                  { name: 'CSS3', icon: 'simple-icons:css3' },
-                  { icon: 'simple-icons:javascript', name: 'Javascript' }
+                  { icon: 'simple-icons:html5', title: 'HTML5' },
+                  { title: 'CSS3', icon: 'simple-icons:css3' },
+                  { icon: 'simple-icons:javascript', title: 'Javascript' }
                ]
             },
             current: false,
@@ -443,10 +524,10 @@ export const useProjectStore = defineStore('project', {
             },
             technical: {
                technologies: [
-                  { name: 'HTML5', icon: 'simple-icons:html5' },
-                  { icon: 'simple-icons:css3', name: 'CSS3' },
-                  { icon: 'simple-icons:javascript', name: 'Javascript' },
-                  { icon: 'simple-icons:php', name: 'PHP' }
+                  { title: 'HTML5', icon: 'simple-icons:html5' },
+                  { icon: 'simple-icons:css3', title: 'CSS3' },
+                  { icon: 'simple-icons:javascript', title: 'Javascript' },
+                  { icon: 'simple-icons:php', title: 'PHP' }
                ],
                main: {
                   color: '#f0db4f',
@@ -480,7 +561,7 @@ export const useProjectStore = defineStore('project', {
             const project = state.projects.find(project => project.slug === slug)
             const filtered = state.projects.filter(p => p.technical.main.name === project?.technical.main.name && p.slug !== project.slug)
             // Limit return to 3
-            return filtered.slice(0, 3)
+            return filtered.slice(0, 2)
          }
       }
    },
