@@ -53,8 +53,6 @@ export default defineNuxtConfig({
     typeCheck: true
   },
 
-  build: { transpile: ["vuetify"] },
-
   plugins: ['~/plugins/vuetify.ts'],
 
   modules: [
@@ -103,7 +101,11 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       Ubuntu: [400, 500, 700],
-    }
+    },
+    display: 'swap',
+    prefetch: true,
+    preconnect: true,
+    preload: true,
   },
 
   pwa: {
@@ -147,6 +149,10 @@ export default defineNuxtConfig({
         getSession: { path: 'users/me', method: 'get' }
       },
     }
+  },
+
+  build: {
+    transpile: ["vuetify"],
   },
 
   // Nuxt compatibility date
