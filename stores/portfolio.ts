@@ -135,13 +135,30 @@ export const useProjectStore = defineStore('project', {
                en: 'Linktree website'
             },
             description: {
-               it: 'Applicazione web di gestione di una associazione no-profit operante nel campo e-sport. I giocatori iscritti possono partecipare ad eventi, creare team e cercare giocatori con cui giocare in base alle proprie preferenze.',
-               en: 'Web application for the management of a non-profit association operating in the e-sports field. Registered players can participate in events, create teams and search for players to play with based on their preferences.'
+               it: 'Un\'applicazione simile a Linktree sviluppata in Nuxt.js è una piattaforma web che consente agli utenti di aggregare e presentare una serie di link utili in una singola pagina personalizzabile. Questo tipo di applicazione è progettato per essere leggero e performante, sfruttando le capacità di rendering lato server (SSR) e la generazione di siti statici di Nuxt.js.',
+               en: 'A Linktree-like application developed in Nuxt.js is a web platform that allows users to aggregate and present a series of useful links on a single customizable page. This type of application is designed to be lightweight and performant, leveraging the server-side rendering (SSR) capabilities and static site generation of Nuxt.js.'
             },
             images: [
                {
                   image: 'https://file-harbor.com/api/v1/files/33925b190be7f512bc95f9062dce6d4f',
                   title: 'Homepage',
+               }
+            ],
+            features: [
+               {
+                  title: "Personalizzazione dei link",
+                  subtitle: "Gli utenti possono aggiungere, modificare e rimuovere link utili che puntano a risorse esterne, articoli, pagine aziendali o documenti.",
+                  icon: "line-md:link"
+               },
+               {
+                  title: "Link ai profili social",
+                  subtitle: "Possibilità di inserire e visualizzare in maniera ottimale i collegamenti ai profili sui social network (es. Instagram, Facebook, LinkedIn).",
+                  icon: "line-md:facebook"
+               },
+               {
+                  title: "Personalizzazione grafica",
+                  subtitle: "Inclusione del logo aziendale, colori personalizzati e tipografia in linea con l'identità visiva del brand.",
+                  icon: "line-md:paint-drop"
                }
             ],
             preview: 'https://file-harbor.com/api/v1/files/33925b190be7f512bc95f9062dce6d4f',
@@ -393,6 +410,18 @@ export const useProjectStore = defineStore('project', {
                website: 'https://github.com/andreacw5/nuxt3-vuetify',
                logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
             },
+            features: [
+               {
+                  title: "Integrazione Nuxt 3 e Vuetify",
+                  subtitle: "Configurazione pronta per una perfetta sinergia tra Nuxt 3 e Vuetify.",
+                  icon: "line-md:link"
+               },
+               {
+                  title: "Architettura modulare",
+                  subtitle: "Struttura organizzata per scalabilità e manutenibilità del codice.",
+                  icon: "line-md:folder"
+               }
+            ],
             technical: {
                main: { icon: 'simple-icons:nuxtdotjs', name: 'Nuxt.js', color: '#00A86B' },
                technologies: [
@@ -460,11 +489,38 @@ export const useProjectStore = defineStore('project', {
                it: 'Applicazione web per la gestione dei clienti remoti di un personal trainer, che permette di gestire i clienti e le sessioni di fitness. Assegnando anche esercizi da remoto ai clienti.',
                en: 'Web application for the management of remote customers of a personal trainer, which allows you to manage clients and fitness sessions. Also assigning remote exercises to customers.'
             },
+            features: [
+               {
+                  title: "Gestione Clienti",
+                  subtitle: "Crea, modifica e visualizza i profili dei clienti con informazioni dettagliate.",
+                  icon: "line-md:account"
+               },
+               {
+                  title: "Pianificazione Sessioni",
+                  subtitle: "Organizza e programma sessioni di fitness individuali o di gruppo.",
+                  icon: "line-md:calendar"
+               },
+               {
+                  title: "Assegnazione Esercizi",
+                  subtitle: "Crea piani di esercizi personalizzati e condividili con i clienti.",
+                  icon: "line-md:document-code"
+               },
+               {
+                  title: "Monitoraggio Progressi",
+                  subtitle: "Tieni traccia dei risultati e dei progressi dei clienti.",
+                  icon: "line-md:backup-restore"
+               },
+               {
+                  title: "Comunicazione Diretta",
+                  subtitle: "Chat integrata per mantenere il contatto con i clienti in tempo reale.",
+                  icon: "line-md:chat"
+               }
+            ],
             technical: {
                main: { color: '#68a063', name: 'Node.js', icon: 'simple-icons:nodedotjs' },
                technologies: [
                   { title: 'Node.js', icon: 'simple-icons:nodedotjs' },
-                  { title: 'simple-icons:html5', name: 'HTML5' },
+                  { icon: 'simple-icons:html5', title: 'HTML5' },
                   { title: 'CSS3', icon: 'simple-icons:css3' },
                   { icon: 'simple-icons:javascript', title: 'Javascript' }
                ]
@@ -483,6 +539,28 @@ export const useProjectStore = defineStore('project', {
                it: 'Un portale online per la visualizzazione dei propri dati e progressi personali all\'interno del gioco Arma 3. Fornisce dati sui veicoli, incarichi, armi, ruoli e conti bancari dei giocatori.',
                en: 'An online portal for viewing your personal data and progress within the Arma 3 game. It provides data on players\' vehicles, assignments, weapons, roles, and bank accounts.'
             },
+            features: [
+               {
+                  title: "Visualizzazione Dati Personali",
+                  subtitle: "Accedi ai tuoi dati di gioco, inclusi progressi e statistiche personali.",
+                  icon: "line-md:file-document"
+               },
+               {
+                  title: "Monitoraggio Veicoli",
+                  subtitle: "Consulta i dettagli e lo stato dei veicoli associati al tuo profilo.",
+                  icon: "line-md:car-light"
+               },
+               {
+                  title: "Ruoli e Specializzazioni",
+                  subtitle: "Esamina i ruoli giocati e le abilità sviluppate nel tempo.",
+                  icon: "line-md:document-code"
+               },
+               {
+                  title: "Gestione Conti Bancari",
+                  subtitle: "Monitora e gestisci i tuoi conti bancari di gioco con dati aggiornati.",
+                  icon: "line-md:monitor-arrow-down"
+               }
+            ],
             startDate: '2017',
             preview: 'https://file-harbor.com/api/v1/files/e0f298cb75d18b5a6ee5b273d22f101a',
             technical: {
