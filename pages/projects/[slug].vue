@@ -6,6 +6,7 @@ import ProjectCard from "~/components/projects/ProjectCard.vue";
 import GalleryElement from "~/components/projects/GalleryElement.vue";
 import OptimizeImage from "~/components/shared/OptimizeImage.vue";
 import CompanyCard from "~/components/projects/CompanyCard.vue";
+import ProjectFeatures from "~/components/projects/ProjectFeatures.vue";
 const projectStore = useProjectStore();
 const { t } = useI18n();
 const route = useRoute();
@@ -21,18 +22,12 @@ if (!project) {
   project = projectStore.getProjectBySlug(route.params.slug);
   loading.value = false;
 }
+
 const projectTitle = currentLocaleIsItalian ? project?.title?.it : project?.title?.en;
 
 useHead({
   title: projectTitle,
 })
-
-const features = [
-  'Padded Laptop Compartment',
-  'Water Bottle Holder',
-  'Anti-Theft Pockets',
-  'Ventilated Back Panel',
-]
 
 //@ts-ignore
 const projectHaveImages = computed(() => project?.images?.length > 0 || false);
@@ -49,7 +44,7 @@ const breadcrumb = [
 <template>
   <v-container class="v-col-auto grid-list-md text-xs-center ms-auto">
     <v-container class="grid-list-sm text-xs-center">
-      <v-card class="card round-border mb-8">
+      <v-card class="card round-border mb-4">
         <title-card
           :title="projectTitle"
           :breadcrumb="breadcrumb"
@@ -69,6 +64,17 @@ const breadcrumb = [
                 position="center"
                 cover
               />
+
+              <template v-if="project?.features">
+
+                <v-divider class="my-4" />
+
+                <p class="text-body-1 font-weight-bold mt-4 mb-2">{{ $t('projects.features') }}</p>
+
+                <project-features :features="project?.features" />
+
+              </template>
+
             </v-col>
             <v-col
               class="px-md-4"
@@ -136,7 +142,7 @@ const breadcrumb = [
 
               <p class="text-body-1 font-weight-bold mt-4 mb-2">{{ $t('projects.technologies') }}</p>
 
-              <v-tooltip v-for="(lang,i) in project?.technical?.technologies" :key="i" location="top">
+              <v-tooltip :text="lang.title" v-for="(lang,i) in project?.technical?.technologies" :key="i" location="top">
                 <template v-slot:activator="{ props }">
                   <v-btn
                     :icon="true"
@@ -149,7 +155,6 @@ const breadcrumb = [
                     <v-icon class="white-text" size="30">{{ lang.icon }}</v-icon>
                   </v-btn>
                 </template>
-                <span>{{ lang.name }}</span>
               </v-tooltip>
             </v-col>
             <v-col
@@ -181,18 +186,17 @@ const breadcrumb = [
       </v-card>
       <!-- SIMILAR PROJECTS -->
       <v-container class="pa-md-2" fluid>
-        <h3 class="text-h5 font-weight-bold mb-4">{{ $t('projects.similar') }}</h3>
-
+        <h3 class="text-h4 font-weight-bold mb-8">{{ $t('projects.similar') }}</h3>
         <v-row>
           <v-col
             v-for="(project, i) in similarProjects"
             :key="i"
             cols="12"
             md="6"
-            lg="4"
+            lg="6"
             class="px-0 px-sm-0 pa-md-2"
           >
-            <project-card :item="project" :image-height="150" />
+            <project-card :item="project" />
           </v-col>
         </v-row>
       </v-container>

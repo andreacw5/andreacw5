@@ -15,17 +15,11 @@
     "portfolio": "portfolio personale."
   },
   "tech": {
-    "title": {
-      "one": "Competenze",
-      "two": "tecniche"
-    },
+    "title": "Competenze",
     "description": "Lavoro con tecnologie web basate su {js} o {java}, come {node}, {grails}, {nest}, {vue} e {nuxt}. Sempre alla ricerca di nuove tecnologie da imparare, al fine di migliorare le mie competenze. Inoltre, mi occupo della UX e UI, mettendo l'accento sul design e la qualità del prodotto, con particolare attenzione ai dettagli e alla semplicità d'uso."
   },
   "works": {
-    "title": {
-      "one": "Esperienze",
-      "two": "lavorative"
-    },
+    "title": "Esperienze lavorative",
     "today": "In corso",
     "years": "anni",
     "days": "mesi"
@@ -148,6 +142,7 @@
   "projects": {
     "title": "Portfolio",
     "description": "Descrizione",
+    "features": "Funzionalità principali",
     "technologies": "Tecnologie usate",
     "main_tech": "Tecnologia principale",
     "time": "Tempo",

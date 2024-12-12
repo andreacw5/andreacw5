@@ -13,7 +13,6 @@ export default defineNuxtPlugin((nuxtApp) => {
         dark,
       },
     },
-    // Add the custom iconset
     icons: {
       defaultSet: "custom",
       aliases,

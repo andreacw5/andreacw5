@@ -54,7 +54,7 @@
           <v-card-actions class="mt-3">
             <v-btn
               variant="text"
-              prepend-icon="mdi-arrow-left"
+              prepend-icon="line-md:arrow-small-left"
               to="/"
             >
               {{ $t('auth.forgot.back') }}
@@ -64,7 +64,7 @@
 
             <v-btn
               variant="text"
-              append-icon="mdi-arrow-right"
+              append-icon="line-md:arrow-small-right"
               to="/auth/login"
             >
               {{ $t('auth.forgot.login') }}

@@ -23,9 +23,6 @@ export default defineNuxtConfig({
         lang: 'it'
       },
       link: [
-        { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" },
-        { rel: "preconnect", href: "https://fonts.googleapis.com" },
-        { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
         { rel: "canonical", href: url },
       ],
@@ -56,8 +53,6 @@ export default defineNuxtConfig({
     typeCheck: true
   },
 
-  build: { transpile: ["vuetify"] },
-
   plugins: ['~/plugins/vuetify.ts'],
 
   modules: [
@@ -66,6 +61,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxtjs/i18n",
     '@nuxt/image',
+    '@nuxtjs/google-fonts',
     /* Treeshaking: https://vuetifyjs.com/en/features/treeshaking/#automatic-treeshaking */
     async (options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
@@ -99,6 +95,17 @@ export default defineNuxtConfig({
       useCookie: false
     },
     defaultLocale: "it-IT",
+  },
+
+  // Google Fonts Configuration
+  googleFonts: {
+    families: {
+      Ubuntu: [400, 500, 700],
+    },
+    display: 'swap',
+    prefetch: true,
+    preconnect: true,
+    preload: true,
   },
 
   pwa: {
@@ -142,6 +149,10 @@ export default defineNuxtConfig({
         getSession: { path: 'users/me', method: 'get' }
       },
     }
+  },
+
+  build: {
+    transpile: ["vuetify"],
   },
 
   // Nuxt compatibility date

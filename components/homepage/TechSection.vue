@@ -78,6 +78,13 @@ const skills = [
     title: 'Git',
     color: '#f34f29',
     url: 'https://git-scm.com'
+  },
+  {
+    type: 'skill',
+    icon: 'simple-icons:nginx',
+    title: 'NGINX',
+    color: '#00B140',
+    url: 'https://nginx.org/en/'
   }
 ]
 </script>
@@ -86,7 +93,7 @@ const skills = [
   <v-card class="card mt-6 round-border">
     <v-card-title class="gradient-border-bottom round-border">
       <h4 class="font-weight-bold text-h4 mb-2">
-        {{ $t('tech.title.one') }}
+        {{ $t('tech.title') }}
       </h4>
     </v-card-title>
     <v-container class="pr-6 pl-6" fluid>
