@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.5.5",
-    "@sidebase/nuxt-auth": "^0.9.4",
+    "date-fns": "^4.1.0",
     "date-fns": "^3.6.0",
     "date-fns-tz": "^3.2.0",
     "vite-plugin-vuetify": "^2.0.4",
@@ -31,7 +31,7 @@
     "@nuxt/types": "^2.18.1",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/i18n": "^8.5.5",
-    "@vite-pwa/nuxt": "^0.10.5",
+    "@sidebase/nuxt-auth": "^0.10.0",
     "happy-dom": "^15.11.7",
     "nuxt": "3.14.1592",
     "postcss": "^8.4.49",
