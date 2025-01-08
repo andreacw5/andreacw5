@@ -21,7 +21,7 @@ useHead({
 })
 
 definePageMeta({
-  middleware: 'auth'
+  middleware: 'sidebase-auth'
 })
 
 const { data, status } = useAuth();
