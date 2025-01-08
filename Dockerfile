@@ -1,24 +1,29 @@
 # Stage 1: Build the application
-FROM node:20.15.1-alpine AS build
+FROM node:23.6.0-alpine3.21 AS build
 
-# Create app directory
+# Install pnpm and create app directory
+RUN npm install -g pnpm && mkdir /app
+
+# Set working directory
 WORKDIR /app
 
 # Install app dependencies
-COPY package.json yarn.lock ./
-RUN yarn --frozen-lockfile && \
-    yarn cache clean
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile && pnpm store prune
 
 # Bundle app source
 COPY . .
 
 # Build the application
-RUN yarn build
+RUN pnpm build
 
 # Stage 2: Create the final image
-FROM node:20.15.1-alpine
+FROM node:23.6.0-alpine3.21
 
-# Create app directory
+# Install pnpm and create app directory
+RUN npm install -g pnpm && mkdir /app
+
+# Set working directory
 WORKDIR /app
 
 # Copy built application from the build stage
@@ -28,4 +33,4 @@ COPY --from=build /app ./
 EXPOSE 3000
 
 # Start the application
-CMD ["yarn", "start:prod"]
+CMD ["pnpm", "start:prod"]
