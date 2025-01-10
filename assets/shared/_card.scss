@@ -14,10 +14,6 @@
   --bg-ending: #1f1f1f;
 }
 
-.round-border {
-  border-radius: 14px !important;
-}
-
 .card-header {
   color: var(--card-text);
   background: #282829 !important;
@@ -34,17 +30,6 @@
   background: var(--card-color) !important;
   border: solid 1px var(--border-color) !important;
   transition: background-color .5s;
-}
-
-.snackbar__wrapper {
-  border-radius: 14px !important;
-  background: var(--card-color) !important;
-}
-
-.v-snackbar__content {
-  border: solid 1px var(--border-color) !important;
-  border-radius: 14px !important;
-  background: var(--card-color) !important;
 }
 
 .v-sheet {
@@ -73,47 +58,4 @@
 
 .secondary-border {
   border: solid 1px var(--border-color) !important;
-}
-
-.image-transition {
-  transition: .25s ease;
-}
-
-.gradient-border-bottom {
-  position: relative;
-}
-
-.gradient-border-bottom::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, transparent, var(--color-primary), transparent);
-}
-
-.gradient-border-right {
-  position: relative;
-}
-
-.gradient-border-right::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(to bottom, transparent, var(--color-primary), transparent);
-}
-
-.green-border {
-  transition: border-color 0.3s ease-in-out;
-}
-
-.green-border:hover {
-  border-bottom: solid 2px transparent !important;
-  border-right: solid 2px transparent !important;
-  border-bottom-color: var(--color-primary) !important;
-  border-right-color: var(--color-primary) !important;
 }
