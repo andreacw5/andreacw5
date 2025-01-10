@@ -14,8 +14,8 @@ const contactInfo = [
     icon: 'line-md:map-marker',
   },
   {
-    title: 'atomweb96@gmail.com',
-    link: 'mailto:atomweb96@gmail.com',
+    title: 'info@andreatombolato.dev',
+    link: 'mailto:info@andreatombolato.dev',
     icon: 'line-md:email',
   },
   {
