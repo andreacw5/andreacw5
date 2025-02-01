@@ -26,6 +26,13 @@ const links = ref([
     to: '/travels',
     link: true,
     aria: 'Travels section'
+  },
+  {
+    title: t("sections.blog"),
+    prependIcon: "line-md:map-marker-filled",
+    to: '/blog',
+    link: true,
+    aria: 'Blogs section'
   }
 ])
 
@@ -72,6 +79,10 @@ const appBarItems = computed(() => {
     {
       "name": "sections.travels",
       "url": "/travels"
+    },
+    {
+      "name": "sections.blog",
+      "url": "/blog"
     }
   ]
 })
