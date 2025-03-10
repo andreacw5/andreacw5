@@ -24,7 +24,7 @@ const currentLocaleIsItalian = computed(() => currentLocale.value === 'it-IT');
         :src="item.preview"
         :alt-text="item.title + ' cover image'"
         :height="imageHeight"
-        class="project-image"
+        class="project-image gradient-border-bottom"
         position="absolute"
       />
       <v-card class="mx-auto" style="background: transparent !important;">

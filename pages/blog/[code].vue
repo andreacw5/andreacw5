@@ -1,47 +1,72 @@
 <script setup lang="ts">
-import { useTravelStore } from "~/stores/travels"
-import TitleCard from "~/components/shared/TitleCard.vue";
+import { useBlogStore } from "~/stores/blog"
 import { useI18n } from "#imports";
-import OptimizeImage from "~/components/shared/OptimizeImage.vue";
+import PageTitle from "~/components/shared/PageTitle.vue";
 const { t } = useI18n();
-const travelStore = useTravelStore();
+const blogStore = useBlogStore();
 const route = useRoute();
 //@ts-ignore
-let travel = travelStore.getTravelByCode(route.params.code);
+let article = {
+  title: t("blog.title"),
+  cover: "https://cdn.vuetifyjs.com/images/cards/desert.jpg",
+  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit!"
+}
 
-const currentLocale = useI18n().locale;
-const currentLocaleIsItalian = computed(() => currentLocale.value === 'it-IT');
-const travelTitle = currentLocaleIsItalian ? travel?.title?.it : travel?.title?.en;
+article = blogStore.getBlogByCode(route.params.code);
 
 useHead({
-  title: travelTitle,
+  title: "fsdf",
 })
-const breadcrumb = [
-  { title: 'Home', to: '/' },
-  { title: t('travels.title'), to: '/travels' },
-  { title: travelTitle, to: '/travels/' + travel.code, active: true },
-];
+
+const items = [
+  {
+    title: 'Dashboard',
+    disabled: false,
+    href: '/dashboard',
+  },
+  {
+    title: 'Profile',
+    disabled: true,
+    href: '/dashboard/profile',
+  },
+]
 </script>
 
 <template>
-  <v-container class="v-col-auto grid-list-md text-xs-center ms-auto">
+  <v-container class="v-col-auto grid-list-md text-xs-center ms-auto mb-16">
+
+    <v-responsive
+      class="text-center mx-auto mb-12 mb-md-0"
+      max-width="700"
+    >
+      <p class="font-weight-medium text-primary">
+        {{ article.short }}
+      </p>
+
+      <p class="mt-2 text-h5 font-weight-bold text-sm-h4">
+        {{ article.title }}
+      </p>
+
+      <p class="mt-4 text-body-1 text-medium-emphasis">
+        {{ article.content }}
+      </p>
+    </v-responsive>
+
     <v-container class="grid-list-sm text-xs-center">
-      <v-card class="card round-border mb-8">
-        <title-card
-          :title="travelTitle"
-          :breadcrumb="breadcrumb"
-          icon="line-md:compass-loop"
-        />
-        <v-card-text class="mt-4">
-          <v-row class="ma-3" dense>
-            <template v-for="(item) in travel.gallery" :key="imgIdx">
-              <v-col cols="12" :lg="item.cols" :xl="item.cols">
-                <optimize-image :src="item.image" :height="600" class="round-border" />
-              </v-col>
-            </template>
-          </v-row>
-        </v-card-text>
-      </v-card>
+
+      <v-row>
+        <v-col
+          v-for="(item, i) in article.gallery"
+          :key="i"
+          cols="12"
+          md="6"
+        >
+          <v-card border flat rounded="lg" class="mx-auto card" height="400">
+            <v-img :src="item.image" cover :alt="item.alt" />
+          </v-card>
+        </v-col>
+      </v-row>
+
     </v-container>
   </v-container>
 </template>

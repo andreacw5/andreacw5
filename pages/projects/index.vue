@@ -13,6 +13,8 @@ useHead({
 })
 
 import { useProjectStore } from "~/stores/portfolio"
+import PageTitle from "~/components/shared/PageTitle.vue";
+import FilterButton from "~/components/shared/FilterButton.vue";
 const projectStore = useProjectStore();
 
 const contracts = projectStore.getAllCompanies;
@@ -60,26 +62,14 @@ watch([contract, technology, title], ([newContract, newTechnology, newTitle]) =>
 <template>
   <v-container class="v-col-auto grid-list-md text-xs-center ms-auto mb-16">
     <v-container class="grid-list-sm text-xs-center">
-      <div class="d-flex align-center flex-column flex-sm-row justify-space-between align-md-center mb-6">
-        <h1
-          style="font-weight: bolder"
-          class="text-h4 text-md-h3 text-lg-h3 ps-1"
-        >
-          <v-icon
-            class="mr-1 mb-2 hidden-sm-and-down"
-            size="45"
-          >
-            line-md:folder
-          </v-icon>
-          {{ $t('projects.title') }}
-        </h1>
-        <div class="d-flex ga-4 mt-4 mt-md-0">
+      <page-title :title="$t('projects.title')" icon="line-md:folder">
+        <slot>
           <div class="text-center">
             <div class="text-h6 font-weight-bold">
-              {{ projects.length }}
+              {{ technologies.length }}
             </div>
             <div class="text-caption text-medium-emphasis">
-              {{ $t('projects.filters.projects') }}
+              {{ $t('projects.filters.technologies') }}
             </div>
           </div>
 
@@ -93,8 +83,8 @@ watch([contract, technology, title], ([newContract, newTechnology, newTitle]) =>
               {{ $t('projects.filters.companies') }}
             </div>
           </div>
-        </div>
-      </div>
+        </slot>
+      </page-title>
       <div class="d-flex flex-wrap ga-3 align-md-center flex-column flex-sm-row">
         <v-text-field
           bg-color="#202022"

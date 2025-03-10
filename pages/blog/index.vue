@@ -1,52 +1,133 @@
 <script setup>
-import TitleCard from "~/components/shared/TitleCard.vue";
 import { useI18n } from '#imports'
 const { t } = useI18n();
 
 useHead({
-  title: t('travels.title'),
+  title: t('blog.title'),
+})
+const loading = ref(false)
+import { useBlogStore } from "~/stores/blog"
+import PageTitle from "~/components/shared/PageTitle.vue";
+import BlogCard from "~/components/blog/BlogCard.vue";
+const blogStore = useBlogStore();
+
+let blogs = blogStore.getAllBlogs;
+const categories = blogStore.getAllCategories;
+
+const categoriesActive = shallowRef([])
+const title = ref('')
+
+const active = computed(() => {
+  return [].concat(categoriesActive.value)
 })
 
-import TravelListCard from "~/components/travels/TravelListCard.vue";
-const loading = ref(false)
-import { useTravelStore } from "~/stores/travels"
-const travelStore = useTravelStore();
-let travels = travelStore.getAllTravels;
+function onClickClose (title) {
+  if (categoriesActive.value.includes(title)) {
+    categoriesActive.value = categoriesActive.value.filter(item => item !== title)
+  }
+}
 
-const breadcrumb = [
-  { title: 'Home', to: '/' },
-  { title: t('blogs.title'), to: '/blog', active: true },
-];
+function onClickClear () {
+  categoriesActive.value = []
+}
 </script>
 
 
 <template>
   <v-container class="v-col-auto grid-list-md text-xs-center ms-auto mb-16">
     <v-container class="grid-list-sm text-xs-center">
-      <div class="d-flex justify-space-between align-center flex-wrap ga-3">
-        <h1
-          style="font-weight: bolder"
-          class="text-h4 text-md-h3 text-lg-h3 ps-1"
+      <page-title icon="line-md:cloud-alt-print-loop" :title="$t('blog.title')">
+        <slot>
+          <div class="text-center">
+            <div class="text-h6 font-weight-bold">
+              {{ blogs.length }}
+            </div>
+            <div class="text-caption text-medium-emphasis">
+              {{ $t('blog.filters.blogs') }}
+            </div>
+          </div>
+        </slot>
+      </page-title>
+
+      <div class="d-flex flex-wrap ga-3 align-md-center flex-column flex-sm-row">
+        <v-text-field
+          bg-color="#202022"
+          density="compact"
+          hide-details
+          rounded="lg"
+          :placeholder="$t('blog.filters.search')"
+          prepend-inner-icon="mdi-magnify"
+          variant="outlined"
+          v-model="title"
+        />
+
+        <v-btn
+          append-icon="line-md:chevron-small-down"
+          class="text-none"
+          height="40"
+          prepend-icon="mdi:tag-outline"
+          rounded="lg"
+          variant="outlined"
         >
-          <v-icon
-            class="mr-1 mb-2 hidden-sm-and-down"
-            size="45"
-          >
-            line-md:cloud-alt-print-loop
-          </v-icon>
-          Blogs
-        </h1>
-        <div class="d-flex ga-2 align-center">
-          <v-btn
-            class="text-none"
+          {{ $t('blog.filters.categories') }}
+
+          <v-badge
+            v-if="categoriesActive.length"
             color="primary"
-            rounded="lg"
-            text="Publish"
-            variant="flat"
+            :content="categoriesActive.length"
+            floating
+            offset-x="-20"
+            offset-y="-10"
           />
-        </div>
+
+          <v-menu activator="parent" :close-on-content-click="false" location="bottom end">
+            <v-list v-model:selected="categoriesActive" select-strategy="leaf" style="background: #202022">
+              <v-list-item
+                v-for="(category, i) in categories"
+                :key="i"
+                :title="category.name"
+                :value="category.code"
+              >
+                <template #prepend="{ isSelected }">
+                  <v-list-item-action start>
+                    <v-checkbox-btn :model-value="isSelected" />
+                  </v-list-item-action>
+                </template>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+        </v-btn>
+
       </div>
-      <v-breadcrumbs class="px-0 pb-0 text-body-2" :items="breadcrumb" />
+
+      <div v-if="active.length" class="d-flex flex-wrap ga-2 mt-4">
+        <v-chip
+          v-for="title in active"
+          :key="title"
+          closable
+          size="small"
+          :text="title"
+          variant="outlined"
+          @click:close="onClickClose(title)"
+        />
+
+        <v-chip
+          v-if="active.length"
+          border="error thin opacity-100"
+          class="text-none"
+          closable
+          color="error"
+          rounded="lg"
+          size="small"
+          :text="$t('projects.filters.reset')"
+          @click:close="onClickClear"
+        >
+          <template #close>
+            <v-icon color="mdi:bin-outline" />
+          </template>
+        </v-chip>
+      </div>
+
     </v-container>
     <v-container grid-list-md text-xs-center>
       <v-row v-if="loading">
@@ -59,41 +140,9 @@ const breadcrumb = [
         </v-col>
       </v-row>
       <v-row v-else>
-        <template v-for="(travel, i) in travels" :key="i">
-          <v-col cols="12" xl="3" md="4" sm="6" class="d-flex ga-6 py-3 justify-center pa-2">
-            <v-card class="card round-border" link :ripple="false">
-              <v-img
-                cover
-                height="150"
-                :src="travel.background"
-              />
-
-              <v-card-title>
-                {{ travel.title.it }}
-                <v-chip size="x-small">Travel</v-chip>
-              </v-card-title>
-
-              <v-card-text class="pb-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore voluptatibus!
-              </v-card-text>
-              <v-card-actions>
-
-                <v-chip
-                  class="mr-2"
-                  color="primary"
-                  label
-                  small
-                  v-text="travel.state.it"
-                ></v-chip>
-                <v-chip
-                  class="mr-2"
-                  color="primary"
-                  label
-                  small
-                  v-text="travel.time.start"
-                ></v-chip>
-              </v-card-actions>
-            </v-card>
+        <template v-for="blog in blogs" :key="i">
+          <v-col cols="12" xl="3" md="4" sm="6" class="px-0 px-sm-0 pa-md-2">
+            <blog-card :item="blog" />
           </v-col>
         </template>
       </v-row>

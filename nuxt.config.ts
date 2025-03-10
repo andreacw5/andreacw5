@@ -137,7 +137,7 @@ export default defineNuxtConfig({
   auth: {
     // https://github.com/geraldmuvengei06/nuxt-3-auth-credentials/blob/main/nuxt.config.ts
     isEnabled: true,
-    baseURL: 'https://andreatombolato.dev/api/v1',
+    baseURL: 'http://localhost:8080/v1',
     provider: {
       type: 'local',
       pages: {

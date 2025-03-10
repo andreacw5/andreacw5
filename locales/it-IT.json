@@ -158,25 +158,20 @@
       "noResults": "Nessun progetto trovato",
       "projects": "Progetti",
       "companies": "Aziende",
-      "technologies": "Tecnologie"
+      "technologies": "Linguaggi"
     },
     "emptyState": {
       "title": "Nessun progetto trovato",
       "subtitle": "Non ho trovato progetti con i filtri selezionati. Prova a rimuoverli o a cercare qualcosa di diverso."
     }
   },
-  "travels": {
-    "title": "Viaggi",
-    "description": "Tutti i miei viaggi in giro per il mondo",
-    "days": "Giorni",
-    "photos": "Foto",
-    "start": "Partenza"
-  },
   "blog": {
     "title": "Blog",
-    "description": "Articoli e post su vari argomenti",
-    "read": "Leggi",
-    "more": "Altri articoli"
+    "filters": {
+      "blogs": "Articoli",
+      "categories": "Categorie",
+      "search": "Cerca tra i post"
+    }
   },
   "gpt": {
     "title": "Integrazione con ChatGPT",
