@@ -618,7 +618,12 @@ export const useProjectStore = defineStore('project', {
    }),
    getters: {
       getAllTechs (state) {
-         return state.technologies
+         const uniqueTechs = [...new Set(state.projects.map(project => project.technical.main.name))].sort();
+         return [...uniqueTechs];
+      },
+      getAllCompanies (state) {
+         const uniqueCompanies = [...new Set(state.projects.map(project => project.client.name))].sort();
+         return [...uniqueCompanies];
       },
       getAllProjects (state) {
          return state.projects
@@ -628,6 +633,17 @@ export const useProjectStore = defineStore('project', {
             if (tech === 'All') return state.projects
             return state.projects.filter(project => project.technical.main.name.includes(tech))
          }
+      },
+      getProjectsByFilters (state) {
+         return (filters: { techs: Array<string>, clients: Array<string>, title: string }) => {
+            const { techs, clients, title } = filters;
+            return state.projects.filter(project => {
+               const techMatch = techs.length === 0 || techs.includes(project.technical.main.name);
+               const clientMatch = clients.length === 0 || clients.includes(project.client.name);
+               const titleMatch = title === '' || project.title.it.includes(title) || project.title.en.includes(title);
+               return techMatch && clientMatch && titleMatch;
+            });
+         };
       },
       getProjectBySlug (state) {
           return (slug: string | string[]) => {

@@ -15,17 +15,17 @@ const links = ref([
   },
   {
     title: t("sections.projects"),
-    prependIcon: "line-md:briefcase",
+    prependIcon: "line-md:folder",
     to: '/projects',
     link: true,
     aria: 'Projects section'
   },
   {
-    title: t("sections.travels"),
+    title: t("sections.blog"),
     prependIcon: "line-md:map-marker-filled",
-    to: '/travels',
+    to: '/blog',
     link: true,
-    aria: 'Travels section'
+    aria: 'Blogs section'
   }
 ])
 
@@ -70,8 +70,8 @@ const appBarItems = computed(() => {
       "url": "/projects"
     },
     {
-      "name": "sections.travels",
-      "url": "/travels"
+      "name": "sections.blog",
+      "url": "/blog"
     }
   ]
 })

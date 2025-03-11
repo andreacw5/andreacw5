@@ -1,76 +1,53 @@
 import { defineStore } from 'pinia'
-//@ts-ignore
-export const useTravelStore = defineStore('travels', {
+
+// ICONS: https://icon-sets.iconify.design/simple-icons/?category=Brands+%2F+Social&query=php
+export const useBlogStore = defineStore('blog', {
    state: () => ({
-      travels:  [
+      categories: [
          {
-            code: 'valsesia-2023',
-            title: {
-               it: 'Zambla (BG)',
-               en: 'Zambla (BG)'
-            },
-            state: {
-               it: 'Italia',
-               en: 'Italy'
-            },
-            background: 'https://file-harbor.com/api/v1/files/1592da16cae9a30b1b4be0f667300949',
-            time: {
-               start: '2023-08-03',
-               end: '2023-08-06'
-            },
-            photos: 194
+            code: "travel",
+            name: "Travel",
+            icon: "mdi:airplane",
+            color: "#FFC107"
+         }
+      ],
+      blogs: [
+         {
+            "code": "zambla-2023",
+            "title": "Zambla (BG)",
+            "short": "Un viaggio immerso nella natura delle Prealpi Bergamasche.",
+            "cover": "https://file-harbor.com/api/v1/files/1592da16cae9a30b1b4be0f667300949",
+            "category": "travel",
+            "content": "Dal 3 al 6 agosto 2023, abbiamo esplorato Zambla (BG), una meta perfetta per escursioni e relax immersi nella natura.",
+            "created_at": "2023-08-03"
          },
          {
-            code: 'valsesia-2023',
-            title: {
-               it: 'Valsesia',
-               en: 'Valsesia'
-            },
-            state: {
-               it: 'Italia',
-               en: 'Italy'
-            },
-            background: 'https://file-harbor.com/api/v1/files/92b83568dac5af1789fe3ff4813baee5',
-            time: {
-               start: '2023-06-29',
-               end: '2023-07-02'
-            },
-            photos: 573
+            "code": "valsesia-2023",
+            "title": "Valsesia",
+            "short": "Alla scoperta delle valli più affascinanti del Piemonte.",
+            "cover": "https://file-harbor.com/api/v1/files/92b83568dac5af1789fe3ff4813baee5",
+            "category": "travel",
+            "content": "Dal 29 giugno al 2 luglio 2023, un viaggio tra natura incontaminata e tradizioni alpine nella splendida Valsesia.",
+            "created_at": "2023-06-29"
          },
          {
-            code: 'scottland-2022',
-            title: {
-               it: 'Scozia',
-               en: 'Scotland'
-            },
-            state: {
-               it: 'Regno unito',
-               en: 'United Kingdom'
-            },
-            background: 'https://file-harbor.com/api/v1/files/1f411c33ba295890895214af38afbee9',
-            time: {
-               start: '2022-08-25',
-               end: '2022-09-03'
-            },
-            photos: 423
+            "code": "scotland-2022",
+            "title": "Scozia",
+            "short": "Un'avventura tra castelli e paesaggi mozzafiato.",
+            "cover": "https://file-harbor.com/api/v1/files/1f411c33ba295890895214af38afbee9",
+            "category": "travel",
+            "content": "Dal 25 agosto al 3 settembre 2022, abbiamo attraversato la Scozia tra Edimburgo, le Highlands e l'Isola di Skye.",
+            "created_at": "2022-08-25"
          },
          {
-            code: 'route-66-2022',
-            title: {
-               it: 'Route 66',
-               en: 'Route 66'
-            },
-            state: {
-               it: 'Stati Uniti',
-               en: 'United States'
-            },
-            background: 'https://file-harbor.com/api/v1/files/2f34563f7b7905b32b9d992649a66853',
-            time: {
-               start: '2022-05-13',
-               end: '2022-05-30'
-            },
-            photos: 1420,
-            gallery: [
+            "code": "route-66-2022",
+            "title": "Route 66",
+            "short": "Un viaggio epico attraverso l'America on the road.",
+            "cover": "https://file-harbor.com/api/v1/files/2f34563f7b7905b32b9d992649a66853",
+            "category": "travel",
+            "content": "Dal 13 al 30 maggio 2022, abbiamo percorso la storica Route 66, esplorando il cuore degli Stati Uniti.",
+            "created_at": "2022-05-13",
+            "gallery": [
                {
                   image: 'https://file-harbor.com/api/v1/files/71867ef5e339a93e15f302f7df800961',
                   alt: 'Chicago - Illinois',
@@ -209,85 +186,56 @@ export const useTravelStore = defineStore('travels', {
             ]
          },
          {
-            code: 'lisbon-2019',
-            title: {
-               it: 'Lisbona',
-               en: 'Lisbon'
-            },
-            state: {
-               it: 'Portogallo',
-               en: 'Portugal'
-            },
-            background: 'https://file-harbor.com/api/v1/files/4b548feae1df148b33e40ae2d14d169a',
-            startDate: '2019-11-02',
-            time: {
-               start: '2019-11-02',
-               end: '2019-11-08'
-            },
-            photos: 155
+            "code": "lisbon-2019",
+            "title": "Lisbona",
+            "short": "Un viaggio nel fascino senza tempo della capitale portoghese.",
+            "cover": "https://file-harbor.com/api/v1/files/4b548feae1df148b33e40ae2d14d169a",
+            "category": "travel",
+            "content": "Dal 2 all'8 novembre 2019, abbiamo scoperto i colori e la cultura di Lisbona, tra tram iconici e fado.",
+            "created_at": "2019-11-02"
          },
          {
-            code: 'andalusia-2019',
-            title: {
-               it: 'Andalusia',
-               en: 'Andalusia'
-            },
-            state: {
-               it: 'Spagna',
-               en: 'Spain'
-            },
-            background: 'https://file-harbor.com/api/v1/files/3193b1f3e827844a844cc6a8d55b6637',
-            startDate: '2019-09-21',
-            time: {
-               start: '2019-09-21',
-               end: '2019-09-26'
-            },
-            photos: 516
+            "code": "andalusia-2019",
+            "title": "Andalusia",
+            "short": "Un tour tra le perle del sud della Spagna.",
+            "cover": "https://file-harbor.com/api/v1/files/3193b1f3e827844a844cc6a8d55b6637",
+            "category": "travel",
+            "content": "Dal 21 al 26 settembre 2019, abbiamo visitato le città storiche di Siviglia, Granada e Cordova.",
+            "created_at": "2019-09-21"
          },
          {
-            code: 'trentino-2018',
-            title: {
-               it: 'Val di Fassa',
-               en: 'Val di Fassa'
-            },
-            state: {
-               it: 'Italia',
-               en: 'Italy'
-            },
-            background: 'https://file-harbor.com/api/v1/files/e9812c767ff6337c534b91530775769e',
-            time: {
-               start: '2018-09-03',
-               end: '2018-09-18'
-            },
-            photos: 479
+            "code": "trentino-2018",
+            "title": "Val di Fassa",
+            "short": "Un'esperienza indimenticabile tra le Dolomiti.",
+            "cover": "https://file-harbor.com/api/v1/files/e9812c767ff6337c534b91530775769e",
+            "category": "travel",
+            "content": "Dal 3 al 18 settembre 2018, un viaggio tra le montagne della Val di Fassa, con escursioni e panorami spettacolari.",
+            "created_at": "2018-09-03"
          },
          {
-            code: 'london-2014',
-            title: {
-               it: 'Londra',
-               en: 'London'
-            },
-            state: {
-               it: 'Regno unito',
-               en: 'United Kingdom'
-            },
-            background: 'https://file-harbor.com/api/v1/files/56359f080ef275fc46f72ab899e12fd1',
-            time: {
-               start: '2014-08-31',
-               end: '2014-09-04'
-            },
-            photos: 173
+            "code": "london-2014",
+            "title": "Londra",
+            "short": "La magia di una delle città più iconiche al mondo.",
+            "cover": "https://file-harbor.com/api/v1/files/56359f080ef275fc46f72ab899e12fd1",
+            "category": "travel",
+            "content": "Dal 31 agosto al 4 settembre 2014, abbiamo vissuto il ritmo frenetico di Londra, tra cultura, storia e modernità.",
+            "created_at": "2014-08-31"
          }
       ]
    }),
    getters: {
-      getAllTravels (state) {
-         return state.travels
+      getAllCategories (state) {
+         return state.categories;
       },
-      getTravelByCode (state: string) {
+      getCategoryByCode: (state) => (code: string) => {
+          return state.categories.find(category => category.code === code);
+      },
+      getAllBlogs (state) {
+         return state.blogs;
+      },
+      getBlogByCode (state) {
           return (code: string) => {
-             //@ts-ignore
-              return state.travels.find(travel => travel.code === code)
+              return state.blogs.find(blog => blog.code === code);
           }
       }
    },

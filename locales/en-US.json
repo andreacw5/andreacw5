@@ -35,7 +35,18 @@
     "explore": "Explore",
     "study_case": "Study case",
     "similar": "Similar projects",
-    "moreImages": "More images"
+    "moreImages": "More images",
+    "filters": {
+      "search": "Search from projects",
+      "reset": "Reset filters",
+      "projects": "Projects",
+      "companies": "Companies",
+      "technologies": "Technologies"
+    },
+    "emptyState": {
+      "title": "No projects found",
+      "subtitle": "Try to change the filters or search for another project"
+    }
   },
   "common": {
     "description": "Description",
@@ -61,7 +72,8 @@
     "start": "My {section}",
     "works": "Works",
     "projects": "Portfolio",
-    "travels": "Travels"
+    "travels": "Travels",
+    "blog": "Blog"
   },
   "auth": {
     "terms": "Terms of service",
@@ -123,6 +135,13 @@
     "days": "Days",
     "photos": "Photos",
     "start": "Departure"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "My thoughts and experiences",
+    "read": "Read more",
+    "similar": "Similar posts",
+    "more": "More posts"
   },
   "socials": {
     "prefix": "Follow me on {name}",
