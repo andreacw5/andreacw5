@@ -4,6 +4,18 @@ export interface BreadcrumbItem {
   active?: boolean;
 }
 
+export interface ChatGPTResponse {
+  initial: {
+    prompt: string;
+    translated: string;
+  };
+  response: {
+    chatGptResp: string;
+    translatedResp: string;
+  };
+  translate: string;
+}
+
 export interface Project {
   id: string;
   name: string;

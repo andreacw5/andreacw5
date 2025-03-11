@@ -174,7 +174,7 @@
     }
   },
   "gpt": {
-    "title": "Integrazione con ChatGPT",
+    "title": "Chat temporanea",
     "errors": {
       "title": "Token o messaggio non validi",
       "subtitle": "Per favore, inserisci un messaggio valido"
