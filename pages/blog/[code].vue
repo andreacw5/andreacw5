@@ -15,21 +15,8 @@ let article = {
 article = blogStore.getBlogByCode(route.params.code);
 
 useHead({
-  title: "fsdf",
+  title: article.title,
 })
-
-const items = [
-  {
-    title: 'Dashboard',
-    disabled: false,
-    href: '/dashboard',
-  },
-  {
-    title: 'Profile',
-    disabled: true,
-    href: '/dashboard/profile',
-  },
-]
 </script>
 
 <template>
@@ -52,8 +39,7 @@ const items = [
       </p>
     </v-responsive>
 
-    <v-container class="grid-list-sm text-xs-center">
-
+    <v-container v-if="article.gallery" class="grid-list-sm text-xs-center">
       <v-row>
         <v-col
           v-for="(item, i) in article.gallery"
@@ -66,7 +52,6 @@ const items = [
           </v-card>
         </v-col>
       </v-row>
-
     </v-container>
   </v-container>
 </template>

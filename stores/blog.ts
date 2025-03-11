@@ -19,7 +19,34 @@ export const useBlogStore = defineStore('blog', {
             "cover": "https://file-harbor.com/api/v1/files/1592da16cae9a30b1b4be0f667300949",
             "category": "travel",
             "content": "Dal 3 al 6 agosto 2023, abbiamo esplorato Zambla (BG), una meta perfetta per escursioni e relax immersi nella natura.",
-            "created_at": "2023-08-03",
+            "created_at": "2023-08-03"
+         },
+         {
+            "code": "valsesia-2023",
+            "title": "Valsesia",
+            "short": "Alla scoperta delle valli più affascinanti del Piemonte.",
+            "cover": "https://file-harbor.com/api/v1/files/92b83568dac5af1789fe3ff4813baee5",
+            "category": "travel",
+            "content": "Dal 29 giugno al 2 luglio 2023, un viaggio tra natura incontaminata e tradizioni alpine nella splendida Valsesia.",
+            "created_at": "2023-06-29"
+         },
+         {
+            "code": "scotland-2022",
+            "title": "Scozia",
+            "short": "Un'avventura tra castelli e paesaggi mozzafiato.",
+            "cover": "https://file-harbor.com/api/v1/files/1f411c33ba295890895214af38afbee9",
+            "category": "travel",
+            "content": "Dal 25 agosto al 3 settembre 2022, abbiamo attraversato la Scozia tra Edimburgo, le Highlands e l'Isola di Skye.",
+            "created_at": "2022-08-25"
+         },
+         {
+            "code": "route-66-2022",
+            "title": "Route 66",
+            "short": "Un viaggio epico attraverso l'America on the road.",
+            "cover": "https://file-harbor.com/api/v1/files/2f34563f7b7905b32b9d992649a66853",
+            "category": "travel",
+            "content": "Dal 13 al 30 maggio 2022, abbiamo percorso la storica Route 66, esplorando il cuore degli Stati Uniti.",
+            "created_at": "2022-05-13",
             "gallery": [
                {
                   image: 'https://file-harbor.com/api/v1/files/71867ef5e339a93e15f302f7df800961',
@@ -157,33 +184,6 @@ export const useBlogStore = defineStore('blog', {
                   cols: 4
                },
             ]
-         },
-         {
-            "code": "valsesia-2023",
-            "title": "Valsesia",
-            "short": "Alla scoperta delle valli più affascinanti del Piemonte.",
-            "cover": "https://file-harbor.com/api/v1/files/92b83568dac5af1789fe3ff4813baee5",
-            "category": "travel",
-            "content": "Dal 29 giugno al 2 luglio 2023, un viaggio tra natura incontaminata e tradizioni alpine nella splendida Valsesia.",
-            "created_at": "2023-06-29"
-         },
-         {
-            "code": "scotland-2022",
-            "title": "Scozia",
-            "short": "Un'avventura tra castelli e paesaggi mozzafiato.",
-            "cover": "https://file-harbor.com/api/v1/files/1f411c33ba295890895214af38afbee9",
-            "category": "travel",
-            "content": "Dal 25 agosto al 3 settembre 2022, abbiamo attraversato la Scozia tra Edimburgo, le Highlands e l'Isola di Skye.",
-            "created_at": "2022-08-25"
-         },
-         {
-            "code": "route-66-2022",
-            "title": "Route 66",
-            "short": "Un viaggio epico attraverso l'America on the road.",
-            "cover": "https://file-harbor.com/api/v1/files/2f34563f7b7905b32b9d992649a66853",
-            "category": "travel",
-            "content": "Dal 13 al 30 maggio 2022, abbiamo percorso la storica Route 66, esplorando il cuore degli Stati Uniti.",
-            "created_at": "2022-05-13"
          },
          {
             "code": "lisbon-2019",

@@ -30,20 +30,25 @@ function onClickClose (title) {
 function onClickClear () {
   categoriesActive.value = []
 }
+
+const breadcrumbs = [
+  { title: 'Home', to: '/' },
+  { title: t('blog.title'), active: true }
+];
 </script>
 
 
 <template>
   <v-container class="v-col-auto grid-list-md text-xs-center ms-auto mb-16">
     <v-container class="grid-list-sm text-xs-center">
-      <page-title icon="line-md:cloud-alt-print-loop" :title="$t('blog.title')">
+      <page-title icon="line-md:cloud-alt-print-loop" :title="t('blog.title')" :breadcrumbs="breadcrumbs">
         <slot>
           <div class="text-center">
             <div class="text-h6 font-weight-bold">
               {{ blogs.length }}
             </div>
             <div class="text-caption text-medium-emphasis">
-              {{ $t('blog.filters.blogs') }}
+              {{ t('blog.filters.blogs') }}
             </div>
           </div>
         </slot>
@@ -55,7 +60,7 @@ function onClickClear () {
           density="compact"
           hide-details
           rounded="lg"
-          :placeholder="$t('blog.filters.search')"
+          :placeholder="t('blog.filters.search')"
           prepend-inner-icon="mdi-magnify"
           variant="outlined"
           v-model="title"
@@ -69,7 +74,7 @@ function onClickClear () {
           rounded="lg"
           variant="outlined"
         >
-          {{ $t('blog.filters.categories') }}
+          {{ t('blog.filters.categories') }}
 
           <v-badge
             v-if="categoriesActive.length"
@@ -119,7 +124,7 @@ function onClickClear () {
           color="error"
           rounded="lg"
           size="small"
-          :text="$t('projects.filters.reset')"
+          :text="t('projects.filters.reset')"
           @click:close="onClickClear"
         >
           <template #close>

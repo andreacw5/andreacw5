@@ -56,20 +56,25 @@ watch([contract, technology, title], ([newContract, newTechnology, newTitle]) =>
   });
   loading.value = false;
 });
+
+const breadcrumbs = [
+  { title: 'Home', to: '/' },
+  { title: t('projects.title'), active: true }
+];
 </script>
 
 
 <template>
   <v-container class="v-col-auto grid-list-md text-xs-center ms-auto mb-16">
     <v-container class="grid-list-sm text-xs-center">
-      <page-title :title="$t('projects.title')" icon="line-md:folder">
+      <page-title :title="t('projects.title')" icon="line-md:folder" :breadcrumbs="breadcrumbs">
         <slot>
           <div class="text-center">
             <div class="text-h6 font-weight-bold">
               {{ technologies.length }}
             </div>
             <div class="text-caption text-medium-emphasis">
-              {{ $t('projects.filters.technologies') }}
+              {{ t('projects.filters.technologies') }}
             </div>
           </div>
 
@@ -80,7 +85,7 @@ watch([contract, technology, title], ([newContract, newTechnology, newTitle]) =>
               {{ contracts.length }}
             </div>
             <div class="text-caption text-medium-emphasis">
-              {{ $t('projects.filters.companies') }}
+              {{ t('projects.filters.companies') }}
             </div>
           </div>
         </slot>
@@ -105,7 +110,7 @@ watch([contract, technology, title], ([newContract, newTechnology, newTitle]) =>
           rounded="lg"
           variant="outlined"
         >
-          {{ $t('projects.filters.technologies') }}
+          {{ t('projects.filters.technologies') }}
 
           <v-badge
             v-if="technology.length"
@@ -142,7 +147,7 @@ watch([contract, technology, title], ([newContract, newTechnology, newTitle]) =>
           rounded="lg"
           variant="outlined"
         >
-          {{ $t('projects.filters.companies') }}
+          {{ t('projects.filters.companies') }}
 
           <v-badge
             v-if="contract.length"
@@ -191,7 +196,7 @@ watch([contract, technology, title], ([newContract, newTechnology, newTitle]) =>
           color="error"
           rounded="lg"
           size="small"
-          :text="$t('projects.filters.reset')"
+          :text="t('projects.filters.reset')"
           @click:close="onClickClear"
         >
           <template #close>
@@ -244,11 +249,11 @@ watch([contract, technology, title], ([newContract, newTechnology, newTitle]) =>
               <v-icon size="100px" class="font-weight-medium text-primary">line-md:question-circle</v-icon>
 
               <p class="font-weight-bold text-sm-h3 text-h4 mt-2'">
-                {{ $t('projects.emptyState.title') }}
+                {{ t('projects.emptyState.title') }}
               </p>
 
               <p class="mt-4 mb-8 text-body-1 text-medium-emphasis">
-                {{ $t('projects.emptyState.subtitle') }}
+                {{ t('projects.emptyState.subtitle') }}
               </p>
             </v-responsive>
           </v-container>
