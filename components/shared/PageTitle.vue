@@ -1,9 +1,5 @@
 <script setup lang="ts">
-interface BreadcrumbItem {
-  title: string;
-  to: string;
-  active?: boolean;
-}
+import type { BreadcrumbItem } from '~/utils/types';
 
 defineProps({
   title: {

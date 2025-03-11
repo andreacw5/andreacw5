@@ -1,18 +1,28 @@
 <script setup lang="ts">
 import { useBlogStore } from "~/stores/blog"
 import { useI18n } from "#imports";
-import PageTitle from "~/components/shared/PageTitle.vue";
 const { t } = useI18n();
 const blogStore = useBlogStore();
 const route = useRoute();
-//@ts-ignore
-let article = {
+
+interface Article {
+  title: string;
+  cover: string;
+  content: string;
+  short?: string;
+  gallery?: { image: string; alt: string }[];
+}
+
+let article: Article = {
   title: t("blog.title"),
   cover: "https://cdn.vuetifyjs.com/images/cards/desert.jpg",
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit!"
-}
+};
 
-article = blogStore.getBlogByCode(route.params.code);
+const fetchedArticle = blogStore.getBlogByCode(route.params.code as string);
+if (fetchedArticle) {
+  article = fetchedArticle as Article;
+}
 
 useHead({
   title: article.title,

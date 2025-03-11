@@ -1,27 +1,30 @@
-<script setup>
+<script setup lang="ts">
 import { useI18n } from '#imports'
+import type { BreadcrumbItem } from '~/utils/types';
+import { useBlogStore } from "~/stores/blog"
+import PageTitle from "~/components/shared/PageTitle.vue";
+import BlogCard from "~/components/blog/BlogCard.vue";
+
 const { t } = useI18n();
 
 useHead({
   title: t('blog.title'),
 })
 const loading = ref(false)
-import { useBlogStore } from "~/stores/blog"
-import PageTitle from "~/components/shared/PageTitle.vue";
-import BlogCard from "~/components/blog/BlogCard.vue";
 const blogStore = useBlogStore();
 
 let blogs = blogStore.getAllBlogs;
 const categories = blogStore.getAllCategories;
 
-const categoriesActive = shallowRef([])
+const categoriesActive = shallowRef<string[]>([]);
 const title = ref('')
 
 const active = computed(() => {
+  //@ts-ignore
   return [].concat(categoriesActive.value)
 })
 
-function onClickClose (title) {
+function onClickClose (title: string) {
   if (categoriesActive.value.includes(title)) {
     categoriesActive.value = categoriesActive.value.filter(item => item !== title)
   }
@@ -31,9 +34,9 @@ function onClickClear () {
   categoriesActive.value = []
 }
 
-const breadcrumbs = [
+const breadcrumbs: BreadcrumbItem[] = [
   { title: 'Home', to: '/' },
-  { title: t('blog.title'), active: true }
+  { title: t('blog.title'), active: true },
 ];
 </script>
 

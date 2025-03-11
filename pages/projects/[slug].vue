@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useProjectStore } from "~/stores/portfolio"
-import TitleCard from "~/components/shared/TitleCard.vue";
 import { useI18n } from '#imports'
 import ProjectCard from "~/components/projects/ProjectCard.vue";
 import GalleryElement from "~/components/projects/GalleryElement.vue";
@@ -8,6 +7,7 @@ import OptimizeImage from "~/components/shared/OptimizeImage.vue";
 import CompanyCard from "~/components/projects/CompanyCard.vue";
 import ProjectFeatures from "~/components/projects/ProjectFeatures.vue";
 import PageTitle from "~/components/shared/PageTitle.vue";
+import type { BreadcrumbItem } from '~/utils/types';
 const projectStore = useProjectStore();
 const { t } = useI18n();
 const route = useRoute();
@@ -24,7 +24,7 @@ if (!project) {
   loading.value = false;
 }
 
-const projectTitle = currentLocaleIsItalian ? project?.title?.it : project?.title?.en;
+const projectTitle = currentLocaleIsItalian ? project?.title?.it ?? '' : project?.title?.en ?? '';
 
 useHead({
   title: projectTitle,
@@ -35,7 +35,7 @@ const projectHaveImages = computed(() => project?.images?.length > 0 || false);
 
 const projectPreview = project?.preview ? project.preview : '@/assets/images/loading.webp';
 
-const breadcrumbs = [
+const breadcrumbs: BreadcrumbItem[] = [
   { title: 'Home', to: '/' },
   { title: t('projects.title'), to: '/projects' },
   { title: projectTitle, to: '', active: true },

@@ -1,6 +1,10 @@
-<script setup>
+<script setup lang="ts">
 import ProjectCard from "~/components/projects/ProjectCard.vue";
 import { useI18n } from '#imports'
+import type { BreadcrumbItem, Project } from '~/utils/types';
+import { useProjectStore } from "~/stores/portfolio"
+import PageTitle from "~/components/shared/PageTitle.vue";
+
 const { t } = useI18n();
 useHead({
   title: t('projects.title'),
@@ -12,27 +16,25 @@ useHead({
   ]
 })
 
-import { useProjectStore } from "~/stores/portfolio"
-import PageTitle from "~/components/shared/PageTitle.vue";
-import FilterButton from "~/components/shared/FilterButton.vue";
 const projectStore = useProjectStore();
 
 const contracts = projectStore.getAllCompanies;
 const technologies = projectStore.getAllTechs;
 
-const contract = shallowRef([])
-const technology = shallowRef([])
+const contract = shallowRef<string[]>([]);
+const technology = shallowRef<string[]>([]);
 const title = ref('')
 
 const active = computed(() => {
+  //@ts-ignore
   return [].concat(contract.value).concat(technology.value)
 })
 
-function onClickClose (title) {
+function onClickClose(title: string) {
   if (contract.value.includes(title)) {
-    contract.value = contract.value.filter(item => item !== title)
+    contract.value = contract.value.filter(item => item !== title);
   } else if (technology.value.includes(title)) {
-    technology.value = technology.value.filter(item => item !== title)
+    technology.value = technology.value.filter(item => item !== title);
   }
 }
 
@@ -43,12 +45,14 @@ function onClickClear () {
 
 let loading = ref(false);
 
-let projects = ref([]);
+const projects = ref<Project[]>([]);
 
+//@ts-ignore
 projects.value = projectStore.getAllProjects;
 
 watch([contract, technology, title], ([newContract, newTechnology, newTitle]) => {
   loading.value = true;
+  //@ts-ignore
   projects.value = projectStore.getProjectsByFilters({
     techs: newTechnology,
     clients: newContract,
@@ -57,7 +61,7 @@ watch([contract, technology, title], ([newContract, newTechnology, newTitle]) =>
   loading.value = false;
 });
 
-const breadcrumbs = [
+const breadcrumbs: BreadcrumbItem[] = [
   { title: 'Home', to: '/' },
   { title: t('projects.title'), active: true }
 ];
