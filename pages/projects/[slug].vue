@@ -57,6 +57,7 @@ const breadcrumbs: BreadcrumbItem[] = [
             text="Visualizza"
             prepend-icon="line-md:external-link"
             variant="tonal"
+            :href="project?.website"
             v-tooltip="{ text: 'Visualizza', location: 'top' }"
           />
           <v-btn
@@ -67,6 +68,7 @@ const breadcrumbs: BreadcrumbItem[] = [
             rounded="lg"
             text="GitHub"
             variant="tonal"
+            :href="project?.github"
             v-tooltip="{ text: 'GitHub', location: 'top' }"
           />
         </slot>
