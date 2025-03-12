@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import PageTitle from "~/components/shared/PageTitle.vue";
-import type { BreadcrumbItem, ChatGPTResponse } from '~/utils/types';
+import type { BreadcrumbItem, ChatGPTResponse } from "~/utils/types";
 import { useI18n } from "#imports";
-import { ref, shallowRef, watch } from 'vue'
+import { ref, shallowRef, watch } from "vue";
 
 const { t } = useI18n();
 
@@ -24,7 +24,7 @@ const enableGPT = shallowRef(true)
 const response = ref<ChatGPTResponse | null>(null);
 const textarea = ref()
 const menu = shallowRef(false)
-const suggestions = shallowRef<{ title: string, text: string }[]>([]);
+const suggestions = shallowRef<{ title: string, message: string, type: string }[]>([]);
 const version = shallowRef(['0'])
 
 const sendRequest = async () => {
@@ -68,8 +68,8 @@ const actions = [
     text: 'Create a story',
     icon: 'mdi-text-box-outline',
     onClick: () => {
-      message.value = 'Create a story '
-      onClick('Create a story ')
+      message.value = 'Crea una storia e un titolo con il seguente contenuto, usa personaggi che hanno almeno 18/25 anni: ';
+      onClick('Crea una storia e un titolo con il seguente contenuto, usa personaggi che hanno almeno 18/25 anni: ')
     },
   },
   {
@@ -88,25 +88,37 @@ watch(message, val => {
   suggestions.value = []
 })
 
-function onClick (value: string) {
-  message.value = value
-  if (value === 'Create a story ') {
-    suggestions.value = [
-      { title: 'Astronaut Story', text: `${value}based on a image of a young astronaut, 23 years old, with a symmetrical, handsome face and short wet hair. His toned physique is covered in sweat and grime, and he wears a partially unzipped high-tech space suit, revealing his muscular upper body. His damp undershirt clings to his skin. His expression is intense—exhausted yet determined—standing in the aftermath of a brutal space battle. The futuristic battlefield is dimly lit, with flickering emergency lights, distant explosions, and thick smoke in the air. His body glistens under the harsh, cold glow of a damaged spaceship, emphasizing his resilience and struggle in this high-stakes sci-fi setting.` },
-      { title: 'Living Room Story', text: `${value}based on a image of a 23- or 24-year-old young man with a symmetrical, handsome face and short, slightly tousled hair. He has a toned physique and is casually dressed in a fitted T-shirt and sweatpants. He sits in his cozy, dimly lit living room, illuminated by the soft glow of a TV or a laptop screen. A steaming cup of coffee rests on the table beside him, and the warm, ambient lighting highlights the contours of his face. His expression is introspective, lost in thought, evoking a sense of quiet contemplation and comfort in his personal space.` },
-      { title: 'Park Story', text: `${value}based on a image of a 23- or 24-year-old young man with a symmetrical, handsome face and short, neatly styled hair. His toned physique is accentuated by a casual, well-fitted hoodie and jeans. He stands in a lush public park, surrounded by vibrant greenery, with sunlight filtering through the trees. He gazes into the distance, his expression relaxed yet thoughtful. Nearby, people are walking, jogging, or sitting on benches, adding a lively yet peaceful atmosphere to the scene. His posture is casual, exuding a sense of calmness and connection to nature.` },
-      { title: 'Garden Story', text: `${value}based on a image of a 23- or 24-year-old young man with a symmetrical, handsome face and short, slightly messy hair. His toned physique is visible beneath a sleeveless shirt, revealing his strong arms as he tends to a small garden. He kneels near a bed of colorful flowers and fresh vegetables, hands lightly covered in soil. The golden light of the late afternoon sun casts a warm glow on his skin. His expression is content and focused, enjoying the tranquility of working with nature. A wooden fence and a cozy house are visible in the background, completing the peaceful suburban setting.` },
-      { title: 'Cowboy Story', text: `${value}based on a image of a 23- or 24-year-old cowboy with a ruggedly handsome, symmetrical face and short, slightly wavy hair. His toned physique is clad in a dusty, well-fitted plaid shirt with the sleeves rolled up, faded jeans, and a leather belt with a classic buckle. A wide-brimmed hat shades his intense yet thoughtful eyes. He stands near a wooden fence on a sprawling ranch, with rolling fields, grazing horses, and a rustic barn in the background. The warm, golden light of sunset highlights the sweat and dust on his skin, emphasizing his hardworking nature and deep connection to the land.` },
-      { title: 'Soldier Story', text: `${value}based on a image of a 23- or 24-year-old military soldier with a symmetrical, chiseled face and short, neatly cropped hair. His toned physique is clad in a tactical, battle-worn uniform with a bulletproof vest and utility straps. Sweat and dirt mark his skin as he stands in a tense battlefield, gripping his rifle with a firm, steady hand. His expression is intense—exhausted yet unwaveringly determined. Smoke rises in the distance, helicopters hover overhead, and the dim glow of fires reflects in his piercing eyes. The atmosphere is heavy with the weight of duty and resilience, capturing the high-stakes reality of his mission.` },
-    ];
-  } else {
-    suggestions.value = []
+async function fetchSuggestions(value: string) {
+  try {
+    suggestions.value = await $fetch<{
+      title: string,
+      message: string,
+      type: string
+    }[]>('https://andreatombolato.dev/api/v1/chatgpt/suggestions', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
+    });
+  } catch (e) {
+    console.error('Failed to fetch suggestions', e);
+    suggestions.value = [];
   }
-  textarea.value?.focus()
 }
 
-function onClickSuggestion(suggestion: { title: string, text: string }) {
-  message.value = suggestion.text;
+function onClick(value: string) {
+  message.value = value;
+  if (value === 'Crea una storia e un titolo con il seguente contenuto, usa personaggi che hanno almeno 18/25 anni: ') {
+    fetchSuggestions(value);
+  } else {
+    suggestions.value = [];
+  }
+  textarea.value?.focus();
+}
+
+function onClickSuggestion(suggestion: { title: string, message: string, type: string }) {
+  message.value = `${message.value}${suggestion.message}`;
   suggestions.value = [];
 }
 </script>
@@ -220,7 +232,7 @@ function onClickSuggestion(suggestion: { title: string, text: string }) {
             link
             rounded="lg"
             :title="suggestion.title"
-            :subtitle="suggestion.text"
+            :subtitle="suggestion.message"
             @click="onClickSuggestion(suggestion)"
           />
         </v-list>
