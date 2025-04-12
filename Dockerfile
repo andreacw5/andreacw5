@@ -1,5 +1,5 @@
 # Stage 1: Build the application
-FROM node:23.6.0-alpine3.21 AS build
+FROM node:23.11.0-alpine3.21 AS build
 
 # Install pnpm and create app directory
 RUN npm install -g pnpm && mkdir /app
@@ -18,7 +18,7 @@ COPY . .
 RUN pnpm build
 
 # Stage 2: Create the final image
-FROM node:23.6.0-alpine3.21
+FROM node:23.11.0-alpine3.21
 
 # Install pnpm and create app directory
 RUN npm install -g pnpm && mkdir /app

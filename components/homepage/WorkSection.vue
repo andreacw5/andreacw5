@@ -5,7 +5,7 @@ const aboutStore = useAboutStore();
 let works = aboutStore.getAllWorks;
 
 const currentLocale = useI18n().locale;
-const currentLocaleIsItalian = computed(() => currentLocale.value === 'it-IT');
+const currentLocaleIsItalian = computed(() => currentLocale.value === 'it');
 </script>
 
 <template>

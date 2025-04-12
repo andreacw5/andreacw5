@@ -72,29 +72,17 @@ export default defineNuxtConfig({
 
   // I18N Configuration
   i18n: {
-    /* module options */
     lazy: true,
-    langDir: "locales",
+    langDir: 'locales',
     strategy: 'no_prefix',
     locales: [
-      {
-        code: "en-US",
-        language: "en-US",
-        icon: 'flagpack:gb-ukm',
-        name: "English",
-        file: "en-US.json",
-      },{
-        code: "it-IT",
-        language: "it-IT",
-        icon: 'flagpack:it',
-        name: "Italiano",
-        file: "it-IT.json",
-      },
+      { code: 'en', language: 'en-US', file: 'en.json' },
+      { code: 'it', language: 'it-IT', file: 'it.json' }
     ],
     detectBrowserLanguage: {
       useCookie: false
     },
-    defaultLocale: "it-IT",
+    defaultLocale: "it",
   },
 
   // Google Fonts Configuration
