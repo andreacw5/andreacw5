@@ -16,7 +16,7 @@ const similarProjects = projectStore.getSimilarProjects(route.params.slug);
 
 const loading = ref(false);
 const currentLocale = useI18n().locale;
-const currentLocaleIsItalian = computed(() => currentLocale.value === 'it-IT');
+const currentLocaleIsItalian = computed(() => currentLocale.value === 'it');
 
 if (!project) {
   loading.value = true;
