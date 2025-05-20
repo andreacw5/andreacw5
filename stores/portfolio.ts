@@ -283,25 +283,96 @@ export const useProjectStore = defineStore('project', {
             }
          },
          {
+            slug: 'respondo',
+            title: {
+               it: 'Respondo',
+               en: 'Respondo'
+            },
+            description: {
+               it: 'Respondo è applicazione progettata per monitorare risorse, endpoint e heartbeat in tempo reale.  Attualmente è in sviluppo la parte di backend, che fornirà un\'API REST per la gestione delle risorse e dei loro stati. La parte frontend è in fase di sviluppo.',
+               en: 'Respondo is an application designed to monitor resources, endpoints, and heartbeats in real time. Currently, the backend part is under development, which will provide a REST API for managing resources and their states. The frontend part is under development.'
+            },
+            startDate: '2025',
+            current: true,
+            github: 'https://github.com/atomwebdev/respondo-api',
+            client: {
+               name: 'Open Source',
+               bio: 'Progetto open source',
+               website: 'https://github.com/atomwebdev/respondo-api',
+               logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
+            },
+            features: [
+               {
+                  "title": "Heartbeat e monitoraggio",
+                  "subtitle": "Heartbeat e monitoraggio HTTP/endpoint configurabile per risorse",
+                  "icon": "line-md:cloud-alt-upload"
+               },
+               {
+                  "title": "Storico temporale",
+                  "subtitle": "Tracciamento uptime su tempi di 30/60/90 giorni con log storico dello stato",
+                  "icon": "line-md:account"
+               },
+               {
+                  "title": "Integrazione notifiche",
+                  "subtitle": "Webhook Discord con embed custom, estendibile facilmente con altri canali di notifica (Slack, Telegram, etc.)",
+                  "icon": "line-md:cloud-alt-braces"
+               },
+               {
+                  "title": "Multi-tenant",
+                  "subtitle": "Supporto multi-azienda/multi-applicazione",
+                  "icon": "line-md:cloud-alt-braces"
+               }
+            ],
+            preview: 'https://file-harbor.com/api/v1/files/8b93cf49-c117-49e2-86fe-ac670bd77295',
+            technical: {
+               main: {
+                  name: 'Nest.js',
+                  icon: 'simple-icons:nestjs',
+                  color: '#e0234e'
+               },
+               technologies: [
+                  { title: 'Nest.js', icon: 'simple-icons:nestjs' },
+                  { icon: 'simple-icons:typescript', title: 'Typescript' }
+               ]
+            }
+         },
+         {
             slug: 'alertconnector',
             title: {
                it: 'AlertConnector',
                en: 'AlertConnector'
             },
             description: {
-               it: 'ZipLink è un sistema gestore di url con Rest API per la gestione di url accorciati, statistiche sui click e reindirizzamenti tramite codici personalizzati.',
-               en: 'ZipLink, is an url manager system with Rest API for management of short urls, click statistics and redirects by personalized codes'
+               it: 'AlertConnect è un servizio di agregazione degli alert di emergenza emessi dal dipartimento di Protezione civile Nazionale Italiano, in un servizio REST accessibile a tutti. Il servizio aggrega gli alert e li rende disponibili in un formato standardizzato, per essere utilizzato da altri servizi o applicazioni.',
+               en: 'AlertConnect is an emergency alert aggregation service issued by the Italian National Civil Protection Department, in a REST service accessible to all. The service aggregates alerts and makes them available in a standardized format, to be used by other services or applications.'
             },
             startDate: '2024',
             current: true,
             github: 'https://github.com/prociv-sm/management-api',
+            features: [
+               {
+                  "title": "Aggregazione degli alert",
+                  "subtitle": "Aggregazione degli alert di emergenza emessi dal dipartimento di Protezione civile Nazionale Italiano.",
+                  "icon": "line-md:cloud-alt-upload"
+               },
+               {
+                  "title": "Servizio REST",
+                  "subtitle": "Accessibile a tutti, per essere utilizzato da altri servizi o applicazioni.",
+                  "icon": "line-md:account"
+               },
+               {
+                  "title": "Formato standardizzato",
+                  "subtitle": "Gli alert sono disponibili in un formato standardizzato.",
+                  "icon": "line-md:cloud-alt-braces"
+               },
+            ],
             client: {
                name: 'Open Source',
                bio: 'Progetto open source',
                website: 'https://github.com/prociv-sm/management-api',
                logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
             },
-            preview: 'https://file-harbor.com/api/v1/files/2880cba043f55f209b3ecb92e3b69a00',
+            preview: 'https://file-harbor.com/api/v1/files/cc7e65a9-1467-46ce-98bd-2b8bc56ec114',
             technical: {
                main: {
                   name: 'Nest.js',
@@ -442,15 +513,15 @@ export const useProjectStore = defineStore('project', {
             },
             images: [
                {
-                  image: 'https://file-harbor.com/api/v1/files/2be3bf23f7972b37436e489c4cb0620f',
+                  image: 'https://file-harbor.com/api/v1/files/842b5dc5-7aa8-4eb1-9c8f-11deb68d6872',
                   title: 'Homepage',
                },
                {
-                  image: 'https://file-harbor.com/api/v1/files/c1a29911ee6523239b024e9e5669b1e4',
-                  title: 'Dettaglio opera',
+                  image: 'https://file-harbor.com/api/v1/files/87f52800-da77-456a-b471-a4d7368f83ad',
+                  title: 'Su di me',
                }
             ],
-            preview: 'https://file-harbor.com/api/v1/files/2be3bf23f7972b37436e489c4cb0620f',
+            preview: 'https://file-harbor.com/api/v1/files/842b5dc5-7aa8-4eb1-9c8f-11deb68d6872',
             startDate: '2023',
             current: true,
             website: 'https://studioartepuma.it/',
