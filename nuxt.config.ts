@@ -88,7 +88,8 @@ export default defineNuxtConfig({
   // Google Fonts Configuration
   googleFonts: {
     families: {
-      Ubuntu: [400, 500, 700],
+      Inter: [400, 500, 700],
+      Poppins: [400, 500, 700],
     },
     display: 'swap',
     prefetch: true,

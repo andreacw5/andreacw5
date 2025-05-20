@@ -3,29 +3,34 @@
 @use "shared/buttons";
 @use "shared/text";
 
-$family: "Ubuntu", sans-serif;
+$family: "Inter", sans-serif;
 
 @use "vuetify" with (
   $body-font-family: $family
 );
 
 :root {
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 @supports (font-variation-settings: normal) {
   :root {
-    font-family: "Ubuntu", sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 }
 
+:root {
+  --font-title: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
 html {
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 h1 {
-  font-family: "Ubuntu", sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
 }
 .text-h3 {
-  font-family: "Ubuntu", sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 // Reset link styles
