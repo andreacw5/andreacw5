@@ -34,7 +34,7 @@ const currentLocaleIsItalian = computed(() => currentLocale.value === 'it');
           </h2>
         </template>
         <template v-slot:subtitle>
-          <span class="project-subtitle">
+          <span class="project-subtitle text-medium-emphasis">
             {{ item.client.name }}
             <span class="hidden-md-and-up">
               <br>
