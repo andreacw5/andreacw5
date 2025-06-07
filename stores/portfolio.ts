@@ -185,207 +185,6 @@ export const useProjectStore = defineStore('project', {
             }
          },
          {
-            slug: 'ziplink',
-            title: {
-               it: 'ZipLink',
-               en: 'ZipLink'
-            },
-            description: {
-               it: 'ZipLink è un sistema gestore di url con Rest API per la gestione di url accorciati, statistiche sui click e reindirizzamenti tramite codici personalizzati.',
-               en: 'ZipLink, is an url manager system with Rest API for management of short urls, click statistics and redirects by personalized codes'
-            },
-            features: [
-               {
-                  title: "Gestione di URL accorciati",
-                  subtitle: "ZipLink è un sistema gestore di URL con Rest API che consente la creazione e la gestione di URL accorciati.",
-                  icon: "line-md:folder-network"
-               },
-               {
-                  title: "Statistiche sui click",
-                  subtitle: "Il sistema fornisce statistiche dettagliate sui click ricevuti dagli URL accorciati.",
-                  icon: "line-md:check-list-3"
-               },
-               {
-                  title: "Reindirizzamenti tramite codici personalizzati",
-                  subtitle: "Permette la configurazione di reindirizzamenti utilizzando codici URL personalizzati.",
-                  icon: "line-md:edit"
-               }
-            ],
-            startDate: '2022',
-            current: true,
-            github: 'https://github.com/andreacw5/ziplink',
-            client: {
-               name: 'Open Source',
-               bio: 'Progetto open source',
-               website: 'https://github.com/andreacw5/ziplink',
-               logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
-            },
-            preview: 'https://file-harbor.com/api/v1/files/aa446189ee45f5b45daa112ad43861c6',
-            technical: {
-               main: {
-                  name: 'Nest.js',
-                  icon: 'simple-icons:nestjs',
-                  color: '#e0234e'
-               },
-               technologies: [
-                  { title: 'Nest.js', icon: 'simple-icons:nestjs' },
-                  { icon: 'simple-icons:typescript', title: 'Typescript' }
-               ]
-            }
-         },
-         {
-            slug: 'fileharbor',
-            title: {
-               it: 'FileHarbor',
-               en: 'FileHarbor'
-            },
-            description: {
-               it: 'Servizio costruito con Nest.js dedicato alla gestione degli upload di immagini, come avatar, copertine di post e altri asset.',
-               en: 'Service built with Nest.js dedicated to handling image uploads, such as avatars, post covers, and other assets. '
-            },
-            startDate: '2024',
-            current: true,
-            github: 'https://github.com/andreacw5/fileharbor',
-            client: {
-               name: 'Open Source',
-               bio: 'Progetto open source',
-               website: 'https://github.com/andreacw5/fileharbor',
-               logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
-            },
-            features: [
-               {
-                  "title": "Gestione degli upload",
-                  "subtitle": "Servizio costruito con Nest.js per la gestione degli upload di immagini.",
-                  "icon": "line-md:cloud-alt-upload"
-               },
-               {
-                  "title": "Supporto per Avatar",
-                  "subtitle": "Carica e gestisci immagini personalizzate come avatar per gli utenti.",
-                  "icon": "line-md:account"
-               },
-               {
-                  "title": "Owner dei contenuti",
-                  "subtitle": "I contenuti caricati sono assegnati ad un proprietario e viene salvato il dominio di provenienza, che può gestirli e modificarli.",
-                  "icon": "line-md:cloud-alt-braces"
-               }
-            ],
-            preview: 'https://file-harbor.com/api/v1/files/9eb12aade81517f5a5e63909d6ef1ae6',
-            technical: {
-               main: {
-                  name: 'Nest.js',
-                  icon: 'simple-icons:nestjs',
-                  color: '#e0234e'
-               },
-               technologies: [
-                  { title: 'Nest.js', icon: 'simple-icons:nestjs' },
-                  { icon: 'simple-icons:typescript', title: 'Typescript' }
-               ]
-            }
-         },
-         {
-            slug: 'respondo',
-            title: {
-               it: 'Respondo',
-               en: 'Respondo'
-            },
-            description: {
-               it: 'Respondo è applicazione progettata per monitorare risorse, endpoint e heartbeat in tempo reale.  Attualmente è in sviluppo la parte di backend, che fornirà un\'API REST per la gestione delle risorse e dei loro stati. La parte frontend è in fase di sviluppo.',
-               en: 'Respondo is an application designed to monitor resources, endpoints, and heartbeats in real time. Currently, the backend part is under development, which will provide a REST API for managing resources and their states. The frontend part is under development.'
-            },
-            startDate: '2025',
-            current: true,
-            github: 'https://github.com/atomwebdev/respondo-api',
-            client: {
-               name: 'Open Source',
-               bio: 'Progetto open source',
-               website: 'https://github.com/atomwebdev/respondo-api',
-               logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
-            },
-            features: [
-               {
-                  "title": "Heartbeat e monitoraggio",
-                  "subtitle": "Heartbeat e monitoraggio HTTP/endpoint configurabile per risorse",
-                  "icon": "line-md:cloud-alt-upload"
-               },
-               {
-                  "title": "Storico temporale",
-                  "subtitle": "Tracciamento uptime su tempi di 30/60/90 giorni con log storico dello stato",
-                  "icon": "line-md:account"
-               },
-               {
-                  "title": "Integrazione notifiche",
-                  "subtitle": "Webhook Discord con embed custom, estendibile facilmente con altri canali di notifica (Slack, Telegram, etc.)",
-                  "icon": "line-md:cloud-alt-braces"
-               },
-               {
-                  "title": "Multi-tenant",
-                  "subtitle": "Supporto multi-azienda/multi-applicazione",
-                  "icon": "line-md:cloud-alt-braces"
-               }
-            ],
-            preview: 'https://file-harbor.com/api/v1/files/8b93cf49-c117-49e2-86fe-ac670bd77295',
-            technical: {
-               main: {
-                  name: 'Nest.js',
-                  icon: 'simple-icons:nestjs',
-                  color: '#e0234e'
-               },
-               technologies: [
-                  { title: 'Nest.js', icon: 'simple-icons:nestjs' },
-                  { icon: 'simple-icons:typescript', title: 'Typescript' }
-               ]
-            }
-         },
-         {
-            slug: 'alertconnector',
-            title: {
-               it: 'AlertConnector',
-               en: 'AlertConnector'
-            },
-            description: {
-               it: 'AlertConnect è un servizio di agregazione degli alert di emergenza emessi dal dipartimento di Protezione civile Nazionale Italiano, in un servizio REST accessibile a tutti. Il servizio aggrega gli alert e li rende disponibili in un formato standardizzato, per essere utilizzato da altri servizi o applicazioni.',
-               en: 'AlertConnect is an emergency alert aggregation service issued by the Italian National Civil Protection Department, in a REST service accessible to all. The service aggregates alerts and makes them available in a standardized format, to be used by other services or applications.'
-            },
-            startDate: '2024',
-            current: true,
-            github: 'https://github.com/prociv-sm/management-api',
-            features: [
-               {
-                  "title": "Aggregazione degli alert",
-                  "subtitle": "Aggregazione degli alert di emergenza emessi dal dipartimento di Protezione civile Nazionale Italiano.",
-                  "icon": "line-md:cloud-alt-upload"
-               },
-               {
-                  "title": "Servizio REST",
-                  "subtitle": "Accessibile a tutti, per essere utilizzato da altri servizi o applicazioni.",
-                  "icon": "line-md:account"
-               },
-               {
-                  "title": "Formato standardizzato",
-                  "subtitle": "Gli alert sono disponibili in un formato standardizzato.",
-                  "icon": "line-md:cloud-alt-braces"
-               },
-            ],
-            client: {
-               name: 'Open Source',
-               bio: 'Progetto open source',
-               website: 'https://github.com/prociv-sm/management-api',
-               logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
-            },
-            preview: 'https://file-harbor.com/api/v1/files/cc7e65a9-1467-46ce-98bd-2b8bc56ec114',
-            technical: {
-               main: {
-                  name: 'Nest.js',
-                  icon: 'simple-icons:nestjs',
-                  color: '#e0234e'
-               },
-               technologies: [
-                  { title: 'Nest.js', icon: 'simple-icons:nestjs' },
-                  { icon: 'simple-icons:typescript', title: 'Typescript' }
-               ]
-            }
-         },
-         {
             slug: 'prociv',
             title: {
                it: 'Sito web per la Protezione Civile',
@@ -462,42 +261,277 @@ export const useProjectStore = defineStore('project', {
             }
          },
          {
-            slug: 'nuxt3-vuetify',
+            slug: 'kaish-dbd',
             title: {
-               it: 'Nuxt 3 Vuetify Template',
-               en: 'Nuxt 3 Vuetify Template'
+               it: 'Sito web per Kaish79',
+               en: 'Kaish79\'s website'
             },
             description: {
-               it: 'Modello di partenza per Nuxt 3 con Vuetify. Ottimo punto di partenza per la costruzione di un nuovo progetto Nuxt 3 con Vuetify.',
-               en: 'Minimal Nuxt 3 starter template with Vuetify. Good starting point for building a new Nuxt 3 project with Vuetify. '
+               it: 'Sito web personale dello streamer Kaish79, con creazione, salvataggio e condivisione di build personalizzate per Dead by Daylight. Il progetto include la gestione avanzata di perk, addon e personaggi, supporta l\'upload di immagini, la validazione dei ruoli e il tracciamento delle visualizzazioni per le metriche. Include integrazione completa con un backend NestJS + Prisma e un pannello di amministrazione per gestire le build in evidenza.',
+               en: 'Personal website of the streamer Kaish79, with creation, saving and sharing of custom builds for Dead by Daylight. The project includes advanced management of perks, addons and characters, supports image upload, role validation and view tracking for metrics. It includes full integration with a NestJS + Prisma backend and an admin panel to manage featured builds.'
             },
-            preview: 'https://file-harbor.com/api/v1/files/1d1516da142bc712ae31b3a8504c9e75',
-            startDate: '2023',
+            website: 'https://kaish-dbd.it',
+            startDate: '2025',
             current: true,
-            github: 'https://github.com/andreacw5/nuxt3-vuetify',
             client: {
-               name: 'Open Source',
-               bio: 'Progetto open source',
-               website: 'https://github.com/andreacw5/nuxt3-vuetify',
-               logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
+               name: 'Kaish79 (Private Client)',
+               bio: 'Kaish personal website and tool for DBD fans',
+               logo: 'https://static-cdn.jtvnw.net/jtv_user_pictures/80cb02d5-ffa5-400a-af19-ff652b2c1d6b-profile_image-150x150.png',
+               website: 'https://kaish-dbd.it',
+               instagram: 'https://www.instagram.com/kaish_1979/'
             },
             features: [
                {
-                  title: "Integrazione Nuxt 3 e Vuetify",
-                  subtitle: "Configurazione pronta per una perfetta sinergia tra Nuxt 3 e Vuetify.",
-                  icon: "line-md:link"
+                  title: 'Gestione completa delle build',
+                  subtitle: 'Crea build per Survivors e Killers con perk e addon dedicati',
+                  icon: 'line-md:clipboard-check'
                },
                {
-                  title: "Architettura modulare",
-                  subtitle: "Struttura organizzata per scalabilità e manutenibilità del codice.",
-                  icon: "line-md:folder"
+                  title: 'Sistema utenti e ruoli',
+                  subtitle: 'Registrazione, login, ruolo admin con privilegi avanzati',
+                  icon: 'line-md:account'
+               },
+               {
+                  title: 'Upload immagini con File Harbor',
+                  subtitle: 'Supporto per immagini custom di perk, personaggi e addon',
+                  icon: 'line-md:upload'
+               },
+               {
+                  title: 'Build in evidenza e metriche',
+                  subtitle: 'Visualizzazioni, ordinamento per popolarità e gestione delle featured',
+                  icon: 'line-md:speedometer'
                }
+            ],
+            preview: 'https://file-harbor.com/api/v1/files/e1c2a47b-6282-4a3b-9d76-ce3dc04fe8b5',
+            images: [
+                {
+                    image: 'https://file-harbor.com/api/v1/files/e1c2a47b-6282-4a3b-9d76-ce3dc04fe8b5',
+                    title: 'Homepage',
+                }
             ],
             technical: {
                main: { icon: 'simple-icons:nuxtdotjs', name: 'Nuxt.js', color: '#00A86B' },
                technologies: [
                   { icon: 'simple-icons:nuxtdotjs', title: 'Nuxt.js' },
-                  { icon: 'simple-icons:vuetify', title: 'Vuetify' }
+                  { icon: 'simple-icons:vuetify', title: 'Vuetify' },
+                  { title: 'Nest.js', icon: 'simple-icons:nestjs' },
+                  { title: 'Prisma ORM', icon: 'simple-icons:prisma' },
+                  { title: 'Typescript', icon: 'simple-icons:typescript' },
+                  { title: 'PostgreSQL', icon: 'simple-icons:postgresql' }
+               ]
+            }
+         },
+         {
+            slug: 'fileharbor',
+            title: {
+               it: 'FileHarbor',
+               en: 'FileHarbor'
+            },
+            description: {
+               it: 'Servizio costruito con Nest.js dedicato alla gestione degli upload di immagini, come avatar, copertine di post e altri asset.',
+               en: 'Service built with Nest.js dedicated to handling image uploads, such as avatars, post covers, and other assets. '
+            },
+            startDate: '2024',
+            current: true,
+            github: 'https://github.com/andreacw5/fileharbor',
+            client: {
+               name: 'Open Source',
+               bio: 'Progetto open source',
+               website: 'https://github.com/andreacw5/fileharbor',
+               logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
+            },
+            features: [
+               {
+                  "title": "Gestione degli upload",
+                  "subtitle": "Servizio costruito con Nest.js per la gestione degli upload di immagini.",
+                  "icon": "line-md:cloud-alt-upload"
+               },
+               {
+                  "title": "Supporto per Avatar",
+                  "subtitle": "Carica e gestisci immagini personalizzate come avatar per gli utenti.",
+                  "icon": "line-md:account"
+               },
+               {
+                  "title": "Owner dei contenuti",
+                  "subtitle": "I contenuti caricati sono assegnati ad un proprietario e viene salvato il dominio di provenienza, che può gestirli e modificarli.",
+                  "icon": "line-md:cloud-alt-braces"
+               }
+            ],
+            preview: 'https://file-harbor.com/api/v1/files/9eb12aade81517f5a5e63909d6ef1ae6',
+            technical: {
+               main: {
+                  name: 'Nest.js',
+                  icon: 'simple-icons:nestjs',
+                  color: '#e0234e'
+               },
+               technologies: [
+                  { title: 'Nest.js', icon: 'simple-icons:nestjs' },
+                  { title: 'Prisma ORM', icon: 'simple-icons:prisma' },
+                  { title: 'Typescript', icon: 'simple-icons:typescript' },
+                  { title: 'PostgreSQL', icon: 'simple-icons:postgresql' }
+               ]
+            }
+         },
+         {
+            slug: 'stream-scanner',
+            title: {
+               it: 'Stream Scanner',
+               en: 'Stream Scanner'
+            },
+            description: {
+               it: 'Stream Scanner è un microservizio pensato per monitorare in tempo reale lo stato dei canali Twitch, raccogliendo dati su dirette, giochi e clip. Espone un\'API REST protetta da API Key per consentire ad altri servizi di integrarsi e ricevere aggiornamenti sui canali monitorati. Supporta notifiche automatiche tramite Webhook Discord e analisi dei cambiamenti di stato (live, fine diretta, cambio gioco, nuove clip).',
+               en: 'Stream Scanner is a microservice designed to monitor Twitch channels in real-time, collecting data about live streams, games, and clips. It exposes a REST API protected by an API Key to allow other services to integrate and receive updates about monitored channels. It supports automatic notifications via Discord Webhooks and tracks status changes such as going live, stream end, game switch, or new clips.'
+            },
+            startDate: '2025',
+            current: true,
+            client: {
+               name: 'Private client',
+               bio: 'Companion service for content tracking',
+               logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
+            },
+            features: [
+               {
+                  title: 'Monitoraggio live',
+                  subtitle: 'Controllo automatico dello stato online/offline dei canali Twitch',
+                  icon: 'line-md:cloud-up'
+               },
+               {
+                  title: 'Notifiche Discord',
+                  subtitle: 'Webhook con embed personalizzati per eventi come dirette, giochi e clip',
+                  icon: 'line-md:bell'
+               },
+               {
+                  title: 'Gestione clip e VOD',
+                  subtitle: 'Controllo periodico e salvataggio automatico di nuove clip e VOD',
+                  icon: 'line-md:pause-to-play-filled-transition'
+               },
+               {
+                  title: 'API sicura',
+                  subtitle: 'REST API protetta con autenticazione tramite API Key personale',
+                  icon: 'line-md:security'
+               }
+            ],
+            preview: 'https://file-harbor.com/api/v1/files/3065664c-c028-48f8-99f3-c5e707410a99',
+            technical: {
+               main: {
+                  name: 'Nest.js',
+                  icon: 'simple-icons:nestjs',
+                  color: '#e0234e'
+               },
+               technologies: [
+                  { title: 'Nest.js', icon: 'simple-icons:nestjs' },
+                  { title: 'Prisma ORM', icon: 'simple-icons:prisma' },
+                  { title: 'Typescript', icon: 'simple-icons:typescript' },
+                  { title: 'PostgreSQL', icon: 'simple-icons:postgresql' },
+                  { title: 'Twitch API', icon: 'simple-icons:twitch' },
+                  { title: 'Swagger', icon: 'simple-icons:swagger' }
+               ]
+            }
+         },
+         {
+            slug: 'respondo',
+            title: {
+               it: 'Respondo',
+               en: 'Respondo'
+            },
+            description: {
+               it: 'Respondo è applicazione progettata per monitorare risorse, endpoint e heartbeat in tempo reale.  Attualmente è in sviluppo la parte di backend, che fornirà un\'API REST per la gestione delle risorse e dei loro stati. La parte frontend è in fase di sviluppo.',
+               en: 'Respondo is an application designed to monitor resources, endpoints, and heartbeats in real time. Currently, the backend part is under development, which will provide a REST API for managing resources and their states. The frontend part is under development.'
+            },
+            startDate: '2025',
+            current: true,
+            github: 'https://github.com/atomwebdev/respondo-api',
+            client: {
+               name: 'Open Source',
+               bio: 'Progetto open source',
+               website: 'https://github.com/atomwebdev/respondo-api',
+               logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
+            },
+            features: [
+               {
+                  "title": "Heartbeat e monitoraggio",
+                  "subtitle": "Heartbeat e monitoraggio HTTP/endpoint configurabile per risorse",
+                  "icon": "line-md:cloud-alt-upload"
+               },
+               {
+                  "title": "Storico temporale",
+                  "subtitle": "Tracciamento uptime su tempi di 30/60/90 giorni con log storico dello stato",
+                  "icon": "line-md:account"
+               },
+               {
+                  "title": "Integrazione notifiche",
+                  "subtitle": "Webhook Discord con embed custom, estendibile facilmente con altri canali di notifica (Slack, Telegram, etc.)",
+                  "icon": "line-md:cloud-alt-braces"
+               },
+               {
+                  "title": "Multi-tenant",
+                  "subtitle": "Supporto multi-azienda/multi-applicazione",
+                  "icon": "line-md:cloud-alt-braces"
+               }
+            ],
+            preview: 'https://file-harbor.com/api/v1/files/8b93cf49-c117-49e2-86fe-ac670bd77295',
+            technical: {
+               main: {
+                  name: 'Nest.js',
+                  icon: 'simple-icons:nestjs',
+                  color: '#e0234e'
+               },
+               technologies: [
+                  { title: 'Nest.js', icon: 'simple-icons:nestjs' },
+                  { title: 'Prisma ORM', icon: 'simple-icons:prisma' },
+                  { title: 'Typescript', icon: 'simple-icons:typescript' },
+                  { title: 'PostgreSQL', icon: 'simple-icons:postgresql' }
+               ]
+            }
+         },
+         {
+            slug: 'ziplink',
+            title: {
+               it: 'ZipLink',
+               en: 'ZipLink'
+            },
+            description: {
+               it: 'ZipLink è un sistema gestore di url con Rest API per la gestione di url accorciati, statistiche sui click e reindirizzamenti tramite codici personalizzati.',
+               en: 'ZipLink, is an url manager system with Rest API for management of short urls, click statistics and redirects by personalized codes'
+            },
+            features: [
+               {
+                  title: "Gestione di URL accorciati",
+                  subtitle: "ZipLink è un sistema gestore di URL con Rest API che consente la creazione e la gestione di URL accorciati.",
+                  icon: "line-md:folder-network"
+               },
+               {
+                  title: "Statistiche sui click",
+                  subtitle: "Il sistema fornisce statistiche dettagliate sui click ricevuti dagli URL accorciati.",
+                  icon: "line-md:check-list-3"
+               },
+               {
+                  title: "Reindirizzamenti tramite codici personalizzati",
+                  subtitle: "Permette la configurazione di reindirizzamenti utilizzando codici URL personalizzati.",
+                  icon: "line-md:edit"
+               }
+            ],
+            startDate: '2022',
+            current: true,
+            github: 'https://github.com/andreacw5/ziplink',
+            client: {
+               name: 'Open Source',
+               bio: 'Progetto open source',
+               website: 'https://github.com/andreacw5/ziplink',
+               logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
+            },
+            preview: 'https://file-harbor.com/api/v1/files/aa446189ee45f5b45daa112ad43861c6',
+            technical: {
+               main: {
+                  name: 'Nest.js',
+                  icon: 'simple-icons:nestjs',
+                  color: '#e0234e'
+               },
+               technologies: [
+                  { title: 'Nest.js', icon: 'simple-icons:nestjs' },
+                  { title: 'Prisma ORM', icon: 'simple-icons:prisma' },
+                  { title: 'Typescript', icon: 'simple-icons:typescript' },
+                  { title: 'PostgreSQL', icon: 'simple-icons:postgresql' }
                ]
             }
          },
@@ -540,6 +574,55 @@ export const useProjectStore = defineStore('project', {
                   { icon: 'simple-icons:nodedotjs', title: 'Node.js' },
                   { icon: 'simple-icons:vuetify', title: 'Vuetify' },
                   { icon: 'simple-icons:nginx', title: 'NGINX' }
+               ]
+            }
+         },
+         {
+            slug: 'alertconnector',
+            title: {
+               it: 'AlertConnector',
+               en: 'AlertConnector'
+            },
+            description: {
+               it: 'AlertConnect è un servizio di agregazione degli alert di emergenza emessi dal dipartimento di Protezione civile Nazionale Italiano, in un servizio REST accessibile a tutti. Il servizio aggrega gli alert e li rende disponibili in un formato standardizzato, per essere utilizzato da altri servizi o applicazioni.',
+               en: 'AlertConnect is an emergency alert aggregation service issued by the Italian National Civil Protection Department, in a REST service accessible to all. The service aggregates alerts and makes them available in a standardized format, to be used by other services or applications.'
+            },
+            startDate: '2024',
+            current: true,
+            github: 'https://github.com/prociv-sm/management-api',
+            features: [
+               {
+                  "title": "Aggregazione degli alert",
+                  "subtitle": "Aggregazione degli alert di emergenza emessi dal dipartimento di Protezione civile Nazionale Italiano.",
+                  "icon": "line-md:cloud-alt-upload"
+               },
+               {
+                  "title": "Servizio REST",
+                  "subtitle": "Accessibile a tutti, per essere utilizzato da altri servizi o applicazioni.",
+                  "icon": "line-md:account"
+               },
+               {
+                  "title": "Formato standardizzato",
+                  "subtitle": "Gli alert sono disponibili in un formato standardizzato.",
+                  "icon": "line-md:cloud-alt-braces"
+               },
+            ],
+            client: {
+               name: 'Open Source',
+               bio: 'Progetto open source',
+               website: 'https://github.com/prociv-sm/management-api',
+               logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
+            },
+            preview: 'https://file-harbor.com/api/v1/files/cc7e65a9-1467-46ce-98bd-2b8bc56ec114',
+            technical: {
+               main: {
+                  name: 'Nest.js',
+                  icon: 'simple-icons:nestjs',
+                  color: '#e0234e'
+               },
+               technologies: [
+                  { title: 'Nest.js', icon: 'simple-icons:nestjs' },
+                  { icon: 'simple-icons:typescript', title: 'Typescript' }
                ]
             }
          },
@@ -684,7 +767,47 @@ export const useProjectStore = defineStore('project', {
                   name: 'Javascript'
                }
             }
-         }
+         },
+         {
+            slug: 'nuxt3-vuetify',
+            title: {
+               it: 'Nuxt 3 Vuetify Template',
+               en: 'Nuxt 3 Vuetify Template'
+            },
+            description: {
+               it: 'Modello di partenza per Nuxt 3 con Vuetify. Ottimo punto di partenza per la costruzione di un nuovo progetto Nuxt 3 con Vuetify.',
+               en: 'Minimal Nuxt 3 starter template with Vuetify. Good starting point for building a new Nuxt 3 project with Vuetify. '
+            },
+            preview: 'https://file-harbor.com/api/v1/files/1d1516da142bc712ae31b3a8504c9e75',
+            startDate: '2023',
+            current: true,
+            github: 'https://github.com/andreacw5/nuxt3-vuetify',
+            client: {
+               name: 'Open Source',
+               bio: 'Progetto open source',
+               website: 'https://github.com/andreacw5/nuxt3-vuetify',
+               logo: 'https://file-harbor.com/api/v1/files/3fcd8577e8c1a378f655a3d5e0956d28'
+            },
+            features: [
+               {
+                  title: "Integrazione Nuxt 3 e Vuetify",
+                  subtitle: "Configurazione pronta per una perfetta sinergia tra Nuxt 3 e Vuetify.",
+                  icon: "line-md:link"
+               },
+               {
+                  title: "Architettura modulare",
+                  subtitle: "Struttura organizzata per scalabilità e manutenibilità del codice.",
+                  icon: "line-md:folder"
+               }
+            ],
+            technical: {
+               main: { icon: 'simple-icons:nuxtdotjs', name: 'Nuxt.js', color: '#00A86B' },
+               technologies: [
+                  { icon: 'simple-icons:nuxtdotjs', title: 'Nuxt.js' },
+                  { icon: 'simple-icons:vuetify', title: 'Vuetify' }
+               ]
+            }
+         },
       ]
    }),
    getters: {

@@ -149,7 +149,7 @@ const breadcrumbs: BreadcrumbItem[] = [
       </v-row>
       <v-row v-else>
         <template v-for="blog in blogs" :key="i">
-          <v-col cols="12" xl="3" md="4" sm="6" class="px-0 px-sm-0 pa-md-2">
+          <v-col cols="12" xl="4" md="6" sm="6" class="px-0 px-sm-0 pa-md-2">
             <blog-card :item="blog" />
           </v-col>
         </template>

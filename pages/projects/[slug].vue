@@ -45,7 +45,7 @@ const breadcrumbs: BreadcrumbItem[] = [
 <template>
   <v-container class="v-col-auto grid-list-md text-xs-center ms-auto mb-16">
     <v-container class="grid-list-sm text-xs-center">
-      <page-title icon="line-md:text-box-multiple" :title="t('projects.title')" :breadcrumbs="breadcrumbs">
+      <page-title icon="line-md:text-box-multiple" :title="projectTitle || t('projects.title')" :breadcrumbs="breadcrumbs">
         <slot>
           <v-btn
             v-if="project?.website"
@@ -106,13 +106,6 @@ const breadcrumbs: BreadcrumbItem[] = [
             order="2"
             order-md="2"
           >
-            <!--              <p
-                            v-if="project?.version && project?.updated"
-                            class="text-caption font-weight-bold mb-4 text-medium-emphasis"
-                          >
-                            Version {{ project?.version }} (Updated {{ project?.updated }})
-                          </p>-->
-
             <div class="text-body-1 mb-4 text-medium-emphasis">
               {{ currentLocaleIsItalian ? project?.description?.it : project?.description?.en }}
             </div>

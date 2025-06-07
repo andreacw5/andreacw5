@@ -23,7 +23,7 @@ const formattedDate = computed(() => {
   <v-card class="card round-border" link :to="'/blog/' + item.code">
     <v-img
       cover
-      height="200"
+      height="250"
       :src="item.cover"
       class="gradient-border-bottom"
       gradient="to bottom, rgba(var(--v-theme-surface), 0.1) 60%, rgba(0,0,0, 1)"
