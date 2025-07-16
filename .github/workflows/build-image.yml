@@ -37,7 +37,7 @@ jobs:
       - name: Scan the Docker image for vulnerabilities
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: 'registry.gitlab.com/atomweb/andreacw5:${{ steps.get_version.outputs.VERSION }}'
+          image-ref: 'registry.gitlab.com/heyatomdev/andreacw5:${{ steps.get_version.outputs.VERSION }}'
           format: 'table'
           exit-code: '0'
           ignore-unfixed: true
