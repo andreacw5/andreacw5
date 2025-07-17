@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useSnackbarStore } from '~/stores/snackbar';
+import { useSnackbarStore } from '@/stores/snackbar';
 
 const snackbarStore = useSnackbarStore();
 const snackbar = computed(() => snackbarStore.getSnackbar);

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import ProjectCard from "~/components/projects/ProjectCard.vue";
+import ProjectCard from "@/components/projects/ProjectCard.vue";
 import { useI18n } from '#imports'
-import type { BreadcrumbItem, Project } from '~/utils/types';
-import { useProjectStore } from "~/stores/portfolio"
-import PageTitle from "~/components/shared/PageTitle.vue";
+import type { BreadcrumbItem, Project } from '@/utils/types';
+import { useProjectStore } from "@/stores/portfolio"
+import PageTitle from "@/components/shared/PageTitle.vue";
 
 const { t } = useI18n();
 useHead({

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import PageTitle from "~/components/shared/PageTitle.vue";
-import type { BreadcrumbItem, ChatGPTResponse } from "~/utils/types";
+import PageTitle from "@/components/shared/PageTitle.vue";
+import type { BreadcrumbItem, ChatGPTResponse } from "@/utils/types";
 import { useI18n } from "#imports";
 import { ref, shallowRef, watch } from "vue";
 

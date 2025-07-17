@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CardIcon from "~/components/shared/CardIcon.vue";
+import CardIcon from "@/components/shared/CardIcon.vue";
 
 const stats = [
   {

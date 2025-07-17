@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useI18n } from '#imports'
-import type { BreadcrumbItem } from '~/utils/types';
-import { useBlogStore } from "~/stores/blog"
-import PageTitle from "~/components/shared/PageTitle.vue";
-import BlogCard from "~/components/blog/BlogCard.vue";
+import type { BreadcrumbItem } from '@/utils/types';
+import { useBlogStore } from "@/stores/blog"
+import PageTitle from "@/components/shared/PageTitle.vue";
+import BlogCard from "@/components/blog/BlogCard.vue";
 
 const { t } = useI18n();
 

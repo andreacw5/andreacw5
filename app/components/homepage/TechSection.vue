@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SkillIcon from "~/components/homepage/tech/SkillIcon.vue";
+import SkillIcon from "@/components/homepage/tech/SkillIcon.vue";
 
 const skills = [
   {

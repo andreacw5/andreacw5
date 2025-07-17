@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { BreadcrumbItem } from '~/utils/types';
+import type { BreadcrumbItem } from '@/utils/types';
 
 defineProps({
   title: {

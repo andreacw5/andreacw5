@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
-import OptimizeImage from "~/components/shared/OptimizeImage.vue";
+import OptimizeImage from "@/components/shared/OptimizeImage.vue";
 
 defineProps({
   item: {

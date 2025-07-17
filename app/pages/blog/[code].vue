@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useBlogStore } from "~/stores/blog"
+import { useBlogStore } from "@/stores/blog"
 import { useI18n } from "#imports";
 const { t } = useI18n();
 const blogStore = useBlogStore();

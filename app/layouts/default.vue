@@ -31,9 +31,9 @@
   </v-app>
 </template>
 <script setup lang="ts">
-import MainHeader from "~/components/layout/MainHeader.vue";
-import MainFooter from "~/components/layout/MainFooter.vue";
-import SnackBar from "~/components/shared/SnackBar.vue";
+import MainHeader from "@/components/layout/MainHeader.vue";
+import MainFooter from "@/components/layout/MainFooter.vue";
+import SnackBar from "@/components/shared/SnackBar.vue";
 
 const scrollToTop = () => {
   window.scrollTo({
