@@ -1,5 +1,4 @@
-# Stage 1: Build the application
-FROM node:23.11.0-alpine3.21 AS build
+FROM node:23.11.1-alpine3.22 AS build
 
 # Install pnpm and create app directory
 RUN npm install -g pnpm && mkdir /app
