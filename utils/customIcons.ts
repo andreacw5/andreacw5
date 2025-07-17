@@ -1,7 +1,7 @@
-import type { IconSet, IconAliases, IconProps } from "vuetify";
+import type { IconSet, IconProps } from "vuetify";
 import { Icon } from "@iconify/vue";
 
-const aliases: IconAliases = {
+const aliases = {
   collapse: "ph:caret-up",
   complete: "ph:check",
   cancel: "ph:x-circle",
@@ -26,6 +26,17 @@ const aliases: IconAliases = {
   radioOn: "ph:radio-button-fill",
   radioOff: "ph:circle",
   edit: "ph:note-pencil",
+  command: "ph:command",
+  ctrl: "ph:control",
+  space: "ph:space-bar",
+  shift: "ph:arrow-up",
+  left: "ph:arrow-left",
+  right: "ph:arrow-right",
+  up: "ph:arrow-up",
+  down: "ph:arrow-down",
+  color: "ph:palette",
+  plus: "ph:plus",
+  minus: "ph:minus",
   ratingEmpty: "ph:star",
   ratingFull: "ph:star-fill",
   ratingHalf: "ph:star-half-fill",
@@ -34,11 +45,19 @@ const aliases: IconAliases = {
   last: "ph:caret-double-right-duotone",
   unfold: "ph:arrows-down-up",
   file: "ph:paperclip",
-  plus: "ph:plus",
-  minus: "ph:minus",
-  sortAsc: "ph:sort-ascending",
-  sortDesc: "ph:sort-descending",
   calendar: "ph:calendar",
+  treeviewCollapse: "ph:caret-right",
+  treeviewExpand: "ph:caret-down",
+  eyeDropper: "ph:eyedropper-sample",
+  upload: "ph:upload",
+  sortAsc: "ph:arrow-up",
+  sortDesc: "ph:arrow-down",
+  alt: "ph:option",
+  enter: "ph:enter",
+  pageFirst: "ph:caret-double-left-duotone",
+  pageLast: "ph:caret-double-right-duotone",
+  pageNext: "ph:caret-right",
+  pagePrev: "ph:caret-left"
 };
 
 const custom: IconSet = {

@@ -56,6 +56,8 @@ export default defineNuxtConfig({
   plugins: ['~/plugins/vuetify.ts'],
 
   modules: [
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
     "@vite-pwa/nuxt",
     "@sidebase/nuxt-auth",
     "@pinia/nuxt",
@@ -69,6 +71,34 @@ export default defineNuxtConfig({
       });
     }
   ],
+
+  // Sitemap Configuration
+  sitemap: {
+    urls: [
+      { loc: '/', lastmod: '2025-07-17', priority: 1.0 },
+      { loc: '/projects', lastmod: '2025-07-17', priority: 0.8 },
+      { loc: '/projects/element', lastmod: '2025-07-17', priority: 0.8 },
+      { loc: '/projects/emt-links', lastmod: '2025-07-17', priority: 0.3 },
+      { loc: '/projects/prociv', lastmod: '2025-07-17', priority: 0.8 },
+      { loc: '/projects/kaish-dbd', lastmod: '2025-07-17', priority: 0.8 },
+      { loc: '/projects/fileharbor', lastmod: '2025-07-17', priority: 0.3 },
+      { loc: '/projects/stream-scanner', lastmod: '2025-07-17', priority: 0.3 },
+      { loc: '/projects/respondo', lastmod: '2025-07-17', priority: 0.3 },
+      { loc: '/projects/ziplink', lastmod: '2025-07-17', priority: 0.3 },
+      { loc: '/projects/puma-arts', lastmod: '2025-07-17', priority: 0.3 },
+      { loc: '/projects/alertconnector', lastmod: '2025-07-17', priority: 0.3 },
+      { loc: '/projects/alirdb', lastmod: '2025-07-17', priority: 0.3 },
+      { loc: '/projects/alircommunity', lastmod: '2025-07-17', priority: 0.3 },
+      { loc: '/projects/nuxt3-vuetify', lastmod: '2025-07-17', priority: 0.3 },
+      { loc: '/projects/gymtrack', lastmod: '2025-07-17', priority: 0.3 },
+      { loc: '/blog', lastmod: '2025-07-17', priority: 0.8 },
+      { loc: '/auth/login', lastmod: '2025-07-17', priority: 0.3 },
+      { loc: '/auth/password/forgot', lastmod: '2025-07-01', priority: 0.3 },
+      { loc: '/auth/password/reset', lastmod: '2025-07-17', priority: 0.3 },
+      { loc: '/legal/terms', lastmod: '2025-07-17', priority: 0.3 },
+      { loc: '/legal/privacy-policy', lastmod: '2025-07-17', priority: 0.3 },
+    ]
+  },
 
   // I18N Configuration
   i18n: {
@@ -145,5 +175,5 @@ export default defineNuxtConfig({
   },
 
   // Nuxt compatibility date
-  compatibilityDate: '2024-12-03',
+  compatibilityDate: '2025-07-17',
 });
