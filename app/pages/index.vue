@@ -28,7 +28,7 @@ useHead({
 })
 const TITLE = 'Andrea Tombolato - Web Developer'
 const DESCRIPTION = 'Andrea Tombolato, Web Developer con base a Milano e questo è il mio sito personale!'
-useServerSeoMeta({
+useSeoMeta({
   ogTitle: () => TITLE,
   title: () => TITLE,
   description: () => DESCRIPTION,

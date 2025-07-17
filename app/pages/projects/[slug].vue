@@ -11,8 +11,9 @@ import type { BreadcrumbItem } from '~/utils/types';
 const projectStore = useProjectStore();
 const { t } = useI18n();
 const route = useRoute();
-let project = projectStore.getProjectBySlug(route.params.slug);
-const similarProjects = projectStore.getSimilarProjects(route.params.slug);
+const slug = route.params.slug ?? '';
+let project = projectStore.getProjectBySlug(slug);
+const similarProjects = projectStore.getSimilarProjects(slug);
 
 const loading = ref(false);
 const currentLocale = useI18n().locale;
@@ -20,7 +21,7 @@ const currentLocaleIsItalian = computed(() => currentLocale.value === 'it');
 
 if (!project) {
   loading.value = true;
-  project = projectStore.getProjectBySlug(route.params.slug);
+  project = projectStore.getProjectBySlug(slug);
   loading.value = false;
 }
 

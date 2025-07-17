@@ -1,36 +1,39 @@
-# Stage 1: Build the application
-FROM node:23.11.0-alpine3.21 AS build
+FROM node:23.11.1-alpine3.22 AS build
 
-# Install pnpm and create app directory
-RUN npm install -g pnpm && mkdir /app
+# Install pnpm globally
+RUN npm install -g pnpm
 
 # Set working directory
 WORKDIR /app
 
-# Install app dependencies
+# Copy dependency files
 COPY package.json pnpm-lock.yaml ./
+
+# Install dependencies (faster, smaller)
 RUN pnpm install --frozen-lockfile && pnpm store prune
 
-# Bundle app source
+# Copy rest of the app
 COPY . .
 
-# Build the application
-RUN pnpm build
+# Build Nuxt 4 app
+RUN pnpm run build
 
-# Stage 2: Create the final image
-FROM node:23.11.0-alpine3.21
+# Production image
+FROM node:23.11.1-alpine3.22 AS production
 
-# Install pnpm and create app directory
-RUN npm install -g pnpm && mkdir /app
-
-# Set working directory
+ENV NODE_ENV=production
 WORKDIR /app
 
-# Copy built application from the build stage
-COPY --from=build /app ./
+# Install pnpm (for running app)
+RUN npm install -g pnpm
 
-# Expose the application port
+# Copy only built output and minimal files
+COPY --from=build /app/.output ./.output
+COPY package.json pnpm-lock.yaml ./
+
+# Install only production dependencies
+RUN pnpm install --prod --frozen-lockfile && pnpm store prune
+
 EXPOSE 3000
 
-# Start the application
-CMD ["pnpm", "start:prod"]
+CMD ["pnpm", "start"]
