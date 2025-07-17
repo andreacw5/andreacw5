@@ -86,7 +86,7 @@ import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 
 const email = ref("");
-import { useSnackbarStore } from '~/stores/snackbar';
+import { useSnackbarStore } from '@/stores/snackbar';
 const snackbarStore = useSnackbarStore();
 const { ruleEmail, ruleRequired } = useFormRules();
 const error = ref(false);

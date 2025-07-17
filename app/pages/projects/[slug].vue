@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { useProjectStore } from "~/stores/portfolio"
+import { useProjectStore } from "@/stores/portfolio"
 import { useI18n } from '#imports'
-import ProjectCard from "~/components/projects/ProjectCard.vue";
-import GalleryElement from "~/components/projects/GalleryElement.vue";
-import OptimizeImage from "~/components/shared/OptimizeImage.vue";
-import CompanyCard from "~/components/projects/CompanyCard.vue";
-import ProjectFeatures from "~/components/projects/ProjectFeatures.vue";
-import PageTitle from "~/components/shared/PageTitle.vue";
-import type { BreadcrumbItem } from '~/utils/types';
+import ProjectCard from "@/components/projects/ProjectCard.vue";
+import GalleryElement from "@/components/projects/GalleryElement.vue";
+import OptimizeImage from "@/components/shared/OptimizeImage.vue";
+import CompanyCard from "@/components/projects/CompanyCard.vue";
+import ProjectFeatures from "@/components/projects/ProjectFeatures.vue";
+import PageTitle from "@/components/shared/PageTitle.vue";
+import type { BreadcrumbItem } from '@/utils/types';
 const projectStore = useProjectStore();
 const { t } = useI18n();
 const route = useRoute();

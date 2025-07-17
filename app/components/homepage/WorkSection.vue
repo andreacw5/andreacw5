@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import WorkCard from "~/components/homepage/work/WorkCard.vue";
-import { useAboutStore } from "~/stores/about"
+import WorkCard from "@/components/homepage/work/WorkCard.vue";
+import { useAboutStore } from "@/stores/about"
 const aboutStore = useAboutStore();
 let works = aboutStore.getAllWorks;
 

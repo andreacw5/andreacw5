@@ -53,7 +53,7 @@ export default defineNuxtConfig({
     typeCheck: true
   },
 
-  plugins: ['~/plugins/vuetify.ts'],
+  plugins: ['@/plugins/vuetify.ts'],
 
   modules: [
     '@nuxtjs/sitemap',

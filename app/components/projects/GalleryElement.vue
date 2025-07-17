@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import OptimizeImage from "~/components/shared/OptimizeImage.vue";
+import OptimizeImage from "@/components/shared/OptimizeImage.vue";
 
 defineProps({
   image: {

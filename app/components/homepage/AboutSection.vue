@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import OptimizeImage from "~/components/shared/OptimizeImage.vue";
+import OptimizeImage from "@/components/shared/OptimizeImage.vue";
 
-import { useSnackbarStore } from '~/stores/snackbar';
+import { useSnackbarStore } from '@/stores/snackbar';
 
 const snackbarStore = useSnackbarStore();
 

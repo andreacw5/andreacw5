@@ -99,7 +99,7 @@ const { t } = useI18n();
 const password = ref("");
 const password2 = ref("");
 
-import { useSnackbarStore } from '~/stores/snackbar';
+import { useSnackbarStore } from '@/stores/snackbar';
 const snackbarStore = useSnackbarStore();
 const { ruleRequired } = useFormRules();
 const error = ref(false);

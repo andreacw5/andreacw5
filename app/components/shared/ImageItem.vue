@@ -20,7 +20,7 @@ defineProps({
     :alt="altText"
     :height="height"
     :src="imageUrl"
-    lazy-src="~/assets/branding/loading.webp"
+    lazy-src="@/assets/branding/loading.webp"
     :aspect-ratio="1"
     :cover="true"
     class="grey darken-3 image-transition"
