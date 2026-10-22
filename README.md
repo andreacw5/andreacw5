@@ -14,25 +14,6 @@ By day I build **Meview** at [Medas Solutions](https://medas-solutions.it/): the
 
 By night I run my own small platform: a set of NestJS services that handle auth, mail, content, media and events, so every new side project starts with the boring parts already done.
 
-## The platform
-
-```mermaid
-flowchart LR
-    apps["DBD Builds<br/>and other apps"] --> platform
-    meridian["Meridian<br/>admin console · Nuxt"] --> platform
-
-    subgraph platform["heyatom · NestJS + Prisma + PostgreSQL"]
-        bastion["Bastion<br/>identity · JWT RS256 · OAuth · 2FA"]
-        herald["Herald<br/>mail"]
-        articuno["Articuno<br/>CMS"]
-        fileharbor["FileHarbor<br/>media CDN"]
-        gatherly["Gatherly<br/>events"]
-        beacon["Beacon<br/>Twitch monitor"]
-        bastion -. service JWT .-> herald
-        bastion -. service JWT .-> gatherly
-    end
-```
-
 ## Projects
 
 | | Project | What it is | Stack |
