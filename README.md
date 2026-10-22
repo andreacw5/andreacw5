@@ -14,15 +14,49 @@ By day I build **Meview** at [Medas Solutions](https://medas-solutions.it/): the
 
 By night I run my own small platform: a set of NestJS services that handle auth, mail, content, media and events, so every new side project starts with the boring parts already done.
 
-## Projects
+## Selected work
 
-| | Project | What it is | Stack |
-|---|---|---|---|
-| 🎮 | **[DBD Builds](https://dbd-builds.it)** | Dead by Daylight build sharing and translated wiki. 500+ builds, ~1k visitors a month | NestJS · Nuxt · Vuetify |
-| 🗂️ | **[FileHarbor](https://github.com/andreacw5/fileharbor)** | Multi-tenant image and media CDN with albums and avatars | NestJS · Prisma |
-| 📝 | **[Articuno](https://github.com/heyatomdev/articuno)** | Headless CMS with translations, moderation and webhooks | NestJS · Prisma |
-| 📅 | **[Gatherly](https://github.com/heyatomdev/gatherly)** | Event API with i18n, recurrence and signed webhooks | NestJS · Prisma |
-| 🔗 | **[Ziplink](https://github.com/andreacw5/ziplink)** | URL shortener with click stats and custom codes | NestJS · Prisma |
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://dbd-builds.it"><img src="assets/projects/kaish-dbd.webp" alt="DBD Builds"></a>
+      <h3><a href="https://dbd-builds.it">DBD Builds</a></h3>
+      <p>Build creator and fully translated wiki for Dead by Daylight, made for streamer Kaish79's community. 500+ builds shared, ~1k visitors a month.</p>
+      <p><code>Nuxt</code> <code>Vuetify</code> <code>NestJS</code> <code>Prisma</code> <code>PostgreSQL</code></p>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://beacon.heyatom.dev/it"><img src="assets/projects/beacon.webp" alt="Beacon"></a>
+      <h3><a href="https://beacon.heyatom.dev/it">Beacon</a></h3>
+      <p>Live page for a team of streamers on Twitch and Kick: who's on air right now, stream stats, Discord alerts when someone goes live.</p>
+      <p><code>Nuxt</code> <code>NestJS</code> <code>Prisma</code> <code>Twitch API</code> <code>Kick API</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://studioartepuma.it/"><img src="assets/projects/puma-arts.webp" alt="Studio Arte Puma"></a>
+      <h3><a href="https://studioartepuma.it/">Studio Arte Puma</a></h3>
+      <p>Showcase for painter and sculptor Emanuele Puma, laid out as a journey through his work and built phone-first for visitors coming from Instagram.</p>
+      <p><code>Nuxt</code> <code>GSAP</code> <code>FileHarbor</code> <code>Docker</code></p>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://taichisesto.it/"><img src="assets/projects/sgweb.webp" alt="Tai Chi Sesto"></a>
+      <h3><a href="https://taichisesto.it/">Tai Chi Sesto</a></h3>
+      <p>Bilingual site for Tai Chi and Qi Gong classes around Milan: venues, schedules, teachers, and a direct line to the instructor.</p>
+      <p><code>Nuxt</code> <code>Vuetify</code> <code>TypeScript</code></p>
+    </td>
+  </tr>
+</table>
+
+## Open source
+
+- **[FileHarbor](https://github.com/andreacw5/fileharbor)**: uploads, optimizes and serves images and video, with automatic WebP, on-the-fly resizing and public or private albums.
+- **[Articuno](https://github.com/heyatomdev/articuno)**: multi-tenant CMS with translations, auto-moderated comments and exactly-once webhooks.
+- **[Gatherly](https://github.com/heyatomdev/gatherly)**: event API with RFC 5545 recurrence, categories, tags and guest participants.
+- **[Ziplink](https://github.com/andreacw5/ziplink)**: URL shortener with custom codes, click counts and a documented API.
+- **[AlertConnector](https://github.com/prociv-sm/management-api)**: Italian Civil Protection emergency alerts, normalized behind a REST API.
+- **[nuxt-template](https://github.com/andreacw5/nuxt-template)**: my Nuxt 4 starter with Vuetify, TypeScript, Pinia, i18n and SEO ready.
+
+Everything else, back to 2016, is on **[heyatom.dev/works](https://heyatom.dev/en/works)**.
 
 ## Stack
 
