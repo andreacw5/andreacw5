@@ -26,18 +26,18 @@ By night I run my own small platform: a set of NestJS services that handle auth,
 
 ## Stack
 
-![Java](https://img.shields.io/badge/-Java-black?style=flat-square&logo=openjdk)
-![TypeScript](https://img.shields.io/badge/-TypeScript-black?style=flat-square&logo=typescript)
-![NestJS](https://img.shields.io/badge/-NestJS-black?style=flat-square&logo=nestjs)
-![Quarkus](https://img.shields.io/badge/-Quarkus-black?style=flat-square&logo=quarkus)
-![Prisma](https://img.shields.io/badge/-Prisma-black?style=flat-square&logo=prisma)
-![Nuxt](https://img.shields.io/badge/-Nuxt-black?style=flat-square&logo=nuxt)
-![Vue](https://img.shields.io/badge/-Vue-black?style=flat-square&logo=vue.js)
-![Vuetify](https://img.shields.io/badge/-Vuetify-black?style=flat-square&logo=vuetify)
-![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-black?style=flat-square&logo=postgresql)
-![Docker](https://img.shields.io/badge/-Docker-black?style=flat-square&logo=docker)
-![NGINX](https://img.shields.io/badge/-NGINX-black?style=flat-square&logo=nginx)
-![GitHub Actions](https://img.shields.io/badge/-GitHub_Actions-black?style=flat-square&logo=githubactions)
+![Java](https://img.shields.io/badge/-Java-1e201e?style=flat-square&logoColor=33bf89&logo=openjdk)
+![TypeScript](https://img.shields.io/badge/-TypeScript-1e201e?style=flat-square&logoColor=33bf89&logo=typescript)
+![NestJS](https://img.shields.io/badge/-NestJS-1e201e?style=flat-square&logoColor=33bf89&logo=nestjs)
+![Quarkus](https://img.shields.io/badge/-Quarkus-1e201e?style=flat-square&logoColor=33bf89&logo=quarkus)
+![Prisma](https://img.shields.io/badge/-Prisma-1e201e?style=flat-square&logoColor=33bf89&logo=prisma)
+![Nuxt](https://img.shields.io/badge/-Nuxt-1e201e?style=flat-square&logoColor=33bf89&logo=nuxt)
+![Vue](https://img.shields.io/badge/-Vue-1e201e?style=flat-square&logoColor=33bf89&logo=vue.js)
+![Vuetify](https://img.shields.io/badge/-Vuetify-1e201e?style=flat-square&logoColor=33bf89&logo=vuetify)
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-1e201e?style=flat-square&logoColor=33bf89&logo=postgresql)
+![Docker](https://img.shields.io/badge/-Docker-1e201e?style=flat-square&logoColor=33bf89&logo=docker)
+![NGINX](https://img.shields.io/badge/-NGINX-1e201e?style=flat-square&logoColor=33bf89&logo=nginx)
+![GitHub Actions](https://img.shields.io/badge/-GitHub_Actions-1e201e?style=flat-square&logoColor=33bf89&logo=githubactions)
 
 ## Off the keyboard
 

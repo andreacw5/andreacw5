@@ -1,35 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="330" viewBox="0 0 900 330" xml:space="preserve" role="img" aria-label="Terminal: Andrea Tombolato, full-stack developer in Milan">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-label="Hi, I'm Andrea. Full-stack developer in Milan, building web apps since 2016.">
   <style>
-    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 18px; }
-    .p { fill: #3fb950; }
-    .c { fill: #e6edf3; }
-    .o { fill: #c9d1d9; }
-    .d { fill: #8b949e; }
-    .a { fill: #79c0ff; }
-    .y { fill: #d29922; }
+    .sans { font-family: Manrope, -apple-system, 'Segoe UI', system-ui, sans-serif; }
+    .mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .up { opacity: 0; animation: up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    .d1 { animation-delay: 0.1s; } .d2 { animation-delay: 0.25s; } .d3 { animation-delay: 0.4s; }
+    .d4 { animation-delay: 0.55s; } .d5 { animation-delay: 0.7s; }
+    .float { animation: float 6s ease-in-out infinite; }
+    @keyframes up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
   </style>
   <defs>
-    <clipPath id="t1"><rect x="0" y="0" width="0" height="330"><animate attributeName="width" from="40" to="900" begin="0.3s" dur="0.5s" fill="freeze"/></rect></clipPath>
-    <clipPath id="t2"><rect x="0" y="0" width="0" height="330"><animate attributeName="width" from="40" to="900" begin="1.5s" dur="0.6s" fill="freeze"/></rect></clipPath>
-    <clipPath id="t3"><rect x="0" y="0" width="0" height="330"><animate attributeName="width" from="40" to="900" begin="2.8s" dur="0.7s" fill="freeze"/></rect></clipPath>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="rgba(0,168,107,0.1)"/>
+    </pattern>
+    <radialGradient id="glow" cx="0.78" cy="0.45" r="0.5">
+      <stop offset="0" stop-color="#00a86b" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#00a86b" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="card"><rect width="1200" height="400" rx="14"/></clipPath>
   </defs>
 
-  <rect x="0.5" y="0.5" width="899" height="329" rx="10" fill="#0d1117" stroke="#30363d"/>
-  <path d="M0.5 40 V10.5 a10 10 0 0 1 10 -10 H889.5 a10 10 0 0 1 10 10 V40 Z" fill="#161b22"/>
-  <line x1="0.5" y1="40" x2="899.5" y2="40" stroke="#30363d"/>
-  <circle cx="22" cy="20" r="6" fill="#ff5f57"/>
-  <circle cx="42" cy="20" r="6" fill="#febc2e"/>
-  <circle cx="62" cy="20" r="6" fill="#28c840"/>
-  <text x="450" y="25" text-anchor="middle" class="d" style="font-size:14px">andrea@heyatom: ~</text>
+  <g clip-path="url(#card)">
+    <rect width="1200" height="400" fill="#1e201e"/>
+    <rect width="1200" height="400" fill="url(#grid)"/>
+    <rect width="1200" height="400" fill="url(#glow)"/>
+  </g>
+  <rect x="0.5" y="0.5" width="1199" height="399" rx="14" fill="none" stroke="rgba(0,168,107,0.38)"/>
 
-  <g clip-path="url(#t1)"><text x="32" y="82"><tspan class="p">$ </tspan><tspan class="c">whoami</tspan></text></g>
-  <text x="32" y="112" opacity="0"><set attributeName="opacity" to="1" begin="1s" fill="freeze"/><tspan class="c">Andrea Tombolato</tspan><tspan class="d"> · </tspan><tspan class="o">full-stack developer</tspan><tspan class="d"> · </tspan><tspan class="o">Milan, IT</tspan></text>
+  <text x="64" y="104" class="sans up d1" fill="#33bf89" font-size="28" font-weight="600">Hi, I'm Andrea.</text>
+  <text x="64" y="172" class="sans up d2" fill="#eef1ef" font-size="58" font-weight="800" letter-spacing="-1.5">I build web apps,</text>
+  <text x="64" y="238" class="sans up d3" fill="#eef1ef" font-size="58" font-weight="800" letter-spacing="-1.5">from database to pixel.</text>
+  <text x="64" y="290" class="mono up d4" fill="#a1a6a2" font-size="18">full-stack developer · Milan, IT · since 2016</text>
 
-  <g clip-path="url(#t2)"><text x="32" y="156"><tspan class="p">$ </tspan><tspan class="c">cat ./day-job</tspan></text></g>
-  <text x="32" y="186" opacity="0"><set attributeName="opacity" to="1" begin="2.3s" fill="freeze"/><tspan class="y">Meview</tspan><tspan class="d"> @ Medas · </tspan><tspan class="o">patient portal for Italian hospitals, since 2016</tspan></text>
+  <g class="up d5">
+    <rect x="64" y="318" width="190" height="44" rx="10" fill="#00a86b"/>
+    <text x="159" y="346" class="sans" fill="#04140d" font-size="17" font-weight="700" text-anchor="middle">heyatom.dev  →</text>
+  </g>
 
-  <g clip-path="url(#t3)"><text x="32" y="230"><tspan class="p">$ </tspan><tspan class="c">ls ~/after-hours</tspan></text></g>
-  <text x="32" y="260" opacity="0"><set attributeName="opacity" to="1" begin="3.7s" fill="freeze"/><tspan class="a">dbd-builds  fileharbor  articuno  gatherly  ziplink</tspan></text>
-
-  <text x="32" y="304" opacity="0"><set attributeName="opacity" to="1" begin="4.1s" fill="freeze"/><tspan class="p">$ </tspan><tspan class="c">▍<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" begin="4.1s" repeatCount="indefinite"/></tspan></text>
+  <g class="float">
+    <circle cx="960" cy="190" r="118" fill="rgba(18,28,25,0.72)" stroke="rgba(0,168,107,0.38)"/>
+    <path transform="translate(890 120) scale(0.13)" fill="#00a86b" d="M1037.1 449.6 820 789.1l-87.6 169.1c-8 15.4-21.8 27.1-38.3 32.4l-269.8 86.3c-13.8 4.5-28.8 4.1-42.5-.8l-236.6-85.8c-13.9-5.1-25.5-15.3-32.1-28.6L46.9 829.8c-4.5-8.9-6.6-18.9-6.1-28.9l12.3-253.7 15.7-436c.2-4.8 2.1-9.2 5.5-12.6l8.6-8.6c8-8 18.7-12.5 30-12.6l23.5-.3c7.1 0 13.5-4.1 16.7-10.5l30.6-62.2c1.6-3.3 5.4-4.9 8.9-3.8l62.1 19.3c7.4 2.3 12.9 8.6 14.1 16.3l82.5 489.6c1.5 8.6-4.4 16.8-13 18.4l-71.6 12.6c-7 1.3-13.1 5.4-16.7 11.5l-10.7 18.1c-5.8 9.7 2.4 21.8 13.6 20l141.1-23c5.8-1 11.8-1 17.6 0l141.1 23c11.2 1.8 19.3-10.2 13.6-20l-10.7-18.1c-3.6-6.1-9.8-10.3-16.7-11.5l-71.6-12.6c-8.6-1.5-14.4-9.7-13-18.4L536.6 36c1.3-7.4 6.6-13.6 13.8-15.8l59.7-18.7c5.1-1.6 10.5.7 12.9 5.5l29.8 60.7c2.9 5.7 8.7 9.5 15.1 9.5l44.9.4c4.9 0 9.3 2.7 11.8 6.8l9.9 16.6c1.2 2 1.9 4.4 2 6.7l15.7 433.5c.1 4 2.1 7.8 5.3 10.1 5.2 3.7 12.3 3.2 16.9-1.3l137.4-137.4c2.7-2.7 6.5-4 10.2-3.8l94.2 7.4c3.6.3 7 2.1 9.2 5l10.7 13.9c3.4 4.4 3.6 10.3.6 15Z"/>
+  </g>
 </svg>
